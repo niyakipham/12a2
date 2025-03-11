@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Thức Tính Nhanh Vật Lý 12</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2980b9;
+            font-size: 1.8em;
+            border-bottom: 2px solid #2980b9;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #16a085;
+            font-size: 1.4em;
+            margin-top: 20px;
+        }
+        p, li {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        .equation {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CÔNG THỨC TÍNH NHANH VẬT LÝ 12</h1>
+
+        <h2>CHƯƠNG I: DAO ĐỘNG CƠ HỌC</h2>
+
+        <h3>I. Đại cương về dao động điều hòa</h3>
+        <p><strong>Ký hiệu:</strong> \( T \): chu kỳ, \( f \): tần số, \( x \): li độ, \( v \): vận tốc, \( a \): gia tốc, \( g \): gia tốc trọng trường, \( A \): biên độ dao động, \( \omega t + \varphi \): pha dao động, \( \varphi \): pha ban đầu, \( \omega \): tốc độ góc.</p>
+
+        <ol>
+            <li>
+                <p><strong>Phương trình dao động:</strong></p>
+                <div class="equation">\[ x = A \cos(\omega t + \varphi) \]</div>
+                <ul>
+                    <li>Chu kỳ: \( T = \frac{\Delta t}{N} = \frac{2\pi}{\omega} = \frac{1}{f} \) (s)</li>
+                    <li>Tần số: \( f = \frac{N}{\Delta t} = \frac{1}{T} = \frac{\omega}{2\pi} \) (Hz)</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Phương trình vận tốc:</strong></p>
+                <div class="equation">\[ v = x' = -\omega A \sin(\omega t + \varphi) = \omega A \cos\left(\omega t + \varphi + \frac{\pi}{2}\right) \]</div>
+                <ul>
+                    <li>Tại \( x = 0 \) (VTCB): \( v_{\max} = \omega A \)</li>
+                    <li>Tại \( x = \pm A \) (Biên): \( v = 0 \)</li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Phương trình gia tốc:</strong></p>
+                <div class="equation">\[ a = v' = -\omega^2 A \cos(\omega t + \varphi) = -\omega^2 x = \omega^2 A \cos(\omega t + \varphi + \pi) \]</div>
+                <ul>
+                    <li>Tại \( x = 0 \): \( a = 0 \)</li>
+                    <li>Tại \( x = \pm A \): \( a_{\max} = \omega^2 A \)</li>
+                </ul>
+                <p class="note">*Liên hệ pha: \( v \) sớm pha \( \frac{\pi}{2} \) so với \( x \); \( a \) sớm pha \( \frac{\pi}{2} \) so với \( v \); \( a \) ngược pha với \( x \).</p>
+            </li>
+            <li>
+                <p><strong>Hệ thức độc lập thời gian giữa \( x \), \( v \) và \( a \):</strong></p>
+                <ul>
+                    <li>Giữa \( x \) và \( v \): 
+                        <div class="equation">\[ A^2 = x^2 + \frac{v^2}{\omega^2} = \frac{a^2}{\omega^4} + \frac{v^2}{\omega^2} \]</div>
+                        <div class="equation">\[ \omega = \frac{|v|}{\sqrt{A^2 - x^2}} ; x = \pm \sqrt{A^2 - \frac{v^2}{\omega^2}} = \frac{-a}{\omega^2} ; v = \pm \omega \sqrt{A^2 - x^2} \]</div>
+                    </li>
+                    <li>Giữa \( a \) và \( v \): 
+                        <div class="equation">\[ v_{\max}^2 = (\omega A)^2 = v^2 + \frac{a^2}{\omega^2} \quad \text{hoặc} \quad \left(\frac{v}{v_{\max}}\right)^2 + \left(\frac{a}{a_{\max}}\right)^2 = 1 \]</div>
+                    </li>
+                    <li>Giữa \( a \) và \( x \): 
+                        <div class="equation">\[ a = -\omega^2 x \quad \Rightarrow \quad a_{\max} = \omega^2 A \]</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Các liên hệ khác:</strong></p>
+                <ul>
+                    <li>Tốc độ góc: 
+                        <div class="equation">\[ \omega = \frac{a_{\max}}{v_{\max}} = \frac{v_{\max}}{A} = \sqrt{\frac{a_{\max}}{A}} = \sqrt{\frac{v_2^2 - v_1^2}{x_1^2 - x_2^2}} = \sqrt{\frac{a_1^2 - a_2^2}{v_2^2 - v_1^2}} \]</div>
+                    </li>
+                    <li>Công thức tính biên độ: 
+                        <div class="equation">\[ A = \frac{L}{2} = \frac{S}{4n} = \frac{v_{\max}}{\omega} = \frac{a_{\max}}{\omega^2} = \frac{v_{\max}^2}{a_{\max}} = \sqrt{\frac{2W}{k}} = \sqrt{x^2 + \frac{v^2}{\omega^2}} = \frac{\sqrt{\omega^2 v^2 + a^2}}{\omega^2} \]</div>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>II. Con lắc lò xo</h3>
+        <p><strong>Ký hiệu:</strong> \( \Delta \ell \) (m): độ biến dạng của lò xo khi vật cân bằng, \( k \) (N/m): độ cứng của lò xo, \( \ell_0 \) (m): chiều dài tự nhiên của lò xo.</p>
+        <ol>
+            <li>
+                <p><strong>Công thức cơ bản:</strong></p>
+                <ul>
+                    <li>Tần số góc: 
+                        <div class="equation">\[ \omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{g}{\Delta \ell}} \quad (\text{rad/s}) \]</div>
+                        <ul>
+                            <li>Con lắc lò xo treo thẳng đứng: \( \Delta \ell = \frac{mg}{k} = \frac{g}{\omega^2} \)</li>
+                            <li>Đặt trên mặt phẳng nghiêng góc \( \alpha \) không ma sát: \( \Delta \ell = \frac{mg \sin \alpha}{k} \)</li>
+                        </ul>
+                    </li>
+                    <li>Chu kỳ và tần số: 
+                        <div class="equation">\[ T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}} = 2\pi \sqrt{\frac{\Delta \ell}{g}} \]</div>
+                        <div class="equation">\[ f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}} = \frac{1}{2\pi} \sqrt{\frac{g}{\Delta \ell}} \]</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p><strong>Chiều dài cực đại và cực tiểu của lò xo:</strong></p>
+                <div class="equation">\[ \ell_{\min} = \ell_{cb} - A = (\ell_0 + \Delta \ell) - A \]</div>
+                <div class="equation">\[ \ell_{\max} = \ell_{cb} + A = (\ell_0 + \Delta \ell) + A \]</div>
+                <div class="equation">\[ A = \frac{\ell_{\max} - \ell_{\min}}{2} \]</div>
+                <ul>
+                    <li>Dao động thẳng đứng: 
+                        <div class="equation">\[ \ell_{\min} = \ell_0 - A, \quad \ell_{\max} = \ell_0 + A \quad (\ell_{cb} = \ell_0, \Delta \ell = 0) \]</div>
+                    </li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>III. Con lắc đơn</h3>
+        <table>
+            <tr>
+                <th>Hệ dao động</th>
+                <th>Con lắc lò xo</th>
+                <th>Con lắc đơn</th>
+            </tr>
+            <tr>
+                <td>Cấu trúc</td>
+                <td>Hòn bi \( m \) gắn vào lò xo \( k \)</td>
+                <td>Hòn bi \( m \) treo vào đầu sợi dây \( \ell \)</td>
+            </tr>
+            <tr>
+                <td>VTCB</td>
+                <td>Con lắc ngang: lò xo không giãn<br>Con lắc thẳng đứng: giãn \( \Delta \ell = \frac{mg}{k} \)</td>
+                <td>Dây treo thẳng đứng</td>
+            </tr>
+            <tr>
+                <td>Lực tác dụng</td>
+                <td>Lực đàn hồi: \( F = -kx \)</td>
+                <td>Trọng lực và lực căng: \( F = -m \frac{g}{\ell} s \)</td>
+            </tr>
+            <tr>
+                <td>Tần số góc</td>
+                <td>\( \omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{g}{\Delta \ell}} \)</td>
+                <td>\( \omega = \sqrt{\frac{g}{\ell}} \)</td>
+            </tr>
+            <tr>
+                <td>Phương trình dao động</td>
+                <td>\( x = A \cos(\omega t + \varphi) \)</td>
+                <td>\( s = S_0 \cos(\omega t + \varphi) \) hoặc \( \alpha = \alpha_0 \cos(\omega t + \varphi) \)</td>
+            </tr>
+            <tr>
+                <td>Cơ năng</td>
+                <td>\( W = \frac{1}{2} k A^2 = \frac{1}{2} m \omega^2 A^2 \)</td>
+                <td>\( W = mg\ell (1 - \cos \alpha_0) \approx \frac{1}{2} m \frac{g}{\ell} S_0^2 \)</td>
+            </tr>
+        </table>
+
+        <!-- Thêm các chương khác tương tự nếu cần -->
+    </div>
+</body>
+</html>
