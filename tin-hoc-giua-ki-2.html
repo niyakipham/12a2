@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giải Đáp Trắc Nghiệm CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #007BFF;
+            border-radius: 5px;
+        }
+        .question h2 {
+            color: #007BFF;
+            font-size: 1.2em;
+            margin: 0 0 10px;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .correct {
+            color: #28a745;
+            font-weight: bold;
+        }
+        .explanation {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: #555;
+        }
+        code {
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giải Đáp Trắc Nghiệm CSS</h1>
+
+        <!-- Câu 1 -->
+        <div class="question">
+            <h2>Câu 1: Các khai báo nào sau đây để đặt padding cho một phần tử?</h2>
+            <div class="options">
+                <p>A. <code>padding: 10px 20px 30px 40px</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>padding = 10px 20px 30px 40px</code></p>
+                <p>C. <code>padding: 10px, 20px, 30px, 40px</code></p>
+                <p>D. <code>10px 20px 30px 40px: padding</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong CSS, thuộc tính <code>padding</code> được khai báo bằng cú pháp <code>padding: giá-trị;</code>. Đáp án A (<code>padding: 10px 20px 30px 40px</code>) là đúng vì nó tuân theo cú pháp hợp lệ, đặt padding lần lượt cho top, right, bottom, left. 
+                <ul>
+                    <li>B sai vì CSS không dùng dấu <code>=</code>.</li>
+                    <li>C sai vì các giá trị không được phân tách bằng dấu phẩy mà bằng khoảng trắng.</li>
+                    <li>D sai vì thứ tự cú pháp ngược (giá trị phải đứng sau thuộc tính).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="question">
+            <h2>Câu 2: Phương án nào nêu đúng ý nghĩa của khai báo <code>margin: 10px 20px 30px 40px;</code>?</h2>
+            <div class="options">
+                <p>A. <code>margin-top: 10px; margin-bottom: 20px; margin-left: 30px; margin-right: 40px;</code></p>
+                <p>B. <code>margin-left: 10px; margin-right: 20px; margin-top: 30px; margin-bottom: 40px;</code></p>
+                <p>C. <code>margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 40px;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>margin-top: 10px; margin-left: 20px; margin-bottom: 30px; margin-right: 40px;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Thuộc tính <code>margin</code> với 4 giá trị tuân theo thứ tự: <strong>top, right, bottom, left</strong>. Vì vậy, <code>margin: 10px 20px 30px 40px;</code> tương ứng với:
+                <ul>
+                    <li><code>margin-top: 10px</code></li>
+                    <li><code>margin-right: 20px</code></li>
+                    <li><code>margin-bottom: 30px</code></li>
+                    <li><code>margin-left: 40px</code></li>
+                </ul>
+                Chỉ C đúng, các đáp án khác không tuân theo thứ tự này.
+            </div>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="question">
+            <h2>Câu 3: Thuộc tính nào dùng để thay đổi phông chữ của một phần tử?</h2>
+            <div class="options">
+                <p>A. <code>text-font</code></p>
+                <p>B. <code>font-family</code> <span class="correct">[Đúng]</span></p>
+                <p>C. <code>font-color</code></p>
+                <p>D. <code>font-size</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong CSS, <code>font-family</code> là thuộc tính dùng để thay đổi phông chữ (ví dụ: Arial, Times New Roman). 
+                <ul>
+                    <li>A sai vì <code>text-font</code> không tồn tại.</li>
+                    <li>C sai vì <code>font-color</code> không phải thuộc tính hợp lệ (dùng <code>color</code> để đổi màu chữ).</li>
+                    <li>D sai vì <code>font-size</code> chỉ thay đổi kích thước chữ, không phải phông chữ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 4 -->
+        <div class="question">
+            <h2>Câu 4: Phương án nào nêu đúng cách khai báo danh sách với ký hiệu hình vuông?</h2>
+            <div class="options">
+                <p>A. <code>ul { list: square; }</code></p>
+                <p>B. <code>ul { style-type: square; }</code></p>
+                <p>C. <code>ul { list-type: square; }</code></p>
+                <p>D. <code>ul { list-style-type: square; }</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Thuộc tính <code>list-style-type</code> dùng để đặt kiểu ký hiệu cho danh sách (<code>ul</code> hoặc <code>ol</code>), và <code>square</code> là giá trị hợp lệ để tạo ký hiệu hình vuông. 
+                <ul>
+                    <li>A sai vì <code>list</code> không phải thuộc tính.</li>
+                    <li>B sai vì <code>style-type</code> không tồn tại.</li>
+                    <li>C sai vì thiếu từ "style" trong <code>list-type</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 5 -->
+        <div class="question">
+            <h2>Câu 5: Để chọn các phần tử <code>p</code> là con của phần tử id <code>myId</code>, cần khai báo:</h2>
+            <div class="options">
+                <p>A. <code>p > #myId</code></p>
+                <p>B. <code>p #myId</code></p>
+                <p>C. <code>#myId p</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>#myId > p</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong CSS:
+                <ul>
+                    <li><code>#myId p</code> chọn tất cả <code>p</code> là con (trực tiếp hoặc gián tiếp) của phần tử có id <code>myId</code> → Đúng.</li>
+                    <li><code>p > #myId</code> sai vì chọn phần tử <code>#myId</code> là con trực tiếp của <code>p</code>.</li>
+                    <li><code>p #myId</code> sai vì chọn <code>#myId</code> bên trong <code>p</code>.</li>
+                    <li><code>#myId > p</code> chỉ chọn <code>p</code> là con trực tiếp của <code>#myId</code>, không bao gồm con gián tiếp.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 6 -->
+        <div class="question">
+            <h2>Câu 6: Để chọn phần tử với id <code>myId</code> và lớp <code>myClass</code>, cần khai báo:</h2>
+            <div class="options">
+                <p>A. <code>#myId.myClass</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>myId#myClass</code></p>
+                <p>C. <code>myId .myClass</code></p>
+                <p>D. <code>#myId #myClass</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong CSS, để chọn phần tử có cả id và class, ta viết liền <code>#id.class</code> không khoảng trắng. <code>#myId.myClass</code> là đúng.
+                <ul>
+                    <li>B sai vì thiếu ký hiệu <code>#</code> và <code>.</code>.</li>
+                    <li>C sai vì thiếu <code>#</code> và có khoảng trắng.</li>
+                    <li>D sai vì khoảng trắng nghĩa là chọn phần tử <code>#myClass</code> bên trong <code>#myId</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 7 -->
+        <div class="question">
+            <h2>Câu 7: Phương án nào nêu đúng ý nghĩa của khai báo <code>padding: 10px 20px 30px;</code>?</h2>
+            <div class="options">
+                <p>A. <code>padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 20px;</code> <span class="correct">[Đúng]</span></p>
+                <p>B. Trình duyệt sẽ bỏ qua vì khai báo không đầy đủ.</p>
+                <p>C. <code>padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 0px;</code></p>
+                <p>D. <code>padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: kế thừa;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 3 giá trị, <code>padding</code> được hiểu là: <strong>top, right+left, bottom</strong>. Vậy <code>padding: 10px 20px 30px;</code> tương ứng:
+                <ul>
+                    <li><code>padding-top: 10px</code></li>
+                    <li><code>padding-right: 20px</code></li>
+                    <li><code>padding-bottom: 30px</code></li>
+                    <li><code>padding-left: 20px</code></li>
+                </ul>
+                A đúng. B sai vì khai báo vẫn hợp lệ. C và D không đúng cách xử lý của CSS.
+            </div>
+        </div>
+
+        <!-- Câu 8 -->
+        <div class="question">
+            <h2>Câu 8: Phương án nào đúng về số lượng id có thể gán cho một phần tử?</h2>
+            <div class="options">
+                <p>A. Chỉ 1. <span class="correct">[Đúng]</span></p>
+                <p>B. Không giới hạn.</p>
+                <p>C. Có thể mang 2 id cùng lúc.</p>
+                <p>D. Có thể mang tối đa 3 id.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong HTML, một phần tử chỉ được phép có duy nhất 1 id để đảm bảo tính duy nhất. A đúng, các đáp án khác sai theo chuẩn W3C.
+            </div>
+        </div>
+
+        <!-- Câu 9 -->
+        <div class="question">
+            <h2>Câu 9: Khi có xung đột định dạng, trình duyệt ưu tiên quy tắc nào?</h2>
+            <div class="options">
+                <p>A. Quy tắc theo lớp.</p>
+                <p>B. Quy tắc theo id.</p>
+                <p>C. Quy tắc chèn trực tiếp. <span class="correct">[Đúng]</span></p>
+                <p>D. Quy tắc theo thẻ.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong CSS, mức độ ưu tiên (specificity) từ cao đến thấp là:
+                <ol>
+                    <li>Quy tắc chèn trực tiếp (<code>style="..."</code>)</li>
+                    <li>ID</li>
+                    <li>Class</li>
+                    <li>Thẻ</li>
+                </ol>
+                C đúng vì quy tắc chèn trực tiếp có độ ưu tiên cao nhất.
+            </div>
+        </div>
+
+        <!-- Câu 10 -->
+        <div class="question">
+            <h2>Câu 10: Vùng chọn nào định kiểu cho các phần tử cùng loại?</h2>
+            <div class="options">
+                <p>A. id</p>
+                <p>B. element</p>
+                <p>C. tag</p>
+                <p>D. class <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>class</code> dùng để định kiểu cho nhiều phần tử cùng loại → Đúng.</li>
+                    <li><code>id</code> chỉ áp dụng cho 1 phần tử duy nhất.</li>
+                    <li><code>element</code> hoặc <code>tag</code> áp dụng cho tất cả phần tử của thẻ đó, không phân biệt "loại".</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 11 -->
+        <div class="question">
+            <h2>Câu 11: Khi nhập sai thuộc tính CSS, điều gì xảy ra?</h2>
+            <div class="options">
+                <p>A. Trình duyệt tự sửa lỗi.</p>
+                <p>B. Trình duyệt bỏ qua thuộc tính đó. <span class="correct">[Đúng]</span></p>
+                <p>C. Trình duyệt hiển thị thông báo lỗi.</p>
+                <p>D. Trình duyệt không hiển thị trang web.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trình duyệt sẽ bỏ qua thuộc tính CSS không hợp lệ và tiếp tục xử lý các thuộc tính khác. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 12 -->
+        <div class="question">
+            <h2>Câu 12: Thuộc tính nào thay đổi màu nền của phần tử?</h2>
+            <div class="options">
+                <p>A. <code>font-color</code></p>
+                <p>B. <code>text-color</code></p>
+                <p>C. <code>background-color</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>color</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>background-color</code> thay đổi màu nền → Đúng.</li>
+                    <li><code>color</code> thay đổi màu chữ, không phải nền.</li>
+                    <li>A và B không phải thuộc tính hợp lệ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 13 -->
+        <div class="question">
+            <h2>Câu 13: Để đặt kích thước phông chữ 16px, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>font-size: 16px;</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>16px: font-size;</code></p>
+                <p>C. <code>size: font(16px);</code></p>
+                <p>D. <code>font: size(16px);</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>font-size: 16px;</code> là cú pháp đúng để đặt kích thước chữ.</li>
+                    <li>B sai vì thứ tự ngược.</li>
+                    <li>C và D sai vì không phải cú pháp hợp lệ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 14 -->
+        <div class="question">
+            <h2>Câu 14: Số lượng class có thể gán cho một phần tử?</h2>
+            <div class="options">
+                <p>A. Tối đa 3 class.</p>
+                <p>B. Không giới hạn. <span class="correct">[Đúng]</span></p>
+                <p>C. Chỉ 1.</p>
+                <p>D. Có thể mang 2 class.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Một phần tử HTML có thể có nhiều class (không giới hạn), chỉ cần liệt kê trong thuộc tính <code>class="class1 class2 class3"</code>. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 15 -->
+        <div class="question">
+            <h2>Câu 15: Ý nghĩa của khai báo <code>padding: 10px 20px 30px 40px;</code>?</h2>
+            <div class="options">
+                <p>A. <code>padding-top: 10px; padding-right: 20px; padding-bottom: 30px; padding-left: 40px;</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>padding-left: 10px; padding-top: 20px; padding-bottom: 30px; padding-right: 40px;</code></p>
+                <p>C. <code>padding-top: 10px; padding-bottom: 20px; padding-left: 30px; padding-right: 40px;</code></p>
+                <p>D. <code>padding-left: 10px; padding-right: 20px; padding-top: 30px; padding-bottom: 40px;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>padding</code> với 4 giá trị đi theo thứ tự: <strong>top, right, bottom, left</strong>. A đúng, các đáp án khác sai thứ tự.
+            </div>
+        </div>
+
+        <!-- Câu 16 -->
+        <div class="question">
+            <h2>Câu 16: Thuộc tính nào thay đổi kích thước đường viền?</h2>
+            <div class="options">
+                <p>A. <code>border-color</code></p>
+                <p>B. <code>border-style</code></p>
+                <p>C. <code>border-width</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>border</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>border-width</code> thay đổi kích thước (độ dày) đường viền → Đúng.</li>
+                    <li><code>border-color</code> đổi màu, <code>border-style</code> đổi kiểu, <code>border</code> là thuộc tính tổng hợp.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 17 -->
+        <div class="question">
+            <h2>Câu 17: Để chọn phần tử <code>p</code> có id <code>myId</code>, cần khai báo:</h2>
+            <div class="options">
+                <p>A. <code>p#myId</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>p .myId</code></p>
+                <p>C. <code>#myId p</code></p>
+                <p>D. <code>p.myId</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>p#myId</code> chọn phần tử <code>p</code> có id là <code>myId</code> → Đúng.</li>
+                    <li><code>p .myId</code> chọn phần tử có class <code>myId</code> trong <code>p</code>.</li>
+                    <li><code>#myId p</code> chọn <code>p</code> trong phần tử <code>#myId</code>.</li>
+                    <li><code>p.myId</code> dùng cho class, không phải id.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 18 -->
+        <div class="question">
+            <h2>Câu 18: Để đặt kích thước dài 100px cho phần tử, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>width = 100px; height = 100px;</code></p>
+                <p>B. <code>100px: width; 100px: height;</code></p>
+                <p>C. <code>size: 100px 100px;</code></p>
+                <p>D. <code>width: 100px; height: 100px;</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>width: 100px; height: 100px;</code> là cú pháp đúng để đặt chiều rộng và cao.</li>
+                    <li>A sai vì dùng <code>=</code> thay vì <code>:</code>.</li>
+                    <li>B sai vì thứ tự ngược.</li>
+                    <li>C sai vì <code>size</code> không áp dụng cho chiều dài phần tử thông thường.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 19 -->
+        <div class="question">
+            <h2>Câu 19: Với <code>box-sizing: content-box;</code>, width và height là gì?</h2>
+            <div class="options">
+                <p>A. Chỉ gồm border và padding khi có <code>position: absolute;</code>.</p>
+                <p>B. Chưa bao gồm border và padding. <span class="correct">[Đúng]</span></p>
+                <p>C. Chỉ gồm border và padding khi có <code>position: relative;</code>.</p>
+                <p>D. Đã bao gồm border và padding.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với <code>box-sizing: content-box</code> (mặc định), <code>width</code> và <code>height</code> chỉ tính phần nội dung, không bao gồm <code>border</code> và <code>padding</code>. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 20 -->
+        <div class="question">
+            <h2>Câu 20: Khi di chuyển chuột đến đối tượng, trạng thái nào được kích hoạt?</h2>
+            <div class="options">
+                <p>A. Trạng thái hover. <span class="correct">[Đúng]</span></p>
+                <p>B. Trạng thái active.</p>
+                <p>C. Trạng thái visited.</p>
+                <p>D. Trạng thái focus.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li><code>:hover</code> kích hoạt khi chuột di qua → Đúng.</li>
+                    <li><code>:active</code> khi nhấn, <code>:visited</code> khi đã truy cập (liên kết), <code>:focus</code> khi được chọn (như ô nhập liệu).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 21 -->
+        <div class="question">
+            <h2>Câu 21: Thuộc tính nào thay đổi kích thước phông chữ?</h2>
+            <div class="options">
+                <p>A. <code>font-family</code></p>
+                <p>B. <code>font-color</code></p>
+                <p>C. <code>text-font</code></p>
+                <p>D. <code>font-size</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>font-size</code> thay đổi kích thước chữ. Các đáp án khác không đúng hoặc không tồn tại.
+            </div>
+        </div>
+
+        <!-- Câu 22 -->
+        <div class="question">
+            <h2>Câu 22: Để đặt phông chữ Arial, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>font = Arial;</code></p>
+                <p>B. <code>family-weight: bold;</code></p>
+                <p>C. <code>font-family: Arial;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>font: family(Arial);</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>font-family: Arial;</code> là cú pháp đúng. Các đáp án khác sai cú pháp hoặc không tồn tại.
+            </div>
+        </div>
+
+        <!-- Câu 23 -->
+        <div class="question">
+            <h2>Câu 23: Thuộc tính nào đổ bóng màu xám cho toàn bộ đối tượng?</h2>
+            <div class="options">
+                <p>A. <code>shadow-color: grey;</code></p>
+                <p>B. <code>shadow-right: 10px shadow-bottom: 10px;</code></p>
+                <p>C. <code>alpha-effect[shadow]: 10px 10px 5px grey;</code></p>
+                <p>D. <code>box-shadow: 10px 10px 5px grey;</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>box-shadow</code> tạo bóng cho phần tử, cú pháp là <code>box-shadow: x-offset y-offset blur color</code>. D đúng, các đáp án khác không hợp lệ.
+            </div>
+        </div>
+
+        <!-- Câu 24 -->
+        <div class="question">
+            <h2>Câu 24: Để đặt kiểu chữ in đậm, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>font: weight(bold);</code></p>
+                <p>B. <code>bold: font-weight;</code></p>
+                <p>C. <code>font-weight: bold;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>weight: font(bold);</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>font-weight: bold;</code> là cách đúng để đặt chữ đậm. Các đáp án khác sai cú pháp.
+            </div>
+        </div>
+
+        <!-- Câu 25 -->
+        <div class="question">
+            <h2>Câu 25: Cách xử lý của trình duyệt với <code>margin: 10px;</code>?</h2>
+            <div class="options">
+                <p>A. Bỏ qua vì không đầy đủ.</p>
+                <p>B. Đặt 10px cho cả 4 hướng. <span class="correct">[Đúng]</span></p>
+                <p>C. Chọn hướng trên đặt 10px.</p>
+                <p>D. Chọn ngẫu nhiên 1 hướng đặt 10px.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 1 giá trị, <code>margin</code> áp dụng cho cả 4 hướng (top, right, bottom, left). B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 26 -->
+        <div class="question">
+            <h2>Câu 26: Cách xử lý của trình duyệt với <code>margin: 10px 20px;</code>?</h2>
+            <div class="options">
+                <p>A. Bỏ qua vì không đầy đủ.</p>
+                <p>B. Trái-phải: 10px, trên-dưới: 20px.</p>
+                <p>C. Trên-dưới: 10px, trái-phải: 20px. <span class="correct">[Đúng]</span></p>
+                <p>D. Ngẫu nhiên 2 hướng: 10px và 20px.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 2 giá trị, <code>margin</code> áp dụng: <strong>top+bottom, left+right</strong>. C đúng.
+            </div>
+        </div>
+
+        <!-- Câu 27 -->
+        <div class="question">
+            <h2>Câu 27: Thuộc tính nào thay đổi màu đường viền?</h2>
+            <div class="options">
+                <p>A. <code>border</code></p>
+                <p>B. <code>border-width</code></p>
+                <p>C. <code>border-style</code></p>
+                <p>D. <code>border-color</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border-color</code> thay đổi màu đường viền. Các thuộc tính khác điều chỉnh khía cạnh khác của viền.
+            </div>
+        </div>
+
+        <!-- Câu 28 -->
+        <div class="question">
+            <h2>Câu 28: Để đặt độ rộng đường viền 2px, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>2px: border-width;</code></p>
+                <p>B. <code>border = 2px;</code></p>
+                <p>C. <code>border-width: 2px;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>border: width(2px);</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border-width: 2px;</code> là cú pháp đúng. Các đáp án khác sai cú pháp.
+            </div>
+        </div>
+
+        <!-- Câu 30 -->
+        <div class="question">
+            <h2>Câu 30: Thuộc tính nào căn lề văn bản?</h2>
+            <div class="options">
+                <p>A. <code>align-text</code></p>
+                <p>B. <code>text-margin</code></p>
+                <p>C. <code>text-align</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>margin-text</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>text-align</code> dùng để căn lề văn bản (left, right, center, justify). Các đáp án khác không tồn tại.
+            </div>
+        </div>
+
+        <!-- Câu 31 -->
+        <div class="question">
+            <h2>Câu 31: Cách canh lề của tiêu đề <code>h1</code> trong code?</h2>
+            <div class="options">
+                <p>A. Không có canh lề.</p>
+                <p>B. Canh lề trái.</p>
+                <p>C. Canh lề phải. <span class="correct">[Đúng]</span></p>
+                <p>D. Canh giữa.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong code, <code>section { text-align: right; }</code> áp dụng cho tất cả nội dung trong <code>section</code>, bao gồm <code>h1</code>. Vì vậy, <code>h1</code> được canh phải.
+            </div>
+        </div>
+
+        <!-- Câu 32 -->
+        <div class="question">
+            <h2>Câu 32: Vùng chọn nào định kiểu cho các phần tử khác loại?</h2>
+            <div class="options">
+                <p>A. tag</p>
+                <p>B. element</p>
+                <p>C. class <span class="correct">[Đúng]</span></p>
+                <p>D. id</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>class</code> có thể áp dụng cho nhiều phần tử khác loại (ví dụ: <code>p</code>, <code>div</code>). <code>id</code> chỉ cho 1 phần tử, <code>tag</code> hoặc <code>element</code> áp dụng cho cùng loại thẻ.
+            </div>
+        </div>
+
+        <!-- Câu 33 -->
+        <div class="question">
+            <h2>Câu 33: Ý nghĩa của <code>text-indent</code>?</h2>
+            <div class="options">
+                <p>A. Thiết lập chiều rộng dòng văn bản.</p>
+                <p>B. Thiết lập khoảng cách thụt đầu dòng. <span class="correct">[Đúng]</span></p>
+                <p>C. Thiết lập chế độ canh văn bản.</p>
+                <p>D. Thiết lập chiều cao dòng văn bản.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>text-indent</code> đặt khoảng cách thụt đầu dòng của văn bản. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 35 -->
+        <div class="question">
+            <h2>Câu 35: Phông chữ nào được ưu tiên trong code?</h2>
+            <div class="options">
+                <p>A. Tahoma</p>
+                <p>B. Sans-serif</p>
+                <p>C. Roboto <span class="correct">[Đúng]</span></p>
+                <p>D. Verdana</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Trong <code>font-family: Roboto, Tahoma, Verdana, sans-serif;</code>, trình duyệt ưu tiên phông chữ đầu tiên (Roboto) nếu có, nếu không sẽ thử các phông tiếp theo.
+            </div>
+        </div>
+
+        <!-- Câu 36 -->
+        <div class="question">
+            <h2>Câu 36: Để định kiểu cho id <code>lien-ket-noi-bat</code>, cú pháp nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>#lien-ket-noi-bat</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>lien-ket-noi-bat</code></p>
+                <p>C. <code>.lien-ket-noi-bat</code></p>
+                <p>D. <code>*lien-ket-noi-bat</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> ID trong CSS được chọn bằng <code>#</code>. A đúng.
+            </div>
+        </div>
+
+        <!-- Câu 37 -->
+        <div class="question">
+            <h2>Câu 37: Nhận định đúng/sai về code?</h2>
+            <div class="options">
+                <p>a) Sai</p>
+                <p>b) Sai</p>
+                <p>c) Sai</p>
+                <p>d) Đúng <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li>a) Sai vì khai báo đúng cú pháp, chỉ có <code>:nth-child(3)</code> sai (thiếu vùng chọn) nên bị bỏ qua.</li>
+                    <li>b) Sai vì <code>:nth-child(3)</code> không hoạt động do thiếu vùng chọn.</li>
+                    <li>c) Sai vì chỉ <code>:nth-child(3)</code> bị bỏ qua, không ảnh hưởng phần tử khác.</li>
+                    <li>d) Đúng vì <code>li:nth-child(2)</code> tô màu xanh cho phần tử thứ 2 trong <code>ul</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 38 -->
+        <div class="question">
+            <h2>Câu 38: Cách hiển thị ký hiệu ©?</h2>
+            <div class="options">
+                <p>A. Không thể hiện được.</p>
+                <p>B. Phải chuyển thành <code>&copy;</code>.</p>
+                <p>C. Phải chuyển thành <code>&copy;right;</code>.</p>
+                <p>D. Thể hiện bình thường. <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với <code>meta charset="UTF-8"</code>, ký hiệu © hiển thị bình thường mà không cần chuyển đổi.
+            </div>
+        </div>
+
+        <!-- Câu 39 -->
+        <div class="question">
+            <h2>Câu 39: Ý nghĩa của <code>margin: 10px 20px 30px;</code>?</h2>
+            <div class="options">
+                <p>A. <code>margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 10px;</code></p>
+                <p>B. <code>margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 0px;</code></p>
+                <p>C. <code>margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 20px;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. Bỏ qua vì không đầy đủ.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 3 giá trị, <code>margin</code> là: <strong>top, right+left, bottom</strong>. C đúng.
+            </div>
+        </div>
+
+        <!-- Câu 40 -->
+        <div class="question">
+            <h2>Câu 40: Tác dụng của <code>visibility: hidden;</code>?</h2>
+            <div class="options">
+                <p>A. Làm phần tử trong suốt.</p>
+                <p>B. Hiển thị bình thường.</p>
+                <p>C. Không hiển thị phần tử. <span class="correct">[Đúng]</span></p>
+                <p>D. Làm mờ phần tử.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>visibility: hidden;</code> ẩn phần tử nhưng vẫn giữ không gian. C đúng.
+            </div>
+        </div>
+
+        <!-- Câu 41 -->
+        <div class="question">
+            <h2>Câu 41: Cách khai báo <code>margin</code> đúng?</h2>
+            <div class="options">
+                <p>A. <code>margin: 10px 20px 30px 40px;</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>margin = 10px 20px 30px 40px;</code></p>
+                <p>C. <code>10px 20px 30px 40px: margin;</code></p>
+                <p>D. <code>margin: 10px, 20px, 30px, 40px;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> A đúng vì tuân theo cú pháp CSS. Các đáp án khác sai dấu hoặc thứ tự.
+            </div>
+        </div>
+
+        <!-- Câu 42 -->
+        <div class="question">
+            <h2>Câu 42: Thuộc tính đổ bóng xám cho văn bản?</h2>
+            <div class="options">
+                <p>A. <code>shadow: text 5px 5px 5px grey;</code></p>
+                <p>B. <code>font: shadowed 5px 5px 5px grey;</code></p>
+                <p>C. <code>font-shadow: 5px 5px 5px grey;</code></p>
+                <p>D. <code>text-shadow: 5px 5px 5px grey;</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>text-shadow</code> tạo bóng cho văn bản. D đúng.
+            </div>
+        </div>
+
+        <!-- Câu 43 -->
+        <div class="question">
+            <h2>Câu 43: Nhận định đúng/sai về biểu mẫu?</h2>
+            <div class="options">
+                <p>a) Đúng</p>
+                <p>b) Sai</p>
+                <p>c) Sai</p>
+                <p>d) Đúng <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li>a) Đúng vì radio chỉ cho chọn 1 giá trị (Nam/Nữ).</li>
+                    <li>b) Sai vì checkbox cho phép chọn nhiều CLB.</li>
+                    <li>c) Sai vì checkbox cần <code>name</code> giống nhau, <code>id</code> khác nhau không bắt buộc.</li>
+                    <li>d) Đúng vì radio cần <code>id</code> khác nhau để phân biệt.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 44 -->
+        <div class="question">
+            <h2>Câu 44: Thuộc tính bo góc phần tử?</h2>
+            <div class="options">
+                <p>A. <code>corner-effect: round;</code></p>
+                <p>B. <code>border-radius: 30px;</code> <span class="correct">[Đúng]</span></p>
+                <p>C. <code>border[round]: 30px;</code></p>
+                <p>D. <code>alpha-effect: round-corner;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border-radius</code> bo góc phần tử. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 45 -->
+        <div class="question">
+            <h2>Câu 45: Đơn vị nào không dùng trong CSS?</h2>
+            <div class="options">
+                <p>A. <code>cm</code></p>
+                <p>B. <code>doc</code> <span class="correct">[Đúng]</span></p>
+                <p>C. <code>em</code></p>
+                <p>D. <code>px</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>doc</code> không phải đơn vị CSS. Các đơn vị hợp lệ gồm <code>px</code>, <code>em</code>, <code>cm</code>, v.v.
+            </div>
+        </div>
+
+        <!-- Câu 46 -->
+        <div class="question">
+            <h2>Câu 46: Vùng chọn cho phần tử duy nhất?</h2>
+            <div class="options">
+                <p>A. element</p>
+                <p>B. class</p>
+                <p>C. tag</p>
+                <p>D. id <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>id</code> định kiểu cho 1 phần tử duy nhất.
+            </div>
+        </div>
+
+        <!-- Câu 47 -->
+        <div class="question">
+            <h2>Câu 47: Chọn phần tử <code>p</code> có class <code>myClass</code>?</h2>
+            <div class="options">
+                <p>A. <code>p.myClass</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>p .myClass</code></p>
+                <p>C. <code>myClass p</code></p>
+                <p>D. <code>p#myClass</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>p.myClass</code> chọn <code>p</code> có class <code>myClass</code>. A đúng.
+            </div>
+        </div>
+
+        <!-- Câu 48 -->
+        <div class="question">
+            <h2>Câu 48: Định kiểu cho tất cả thẻ <code>a</code>?</h2>
+            <div class="options">
+                <p>A. <code>#a</code></p>
+                <p>B. <code>a</code> <span class="correct">[Đúng]</span></p>
+                <p>C. <code>*a</code></p>
+                <p>D. <code>.a</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Chỉ cần tên thẻ <code>a</code> để chọn tất cả thẻ <code>a</code>. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 49 -->
+        <div class="question">
+            <h2>Câu 49: Nhận định đúng/sai về biểu mẫu?</h2>
+            <div class="options">
+                <p>a) Sai</p>
+                <p>b) Sai</p>
+                <p>c) Đúng</p>
+                <p>d) Đúng <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li>a) Sai vì họ tên thường là <code>input type="text"</code>, không phải <code>textarea</code>.</li>
+                    <li>b) Sai vì giới tính thường là <code>radio</code>, không phải <code>checkbox</code>.</li>
+                    <li>c) Đúng vì lý do tham gia thường dùng <code>textarea</code> cho nhiều dòng.</li>
+                    <li>d) Đúng vì CLB có thể chọn nhiều, dùng <code>checkbox</code>.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 50 -->
+        <div class="question">
+            <h2>Câu 50: Ý nghĩa của <code>padding: 10px;</code>?</h2>
+            <div class="options">
+                <p>A. Chỉ hướng trên: 10px.</p>
+                <p>B. Ngẫu nhiên 1 hướng: 10px.</p>
+                <p>C. Bỏ qua vì không đầy đủ.</p>
+                <p>D. Cả 4 hướng: 10px. <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 1 giá trị, <code>padding</code> áp dụng cho cả 4 hướng. D đúng.
+            </div>
+        </div>
+
+        <!-- Câu 51 -->
+        <div class="question">
+            <h2>Câu 51: Nhận định đúng/sai về bảng?</h2>
+            <div class="options">
+                <p>a) Đúng</p>
+                <p>b) Đúng</p>
+                <p>c) Sai</p>
+                <p>d) Đúng <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li>a) Đúng vì <code>th</code> mặc định in đậm.</li>
+                    <li>b) Đúng vì <code>tr:hover</code> đổi màu khi di chuột qua.</li>
+                    <li>c) Sai vì <code>:active</code> hoạt động với mọi phần tử khi nhấn, không cần siêu liên kết.</li>
+                    <li>d) Đúng vì <code>td:active</code> đổi màu khi nhấn giữ.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Câu 52 -->
+        <div class="question">
+            <h2>Câu 52: Với <code>box-sizing: border-box;</code>, width và height là gì?</h2>
+            <div class="options">
+                <p>A. Chỉ gồm border và padding khi có <code>position: absolute;</code>.</p>
+                <p>B. Đã bao gồm border và padding. <span class="correct">[Đúng]</span></p>
+                <p>C. Chỉ gồm border và padding khi có <code>position: relative;</code>.</p>
+                <p>D. Chưa bao gồm border và padding.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với <code>box-sizing: border-box</code>, <code>width</code> và <code>height</code> bao gồm cả <code>border</code> và <code>padding</code>. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 53 -->
+        <div class="question">
+            <h2>Câu 53: Đặt viền đen, nét liền, 1px, khai báo nào đúng?</h2>
+            <div class="options">
+                <p>A. <code>border: solid black 1px;</code></p>
+                <p>B. <code>1px solid black: border;</code></p>
+                <p>C. <code>border: 1px solid black;</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>border = 1px solid black;</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border: 1px solid black;</code> là cú pháp đúng (width, style, color). C đúng.
+            </div>
+        </div>
+
+        <!-- Câu 54 -->
+        <div class="question">
+            <h2>Câu 54: Thuộc tính thay đổi kiểu đường viền?</h2>
+            <div class="options">
+                <p>A. <code>border-style</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>border-width</code></p>
+                <p>C. <code>border</code></p>
+                <p>D. <code>border-color</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border-style</code> thay đổi kiểu viền (solid, dashed, v.v.). A đúng.
+            </div>
+        </div>
+
+        <!-- Câu 55 -->
+        <div class="question">
+            <h2>Câu 55: Thuộc tính thay đổi kích thước phần tử?</h2>
+            <div class="options">
+                <p>A. <code>dimension</code></p>
+                <p>B. <code>width</code> và <code>height</code> <span class="correct">[Đúng]</span></p>
+                <p>C. <code>scale</code></p>
+                <p>D. <code>size</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>width</code> và <code>height</code> thay đổi kích thước phần tử. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 56 -->
+        <div class="question">
+            <h2>Câu 56: Cách trình bày danh mục trong <code>header</code>?</h2>
+            <div class="options">
+                <p>A. Tùy trình duyệt.</p>
+                <p>B. Hàng dọc.</p>
+                <p>C. Không hiển thị.</p>
+                <p>D. Hàng ngang. <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>nav ul li { display: inline; }</code> làm các mục hiển thị theo hàng ngang. D đúng.
+            </div>
+        </div>
+
+        <!-- Câu 57 -->
+        <div class="question">
+            <h2>Câu 57: Ý nghĩa của <code>padding: 10px 20px;</code>?</h2>
+            <div class="options">
+                <p>A. Top: 10px, right: 20px, bottom/left kế thừa.</p>
+                <p>B. Top: 10px, right: 20px, bottom: 10px, left: 20px. <span class="correct">[Đúng]</span></p>
+                <p>C. Top: 10px, right: 20px, bottom: 0px, left: 0px.</p>
+                <p>D. Bỏ qua vì không đầy đủ.</p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Với 2 giá trị, <code>padding</code> là: <strong>top+bottom, left+right</strong>. B đúng.
+            </div>
+        </div>
+
+        <!-- Câu 58 -->
+        <div class="question">
+            <h2>Câu 58: Định kiểu cho class <code>lien-ket</code>?</h2>
+            <div class="options">
+                <p>A. <code>lien-ket</code></p>
+                <p>B. <code>#lien-ket</code></p>
+                <p>C. <code>.lien-ket</code> <span class="correct">[Đúng]</span></p>
+                <p>D. <code>*lien-ket</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> Class dùng <code>.</code>. C đúng.
+            </div>
+        </div>
+
+        <!-- Câu 59 -->
+        <div class="question">
+            <h2>Câu 59: Thuộc tính thay đổi màu chữ?</h2>
+            <div class="options">
+                <p>A. <code>color</code> <span class="correct">[Đúng]</span></p>
+                <p>B. <code>text-color</code></p>
+                <p>C. <code>font-color</code></p>
+                <p>D. <code>background-color</code></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>color</code> thay đổi màu chữ. A đúng.
+            </div>
+        </div>
+
+        <!-- Câu 60 -->
+        <div class="question">
+            <h2>Câu 60: Viết hoa chữ cái đầu trong <code>h1</code>?</h2>
+            <div class="options">
+                <p>A. <code>a {text-decoration: no underline}</code></p>
+                <p>B. <code>a {underline: none}</code></p>
+                <p>C. <code>a {text-decoration: none}</code></p>
+                <p>D. <code>h1 {text-transform: capitalize;}</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>text-transform: capitalize;</code> viết hoa chữ cái đầu. D đúng.
+            </div>
+        </div>
+
+        <!-- Câu 61 -->
+        <div class="question">
+            <h2>Câu 61: Loại gạch chân liên kết?</h2>
+            <div class="options">
+                <p>A. <code>a {text=decoration: no underline}</code></p>
+                <p>B. <code>a {underline: none}</code></p>
+                <p>C. <code>a {decoration: no underline}</code></p>
+                <p>D. <code>a {text-decoration: none}</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>text-decoration: none;</code> loại gạch chân. D đúng.
+            </div>
+        </div>
+
+        <!-- Câu 62 -->
+        <div class="question">
+            <h2>Câu 62: Thuộc tính thêm đường viền?</h2>
+            <div class="options">
+                <p>A. <code>padding</code></p>
+                <p>B. <code>margin</code></p>
+                <p>C. <code>outline</code></p>
+                <p>D. <code>border</code> <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> <code>border</code> thêm đường viền. D đúng. (<code>outline</code> cũng tạo viền nhưng nằm ngoài phần tử).
+            </div>
+        </div>
+
+        <!-- Câu 29 -->
+        <div class="question">
+            <h2>Câu 29: Nhận định đúng/sai về biểu mẫu?</h2>
+            <div class="options">
+                <p>a) Đúng</p>
+                <p>b) Đúng</p>
+                <p>c) Sai</p>
+                <p>d) Sai <span class="correct">[Đúng]</span></p>
+            </div>
+            <div class="explanation">
+                <strong>Giải thích:</strong> 
+                <ul>
+                    <li>a) Đúng vì <code>margin: 0 auto;</code> căn giữa, <code>width: 300px</code>.</li>
+                    <li>b) Đúng vì <code>input[type="submit"]:focus</code> đổi màu đỏ khi nhấn.</li>
+                    <li>c) Sai vì <code>:focus</code> đổi màu vàng khi ô được chọn.</li>
+                    <li>d) Sai vì <code>select</code> mặc định chỉ chọn 1 giá trị.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
