@@ -1,219 +1,687 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Công Thức Tính Nhanh Vật Lý 12</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <title>Hóa Học Lớp 12</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
+            padding: 0;
+            background-color: #f4f4f4;
             color: #333;
+            counter-reset: page-counter; /* Initialize page counter */
+
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .page {
+            page-break-before: always; /* Force page break before each .page element */
+            /*  width: 210mm; 
+             height: 297mm; */  /* A4 paper size */
+            padding: 20px;
+            margin: 10px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* For absolute positioning of page number */
+            counter-increment: page-counter;
+           
+
         }
-        h1 {
+         .page::before {
+                content: "Trang " counter(page-counter);
+                position: absolute;
+                bottom: 10px; /* Position at the bottom */
+                right: 10px;   /* Position at the right */
+                font-size: 0.8em;
+                color: gray;
+            }
+
+
+        .page:first-child{
+             page-break-before: avoid; /*Except for the very first .page element, we should avoid the page-break to the first child*/
+        }
+
+
+        .page-title {
             text-align: center;
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            color: #444;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5em;
         }
-        h2 {
-            color: #2980b9;
-            font-size: 1.8em;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 5px;
-            margin-top: 30px;
-        }
-        h3 {
-            color: #16a085;
-            font-size: 1.4em;
+         .section-title {
+            background-color: #5cb85c;
+            color: white;
+            padding: 8px;
             margin-top: 20px;
+            border-radius: 4px;
         }
-        p, li {
-            font-size: 1.1em;
-            margin: 10px 0;
+
+        .subsection-title {
+           
+            margin-bottom: -5px;
         }
-        ul, ol {
-            padding-left: 20px;
+
+         .title-color{
+            background-color: rgb(204, 72, 116) !important;
         }
-        .equation {
-            background: #ecf0f1;
-            padding: 10px;
+
+        .important-note{
+            background-color: rgb(252, 217, 158);
+            padding: 5px;
             border-radius: 5px;
-            margin: 10px 0;
-            font-size: 1.2em;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin-bottom: 1em;
         }
+
         th, td {
             border: 1px solid #ddd;
-            padding: 12px;
+            padding: 8px;
             text-align: left;
         }
+
         th {
-            background-color: #3498db;
-            color: white;
+            background-color: #f0f0f0;
+            color: #333;
         }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
+
+
+        ul {
+            padding-left: 20px;
         }
-        .note {
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: 5px;
+
+        ol {
+           padding-left: 35px;
         }
+
+        .equation {
+            margin: 0.5em 0;
+        }
+
+        .example {
+            background-color: #e9ecef;
+            border-left: 4px solid #5bc0de;
+            padding: 0.5em;
+            margin-bottom: 1em;
+        }
+
+         .highlight-blue{
+            color: blue !important;
+            font-weight: bold;
+        }
+
+         .text-center{
+             text-align:center;
+         }
+
+          .img-container {
+            display: flex; /* Use flexbox */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+            margin: 2px 0; /* Add some margin as needed */
+        }
+
+         .image {
+              width: 100%;  /*Scale Image to containers width */
+            height: auto; /*Scales height autom.  */
+        }
+
+         .note{
+             border: 2px solid red;
+             padding: 5px;
+         }
+
+        .danhphap-table {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+         .image-dp{
+           display: block;
+            margin-left: auto;
+            margin-right: auto;
+         }
+
+          .header-box {
+                border: 2px solid rgb(92, 24, 154);
+                background-color: rgba(92, 24, 154, 0.3);
+                padding: 2px;
+                font-weight: bolder;
+                 margin-top: -15px;
+
+            }
+
+           .container {
+                 margin-top: 30px;
+                 display: grid;  /* or 'inline-grid' */
+                  gap: 20px;
+                  /*  padding: 10px; */
+                  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* This line is the magic! */
+            }
+              .grid-section-title {
+                    grid-column: 1 / -1; /* Span across all columns */
+
+                 }
+
+             .flex-item{
+                 display:flex;
+             }
+
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>CÔNG THỨC TÍNH NHANH VẬT LÝ 12</h1>
+    <!--Page 1-->
+     <div class="page">
+        <h1 class="page-title">Bài 1: Ester - Lipid</h1>
+        <h2>A. Ester</h2>
 
-        <h2>CHƯƠNG I: DAO ĐỘNG CƠ HỌC</h2>
+        <div class = "header-box">
+              <h3 class = "subsection-title">I. Khái Niệm</h3>
+        </div>
+      
+        <ul>
+            <li>Khi thay thế nhóm –OH ở nhóm carboxyl (-COOH) của carboxylic acid bằng nhóm –OR' thì thu được ester (R' là gốc hydrocarbon)</li>
+            <li>Ester đơn chức có công thức chung: RCOOR' (R là H hoặc gốc hydrocarbon). Ví dụ: HCOOCH<sub>3</sub>, CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>, CH<sub>3</sub>COOC<sub>6</sub>H<sub>5</sub>...</li>
+             <li>Ester no, đơn chức, mạch hở: C<sub>n</sub>H<sub>2n</sub>O<sub>2</sub> (n ≥ 2).  Ví dụ: C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>, C<sub>3</sub>H<sub>6</sub>O<sub>2</sub>...</li>
+        </ul>
+      <div class = "header-box">
+         <h3 class = "subsection-title" >II. Danh Pháp</h3>
+       </div>
+       
+        <p class="equation"><span class="highlight-blue">RCOOR':</span> Tên R' + tên gốc acid RCOO</p>
 
-        <h3>I. Đại cương về dao động điều hòa</h3>
-        <p><strong>Ký hiệu:</strong> \( T \): chu kỳ, \( f \): tần số, \( x \): li độ, \( v \): vận tốc, \( a \): gia tốc, \( g \): gia tốc trọng trường, \( A \): biên độ dao động, \( \omega t + \varphi \): pha dao động, \( \varphi \): pha ban đầu, \( \omega \): tốc độ góc.</p>
-
-        <ol>
-            <li>
-                <p><strong>Phương trình dao động:</strong></p>
-                <div class="equation">\[ x = A \cos(\omega t + \varphi) \]</div>
-                <ul>
-                    <li>Chu kỳ: \( T = \frac{\Delta t}{N} = \frac{2\pi}{\omega} = \frac{1}{f} \) (s)</li>
-                    <li>Tần số: \( f = \frac{N}{\Delta t} = \frac{1}{T} = \frac{\omega}{2\pi} \) (Hz)</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Phương trình vận tốc:</strong></p>
-                <div class="equation">\[ v = x' = -\omega A \sin(\omega t + \varphi) = \omega A \cos\left(\omega t + \varphi + \frac{\pi}{2}\right) \]</div>
-                <ul>
-                    <li>Tại \( x = 0 \) (VTCB): \( v_{\max} = \omega A \)</li>
-                    <li>Tại \( x = \pm A \) (Biên): \( v = 0 \)</li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Phương trình gia tốc:</strong></p>
-                <div class="equation">\[ a = v' = -\omega^2 A \cos(\omega t + \varphi) = -\omega^2 x = \omega^2 A \cos(\omega t + \varphi + \pi) \]</div>
-                <ul>
-                    <li>Tại \( x = 0 \): \( a = 0 \)</li>
-                    <li>Tại \( x = \pm A \): \( a_{\max} = \omega^2 A \)</li>
-                </ul>
-                <p class="note">*Liên hệ pha: \( v \) sớm pha \( \frac{\pi}{2} \) so với \( x \); \( a \) sớm pha \( \frac{\pi}{2} \) so với \( v \); \( a \) ngược pha với \( x \).</p>
-            </li>
-            <li>
-                <p><strong>Hệ thức độc lập thời gian giữa \( x \), \( v \) và \( a \):</strong></p>
-                <ul>
-                    <li>Giữa \( x \) và \( v \): 
-                        <div class="equation">\[ A^2 = x^2 + \frac{v^2}{\omega^2} = \frac{a^2}{\omega^4} + \frac{v^2}{\omega^2} \]</div>
-                        <div class="equation">\[ \omega = \frac{|v|}{\sqrt{A^2 - x^2}} ; x = \pm \sqrt{A^2 - \frac{v^2}{\omega^2}} = \frac{-a}{\omega^2} ; v = \pm \omega \sqrt{A^2 - x^2} \]</div>
-                    </li>
-                    <li>Giữa \( a \) và \( v \): 
-                        <div class="equation">\[ v_{\max}^2 = (\omega A)^2 = v^2 + \frac{a^2}{\omega^2} \quad \text{hoặc} \quad \left(\frac{v}{v_{\max}}\right)^2 + \left(\frac{a}{a_{\max}}\right)^2 = 1 \]</div>
-                    </li>
-                    <li>Giữa \( a \) và \( x \): 
-                        <div class="equation">\[ a = -\omega^2 x \quad \Rightarrow \quad a_{\max} = \omega^2 A \]</div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Các liên hệ khác:</strong></p>
-                <ul>
-                    <li>Tốc độ góc: 
-                        <div class="equation">\[ \omega = \frac{a_{\max}}{v_{\max}} = \frac{v_{\max}}{A} = \sqrt{\frac{a_{\max}}{A}} = \sqrt{\frac{v_2^2 - v_1^2}{x_1^2 - x_2^2}} = \sqrt{\frac{a_1^2 - a_2^2}{v_2^2 - v_1^2}} \]</div>
-                    </li>
-                    <li>Công thức tính biên độ: 
-                        <div class="equation">\[ A = \frac{L}{2} = \frac{S}{4n} = \frac{v_{\max}}{\omega} = \frac{a_{\max}}{\omega^2} = \frac{v_{\max}^2}{a_{\max}} = \sqrt{\frac{2W}{k}} = \sqrt{x^2 + \frac{v^2}{\omega^2}} = \frac{\sqrt{\omega^2 v^2 + a^2}}{\omega^2} \]</div>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-
-        <h3>II. Con lắc lò xo</h3>
-        <p><strong>Ký hiệu:</strong> \( \Delta \ell \) (m): độ biến dạng của lò xo khi vật cân bằng, \( k \) (N/m): độ cứng của lò xo, \( \ell_0 \) (m): chiều dài tự nhiên của lò xo.</p>
-        <ol>
-            <li>
-                <p><strong>Công thức cơ bản:</strong></p>
-                <ul>
-                    <li>Tần số góc: 
-                        <div class="equation">\[ \omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{g}{\Delta \ell}} \quad (\text{rad/s}) \]</div>
-                        <ul>
-                            <li>Con lắc lò xo treo thẳng đứng: \( \Delta \ell = \frac{mg}{k} = \frac{g}{\omega^2} \)</li>
-                            <li>Đặt trên mặt phẳng nghiêng góc \( \alpha \) không ma sát: \( \Delta \ell = \frac{mg \sin \alpha}{k} \)</li>
-                        </ul>
-                    </li>
-                    <li>Chu kỳ và tần số: 
-                        <div class="equation">\[ T = \frac{2\pi}{\omega} = 2\pi \sqrt{\frac{m}{k}} = 2\pi \sqrt{\frac{\Delta \ell}{g}} \]</div>
-                        <div class="equation">\[ f = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{k}{m}} = \frac{1}{2\pi} \sqrt{\frac{g}{\Delta \ell}} \]</div>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <p><strong>Chiều dài cực đại và cực tiểu của lò xo:</strong></p>
-                <div class="equation">\[ \ell_{\min} = \ell_{cb} - A = (\ell_0 + \Delta \ell) - A \]</div>
-                <div class="equation">\[ \ell_{\max} = \ell_{cb} + A = (\ell_0 + \Delta \ell) + A \]</div>
-                <div class="equation">\[ A = \frac{\ell_{\max} - \ell_{\min}}{2} \]</div>
-                <ul>
-                    <li>Dao động thẳng đứng: 
-                        <div class="equation">\[ \ell_{\min} = \ell_0 - A, \quad \ell_{\max} = \ell_0 + A \quad (\ell_{cb} = \ell_0, \Delta \ell = 0) \]</div>
-                    </li>
-                </ul>
-            </li>
-        </ol>
-
-        <h3>III. Con lắc đơn</h3>
-        <table>
-            <tr>
-                <th>Hệ dao động</th>
-                <th>Con lắc lò xo</th>
-                <th>Con lắc đơn</th>
-            </tr>
-            <tr>
-                <td>Cấu trúc</td>
-                <td>Hòn bi \( m \) gắn vào lò xo \( k \)</td>
-                <td>Hòn bi \( m \) treo vào đầu sợi dây \( \ell \)</td>
-            </tr>
-            <tr>
-                <td>VTCB</td>
-                <td>Con lắc ngang: lò xo không giãn<br>Con lắc thẳng đứng: giãn \( \Delta \ell = \frac{mg}{k} \)</td>
-                <td>Dây treo thẳng đứng</td>
-            </tr>
-            <tr>
-                <td>Lực tác dụng</td>
-                <td>Lực đàn hồi: \( F = -kx \)</td>
-                <td>Trọng lực và lực căng: \( F = -m \frac{g}{\ell} s \)</td>
-            </tr>
-            <tr>
-                <td>Tần số góc</td>
-                <td>\( \omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{g}{\Delta \ell}} \)</td>
-                <td>\( \omega = \sqrt{\frac{g}{\ell}} \)</td>
-            </tr>
-            <tr>
-                <td>Phương trình dao động</td>
-                <td>\( x = A \cos(\omega t + \varphi) \)</td>
-                <td>\( s = S_0 \cos(\omega t + \varphi) \) hoặc \( \alpha = \alpha_0 \cos(\omega t + \varphi) \)</td>
-            </tr>
-            <tr>
-                <td>Cơ năng</td>
-                <td>\( W = \frac{1}{2} k A^2 = \frac{1}{2} m \omega^2 A^2 \)</td>
-                <td>\( W = mg\ell (1 - \cos \alpha_0) \approx \frac{1}{2} m \frac{g}{\ell} S_0^2 \)</td>
-            </tr>
+         <table>
+            <thead>
+                <tr>
+                    <th>CTCT</th>
+                    <th>Danh pháp</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>HCOOCH<sub>3</sub></td>
+                    <td>methyl formate / methyl methanoate</td>
+                </tr>
+                <tr>
+                    <td>CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub></td>
+                    <td>ethyl acetate / ethyl ethanoate</td>
+                </tr>
+                <tr>
+                   <td>C<sub>6</sub>H<sub>5</sub>COOCH<sub>3</sub></td>
+                   <td>methyl benzoate</td>
+                </tr>
+               <tr>
+                   <td>CH<sub>3</sub>COOCH=CH<sub>2</sub></td>
+                   <td>vinyl acetate / vinyl ethanoate</td>
+               </tr>
+                <tr>
+                  <td>CH<sub>2</sub>=CHCOOCH<sub>3</sub></td>
+                  <td>methyl acrylate / methyl propenoate</td>
+                </tr>
+            </tbody>
         </table>
 
-        <!-- Thêm các chương khác tương tự nếu cần -->
+        <div class = "header-box">
+            <h3 class = "subsection-title">III. Tính Chất Vật Lí</h3>
+        </div>
+
+        <ul>
+            <li>Các phân tử este không tạo liên kết hydrogen với nhau nên nhiệt độ sôi este thấp hơn alcohol và carboxylic acid.</li>
+            <li>Ester nhẹ hơn nước và ít tan trong nước.</li>
+            <li>Một số este có mùi thơm hoa, quả chín.</li>
+       </ul>
+         <div class="img-container">
+            <img src="https://i.imgur.com/T3Uq6jB.jpg" alt="Các loại este"  class="image">
+          </div>
+
+         <div class = "header-box">
+              <h3 class = "subsection-title" >IV. Tính Chất Hóa Học</h3>
+         </div>
+
+          <h4 style = "margin-top: 10px;">1. Phản ứng thủy phân (acid)</h4>
+          <p class = "equation">RCOOR' + H<sub>2</sub>O <span style = "color:red">⇌</span> RCOOH + R'OH   (H<sub>2</sub>SO<sub>4</sub>, t°)</p>
+         
+         <h4 >2. Phản ứng thủy phân (base)</h4>
+         <p class = "equation"> RCOOR' + NaOH <span style = "color:blue">→</span> RCOONa + R'OH (t°)</p>
+
+        <div class = "important-note">
+            <h4>LƯU Ý</h4>
+             <p>R'OH sinh ra có thể phản ứng với môi trường hoặc không bền chuyển hóa thành aldehyde hoặc ketone</p>
+               <ul>
+                  <li>RCOOCH=CHR' + NaOH  <span style = "color:blue">→</span> RCOONa + R'CH<sub>2</sub>CHO (t°)</li>
+                  <li>RCOOCR'=CHR'' + NaOH <span style = "color:blue">→</span>  RCOONa + R'COCH<sub>2</sub>R'' (t°)</li>
+                  <li>RCOOC<sub>6</sub>H<sub>4</sub>R' + 2NaOH <span style = "color:blue">→</span> RCOONa + R'C<sub>6</sub>H<sub>4</sub>ONa + H<sub>2</sub>O (t°)</li>
+              </ul>
+
+        </div>
+
+
+         <div class = "header-box">
+                <h3 class = "subsection-title">V. Điều Chế</h3>
+          </div>
+          <p class = "equation">RCOOH + R'OH  <span style = "color:red">⇌</span>  RCOOR' + H<sub>2</sub>O  (H<sub>2</sub>SO<sub>4</sub>, t°)</p>
+
+           <div class = "header-box">
+            <h3 class = "subsection-title">VI. Ứng Dụng</h3>
+        </div>
+        <ol>
+             <li><span class="highlight-blue">LÀM DUNG MÔI:</span> Butyl acetate được dùng để pha sơn tổng hợp; Ethyl acetate dùng tách caffein ra khỏi cà phê....</li>
+             <li><span class = "highlight-blue">TỔNG HỢP POLYMER</span>:  Vinyl acetate được tổng hợp poly(vinyl acetate) là keo dán;
+                      Methyl methacylate để tổng hợp poly(methyl methacrylate) làm thủy tinh hữu cơ...
+             </li>
+             <li> <span class ="highlight-blue">CÔNG NGHIỆP THỰC PHẨM, MĨ PHẨM:</span>  Isoamyl acetate được dùng làm hương liệu cho bánh kẹo...</li>
+        </ol>
+
+
     </div>
+
+    <!--Page 2-->
+     <div class="page">
+
+        <h1 class="page-title">Bài 1: Ester - Lipid</h1>
+        <h2>B. Lipid</h2>
+        <div class = "header-box">
+         <h3 class = "subsection-title" >I. Khái Niệm</h3>
+        </div>
+
+        <ul>
+           <li>Lipid là các hợp chất hữu cơ có trong tế bào sống, không tan trong nước, tan trong dung môi không phân cực. Bao gồm: chất béo, sáp, steroid, phospholipid,...</li>
+        </ul>
+
+         <div class = "header-box">
+           <h3 class ="subsection-title" >II. Danh Pháp</h3>
+         </div>
+      
+
+        <table>
+           <thead>
+              <tr>
+                <th>Acid béo</th>
+                <th>Chất béo</th>
+             </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                    <td>C<sub>15</sub>H<sub>31</sub>COOH <br>(palmitic acid)</td>
+                    <td>(C<sub>15</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub><br> (tripalmitin)</td>
+                </tr>
+                <tr>
+                   <td>C<sub>17</sub>H<sub>35</sub>COOH<br>(stearic acid)</td>
+                    <td>(C<sub>17</sub>H<sub>35</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub><br>(tristearin)</td>
+                 </tr>
+                <tr>
+                    <td>C<sub>17</sub>H<sub>33</sub>COOH<br> (oleic acid)</td>
+                   <td>(C<sub>17</sub>H<sub>33</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> <br>(triolein)</td>
+                 </tr>
+                 <tr>
+                    <td> C<sub>17</sub>H<sub>31</sub>COOH<br> (linoleic acid)</td>
+                    <td> (C<sub>17</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> <br>(trilinolein)</td>
+                </tr>
+
+           </tbody>
+        </table>
+        <p>Chất béo là triester (ester ba chức) của glycerol với acid béo, gọi chung là triglyceride (RCOO)<sub>3</sub>C<sub>5</sub>H<sub>5</sub>.</p>
+           <div class = "flex-item">
+             <p>  R'COO–CH<sub>2</sub>  <br>R<sup>2</sup>COO–CH <br>  R<sup>3</sup>COO–CH<sub>2</sub> </p>
+         </div>
+        <p>Acid béo là carboxylic acid đơn chức, hầu hết chúng có mạch C dài (12 – 24 C), không phân nhánh.</p>
+
+        <div class = "header-box">
+           <h3 class = "subsection-title">III. Tính Chất Vật Lí</h3>
+       </div>
+
+       <ul>
+         <li>Khi trong phân tử chất béo chứa nhiều gốc acid béo no thì chất béo ở trạng thái rắn: mỡ bò, mỡ lợn, mỡ cừu....</li>
+         <li>Khi trong phân tử chất béo chứa nhiều gốc acid béo không no thì chất béo ở trạng thái lỏng: dầu lạc, dầu vừng, dầu cá,...</li>
+        </ul>
+
+         <div class="img-container">
+             <img src="https://i.imgur.com/Qj8J0jH.jpg" alt ="Tính chất vật lí lipid" class = "image">
+         </div>
+
+         <div class = "header-box">
+            <h3 class ="subsection-title">IV. Tính Chất Hóa Học</h3>
+        </div>
+
+       <h4>1. Phản ứng thủy phân</h4>
+       <p>(RCOO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> + 3H<sub>2</sub>O  <span style="color:red">⇌</span> 3RCOOH + C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>   (H<sub>2</sub>SO<sub>4</sub>, t°)</p>
+         <p>(RCOO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> + 3NaOH  <span style = "color:blue">→</span> 3RCOONa + C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>    (t°)</p>
+
+         <h4 style = "margin-top: 10px;">2. Phản ứng hydrogen hóa</h4>
+
+           <p> (C<sub>17</sub>H<sub>33</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub> + 3H<sub>2</sub>  <span style ="color:blue">→</span> (C<sub>17</sub>H<sub>35</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>    (p, t°, xt)</p>
+
+          <div class="img-container">
+              <img src="https://i.imgur.com/0O0Q6P8.jpg" alt="Hydrogen hoá" class="image">
+            </div>
+
+         <h4>3. Phản ứng oxi hóa bởi oxygen không khí</h4>
+          <p>Khi để lâu trong không khí, các gốc acid béo không no trong chất béo có thể bị oxi hóa chậm bởi oxygen, tạo thành các hợp chất có mùi khó chịu. Đây cũng là nguyên nhân dầu, mỡ bị ôi.</p>
+
+        <div class = "header-box">
+             <h3 class ="subsection-title">V. Ứng Dụng</h3>
+         </div>
+
+        <ul>
+             <li>Chất béo là nguồn cung cấp và dự trữ năng lượng ở người và động vật.</li>
+              <li>Chất béo là nguồn cung cấp acid béo thiết yếu cho cơ thể.</li>
+              <li>Chất béo là nguyên liệu ngành công nghiệp thực phẩm, sản xuất xà phòng và glycerol,...</li>
+              <li>Acid béo omega-3 và omega-6 là các acid béo không no với liên kết đôi đầu tiên ở vị trí số 3 và 6 khi đánh số từ nhóm –CH<sub>3</sub>.</li>
+            <li>Dầu cá biển chứa nhiều omega-3. Các loại dầu thực vật chứa nhiều omega-6.</li>
+           <li>Omega-3 và omega-6 đều có lợi cho sức khỏe tim mạch, ngăn ngừa bệnh về tim, động mạch vành.</li>
+
+        </ul>
+
+     </div>
+
+       <!--Page 3-->
+      <div class="page">
+
+        <h1 class="page-title">Bài 2: Xà Phòng và Chất Giặt Rửa</h1>
+
+          <div class = "header-box">
+           <h3 class ="subsection-title">I. Khái Niệm</h3>
+        </div>
+
+        <ul>
+             <li>Xà phòng là hỗn hợp muối sodium hoặc potassium của các acid béo và các chất phụ gia.</li>
+             <li>Chất giặt rửa tổng hợp là chất có tác dụng giặt rửa như xà phòng. Thường là muối sodium alkylsulfate hoặc alkylbenzene sulfonate.</li>
+       </ul>
+       <div class ="img-container">
+          <img src="https://i.imgur.com/8z8s3V1.jpg" alt ="Các loại bột giặt" class="image">
+       </div>
+          
+          
+       <div class ="header-box">
+        <h3 class = "subsection-title">II. Cấu Tạo</h3>
+       </div>
+       
+         <p>
+         Phần phân cực (đầu ưa nước):  Là nhóm carboxylate (xà phòng) hoặc nhóm sulfate, sulfonate (chất giặt rửa tổng hợp). Phần này tan trong nước.<br>
+        Phần không phân cực (đuôi kị nước):  Là gốc hydrocarbon (R). Phần này không tan trong nước.
+        </p>
+
+          
+          
+           <div class="flex-item" style = "justify-content: space-between;">
+                <div> R—<img src = "https://i.imgur.com/6xVnC40.jpg"> ONa<sup>+</sup> </div>
+                 <div>  R <img src="https://i.imgur.com/zLNZk19.jpg" >  ONa<sup>+</sup> </div>
+                  <div>  R—<img src="https://i.imgur.com/uUuOa6P.jpg"> ONa<sup>+</sup>  </div>
+
+             </div>
+
+
+        <div class ="header-box">
+           <h3 class = "subsection-title" >III. Tính Chất Giặt Rửa</h3>
+        </div>
+
+        <p>Khi xà phòng (chất giặt rửa) tan vào nước, đuôi kị nước thâm nhập vào vết bẩn, phân chia vết bẩn thành những hạt rất nhỏ có đầu ưa nước quay ra ngoài, các hạt này phân tán vào nước và bị rửa trôi.</p>
+
+         <div class="img-container">
+             <img src ="https://i.imgur.com/B9F1s9P.jpg" alt="Tính chất giặt rửa" class = "image">
+           </div>
+
+        <div class = "header-box">
+          <h3 class ="subsection-title" >IV. Phương Pháp Sản Xuất</h3>
+        </div>
+         <div style="display: grid; grid-template-columns: 1fr 1fr;">
+          <div> <h4 >1. Xà phòng</h4> <p style="color:red">Chất Béo + NaOH/KOH <span style = "color:blue">→</span>RCOONa(K) <br> (Xà Phòng)</p> <p style="color:red">Alkane(Dầu mỏ)<span style ="color:blue">→</span> RCOOH (Acid béo) </p></div>
+           <div><h4>2. Chất giặt rửa tổng hợp</h4><p style="color:red">Dầu Mỏ <span style = "color:blue">→</span>  R–SO<sub>3</sub>H<br>R–OSO<sub>3</sub>H  </p>  <p style="color:red"> R–SO<sub>3</sub>Na  <br>R–OSO<sub>3</sub>Na</p></div>
+            <div><img src = "https://i.imgur.com/s4J8QxJ.jpg" alt ="Sản xuất xà phòng"> </div>
+
+          </div>
+
+
+         <div class = "header-box">
+           <h3 class ="subsection-title">V. Ưu, Nhược Điểm Của Xà Phòng Và Chất Giặt Rửa</h3>
+         </div>
+
+         <h4 style = "margin-top:10px;"> 1. Xà Phòng </h4>
+         <ul>
+             <li><span class ="highlight-blue">Ưu điểm:</span>  Có thể bị phân hủy bởi các vi sinh vật nên ít gây ô nhiễm môi trường.</li>
+              <li><span class = "highlight-blue">Nhược điểm:</span>  Khi dùng với nước cứng (Ca<sup>2+</sup>, Mg<sup>2+</sup>) tạo ra kết tủa của M<sup>2+</sup> với RCOO<sup>-</sup> (xà phòng).</li>
+         </ul>
+
+          <h4 > 2. Chất Giặt Rửa</h4>
+
+             <ul>
+              <li><span class = "highlight-blue">Ưu điểm:</span> Dùng được với nước cứng vì không tạo kết tủa bởi các ion Ca<sup>2+</sup>, Mg<sup>2+</sup>.</li>
+                <li><span class="highlight-blue">Nhược điểm:</span> Khó bị phân hủy sinh học, do đó gây ô nhiễm môi trường.</li>
+            </ul>
+
+
+
+      </div>
+
+
+       <!-- Page 4-->
+
+       <div class = "page">
+           <h1 class = "page-title">Bài 4. Giới Thiệu Về Carbohydrate, Glucose Và Fructose</h1>
+           
+           <div class = "header-box">
+              <h3 class = "subsection-title" >I. Khái Niệm - Phân Loại</h3>
+           </div>
+
+           <div style = "display:flex ; justify-content: space-between;">
+               <div><h2>CARBOHYDRATE <br> C<sub>n</sub>(H<sub>2</sub>O)<sub>m</sub></h2>  </div>
+
+               <div><ul>  <li>Monosaccharide <br>(glucose,<br> fructose)</li> </ul></div>
+
+                <div>  <ul>  <li>Disaccharide<br> (saccharose,<br> maltose)</li></ul></div>
+
+               <div>  <ul><li> Polysaccharide  <br> (Tinh bột, <br> cellulose)</li></ul></div>
+           </div>
+
+           <div class = "header-box">
+                <h3 class = "subsection-title">II. Cấu Tạo Phân Tử</h3>
+            </div>
+          
+         <h4>HOCH<sub>2</sub>[CHOH]<sub>4</sub>CH=O</h4>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr;">
+            
+             
+                
+              <div> <img src ="https://i.imgur.com/7T3uV7m.jpg" alt = "a-glucose" >  <p class = "text-center">a - glucose </p></div>
+                  
+                 <div>  <img src ="https://i.imgur.com/G070lYk.jpg" alt="beta-glucose"> <p class ="text-center">B - glucose </p></div>
+             <div>  <img src = "https://i.imgur.com/j0zWn7f.jpg" alt = "a-fructose" >  <p class = "text-center"> a-fructose </p></div>
+                  
+              <div> <img src ="https://i.imgur.com/z6T3hWz.jpg" alt = "beta-fructose" ><p class ="text-center">  B - fructose </p> </div>
+                 
+              <div><h4 style = "text-align:center">  Glucose <img src="https://i.imgur.com/J98Bq8o.jpg"> Fructose</h4></div>
+         </div>
+
+       
+
+         <h4>HOCH<sub>2</sub> [CHOH]<sub>3</sub>COCH<sub>2</sub>OH</h4>
+        
+
+         
+
+            <div class = "header-box">
+                <h3 class = "subsection-title" >III. Trạng Thái Tự Nhiên - Ứng Dụng</h3>
+            </div>
+
+            <h4> 1. Glucose</h4>
+
+             <ul>
+             <li>Trong tự nhiên, glucose có nhiều trong nhiều loại trái cây chín.</li>
+            <li> Ở người trưởng thành, khỏe mạnh lượng glucose trong máu trước khi ăn khoảng 4,4 – 7,2 mmol/L (hay 80 – 130 mg/dL).</li>
+             <li>Glucose đóng vai trò cung cấp năng lượng cho tế bào.</li>
+              <li>Trong cuộc sống, glucose có các ứng dụng phổ biến:
+                     <ul>
+                           <li>Nguyên liệu sản xuất ethanol;</li>
+                            <li>Thực phẩm và đồ uống;</li>
+                            <li>Dung dịch truyền tĩnh mạch glucose 5%...</li>
+                      </ul>
+            </li>
+
+            </ul>
+
+             <h4>2. Fructose</h4>
+                <ul>
+                   <li>Fructose cũng có trong một số trái cây chín. Mật ong chứa trung bình 40% fructose và 30% glucose theo khối lượng.</li>
+                  <li>Fructose chủ yếu đóng vai trò cung cấp năng lượng cho tế bào.</li>
+
+              </ul>
+         <div class="img-container">
+           <img src = "https://i.imgur.com/yQ9p0B2.jpg" alt = "Glucose and Fructose" class = "image">
+
+          </div>
+            
+           <div class = "header-box">
+               <h3 class="subsection-title" >IV. Tính Chất Hóa Học</h3>
+           </div>
+          <h4> 1. Tính Chất Của Polyalcohol</h4>
+
+           <p class ="equation">2C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + Cu(OH)<sub>2</sub> → (C<sub>6</sub>H<sub>11</sub>O<sub>6</sub>)<sub>2</sub>Cu + 2H<sub>2</sub>O <br>(dd màu xanh)</p>
+
+           <h4>2. Tính Chất Của Aldehyde</h4>
+               
+                <ul>
+                   <li>
+                    Nhóm aldehyde của glucose có thể bị oxi hoá bởi Cu(OH)<sub>2</sub>/OH<sup>-</sup>, đun nóng, bởi thuốc thử Tollens và bởi nước bromine.
+                   </li>
+                  <li>Tương tự glucose, Fructose cũng bị oxi hoá bởi thuốc thử Tollens và bởi Cu(OH)<sub>2</sub>/OH<sup>-</sup>.</li>
+             </ul>
+               <div class="img-container">
+                 <img src="https://i.imgur.com/EwD1T6o.jpg"  alt ="tinh chat aldehyde cua glucose">
+
+                </div>
+               <p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>  +Cu(OH)<sub>2</sub>/OH<sup>-</sup>  <span style ="color:blue">→</span> HOCH<sub>2</sub>(CHOH)<sub>4</sub>COONa + Cu<sub>2</sub>O    (t°)</p>
+            
+             <p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>   [Ag(NH<sub>3</sub>)<sub>2</sub>]OH <span style = "color:blue">→</span> HOCH<sub>2</sub>(CHOH)<sub>4</sub>COONH<sub>4</sub> + 2Ag</p>
+
+                <p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>   +Br<sub>2</sub> +H<sub>2</sub>O  <span style="color:blue">→</span> HOCH<sub>2</sub>(CHOH)<sub>4</sub>COOH + 2HBr</p>
+
+
+          <h4 >3. Tính Chất Của Nhóm -OH Hemiacetal</h4>
+           <div style="display: flex; flex-wrap: wrap;  ">
+                   <div >
+                       <img src="https://i.imgur.com/j7s23m6.jpg" style="float: left;  padding:10px">  <p class ="text-center"> a - glucose</p>
+                    </div>
+                    
+                  <div >+ CH<sub>3</sub>OH</div>
+
+                  <div >
+                      <img src ="https://i.imgur.com/gV8c9Lz.jpg" >  <p class="text-center">(HCl)</p>
+                   </div>
+                  <div >  <img src ="https://i.imgur.com/L9qF5wz.jpg" style="float: right;   padding:10px">   <p class = "text-center">methyl a- glycoside</p></div>
+
+                </div>
+        <h4> 4. Phản Ứng Lên Men Của Glucose</h4>
+
+          <p>  C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> <span style="color:blue">→</span>   2C<sub>2</sub>H<sub>5</sub>OH (ethyl alcohol) + 2CO<sub>2</sub> (enzyme)</p>
+         <p>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> <span style = "color:blue">→</span> 2CH<sub>3</sub>CH(OH)COOH  (lactic acid)   (enzyme) </p>
+     </div>
+
+      <!-- Page 5-->
+     <div class="page">
+
+        <h1 class="page-title">Bài 5. Saccharose và Maltose</h1>
+
+         <div class ="header-box">
+           <h3 class ="subsection-title" > I. Trạng Thái Tự Nhiên - Ứng Dụng</h3>
+        </div>
+
+          <div style="display: flex; justify-content:space-between ;">
+          <div>
+              <h3> Saccharose</h3>
+               <ul>
+                  <li>Saccharose được tổng hợp trong thực vật từ glucose và Fructose. Saccharose có nhiều nhất trong cây mía, củ cải đường và hoa thốt nốt.</li>
+                </ul>
+                <ul>
+                  <li>Saccharose được sử dụng chế biến nước giải khát, siro, kẹo... và trong sản xuất dược phẩm.</li>
+               </ul>
+
+           </div>
+              
+           
+            <div >
+              <h3>  Maltose</h3>
+                <ul>
+                  <li>Maltose có trong một số hạt nảy mầm. Maltose chủ yếu được tạo ra trong quá trình thủy phân tinh bột.</li>
+               </ul>
+                  <ul>
+                      <li>Maltose được sử dụng làm nguyên liệu sản xuất bia và chất tạo ngọt cho một số loại bánh kẹo.</li>
+               </ul>
+             </div>
+
+            </div>
+
+        
+
+           <div class="img-container" style = "width:80%">
+              <img src = "https://i.imgur.com/b3T4C84.jpg" alt="Saccarose, maltose">
+
+         </div>
+
+        
+           <div class = "header-box">
+               <h3 class = "subsection-title" >II. Cấu Tạo Phân Tử</h3>
+            </div>
+            <h4 style = "margin-top:15px;"> Saccharose</h4>
+              
+                 <img src = "https://i.imgur.com/V0i2f4p.jpg" alt="Saccarose" class = "image-dp">
+             <p class="text-center">Saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>) tạo nên từ 1 gốc a-glucose và 1 gốc β-fructose.</p>
+
+          <h4>Maltose</h4>
+
+               <img src="https://i.imgur.com/f7vQ6o5.jpg" alt = "Maltose" class = "image-dp" >
+                 <p class ="text-center"> Maltose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>) tạo nên từ 2 gốc a-glucose. </p>
+
+               
+          <div class ="header-box">
+                <h3 class ="subsection-title">III. Tính Chất Hóa Học</h3>
+            </div>
+            <h4 style="margin-top:10px;"> 1. Tính Chất Của Polyalcohol</h4>
+            <p>Phân tử saccharose có nhiều nhóm –OH kề nhau nên dung dịch chất này có thể hoà tan Cu(OH)<sub>2</sub>/OH<sup>-</sup>.  Xem thí nghiệm bằng cách quét QR hình bên.</p>
+          
+              <img src = "https://i.imgur.com/t9V9i5h.jpg">
+          
+
+               <p>2C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + Cu(OH)<sub>2</sub>  <span style ="color:blue">→</span> (C<sub>12</sub>H<sub>21</sub>O<sub>6</sub>)<sub>11</sub>Cu + 2H<sub>2</sub>O </p>
+                 
+
+              <h4 >2. Phản ứng thủy phân</h4>
+
+                <p> C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> + H<sub>2</sub>O <span style = "color:blue">→</span> C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> + C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> <br> (glucose) (fructose) <span style = "color:green; float:right">(H<sup>+</sup> hoặc enzyme, t°)</span></p>
+
+               
+     </div>
+
+
+        <!-- Page 6-->
+          <div class = "page">
+             <h1 class = "page-title">Bài 6. Tinh Bột và Cellulose</h1>
+
+          <div class ="header-box">
+           <h3 class = "subsection-title">I. Trạng Thái Tự Nhiên - Ứng Dụng</h3>
+         </div>
+          
+          <div style="display:flex; justify-content: space-around">
+              
+                 <div><h3>Tinh bột</h3>
+
+                  <p>  Sự tạo thành tinh bột trong cây xanh <br> 6nCO<sub>2</sub> + 5nH<sub>2</sub>O   <span style = "color:blue">→</span> (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>  + 6nO<sub>2</sub> <span style ="float:right; color: green;">ánh sáng, <br> chất diệp lục</span>
+                      
+                  
+                    <p>   Sự chuyển hóa tinh bột trong cơ thể:<br>(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>   <span style = "color:blue">→</span> [maltose + dextrin] <span style = "float:right ; color:green">(a-amylase)</span> </p>
+               <p>
+               <ul>Tinh bột hầu như không tan trong nước lạnh, tan trong nước nóng tạo thành hồ tinh bột.</ul> <span style = "color:green; float:right"> (enzyme) <br> (glucose)</span> </p>  </li>
+
+              <p> Tinh bột dùng làm lương thực, điều chế glucose, sản xuất ethanol,...</p>
+                   
+                </div>
+          </div>
+          </div>
 </body>
 </html>
