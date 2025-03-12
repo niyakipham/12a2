@@ -1,7 +1,7 @@
 fetch('/12a2/data/tinhoc.json') // Thay đổi đường dẫn đến file JSON
   .then(response => response.json())
   .then(data => {
-    const titleContainer = document.getElementById('title-container');
+    const titleContainer = document.getElementById('tin-hoc');
 
     for (const item of data.files) {
       const file = item.file;
