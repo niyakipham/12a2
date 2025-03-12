@@ -1,4 +1,4 @@
-fetch('../data/hoahoc.json') // Thay đổi đường dẫn đến file JSON
+fetch('/12a2/data/hoahoc.json') // Thay đổi đường dẫn đến file JSON
   .then(response => response.json())
   .then(data => {
     const titleContainer = document.getElementById('title-container');
