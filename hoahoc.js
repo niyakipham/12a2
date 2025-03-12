@@ -1,36 +1,45 @@
-// Hàm lấy tiêu đề từ nội dung HTML
-function getTitleFromHtml(htmlContent) {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(htmlContent, 'text/html');
-    return doc.querySelector('title').textContent;
-}
+// Đọc nội dung file files.json
+fetch('files.json')
+  .then(response => response.json())
+  .then(data => {
+    const titleContainer = document.getElementById('title-container');
 
-// Hàm định dạng tiêu đề với viền
-function formatTitle(title) {
-    return `<div class="title-box">${title}</div>`;
-}
+        // Duyệt qua từng file trong files.json
+        data.files.forEach(file => {
+          // Đọc nội dung của từng file HTML
+           fetch(`hoa-hoc/${file}`)
+            .then(response => response.text())
+                .then(html => {
+                // Sử dụng DOMParser để parse HTML string
+                   const parser = new DOMParser();
+                   const doc = parser.parseFromString(html, 'text/html');
 
-// Hàm chính để tải và hiển thị tiêu đề
-async function loadTitles() {
-    try {
-        // Lấy danh sách tệp từ files.json
-        const response = await fetch('files.json');
-        const data = await response.json();
-        const hoaHoc = data.hoaHoc;
 
-        // Lấy tiêu đề từ từng tệp HTML
-        const titlesContainer = document.getElementById('titles-container');
-        for (const file of hoaHoc) {
-            const fileResponse = await fetch(file);
-            const htmlContent = await fileResponse.text();
-            const title = getTitleFromHtml(htmlContent);
-            const formattedTitle = formatTitle(title);
-            titlesContainer.innerHTML += formattedTitle;
-        }
-    } catch (error) {
-        console.error('Lỗi khi tải tiêu đề:', error);
-    }
-}
+                // Lấy tiêu đề từ file html     
+                   const title = doc.title;
 
-// Chạy hàm khi trang tải xong
-window.onload = loadTitles;
+
+                  //Tạo element <p> với viền
+                const p = document.createElement('p');
+                 p.textContent = title;
+                p.style.border = '1px solid #007bff';
+                 p.style.padding = '8px 12px';
+                p.style.margin = '5px';
+               p.style.display = 'inline-block';
+                p.style.borderRadius = '5px'; // Bo tròn góc
+                  p.style.backgroundColor = '#f0f0f5';   
+
+
+               titleContainer.appendChild(p);
+
+
+
+
+            });
+        });
+  })
+  .catch(error => console.error('Lỗi khi đọc file JSON:', error));
+
+
+// Trong file index.html, bạn cần có một element div để chứa danh sách tiêu đề:
+//<div id="title-container"></div>
