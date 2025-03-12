@@ -4,25 +4,24 @@ fetch('hoahoc.json')
     const titleContainer = document.getElementById('title-container');
 
     data.files.forEach(file => {
-      fetch(`hoa-hoc/${file}`)
+      fetch(file) // Đường dẫn tương đối so với file js
         .then(response => response.text())
         .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, 'text/html');
-          const title = doc.title;
-
-
-        // Tạo element <p> mới trong mỗi lần lặp
-       const p = document.createElement('p');
-        p.textContent = title;
-       p.style.border = '1px solid #007bff';
-          p.style.padding = '8px 12px';
-           p.style.margin = '5px';
-        p.style.display = 'inline-block';
-         p.style.borderRadius = '5px';
-          p.style.backgroundColor = '#f0f0f5';   
-
-           titleContainer.appendChild(p);
+          // Giới hạn scope của p trong khối này
+          {
+            const p = document.createElement('p');
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, 'text/html');
+            const title = doc.title;            
+            p.textContent = title;
+            p.style.border = '1px solid #007bff';
+            p.style.padding = '8px 12px';
+            p.style.margin = '5px';
+            p.style.display = 'inline-block';
+            p.style.borderRadius = '5px';
+            p.style.backgroundColor = '#f0f0f5';
+            titleContainer.appendChild(p);
+          }
         })
         .catch(error => console.error(`Lỗi khi tải tiêu đề của file ${file}:`, error));
     });
