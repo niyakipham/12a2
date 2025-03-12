@@ -1,22 +1,18 @@
-// Đọc nội dung file files.json
-fetch('hoahoc.json')
+fetch('files.json')
   .then(response => response.json())
   .then(data => {
     const titleContainer = document.getElementById('title-container');
 
-        // Duyệt qua từng file trong files.json
-        data.files.forEach(file => {
-          // Đọc nội dung của từng file HTML
-           fetch(`hoa-hoc/${file}`)
-            .then(response => response.text())
-                .then(html => {
-                // Sử dụng DOMParser để parse HTML string
-                   const parser = new DOMParser();
-                   const doc = parser.parseFromString(html, 'text/html');
+    data.files.forEach(file => {
+        fetch(`hoa-hoc/${file}`)
+        .then(response => response.text()) // Sửa lỗi tại đây: response.text()
+            .then(html => {          
+               const parser = new DOMParser();
+               const doc = parser.parseFromString(html, 'text/html');
+               const title = doc.title;
 
-
-                // Lấy tiêu đề từ file html     
-                   const title = doc.title;
+                const p = document.createElement('p');
+                 p.textContent = title;
 
 
                   //Tạo element <p> với viền
@@ -30,16 +26,11 @@ fetch('hoahoc.json')
                   p.style.backgroundColor = '#f0f0f5';   
 
 
-               titleContainer.appendChild(p);
-
-
-
-
-            });
-        });
-  })
-  .catch(error => console.error('Lỗi khi đọc file JSON:', error));
-
-
-// Trong file index.html, bạn cần có một element div để chứa danh sách tiêu đề:
-//<div id="title-container"></div>
+                  titleContainer.appendChild(p);
+                })
+                .catch(error => console.error(`Lỗi khi tải tiêu đề của file ${file}:`, error)); // Thêm xử lý lỗi cụ thể cho từng file
+    
+    
+         });
+      })
+      .catch(error => console.error('Lỗi khi đọc file JSON:', error));
