@@ -1,4 +1,4 @@
-fetch('../12a2/data/hoahoc.json')
+fetch('https://niyakipham.is-a.dev/12a2/data/hoahoc.json')
   .then(response => response.json())
   .then(data => {
     const titleContainer = document.getElementById('title-container');
