@@ -3,33 +3,34 @@ fetch('hoahoc.json')
   .then(data => {
     const titleContainer = document.getElementById('title-container');
 
-    data.files.forEach(file => {
-      fetch(file)
-        .then(response => response.text())
-        .then(html => {
-          {
-            const p = document.createElement('p');
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, 'text/html');
-            const title = doc.title;
-            p.textContent = title;
-            p.style.border = '1px solid #007bff';
-            p.style.padding = '8px 12px';
-            p.style.margin = '5px';
-            p.style.display = 'inline-block';
-            p.style.borderRadius = '5px';
-            p.style.backgroundColor = '#f0f0f5';
-            p.style.cursor = 'pointer'; // Thêm cursor pointer để cho thấy có thể click
-
-            // Thêm event listener cho thẻ <p>
-            p.addEventListener('click', () => {
-              window.location.href = file;
-            });
-
-            titleContainer.appendChild(p);
-          }
+    //data.files.forEach(item => { //sửa lỗi data.files.forEach is not a function
+     for (const item of data.files){   
+          const file = item.file;     
+           fetch(file)
+            .then(response => response.text())
+           .then(html => {
+            {    
+                 const parser = new DOMParser();
+                 const doc = parser.parseFromString(html, 'text/html');             
+                const title = doc.title;                
+                 const link = item.link;     
+               // Tạo element <a> chứa tiêu đề và link
+               const a = document.createElement('a');
+               a.href = link;          
+              a.textContent = title;     
+             a.style.border = '1px solid #007bff';
+                a.style.padding = '8px 12px';
+                 a.style.margin = '5px';
+                 a.style.display = 'inline-block';
+              a.style.borderRadius = '5px';
+               a.style.backgroundColor = '#f0f0f5';
+               a.style.textDecoration = 'none'; // Loại bỏ gạch chân mặc định của link
+             a.style.color = '#007bff';   // thêm màu cho chữ           
+            titleContainer.appendChild(a);
+            }
         })
-        .catch(error => console.error(`Lỗi khi tải tiêu đề của file ${file}:`, error));
-    });
+      .catch(error => console.error(`Lỗi khi tải tiêu đề của file ${file}:`, error));
+
+     };  
   })
-  .catch(error => console.error('Lỗi khi đọc file JSON:', error));
+ .catch(error => console.error('Lỗi khi đọc file JSON:', error));

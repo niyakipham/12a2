@@ -1,6 +1,7 @@
 {
-    "files": [
-      "hoa-hoc/hoa-hoc-giua-ki-2.html",
-      "hoa-hoc/hop-kim-su-an-mòn-kim-loai-co-ban.html"
-    ]
-  }
+  "files": [
+    { "file": "hoa-hoc/hoa-hoc-giua-ki-2.html", "link": "https://niyakipham.is-a.dev/12a2/hoa-hoc/hoa-hoc-giua-ki-2.html"},
+    { "file": "hoa-hoc/hop-kim-su-an-mòn-kim-loai-co-ban.html", "link": "https://niyakipham.is-a.dev/12a2/hoa-hoc/hop-kim-su-an-m%C3%B2n-kim-loai-co-ban.html"}
+    
+  ]
+}
