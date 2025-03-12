@@ -1,4 +1,4 @@
-fetch('files.json')
+fetch('hoahoc.json')
   .then(response => response.json())
   .then(data => {
     const titleContainer = document.getElementById('title-container');
