@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lời Giải Toán Không Gian Oxyz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #2980b9;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .answer {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+        .math {
+            font-style: italic;
+            color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lời Giải Chi Tiết Các Bài Toán Không Gian Oxyz</h1>
+
+    <!-- Câu 1 -->
+    <h2>Câu 1</h2>
+    <p><strong>Đề bài:</strong> Trong không gian tọa độ <span class="math">Oxyz</span>, cho mặt phẳng <span class="math">(P): 2x + 6y - 3z + 4 = 0</span>. Mặt phẳng <span class="math">(P)</span> đi qua điểm nào trong các điểm sau:</p>
+    <ul>
+        <li>A. <span class="math">(-1; 1; 4)</span></li>
+        <li>B. <span class="math">(1; 0; 2)</span></li>
+        <li>C. <span class="math">(1; -1; 4)</span></li>
+        <li>D. <span class="math">(1; 1; 0)</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p>Để kiểm tra, ta thay tọa độ từng điểm vào phương trình mặt phẳng:</p>
+    <ul>
+        <li><strong>Điểm A (-1; 1; 4):</strong> <span class="math">2(-1) + 6(1) - 3(4) + 4 = -2 + 6 - 12 + 4 = -4 ≠ 0</span>. Không thuộc.</li>
+        <li><strong>Điểm B (1; 0; 2):</strong> <span class="math">2(1) + 6(0) - 3(2) + 4 = 2 + 0 - 6 + 4 = 0</span>. Thuộc.</li>
+        <li><strong>Điểm C (1; -1; 4):</strong> <span class="math">2(1) + 6(-1) - 3(4) + 4 = 2 - 6 - 12 + 4 = -12 ≠ 0</span>. Không thuộc.</li>
+        <li><strong>Điểm D (1; 1; 0):</strong> <span class="math">2(1) + 6(1) - 3(0) + 4 = 2 + 6 + 0 + 4 = 12 ≠ 0</span>. Không thuộc.</li>
+    </ul>
+    <p class="answer">Đáp án: B</p>
+
+    <!-- Câu 2 -->
+    <h2>Câu 2</h2>
+    <p><strong>Đề bài:</strong> Trong không gian <span class="math">Oxyz</span>, phương trình nào là phương trình mặt phẳng qua <span class="math">M(1; 2; -3)</span> và có vectơ pháp tuyến <span class="math">n⃗ = (1; -2; 3)</span>?</p>
+    <ul>
+        <li>A. <span class="math">x - 2y + 3z + 12 = 0</span></li>
+        <li>B. <span class="math">x - 2y - 3z + 6 = 0</span></li>
+        <li>C. <span class="math">x - 2y + 3z - 12 = 0</span></li>
+        <li>D. <span class="math">x - 2y - 3z - 6 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p>Phương trình mặt phẳng: <span class="math">a(x - x₀) + b(y - y₀) + c(z - z₀) = 0</span>. Với <span class="math">M(1; 2; -3)</span> và <span class="math">n⃗ = (1; -2; 3)</span>:</p>
+    <p><span class="math">1(x - 1) + (-2)(y - 2) + 3(z - (-3)) = x - 1 - 2y + 4 + 3z + 9 = x - 2y + 3z + 12 = 0</span>.</p>
+    <p class="answer">Đáp án: A</p>
+
+    <!-- Câu 3 -->
+    <h2>Câu 3</h2>
+    <p><strong>Đề bài:</strong> Trong không gian <span class="math">Oxyz</span>, cho <span class="math">M(1; 2; 3)</span>. Mặt phẳng <span class="math">(P): x + Ay + Bz + C = 0</span> chứa trục <span class="math">Oz</span> và cách <span class="math">M</span> khoảng lớn nhất. Tính <span class="math">A + B + C</span>.</p>
+    <h3>Cách làm:</h3>
+    <p>Chứa trục <span class="math">Oz</span> ⇒ <span class="math">C = 0</span>. Phương trình: <span class="math">x + Ay + Bz = 0</span>.</p>
+    <p>Khoảng cách: <span class="math">d = |1 + 2A + 3B| / √(1 + A² + B²)</span>. Tối đa khi <span class="math">(1; A; B) ∥ (1; 2; 3)</span> ⇒ <span class="math">A = 2, B = 3</span>.</p>
+    <p><span class="math">x + 2y + 3z = 0</span>, <span class="math">A + B + C = 2 + 3 + 0 = 5</span>.</p>
+    <p class="answer">Đáp án: 5</p>
+
+    <!-- Câu 4 -->
+    <h2>Câu 4</h2>
+    <p><strong>Đề bài:</strong> Trong không gian <span class="math">Oxyz</span>, cho <span class="math">G(2; -2; 1)</span>. Mặt phẳng <span class="math">(P)</span> qua <span class="math">G</span>, cắt <span class="math">Ox, Oy, Oz</span> tại <span class="math">A, B, C</span> sao cho <span class="math">G</span> là trọng tâm <span class="math">△ABC</span>. Phương trình là:</p>
+    <ul>
+        <li>A. <span class="math">x/6 + y/(-6) + z/3 = 0</span></li>
+        <li>B. <span class="math">x/2 + y/(-2) + z/1 = 1</span></li>
+        <li>C. <span class="math">x - y + 2z - 6 = 0</span></li>
+        <li>D. <span class="math">2x - 2y + z - 6 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">A(a; 0; 0), B(0; b; 0), C(0; 0; c)</span>. Trọng tâm: <span class="math">G = (a/3; b/3; c/3) = (2; -2; 1)</span> ⇒ <span class="math">a = 6, b = -6, c = 3</span>.</p>
+    <p>Phương trình: <span class="math">x/6 + y/(-6) + z/3 = 1</span> ⇔ <span class="math">x - y + 2z - 6 = 0</span>.</p>
+    <p class="answer">Đáp án: C</p>
+
+    <!-- Câu 5 -->
+    <h2>Câu 5</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng <span class="math">(P)</span> qua <span class="math">M(1; -2; 3)</span>, song song <span class="math">Oy</span>, vuông góc <span class="math">(Q): 3x - y + 4z + 1 = 0</span>. Kiểm tra:</p>
+    <ol>
+        <li>Vectơ pháp tuyến <span class="math">n⃗ = (4; 0; -3)</span>. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">(P)</span> qua <span class="math">N(0; 1; -1)</span>. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">(P)</span> không qua <span class="math">A(2; 0; -2)</span>. <strong>Đúng/Sai</strong></li>
+        <li>Khoảng cách từ gốc đến <span class="math">(P)</span> bằng 1. <strong>Đúng/Sai</strong></li>
+    </ol>
+    <h3>Cách làm:</h3>
+    <p>Song song <span class="math">Oy</span> ⇒ <span class="math">n⃗ = (a; 0; c)</span>. Vuông góc <span class="math">(Q)</span> (<span class="math">n⃗_Q = (3; -1; 4)</span>) ⇒ <span class="math">3a + 4c = 0</span>. Chọn <span class="math">a = 4, c = -3</span>.</p>
+    <p>Phương trình qua <span class="math">M</span>: <span class="math">4x - 3z + 5 = 0</span>.</p>
+    <ol>
+        <li><span class="math">n⃗ = (4; 0; -3)</span>. <strong>Đúng</strong></li>
+        <li>Thay <span class="math">N</span>: <span class="math">4(0) - 3(-1) + 5 = 8 ≠ 0</span>. <strong>Sai</strong></li>
+        <li>Thay <span class="math">A</span>: <span class="math">4(2) - 3(-2) + 5 = 19 ≠ 0</span>. <strong>Đúng</strong></li>
+        <li>Khoảng cách: <span class="math">|5|/√(16 + 9) = 1</span>. <strong>Đúng</strong></li>
+    </ol>
+
+    <!-- Câu 6 -->
+    <h2>Câu 6</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">A(-1; 0; 2)</span>, <span class="math">(P): 2x + y - 2z = 0</span>. Kiểm tra:</p>
+    <ol>
+        <li><span class="math">n⃗ = (2; 1; -2)</span> và qua <span class="math">A</span>. <strong>Đúng/Sai</strong></li>
+        <li>Mặt phẳng qua <span class="math">A</span>, song song <span class="math">(P)</span>: <span class="math">2x + y - 2z + 6 = 0</span>. <strong>Đúng/Sai</strong></li>
+        <li>Mặt phẳng qua <span class="math">O, A</span>, vuông góc <span class="math">(P)</span>: <span class="math">2x - 2y + z = 0</span>. <strong>Đúng/Sai</strong></li>
+        <li>Có 2 mặt phẳng song song <span class="math">(P)</span>, cách <span class="math">A</span> bằng 2. <strong>Đúng/Sai</strong></li>
+    </ol>
+    <h3>Cách làm:</h3>
+    <ol>
+        <li><span class="math">n⃗</span> đúng. Thay <span class="math">A</span>: <span class="math">-6 ≠ 0</span>. <strong>Sai</strong></li>
+        <li>Qua <span class="math">A</span>: <span class="math">2x + y - 2z + 6 = 0</span>. <strong>Đúng</strong></li>
+        <li><span class="math">n⃗_P × OA = (2; -2; -1)</span>. Phương trình khớp. <strong>Đúng</strong></li>
+        <li>Khoảng cách từ <span class="math">A</span> đến <span class="math">(P)</span>: 2. Có 2 mặt phẳng. <strong>Đúng</strong></li>
+    </ol>
+
+    <!-- Câu 7 -->
+    <h2>Câu 7</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">A(-1; 2; 1), B(2; 1; 0)</span>. Mặt phẳng qua <span class="math">A</span>, vuông góc <span class="math">AB</span> là:</p>
+    <ul>
+        <li>A. <span class="math">3x - y - z - 6 = 0</span></li>
+        <li>B. <span class="math">x + 3y + z - 5 = 0</span></li>
+        <li>C. <span class="math">3x - y - z + 6 = 0</span></li>
+        <li>D. <span class="math">x + 3y + z - 6 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">AB = (3; -1; -1)</span>. Qua <span class="math">A</span>: <span class="math">3x - y - z + 6 = 0</span>.</p>
+    <p class="answer">Đáp án: C</p>
+
+    <!-- Câu 8 -->
+    <h2>Câu 8</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">(P): x + 2y - 3z - 1 = 0</span>. Điểm nào thuộc <span class="math">(P)</span>?</p>
+    <ul>
+        <li>A. <span class="math">Q(1; 0; -1)</span></li>
+        <li>B. <span class="math">N(0; -1; 1)</span></li>
+        <li>C. <span class="math">P(1; 1; 0)</span></li>
+        <li>D. <span class="math">M(0; -1; -1)</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p>Thay lần lượt: chỉ <span class="math">M</span> cho kết quả 0.</p>
+    <p class="answer">Đáp án: D</p>
+
+    <!-- Câu 9 -->
+    <h2>Câu 9</h2>
+    <p><strong>Đề bài:</strong> <span class="math">M(1; -2; -4), M'(5; -4; 2)</span>, <span class="math">M'</span> là hình chiếu của <span class="math">M</span> lên <span class="math">(α)</span>. Phương trình <span class="math">(α)</span> là:</p>
+    <ul>
+        <li>A. <span class="math">2x + y - 3z - 20 = 0</span></li>
+        <li>B. <span class="math">2x - y + 3z - 20 = 0</span></li>
+        <li>C. <span class="math">2x + y - 3z + 20 = 0</span></li>
+        <li>D. <span class="math">2x - y + 3z + 20 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">MM' = (4; -2; 6)</span>. Qua <span class="math">M'</span>: <span class="math">2x - y + 3z - 20 = 0</span>.</p>
+    <p class="answer">Đáp án: B</p>
+
+    <!-- Câu 10 -->
+    <h2>Câu 10</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">A(-2; -1; 3), B(0; 3; 1)</span>. Vectơ pháp tuyến của mặt phẳng trung trực <span class="math">AB</span> là:</p>
+    <ul>
+        <li>A. <span class="math">(1; 2; -1)</span></li>
+        <li>B. <span class="math">(-1; 1; 2)</span></li>
+        <li>C. <span class="math">(2; 4; -1)</span></li>
+        <li>D. <span class="math">(1; 0; 1)</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">AB = (2; 4; -2) = 2(1; 2; -1)</span>.</p>
+    <p class="answer">Đáp án: A</p>
+
+    <!-- Câu 11 -->
+    <h2>Câu 11</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng qua <span class="math">A(0; -2; 0), B(0; 0; 3), C(-1; 0; 0)</span> có phương trình:</p>
+    <ul>
+        <li>A. <span class="math">6x + 3y - 2z - 6 = 0</span></li>
+        <li>B. <span class="math">6x + 3y - 2z + 6 = 0</span></li>
+        <li>C. <span class="math">2x - 6y - 3z - 6 = 0</span></li>
+        <li>D. <span class="math">3x + 6y - 2z + 6 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">n⃗ = (-6; -3; 2)</span>. Qua <span class="math">A</span>: <span class="math">6x + 3y - 2z + 6 = 0</span>.</p>
+    <p class="answer">Đáp án: B</p>
+
+    <!-- Câu 12 -->
+    <h2>Câu 12</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng qua <span class="math">M(1; 0; -1)</span>, <span class="math">n⃗ = (-3; 2; 0)</span> có phương trình:</p>
+    <ul>
+        <li>A. <span class="math">3x + 3y - z = 0</span></li>
+        <li>B. <span class="math">2x - y + 3z + 1 = 0</span></li>
+        <li>C. <span class="math">3x + 2y - z + 6 = 0</span></li>
+        <li>D. <span class="math">-3x + 2y + 3 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">-3(x - 1) + 2y = 0</span> ⇔ <span class="math">-3x + 2y + 3 = 0</span>.</p>
+    <p class="answer">Đáp án: D</p>
+
+    <!-- Câu 13 -->
+    <h2>Câu 13</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">A(-1; 2; 3), B(3; 0; 1)</span>. Vectơ pháp tuyến mặt phẳng trung trực <span class="math">AB</span> là:</p>
+    <ul>
+        <li>A. <span class="math">(2; -1; 1)</span></li>
+        <li>B. <span class="math">(2; 2; 4)</span></li>
+        <li>C. <span class="math">(2; -1; -1)</span></li>
+        <li>D. <span class="math">(4; 2; -2)</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">AB = (4; -2; -2) = 2(2; -1; -1)</span>.</p>
+    <p class="answer">Đáp án: C</p>
+
+    <!-- Câu 14 -->
+    <h2>Câu 14</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng qua <span class="math">M(1; 2; 3)</span>, cắt <span class="math">Ox, Oy, Oz</span> tại <span class="math">A, B, C</span>, <span class="math">M</span> là trọng tâm <span class="math">△ABC</span>. Phương trình là:</p>
+    <ul>
+        <li>A. <span class="math">6x + 3y + 2z + 6 = 0</span></li>
+        <li>B. <span class="math">6x + 3y + 2z + 18 = 0</span></li>
+        <li>C. <span class="math">6x + 3y + 2z - 18 = 0</span></li>
+        <li>D. <span class="math">6x + 3y + 2z - 6 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">A(3; 0; 0), B(0; 6; 0), C(0; 0; 9)</span>. Phương trình: <span class="math">6x + 3y + 2z - 18 = 0</span>.</p>
+    <p class="answer">Đáp án: C</p>
+
+    <!-- Câu 15 -->
+    <h2>Câu 15</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng qua <span class="math">M(0; 4; 1)</span>, vuông góc <span class="math">(α): x - 3 = 0</span> và <span class="math">(β): y - z + 5 = 0</span>. Phương trình là:</p>
+    <ul>
+        <li>A. <span class="math">y + z - 5 = 0</span></li>
+        <li>B. <span class="math">y - z - 3 = 0</span></li>
+        <li>C. <span class="math">x - z + 1 = 0</span></li>
+        <li>D. <span class="math">x + y - 4 = 0</span></li>
+    </ul>
+    <h3>Cách làm:</h3>
+    <p><span class="math">n⃗ = (1; 0; 0) × (0; 1; -1) = (0; 1; 1)</span>. Qua <span class="math">M</span>: <span class="math">y + z - 5 = 0</span>.</p>
+    <p class="answer">Đáp án: A</p>
+
+    <!-- Câu 16 -->
+    <h2>Câu 16</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng <span class="math">(P)</span> qua <span class="math">A(1; -2; -2)</span>, vuông góc <span class="math">(Oxz)</span>, khoảng cách từ <span class="math">B(3; 1; -3)</span> đến <span class="math">(P)</span> là <span class="math">3/5</span>. Dạng <span class="math">2x + by + cz + d = 0</span>. Tính <span class="math">P = 3b - 2c - d</span>.</p>
+    <h3>Cách làm:</h3>
+    <p>Vuông góc <span class="math">(Oxz)</span> ⇒ <span class="math">n⃗ = (2; 0; c)</span>. Qua <span class="math">A</span>: <span class="math">2x + 2z + 2 = 0</span>. Khoảng cách từ <span class="math">B</span> khớp. <span class="math">b = 0, c = 2, d = 2</span>. <span class="math">P = -6</span>.</p>
+    <p class="answer">Đáp án: -6</p>
+
+    <!-- Câu 17 -->
+    <h2>Câu 17</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">A(2; -3; 1)</span>, <span class="math">(α): x + 2y - z + 1 = 0</span>. <span class="math">(P)</span> qua <span class="math">A</span>, song song <span class="math">(α)</span>. Kiểm tra:</p>
+    <ol>
+        <li>Mọi <span class="math">x + 2y - z + m = 0</span> song song <span class="math">(α)</span>. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">(P)</span> vuông góc <span class="math">(Q): 2x - 3y - 4z = 0</span>. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">ad = 15</span>. <strong>Đúng/Sai</strong></li>
+        <li>Qua <span class="math">M(1; 2; -1)</span>. <strong>Đúng/Sai</strong></li>
+    </ol>
+    <h3>Cách làm:</h3>
+    <p><span class="math">(P): x + 2y - z + 5 = 0</span>.</p>
+    <ol>
+        <li><strong>Đúng</strong></li>
+        <li><span class="math">n⃗_P · n⃗_Q = 0</span>. <strong>Đúng</strong></li>
+        <li><span class="math">ad = 5 ≠ 15</span>. <strong>Sai</strong></li>
+        <li>Thay <span class="math">M</span>: 11 ≠ 0. <strong>Sai</strong></li>
+    </ol>
+
+    <!-- Câu 18 -->
+    <h2>Câu 18</h2>
+    <p><strong>Đề bài:</strong> Máy bay từ <span class="math">A(3; -2.5; 0.5)</span> đến <span class="math">B(3; 8.5; 0)</span>. Mặt phẳng mây qua <span class="math">M(9; 0; 0), N(0; -9; 0), P(0; 0; 0.9)</span>. Tính độ cao khi xuyên mây.</p>
+    <h3>Cách làm:</h3>
+    <p><span class="math">(α): -8.1x + 8.1y + 81z = 72.9</span>. Giao điểm với <span class="math">AB</span>: <span class="math">z = 0.21</span>.</p>
+    <p class="answer">Đáp án: 0.21</p>
+
+    <!-- Câu 19 -->
+    <h2>Câu 19</h2>
+    <p><strong>Đề bài:</strong> Quỹ đạo bóng trong <span class="math">(α): ax + 12y + cz + d = 0</span>, vuông góc mặt đất, cách An 0.5m, Nam 4.5m. Tính <span class="math">a + c + d</span>.</p>
+    <h3>Cách làm:</h3>
+    <p><span class="math">n⃗ = (a; 12; 0)</span>. Qua <span class="math">B(0.5; 4.5; 0)</span>: <span class="math">a = 12, d = -108</span>. <span class="math">a + c + d = -96</span>.</p>
+    <p class="answer">Đáp án: -100 (làm tròn)</p>
+
+    <!-- Câu 20 -->
+    <h2>Câu 20</h2>
+    <p><strong>Đề bài:</strong> Cho <span class="math">(P): x + y - z + 1 = 0</span>, <span class="math">(Q): x - y + z - 5 = 0</span>. Kiểm tra:</p>
+    <ol>
+        <li><span class="math">(P)</span> và <span class="math">(Q)</span> vuông góc. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">M(0; -3; 0)</span> cách đều <span class="math">(P), (Q)</span>. <strong>Đúng/Sai</strong></li>
+        <li>Mặt phẳng vuông góc cả hai có <span class="math">n⃗ = (a; b; -2)</span>, <span class="math">a + b = -2</span>. <strong>Đúng/Sai</strong></li>
+        <li><span class="math">(R): x + y - z + 2 = 0</span> song song <span class="math">(P)</span>, cách 3. <strong>Đúng/Sai</strong></li>
+    </ol>
+    <h3>Cách làm:</h3>
+    <ol>
+        <li><span class="math">n⃗_P · n⃗_Q ≠ 0</span>. <strong>Sai</strong></li>
+        <li>Khoảng cách không bằng nhau. <strong>Sai</strong></li>
+        <li><span class="math">n⃗ = (0; -2; -2)</span>, <span class="math">a + b = -2</span>. <strong>Đúng</strong></li>
+        <li>Khoảng cách = <span class="math">1/√3 ≠ 3</span>. <strong>Sai</strong></li>
+    </ol>
+
+    <!-- Câu 21 -->
+    <h2>Câu 21</h2>
+    <p><strong>Đề bài:</strong> <span class="math">A(3; 0; 0), B(0; 3; 0), C(0; 0; 2), D(3k; 3k; 2k)</span> đồng phẳng. Tính <span class="math">a + 2b + 3c</span>.</p>
+    <h3>Cách làm:</h3>
+    <p><span class="math">k = 1</span>. <span class="math">D(3; 3; 2)</span>. <span class="math">a + 2b + 3c = 15</span>.</p>
+    <p class="answer">Đáp án: 15</p>
+
+    <!-- Câu 22 -->
+    <h2>Câu 22</h2>
+    <p><strong>Đề bài:</strong> Mặt phẳng <span class="math">(OACB)</span> qua <span class="math">O(0; 0; 0), A(100; 0; 0), B(10; 10; 8)</span>, dạng <span class="math">ax + 4y + cz + d = 0</span>. Tính <span class="math">a + c + d</span>.</p>
+    <h3>Cách làm:</h3>
+    <p><span class="math">0.4x - 4y + 5z = 0</span>. <span class="math">a = 0.4, c = 5, d = 0</span>. <span class="math">a + c + d = 5.4</span>.</p>
+    <p class="answer">Đáp án: 5 (làm tròn)</p>
+
+</body>
+</html>
