@@ -1,0 +1,181 @@
+<html>
+<head>
+  <title>Giải bài tập HTML, CSS</title>
+</head>
+<body>
+
+<h2>Câu 1</h2>
+<p><strong>Đoàn trường THPT A tạo biểu mẫu thu thập thông tin đăng kí thành viên các câu lạc bộ trong trường. Biểu mẫu hiển thị trên trình duyệt có dạng như sau:</strong></p>
+<p><strong>Nhận định về biểu mẫu này, học sinh K đưa ra một số ý kiến sau:</strong></p>
+<ul>
+  <li><b>a)</b> Kiểu dữ liệu của họ tên là textarea</li>
+  <p><i>Giải thích: Kiểu dữ liệu của trường "Họ tên" không phải là textarea mà là <code>&lt;input&gt;</code>, vì textarea được sử dụng cho văn bản nhiều dòng, trong khi họ tên là trường nhập liệu một dòng.</i></p>
+  <li><b>b)</b> Kiểu dữ liệu của giới tính là checkbox.</li>
+  <p><i>Giải thích: Kiểu dữ liệu của "Giới tính" thường là <code>&lt;input type="radio"&gt;</code> thay vì checkbox, vì đây là lựa chọn đơn (chỉ có thể chọn Nam hoặc Nữ).</i></p>
+  <li><b>c)</b> Khung để nhập lý do muốn tham gia CLB cho phép nhập nhiều dòng và cột.</li>
+  <p><i>Giải thích: Điều này đúng, kiểu dữ liệu sẽ là <code>&lt;textarea&gt;</code>, cho phép nhập nhiều dòng và nhiều cột.</i></p>
+  <li><b>d)</b> Kiểu dữ liệu của nội dung “Chọn câu lạc bộ muốn tham gia” là checkbox.</li>
+  <p><i>Giải thích: Kiểu dữ liệu này có thể là <code>&lt;input type="checkbox"&gt;</code> nếu người dùng có thể chọn nhiều câu lạc bộ, nhưng nếu chỉ chọn một câu lạc bộ thì nên sử dụng <code>&lt;input type="radio"&gt;</code>.</i></p>
+</ul>
+
+<h2>Câu 2</h2>
+<p><strong>Đoàn trường THPT A tạo biểu mẫu thu thập thông tin đăng kí thành viên các câu lạc bộ trong trường. Biểu mẫu hiển thị trên trình duyệt có dạng như sau:</strong></p>
+<p><strong>Nhận định về biểu mẫu này, học sinh H đưa ra một số ý kiến sau:</strong></p>
+<ul>
+  <li><b>a)</b> Chỉ có thể chọn một trong hai giá trị giới tính là Nam hoặc Nữ.</li>
+  <p><i>Giải thích: Điều này đúng, thông thường giới tính sẽ được sử dụng với <code>&lt;input type="radio"&gt;</code> để chỉ cho phép chọn một trong hai giá trị.</i></p>
+  <li><b>b)</b> Chỉ có thể chọn một trong hai giá trị câu lạc bộ muốn tham gia là CLB Bóng đá hoặc CLB Vovinam.</li>
+  <p><i>Giải thích: Điều này đúng nếu sử dụng <code>&lt;input type="radio"&gt;</code> cho câu hỏi "Chọn câu lạc bộ muốn tham gia".</i></p>
+  <li><b>c)</b> id của hai phần tử checkbox phải khác nhau, name giống nhau.</li>
+  <p><i>Giải thích: Đúng. Khi sử dụng checkbox, các phần tử có thể có <code>name</code> giống nhau nhưng <code>id</code> phải khác nhau để đảm bảo tính duy nhất của mỗi phần tử.</i></p>
+  <li><b>d)</b> id của hai phần tử radio khác nhau.</li>
+  <p><i>Giải thích: Điều này đúng. Mỗi phần tử <code>&lt;input type="radio"&gt;</code> phải có <code>id</code> duy nhất, nhưng <code>name</code> của chúng phải giống nhau để nhóm các radio lại với nhau.</i></p>
+</ul>
+
+<h2>Câu 3</h2>
+<p><strong>Bạn A thực hành viết mã HTML để tạo trang web đơn giản có áp dụng định dạng kiểu CSS để định dạng văn bản. Bạn đã viết một khai báo CSS và một đoạn code HTML như sau:</strong></p>
+
+<pre>
+Khai báo CSS:
+div:nth-child(2) {
+  background: red;
+}
+li:nth-child(2) {
+  background: green;
+}
+:nth-child(3) {
+  Background: yellow;
+}
+
+HTML:
+<div>
+  <p>Đoạn văn bản thứ nhất.</p>
+</div>
+<div>
+  <p>Đoạn văn bản thứ hai.</p>
+</div>
+<div>
+  <p>Đoạn văn bản thứ ba.</p>
+</div>
+<ul>
+  <li>Phần tử thứ nhất</li>
+  <li>Phần tử thứ hai</li>
+  <li>Phần tử thứ ba</li>
+  <li>Phần tử thứ tư</li>
+  <li>Phần tử thứ năm</li>
+</ul>
+</pre>
+
+<ul>
+  <li><b>a)</b> Bạn A đã khai báo sai phần thứ tự đối với yếu tố nth-child của các vùng chọn, do đó trình duyệt web sẽ hiển thị nội dung HTML không có các định dạng màu nền red, green và yellow.</li>
+  <p><i>Giải thích: Đúng, phần khai báo <code>:nth-child(3)</code> không xác định đúng đối tượng, nó thiếu tên phần tử trước nó. Cần phải sửa lại thành <code>div:nth-child(3)</code> để áp dụng đúng định dạng.</i></p>
+  <li><b>b)</b> Đoạn văn bản thứ ba sẽ có màu nền là màu vàng.</li>
+  <p><i>Giải thích: Đúng. Nếu sửa khai báo CSS, đoạn văn bản thứ ba trong <code>&lt;div&gt;</code> sẽ có màu nền vàng.</i></p>
+  <li><b>c)</b> Phần tử thứ tư và phần tử thứ năm của danh sách sẽ được tô màu nền là màu vàng.</li>
+  <p><i>Giải thích: Sai. Màu nền vàng chỉ được áp dụng cho phần tử thứ ba trong danh sách.</i></p>
+  <li><b>d)</b> Phần tử thứ hai của danh sách sẽ được tô màu xanh.</li>
+  <p><i>Giải thích: Đúng, phần tử thứ hai của <code>&lt;ul&gt;</code> sẽ có màu nền xanh, vì khai báo CSS đúng cho <code>li:nth-child(2)</code>.</i></p>
+</ul>
+
+<h2>Câu 4</h2>
+<p><strong>Bạn B tạo một bảng danh sách học sinh và muốn bảng được định dạng đẹp, đồng thời khi thực hiện các thao tác với con trỏ chuột trên bảng sẽ hiển thị các hiệu ứng giúp người xem tập trung chú ý. Bạn B đã viết một khai báo CSS và một đoạn code HTML như sau:</strong></p>
+
+<pre>
+Khai báo CSS:
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
+  text-align: left;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+td:active {
+  background-color: #ddd;
+  outline: none;
+}
+
+HTML:
+<table>
+  <tr>
+    <th>Tên</th>
+    <th>Địa chỉ</th>
+    <th>Thành phần</th>
+  </tr>
+  <tr>
+    <td>Nguyễn Văn A</td>
+    <td>123 Đường ABC</td>
+    <td>TP.HCM</td>
+  </tr>
+  <tr>
+    <td>Trần Văn B</td>
+    <td>456 Đường XYZ</td>
+    <td>Hà Nội</td>
+  </tr>
+</table>
+</pre>
+
+<ul>
+  <li><b>a)</b> Tất cả các văn bản thuộc dòng tiêu đề đầu tiên của bảng đều được tô đậm.</li>
+  <p><i>Giải thích: Sai. Đoạn mã CSS không có định dạng cho việc tô đậm văn bản trong tiêu đề. Chỉ có <code>border</code>, <code>padding</code>, và <code>background-color</code> được áp dụng.</i></p>
+  <li><b>b)</b> Khi di chuyển chuột trên các dòng của bảng (ngoại trừ dòng tiêu đề), màu nền của dòng sẽ được đổi sang màu xám (#f5f5f5).</li>
+  <p><i>Giải thích: Đúng. Khi di chuột vào các dòng, màu nền của dòng sẽ thay đổi.</i></p>
+  <li><b>c)</b> Vì bảng không chứa siêu liên kết nên yếu tố active không được trình duyệt web xử lý.</li>
+  <p><i>Giải thích: Sai. Thực tế, <code>:active</code> sẽ được áp dụng cho các phần tử như <code>td</code> khi nhấn giữ chuột vào đó, không cần có siêu liên kết.</i></p>
+  <li><b>d)</b> Khi nhấn giữ chuột vào một nội dung trên bảng, toàn bộ ô chứa nội dung sẽ được đổi màu nền sang màu xám (#ddd).</li>
+  <p><i>Giải thích: Đúng. Khi nhấn vào một ô dữ liệu trong bảng, màu nền của ô sẽ chuyển sang màu xám.</i></p>
+</ul>
+
+<h2>Câu 5</h2>
+<p><strong>Bạn H muốn tạo một biểu mẫu đăng kí trên trang web chia sẻ tài liệu của mình. Bạn đã nhập một khai báo CSS và một đoạn code HTML như sau:</strong></p>
+
+<pre>
+Khai báo CSS:
+form {
+  width: 300px;
+  margin: 0 auto;
+}
+input[type="submit"] {
+  background-color:green;
+  color: white;
+}
+:focus {
+  background-color: yellow;
+}
+input[type="submit"]:focus {
+  background-color: red;
+}
+
+HTML:
+<form action="">
+  <label for="fname">Họ:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="name">Tên:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="class">Lớp:</label><br>
+  <select id="class" name="class">
+    <option value="class">12A1</option>
+    <option value="class">12A2</option>
+    <option value="class">12A3</option>
+  </select><br>
+  <input type="submit" value="Đăng kí">
+</form>
+</pre>
+
+<ul>
+  <li><b>a)</b> Biểu mẫu có chiều rộng tổng cộng 300px và được đặt chính giữa trang web theo chiều ngang.</li>
+  <p><i>Giải thích: Đúng. CSS sử dụng <code>margin: 0 auto</code> để căn giữa biểu mẫu trên trang.</i></p>
+  <li><b>b)</b> Nút Đăng kí được tô màu xanh, khi nhấn chọn để gửi nội dung thì màu nền của nút Đăng kí sẽ chuyển sang màu đỏ.</li>
+  <p><i>Giải thích: Sai. Màu của nút khi nhấn sẽ chuyển sang màu đỏ khi ô input có kiểu <code>:focus</code>.</i></p>
+  <li><b>c)</b> Khi nhấn chọn vào các ô nhập dữ liệu, màu nền của ô vẫn được giữ như cũ.</li>
+  <p><i>Giải thích: Sai. Màu nền của ô nhập dữ liệu sẽ chuyển sang màu vàng khi ô đó được chọn, vì khai báo <code>:focus</code>.</i></p>
+  <li><b>d)</b> Biểu mẫu của bạn H cho phép chọn nhiều lớp khác nhau trong một lần đăng kí.</li>
+  <p><i>Giải thích: Sai. Biểu mẫu này chỉ cho phép chọn một lớp duy nhất vì sử dụng <code>&lt;select&gt;</code> mà không có thuộc tính <code>multiple</code>.</i></p>
+</ul>
+
+</body>
+</html>
