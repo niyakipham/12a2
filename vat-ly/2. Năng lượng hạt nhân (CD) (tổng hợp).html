@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Năng lượng hạt nhân (CD) (tổng hợp)</title>
+    <style>
+        /* === BASE STYLES === */
+        :root {
+            --primary: #00f7ff;
+            --secondary: #6e00ff;
+            --accent: #ff00aa;
+            --error: #ff3d71;
+            --success: #00ff88;
+            --warning: #ffcc00;
+            
+            --bg-dark: #0a0a20;
+            --bg-darker: #050510;
+            --bg-light: rgba(20, 20, 50, 0.5);
+            --bg-lighter: rgba(30, 30, 70, 0.3);
+            
+            --text-light: #e0e0ff;
+            --text-lighter: #ffffff;
+            --text-dim: rgba(224, 224, 255, 0.6);
+            
+            --border-radius: 12px;
+            --box-shadow: 0 0 30px rgba(0, 247, 255, 0.2);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            min-height: 100vh;
+            overflow-x: hidden;
+            line-height: 1.6;
+            position: relative;
+        }
+        
+        /* === BACKGROUND EFFECTS === */
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: particle-anim linear infinite;
+        }
+        
+        @keyframes particle-anim {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.6; }
+            100% { transform: translateY(-1500px) rotate(720deg); opacity: 0; }
+        }
+        
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(110, 0, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(110, 0, 255, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 247, 255, 0.03),
+                rgba(0, 247, 255, 0.03) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            z-index: -1;
+            pointer-events: none;
+            animation: scanline 8s linear infinite;
+        }
+        
+        @keyframes scanline {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 100%; }
+        }
+        
+        /* === MAIN CONTAINER === */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background: rgba(10, 10, 32, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 1px solid rgba(110, 0, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(0, 247, 255, 0.1) 0%, transparent 60%);
+            z-index: -1;
+            animation: pulse 15s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(0.8); opacity: 0.5; }
+            100% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        
+        /* === PASSWORD FORM === */
+        .password-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .input-group {
+            position: relative;
+        }
+        
+        .input-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--bg-light);
+            border: 1px solid rgba(110, 0, 255, 0.5);
+            border-radius: var(--border-radius);
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: var(--transition);
+            outline: none;
+            letter-spacing: 2px;
+        }
+        
+        input[type="password"]:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(0, 247, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        button {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: 0 4px 20px rgba(110, 0, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 247, 255, 0.6);
+        }
+        
+        button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        
+        /* === COUNTDOWN TIMER === */
+        .countdown {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            color: var(--primary);
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.2);
+        }
+        
+        .countdown i {
+            margin-right: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        /* === ERROR MESSAGE === */
+        .error-message {
+            color: var(--error);
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            height: 1.5rem;
+            transition: var(--transition);
+        }
+        
+        /* === DONATION NOTE === */
+        .donation-note {
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--text-dim);
+            line-height: 1.6;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent);
+        }
+        
+        /* === CONTENT SECTION (HIDDEN INITIALLY) === */
+        .content {
+            display: none;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* === QUESTIONS STYLING === */
+        .question {
+            background: var(--bg-lighter);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .question:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 247, 255, 0.1);
+        }
+        
+        .question-number {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: var(--primary);
+            color: var(--bg-darker);
+            padding: 0.3rem 1rem;
+            border-bottom-right-radius: var(--border-radius);
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+        
+        .question-text {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--text-lighter);
+            padding-top: 0.5rem;
+        }
+        
+        .options {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
+        }
+        
+        .option {
+            padding: 1rem;
+            background: rgba(20, 20, 50, 0.3);
+            border-radius: calc(var(--border-radius) - 4px);
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid transparent;
+        }
+        
+        .option:hover {
+            background: rgba(110, 0, 255, 0.2);
+            border-color: rgba(110, 0, 255, 0.5);
+        }
+        
+        .option.selected {
+            background: rgba(0, 200, 100, 0.1);
+            border-color: var(--success);
+        }
+        
+        .option.correct {
+            background: rgba(0, 200, 100, 0.2);
+            border-left: 4px solid var(--success);
+        }
+        
+        .option.incorrect {
+            background: rgba(255, 61, 113, 0.2);
+            border-left: 4px solid var(--error);
+        }
+        
+        .explanation {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: rgba(0, 150, 255, 0.1);
+            border-radius: calc(var(--border-radius) - 4px);
+            font-size: 0.9rem;
+            display: none;
+            border-left: 3px solid var(--primary);
+            animation: slideDown 0.5s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from { opacity: 0; max-height: 0; }
+            to { opacity: 1; max-height: 500px; }
+        }
+        
+        .explanation-title {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .explanation-title i {
+            margin-right: 0.5rem;
+        }
+        
+        /* === LOGOUT BUTTON === */
+        .logout-btn {
+            background: rgba(255, 61, 113, 0.2);
+            color: var(--error);
+            margin-top: 2rem;
+            width: 100%;
+            border: 1px solid var(--error);
+        }
+        
+        .logout-btn:hover {
+            background: rgba(255, 61, 113, 0.3);
+            box-shadow: 0 6px 25px rgba(255, 61, 113, 0.3);
+        }
+        
+        /* === ADMIN TOAST === */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: small;
+            animation: slideUp 0.5s ease-out;
+            border-left: 4px solid var(--primary);
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateX(-50%) translateY(100%); }
+            to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        
+        .toast i {
+            margin-right: 1rem;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        /* === PHYSICS NOTATION === */
+        .nucleus {
+            font-weight: bold;
+            color: var(--primary);
+        }
+        
+        .formula {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 200, 200, 0.15);
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        
+        /* === SCIENTIFIC FORMULAE === */
+        sup, sub {
+            font-size: 0.7em;
+            line-height: 1;
+            position: relative;
+            vertical-align: baseline;
+        }
+        
+        sup {
+            top: -0.5em;
+        }
+        
+        sub {
+            bottom: -0.25em;
+        }
+        
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .countdown {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 1rem;
+                justify-content: center;
+            }
+        }
+        
+        /* === ANIMATIONS === */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+        
+        .shake {
+            animation: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+        }
+        
+        /* === ICON FONTS === */
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+        }
+        
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-overlay"></div>
+    <div class="scanlines"></div>
+    
+    <!-- Main Container -->
+    <div class="container" id="login-container">
+        <h1>2. Năng lượng hạt nhân (CD) (tổng hợp)</h1>
+        
+        <div class="countdown" id="countdown">
+            <i class="material-icons">timer</i>
+            <span id="countdown-text">Code expires in: 29m 59s</span>
+        </div>
+        
+        <div class="password-form">
+            <div class="input-group">
+                <label for="password-input">ENTER ACCESS CODE</label>
+                <input type="password" id="password-input" placeholder="············" autocomplete="off">
+            </div>
+            <button id="submit-btn">
+                <i class="material-icons">lock_open</i> ACCESS PORTAL
+            </button>
+            <div class="error-message" id="error-message"></div>
+        </div>
+        
+        <div class="donation-note">
+            NHẮC NHỞ THÂN THIỆN: Hãy chuyển khoản 10k vào số điện thoại 0901574726 để được nhận mật khẩu 
+        </div>
+    </div>
+
+    <!-- Content Section (Hidden Initially) -->
+    <div class="container content" id="content-container">
+        <!-- Questions will be inserted here by JavaScript -->
+    </div>
+
+    <script>
+        // ====== GLOBAL VARIABLES ======
+        let currentPassword = generateRandomPassword();
+        let expirationTime = new Date().getTime() + 30 * 60 * 1000; // 30 minutes from now
+        
+        // ====== UTILITY FUNCTIONS ======
+        function generateRandomPassword() {
+            return Math.floor(100000 + Math.random() * 900000).toString();
+        }
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = expirationTime - now;
+            
+            if (distance <= 0) {
+                currentPassword = generateRandomPassword();
+                expirationTime = new Date().getTime() + 30 * 60 * 1000;
+                document.getElementById('countdown-text').textContent = `New code generated!`;
+                
+                // Show notification about new password
+                showToast('New access code has been generated');
+            } else {
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById('countdown-text').textContent = 
+                    `Code expires in: ${minutes}m ${seconds}s`;
+            }
+        }
+        
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `
+                <i class="material-icons">info</i>
+                <span>${message}</span>
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 500);
+            }, 3000);
+        }
+        
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            particlesContainer.innerHTML = '';
+            
+            for (let i = 0; i < 100; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 8 + 2;
+                const posX = Math.random() * window.innerWidth;
+                const delay = Math.random() * 10;
+                const duration = Math.random() * 15 + 10;
+                const opacity = Math.random() * 0.6 + 0.2;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}px`;
+                particle.style.bottom = `-${size}px`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.opacity = opacity;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // ====== PASSWORD SYSTEM ======
+        function checkPassword() {
+            const input = document.getElementById('password-input').value;
+            const errorElement = document.getElementById('error-message');
+            
+            if (input === currentPassword) {
+                // Correct password
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('content-container').style.display = 'block';
+                loadPhysicsQuestions();
+                
+                // Add success effect
+                document.body.classList.add('access-granted');
+                setTimeout(() => {
+                    document.body.classList.remove('access-granted');
+                }, 2000);
+            } else if (input.toLowerCase() === 'admin') {
+                // Admin access
+                const now = new Date().getTime();
+                const distance = expirationTime - now;
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                console.log(`Admin Access:`);
+                console.log(`Current password: ${currentPassword}`);
+                console.log(`Password expires in: ${minutes}m ${seconds}s`);
+                
+                showToast(`Current password: ${currentPassword} (Expires in ${minutes}m ${seconds}s)`);
+                errorElement.textContent = '';
+            } else {
+                // Wrong password
+                errorElement.textContent = 'Invalid access code. Please try again.';
+                document.getElementById('password-input').value = '';
+                
+                // Shake effect
+                document.getElementById('password-input').classList.add('shake');
+                setTimeout(() => {
+                    document.getElementById('password-input').classList.remove('shake');
+                }, 500);
+            }
+        }
+        
+        // ====== QUESTION LOADING ======
+        function loadPhysicsQuestions() {
+            const contentContainer = document.getElementById('content-container');
+            
+            // Create header
+            contentContainer.innerHTML = `
+                <h1><i class="material-icons">science</i> Nuclear Physics Examination</h1>
+                <div id="questions-container"></div>
+                <button id="logout-btn" class="logout-btn">
+                    <i class="material-icons">logout</i> LOGOUT
+                </button>
+            `;
+            
+            // Get questions container
+            const questionsContainer = document.getElementById('questions-container');
+            
+            // All 30 physics questions
+            const questions = [
+                {
+                    number: "Câu 1",
+                    question: "Năng lượng liên kết riêng là năng lượng liên kết",
+                    options: [
+                        "A. tính riêng cho hạt nhân ấy.",
+                        "B. của một cặp proton-neutron (neutron).",
+                        "C. của một cặp proton-proton.",
+                        "D. tính cho một nucleon."
+                    ],
+                    correct: 3,
+                    explanation: "Lời giải:<br>Năng lượng liên kết riêng của hạt nhân được định nghĩa là năng lượng liên kết tổng cộng của hạt nhân chia cho số nucleon (tổng số proton và neutron). Do đó, nó là năng lượng liên kết tính trung bình cho mỗi nucleon.<br><br>Đáp án đúng: D. tính cho một nucleon."
+                },
+                {
+                    number: "Câu 2",
+                    question: "Hạt nhân bền vững nhất trong các hạt nhân <span class='nucleus'>₂⁴He</span>, <span class='nucleus'>₉₂²³⁵U</span>, <span class='nucleus'>₂₆⁵⁶Fe</span>, và <span class='nucleus'>₅₅¹³⁷Cs</span> là",
+                    options: [
+                        "A. <span class='nucleus'>₂⁴He</span>",
+                        "B. <span class='nucleus'>₂₆⁵⁶Fe</span>",
+                        "C. <span class='nucleus'>₅₅¹³⁷Cs</span>",
+                        "D. <span class='nucleus'>₉₂²³⁵U</span>"
+                    ],
+                    correct: 1,
+                    explanation: "Lời giải:<br>Độ bền vững của hạt nhân được đánh giá qua năng lượng liên kết riêng (năng lượng liên kết trên mỗi nucleon). Hạt nhân có năng lượng liên kết riêng lớn nhất thường là bền vững nhất. Trong vật lý hạt nhân:<br><br><span class='nucleus'>₂₆⁵⁶Fe</span> (sắt-56) có năng lượng liên kết riêng cao nhất, khoảng 8,8 MeV/nucleon, là hạt nhân bền nhất trong tự nhiên.<br><span class='nucleus'>₂⁴He</span> (helium-4) cũng rất bền, nhưng năng lượng liên kết riêng thấp hơn (khoảng 7,1 MeV/nucleon).<br><span class='nucleus'>₉₂²³⁵U</span> và <span class='nucleus'>₅₅¹³⁷Cs</span> có năng lượng liên kết riêng thấp hơn (khoảng 7,6 MeV/nucleon và 8,4 MeV/nucleon), và không bền bằng <span class='nucleus'>₂₆⁵⁶Fe</span>.<br><br>Đáp án đúng: B. <span class='nucleus'>₂₆⁵⁶Fe</span>"
+                },
+                {
+                    number: "Câu 3",
+                    question: "Pôlôni <span class='nucleus'>₈₄²¹⁰Po</span> phóng xạ α và biến đổi thành chì Pb. Biết khối lượng các hạt nhân Po; α; Pb lần lượt là: 209,937303 u; 4,001506 u; 205,929442 u và 1u=931,5 MeV/c². Năng lượng tỏa ra khi một hạt nhân pôlôni phân rã xấp xỉ bằng",
+                    options: [
+                        "A. 29,60 MeV",
+                        "B. 59,20 MeV",
+                        "C. 2,96 MeV",
+                        "D. 5,92 MeV"
+                    ],
+                    correct: 3,
+                    explanation: "Lời giải:<br>Phản ứng phân rã: <span class='nucleus'>₈₄²¹⁰Po → ₈₂²⁰⁶Pb + ₂⁴He</span>.<br><br>Năng lượng tỏa ra được tính từ độ hụt khối Δm theo công thức:<br><span class='formula'>Q = Δm × 931,5 MeV/u</span><br><br>Trong đó:<br><span class='formula'>Δm = m(₈₄²¹⁰Po) − [m(₈₂²⁰⁶Pb) + m(₂⁴He)]</span><br><br>Thay số:<br>Δm = 209,937303 − (205,929442 + 4,001506) = 209,937303 − 209,930948 = 0,006355 u.<br><br>Tính năng lượng:<br>Q = 0,006355 × 931,5 ≈ 5,92 MeV.<br><br>Đáp án đúng: D. 5,92 MeV"
+                },
+                {
+                    number: "Câu 4",
+                    question: "Trong phản ứng hạt nhân không có sự bảo toàn",
+                    options: [
+                        "A. năng lượng toàn phần.",
+                        "B. số neutron.",
+                        "C. động lượng.",
+                        "D. số nucleon."
+                    ],
+                    correct: 1,
+                    explanation: "Lời giải:<br>Trong phản ứng hạt nhân:<br><br>- Năng lượng toàn phần (bao gồm năng lượng nghỉ và động năng) luôn được bảo toàn.<br>- Động lượng cũng được bảo toàn theo định luật bảo toàn động lượng.<br>- Số nucleon (tổng số proton và neutron) được bảo toàn trong mọi phản ứng hạt nhân.<br>- Số neutron không nhất thiết phải bảo toàn, vì neutron có thể biến đổi thành proton (hoặc ngược lại) trong các quá trình như phân rã beta.<br><br>Đáp án đúng: B. số neutron."
+                },
+                {
+                    number: "Câu 5",
+                    question: "Hạt nhân <span class='nucleus'>₈¹⁷O</span> có khối lượng 16,9947 u. Biết khối lượng của proton và neutron lần lượt là 1,0073 u và 1,0087 u. Độ hụt khối của <span class='nucleus'>₈¹⁷O</span> là",
+                    options: [
+                        "A. 0,1294 u",
+                        "B. 0,1406 u",
+                        "C. 0,1532 u",
+                        "D. 0,1420 u"
+                    ],
+                    correct: 3,
+                    explanation: "Lời giải:<br>Độ hụt khối Δm được tính bằng:<br><span class='formula'>Δm = [Z⋅mₚ + (A−Z)⋅mₙ] − m_hạt_nhân</span><br><br>Trong đó:<br>- Z = 8 (số proton)<br>- A = 17 (số nucleon)<br>- A−Z = 17−8 = 9 (số neutron)<br>- mₚ = 1,0073 u<br>- mₙ = 1,0087 u<br>- m_hạt_nhân = 16,9947 u<br><br>Tính:<br>Δm = [8×1,0073 + 9×1,0087] − 16,9947<br>= [8,0584 + 9,0783] − 16,9947<br>= 17,1367 − 16,9947 = 0,1420 u.<br><br>Đáp án đúng: D. 0,1420 u"
+                },
+                {
+                    number: "Câu 6",
+                    question: "Cho khối lượng của hạt proton; neutron và hạt nhân <span class='nucleus'>₁²D</span> lần lượt là 1,0073 u; 1,0087 u và 2,0136 u. Biết 1u=931,5 MeV/c². Năng lượng liên kết riêng của hạt nhân <span class='nucleus'>₁²D</span> là",
+                    options: [
+                        "A. 2,24 MeV/nucleon",
+                        "B. 1,12 MeV/nucleon",
+                        "C. 3,06 MeV/nucleon",
+                        "D. 4,48 MeV/nucleon"
+                    ],
+                    correct: 1,
+                    explanation: "Lời giải:<br>Tính độ hụt khối:<br>Δm = [mₚ + mₙ] - m_D = [1,0073 + 1,0087] - 2,0136 = 2,0160 - 2,0136 = 0,0024 u<br><br>Tính năng lượng liên kết:<br>E = Δm × 931,5 = 0,0024 × 931,5 = 2,2356 MeV<br><br>Tính năng lượng liên kết riêng (A=2):<br>E_riêng = E/A = 2,2356/2 = 1,1178 ≈ 1,12 MeV/nucleon<br><br>Đáp án đúng: B. 1,12 MeV/nucleon"
+                },
+                {
+                    number: "Câu 7",
+                    question: "Hạt nhân <span class='nucleus'>₉₂²³⁵U</span> có năng lượng liên kết riêng là 7,6 MeV/nucleon. Độ hụt khối của hạt nhân <span class='nucleus'>₉₂²³⁵U</span> là",
+                    options: [
+                        "A. 0,751 u",
+                        "B. 1,942 u",
+                        "C. 1,754 u",
+                        "D. 1,917 u"
+                    ],
+                    correct: 3,
+                    explanation: "Lời giải:<br>Năng lượng liên kết tổng:<br>E = E_riêng × A = 7,6 × 235 = 1786 MeV<br><br>Độ hụt khối:<br>Δm = E/931,5 = 1786/931,5 ≈ 1,917 u<br><br>Đáp án đúng: D. 1,917 u"
+                },
+                {
+                    number: "Câu 8",
+                    question: "Biết khối lượng của proton; neutron; hạt nhân <span class='nucleus'>₈¹⁶O</span> lần lượt là 1,0073 u; 1,0087 u; 15,9904 u. Năng lượng liên kết của hạt nhân <span class='nucleus'>₈¹⁶O</span> xấp xỉ bằng",
+                    options: [
+                        "A. 12,817 MeV",
+                        "B. 190,81 MeV",
+                        "C. 128,174 MeV",
+                        "D. 14,25 MeV"
+                    ],
+                    correct: 2,
+                    explanation: "Lời giải:<br>Tính độ hụt khối:<br>Δm = [8×1,0073 + 8×1,0087] - 15,9904<br>= [8,0584 + 8,0696] - 15,9904<br>= 16,1280 - 15,9904 = 0,1376 u<br><br>Tính năng lượng liên kết:<br>E = 0,1376 × 931,5 ≈ 128,174 MeV<br><br>Đáp án đúng: C. 128,174 MeV"
+                },
+                {
+                    number: "Câu 9",
+                    question: "Một nhà máy điện nguyên tử có công suất P=6×10⁵ kW, hiệu suất 20%. Nhiên liệu là <span class='nucleus'>²³⁵U</span> được làm giàu 25%. Coi mỗi năm có 365 ngày; mỗi phân hạch sinh ra 200 MeV. Khối lượng nhiên liệu hạt nhân mà lò phản ứng tiêu thụ trong 1 năm là bao nhiêu? (Cho Nₐ = 6,02×10²³ mol⁻¹)",
+                    options: [
+                        "A. 1154 kg",
+                        "B. 4616 tấn",
+                        "C. 185 kg",
+                        "D. 4616 kg"
+                    ],
+                    correct: 3,
+                    explanation: `Lời giải:
+Công suất thực tế: P = 6×10⁵ kW = 6×10⁸ W<br>
+Năng lượng nhiệt cần thiết (hiệu suất 20%):<br>
+P_nhiệt = P/η = 6×10⁸/0,2 = 3×10⁹ W<br>
+<br>
+Năng lượng trong 1 năm:<br>
+E = P_nhiệt × t = 3×10⁹ × (365 × 24 × 3600) = 9,4608×10¹⁶ J<br>
+<br>
+Số phân hạch:<br>
+1 MeV = 1,602×10⁻¹³ J, 200 MeV = 3,204×10⁻¹¹ J<br>
+N = E/E_phản_ứng = 9,4608×10¹⁶ / 3,204×10⁻¹¹ ≈ 2,952×10²⁷<br>
+<br>
+Số mol ²³⁵U:<br>
+n = N/Nₐ = 2,952×10²⁷ / 6,02×10²³ ≈ 4903,65 mol<br>
+<br>
+Khối lượng nguyên chất ²³⁵U:<br>
+m = n × M = 4903,65 × 235×10⁻³ ≈ 1152,36 kg<br>
+<br>
+Nhiên liệu làm giàu 25%:<br>
+m_tổng = m/0,25 ≈ 1152,36/0,25 ≈ 4609,44 kg<br>
+<br>
+Đáp án gần đúng: D. 4616 kg`
+                },
+                {
+                    number: "Câu 10",
+                    question: "Phát biểu về các hạt nhân (Đúng/Sai):",
+                    extra: "<small>(Chọn tất cả các câu đúng)</small>",
+                    options: [
+                        "1. Các hạt nhân <span class='nucleus'>₁₅³¹P</span> và <span class='nucleus'>₁₇³³Cl</span> có số neutron bằng nhau.",
+                        "2. Năng lượng liên kết của <span class='nucleus'>₅₃¹³⁸I</span> là 4063,2867 MeV.",
+                        "3. Độ hụt khối của <span class='nucleus'>₉₂²³⁵U</span> là 1121,14 u.",
+                        "4. <span class='nucleus'>₁₇³³Cl</span> bền hơn <span class='nucleus'>₁₅³¹P</span>."
+                    ],
+                    correct: [0], // Only the first statement is correct
+                    explanation: `Lời giải:<br><br>
+1. Số neutron: <span class='nucleus'>₁₅³¹P</span> = 31-15=16, <span class='nucleus'>₁₇³³Cl</span> = 33-17=16 → <span class='success'>Đúng</span>.<br><br>
+2. Δm <span class='nucleus'>₅₃¹³⁸I</span> = [53×1,00728 + 85×1,00866] - 137,92281 ≈ 1,214 u<br>E = 1,214 × 931,5 ≈ 1130 MeV (không phải 4063,2867 MeV) → <span class='error'>Sai</span>.<br><br>
+3. E_riêng = 7,6 MeV/nucleon, E = 7,6×235 = 1786 MeV,<br>Δm = 1786/931,5 ≈ 1,917 u (không phải 1121,14 u) → <span class='error'>Sai</span>.<br><br>
+4. E_riêng <span class='nucleus'>₁₅³¹P</span> ≈ 8,5 MeV/nucleon, <span class='nucleus'>₁₇³³Cl</span> ≈ 8,4 MeV/nucleon.<br><span class='nucleus'>₁₅³¹P</span> bền hơn → <span class='error'>Sai</span>.<br><br>
+Đáp án: 1. <span class='success'>Đúng</span>, 2. <span class='error'>Sai</span>, 3. <span class='error'>Sai</span>, 4. <span class='error'>Sai</span>`
+                },
+                {
+                    number: "Câu 11",
+                    question: "Cho khối lượng của proton, neutron và hạt nhân <span class='nucleus'>₂⁴He</span> lần lượt là: 1,0073 u; 1,0087 u và 4,0015 u. Năng lượng liên kết của hạt nhân <span class='nucleus'>₂⁴He</span> là",
+                    options: [
+                        "A. 30,21 MeV",
+                        "B. 28,41 MeV",
+                        "C. 18,3 eV",
+                        "D. 14,21 MeV"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+Δm = [2×1,0073 + 2×1,0087] - 4,0015 = [2,0146 + 2,0174] - 4,0015 = 4,0320 - 4,0015 = 0,0305 u<br><br>
+E = 0,0305 × 931,5 ≈ 28,41 MeV<br><br>
+Đáp án đúng: B. 28,41 MeV`
+                },
+                {
+                    number: "Câu 12",
+                    question: "Giả sử trong một phản ứng hạt nhân, tổng khối lượng trước phản ứng nhỏ hơn tổng khối lượng sau phản ứng là 0,02 u. Phản ứng hạt nhân này",
+                    options: [
+                        "A. thu năng lượng 18,63 MeV",
+                        "B. thu năng lượng 1,863 MeV",
+                        "C. tỏa năng lượng 18,63 MeV",
+                        "D. tỏa năng lượng 1,863 MeV"
+                    ],
+                    correct: 0,
+                    explanation: `Lời giải:<br>
+Nếu m_trước < m_sau, phản ứng thu năng lượng (endothermic).<br>
+Δm = m_sau - m_trước = 0,02 u<br>
+Q = -Δm × 931,5 = -0,02 × 931,5 = -18,63 MeV (dấu âm: thu năng lượng)<br><br>
+Đáp án đúng: A. thu năng lượng 18,63 MeV`
+                },
+                {
+                    number: "Câu 13",
+                    question: "Hạt nhân deuterium <span class='nucleus'>₁²D</span> có khối lượng m_D=2,0136 amu. Biết khối lượng của proton là mₚ=1,0073 amu và của neutron là mₙ=1,0087 amu. Năng lượng liên kết của hạt nhân <span class='nucleus'>₁²D</span> là bao nhiêu MeV? (Làm tròn 2 chữ số thập phân)",
+                    options: [
+                        "A. 1.99 MeV",
+                        "B. 2.24 MeV",
+                        "C. 3.41 MeV",
+                        "D. 4.58 MeV"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+Δm = [1,0073 + 1,0087] - 2,0136 = 2,0160 - 2,0136 = 0,0024 u<br><br>
+E = 0,0024 × 931,5 = 2,2356 ≈ 2,24 MeV<br><br>
+Đáp án: B. 2.24 MeV`
+                },
+                {
+                    number: "Câu 14",
+                    question: "Một nhà máy điện nguyên tử dùng <span class='nucleus'>²³⁵U</span> phân hạch tỏa ra 200 MeV. Hiệu suất 30%. Nếu công suất là 1920 MW thì khối lượng <span class='nucleus'>²³⁵U</span> cần dùng trong 1 ngày là bao nhiêu? (Cho Nₐ = 6,02×10²³ mol⁻¹)",
+                    options: [
+                        "A. 2,5964 kg",
+                        "B. 0,6744 kg",
+                        "C. 1,0502 kg",
+                        "D. 6,7455 kg"
+                    ],
+                    correct: 3,
+                    explanation: `Lời giải:<br>
+P = 1920 MW = 1,92×10⁹ W<br>
+P_nhiệt = P/η = 1,92×10⁹/0,3 = 6,4×10⁹ W<br><br>
+E = P_nhiệt × t = 6,4×10⁹ × (24×3600) = 5,5296×10¹⁴ J<br><br>
+Số phân hạch: N = E / (200×1,602×10⁻¹³) ≈ 1,727×10²⁵<br><br>
+n = N/Nₐ = 1,727×10²⁵ / 6,02×10²³ ≈ 28,69 mol<br><br>
+m = n×M = 28,69 × 235×10⁻³ ≈ 6,7455 kg<br><br>
+Đáp án đúng: D. 6,7455 kg`
+                },
+                {
+                    number: "Câu 15",
+                    question: "Dự án lò phản ứng ITER dùng phản ứng <span class='nucleus'>₁²D + ₁³T → ₂⁴He + ₀¹n</span> với công suất điện 500 MW và hiệu suất 25%. Cho độ hụt khối của T, D và He lần lượt là 0,009106 u; 0,002491 u và 0,030382 u. Khối lượng helium do nhà máy thải ra trong 1 năm là",
+                    options: [
+                        "A. 74,8 kg",
+                        "B. 149,6 kg",
+                        "C. 9,35 kg",
+                        "D. 37,4 kg"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+P = 500 MW = 5×10⁸ W, η = 0,25<br>
+P_nhiệt = P/η = 5×10⁸ / 0,25 = 2×10⁹ W<br><br>
+E = 2×10⁹ × (365 × 24 × 3600) = 6,3072×10¹⁶ J<br><br>
+Độ hụt khối phản ứng:<br>
+Δm = [0,002491 + 0,009106] - [0,030382 + 0] = 0,011597 - 0,030382 = -0,018785 u<br><br>
+Q = 0,018785 × 931,5 ≈ 17,5 MeV = 2,803×10⁻¹² J<br><br>
+Số phản ứng: N = E/Q ≈ 2,25×10²⁸<br><br>
+Khối lượng He: m = N×M_He/Nₐ ≈ 149,6 kg<br><br>
+Đáp án đúng: B. 149,6 kg`
+                },
+                {
+                    number: "Câu 16",
+                    question: "Cho ba hạt nhân X, Y, Z có số nucleon Aₓ=2Aʏ=0,5Aᴢ. Biết năng lượng liên kết từng hạt là ΔEᴢ < ΔEₓ < ΔEʏ. Sắp xếp các hạt nhân theo thứ tự tính bền vững giảm dần là",
+                    options: [
+                        "A. X, Y, Z",
+                        "B. Y, Z, X",
+                        "C. Y, X, Z",
+                        "D. Z, X, Y"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Aₓ = 2Aʏ, Aᴢ = 2Aₓ = 4Aʏ<br>
+ΔEᴢ < ΔEₓ < ΔEʏ<br><br>
+Độ bền vững → năng lượng liên kết riêng (ΔE/A):<br>
+Eʏ = ΔEʏ/Aʏ<br>
+Eₓ = ΔEₓ/Aₓ = ΔEₓ/(2Aʏ)<br>
+Eᴢ = ΔEᴢ/Aᴢ = ΔEᴢ/(4Aʏ)<br><br>
+Vì ΔEʏ > ΔEₓ > ΔEᴢ → Eʏ > Eₓ > Eᴢ<br><br>
+Thứ tự bền vững giảm dần: Y, X, Z<br><br>
+Đáp án đúng: C. Y, X, Z`
+                },
+                {
+                    number: "Câu 17",
+                    question: "Phát biểu về các hạt nhân <span class='nucleus'>₂₀⁴²Ca</span> và <span class='nucleus'>₂₀⁴³Ca</span> (Đúng/Sai):",
+                    extra: "<small>(Chọn tất cả các câu đúng)</small>",
+                    options: [
+                        "1. <span class='nucleus'>₂₀⁴²Ca</span> và <span class='nucleus'>₂₀⁴³Ca</span> đều là đồng vị của <span class='nucleus'>₂₀⁴⁰Ca</span>.",
+                        "2. Độ hụt khối <span class='nucleus'>₂₀⁴³Ca</span> > độ hụt khối <span class='nucleus'>₂₀⁴²Ca</span>.",
+                        "3. Năng lượng liên kết <span class='nucleus'>₂₀⁴³Ca</span> > <span class='nucleus'>₂₀⁴²Ca</span> một lượng 9,73 MeV.",
+                        "4. <span class='nucleus'>₂₀⁴³Ca</span> kém bền hơn <span class='nucleus'>₂₀⁴²Ca</span>."
+                    ],
+                    correct: [0,1,3], // First three are correct
+                    explanation: `Lời giải:<br><br>
+1. Đồng vị có cùng số proton (20), khác số neutron → <span class='success'>Đúng</span>.<br><br>
+2. Δm_₄₂ = [20×1,007276 + 22×1,008665] - 41,958622 ≈ 0,3672 u<br>
+Δm_₄₃ = [20×1,007276 + 23×1,008665] - 42,958770 ≈ 0,3759 u<br>
+Δm_₄₃ > Δm_₄₂ → <span class='success'>Đúng</span>.<br><br>
+3. E_₄₂ = 0,3672 × 931,5 ≈ 342,1 MeV<br>
+E_₄₃ = 0,3759 × 931,5 ≈ 350,1 MeV<br>
+ΔE = 350,1 - 342,1 = 8,0 MeV ≠ 9,73 MeV → <span class='error'>Sai</span>.<br><br>
+4. E_riêng_₄₂ = 342,1/42 ≈ 8,15 MeV/nucleon<br>
+E_riêng_₄₃ = 350,1/43 ≈ 8,14 MeV/nucleon<br>
+→ <span class='nucleus'>₂₀⁴²Ca</span> bền hơn → <span class='success'>Đúng</span>.<br><br>
+Đáp án: 1. <span class='success'>Đúng</span>, 2. <span class='success'>Đúng</span>, 3. <span class='error'>Sai</span>, 4. <span class='success'>Đúng</span>`
+                },
+                {
+                    number: "Câu 18",
+                    question: "Năng lượng liên kết riêng của hạt α (cho m_α=4,0015 u; mₙ=1,00867 u; mₚ=1,00728 u; 1uc²=931,5 MeV). Làm tròn đến 1 chữ số thập phân.",
+                    options: [
+                        "A. 5.1 MeV/nucleon",
+                        "B. 6.2 MeV/nucleon",
+                        "C. 7.1 MeV/nucleon",
+                        "D. 8.3 MeV/nucleon"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Δm = [2×1,00728 + 2×1,00867] - 4,0015 = [2,01456 + 2,01734] - 4,0015 = 4,0319 - 4,0015 = 0,0304 u<br><br>
+E = 0,0304 × 931,5 ≈ 28,32 MeV<br><br>
+E_riêng = 28,32/4 = 7,08 ≈ 7,1 MeV/nucleon<br><br>
+Đáp án: C. 7.1 MeV/nucleon`
+                },
+                {
+                    number: "Câu 19",
+                    question: "Một phản ứng tổng hợp hạt nhân năng lượng tỏa ra 4,02 MeV. Phát biểu (Đúng/Sai):",
+                    extra: "<small>(Chọn tất cả các câu đúng)</small>",
+                    options: [
+                        "1. Hạt nhân X có điện tích +1e.",
+                        "2. Năng lượng phản ứng là 6,432×10⁻¹³ J.",
+                        "3. Năng lượng tỏa ra khi tổng hợp 1,00 g là 2,0×10¹¹ J.",
+                        "4. Có thể làm nóng chảy 2,91×10⁶ kg nước đá."
+                    ],
+                    correct: [0,1], // First two are correct (last two false)
+                    explanation: `Lời giải:<br><br>
+1. Không có pt, nhưng có thể → <span class='success'>Đúng</span> (tạm chấp nhận)<br><br>
+2. 4,02 MeV = 4,02 × 1,602×10⁻¹³ = 6,44×10⁻¹³ J ≈ 6,432×10⁻¹³ J → <span class='success'>Đúng</span>.<br><br>
+3. Giả sử phản ứng D+T (17,6 MeV):<br>
+n ≈ 2,408×10²⁰ hạt → E ≈ 6,79×10¹⁰ J ≠ 2×10¹¹ J → <span class='error'>Sai</span>.<br><br>
+4. Q = 6,79×10¹⁰ J → m = Q/q ≈ 2,04×10⁵ kg ≠ 2,91×10⁶ kg → <span class='error'>Sai</span>.<br><br>
+Đáp án: 1. <span class='success'>Đúng</span>, 2. <span class='success'>Đúng</span>, 3. <span class='error'>Sai</span>, 4. <span class='error'>Sai</span>`
+                },
+                {
+                    number: "Câu 20",
+                    question: "Tốc độ ánh sáng 3×10⁸ m/s. Hạt proton có khối lượng 1,673×10⁻²⁷ kg có năng lượng nghỉ bằng",
+                    options: [
+                        "A. 1360 MeV",
+                        "B. 520 MeV",
+                        "C. 941 MeV",
+                        "D. 325 MeV"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+E₀ = mc² = 1,673×10⁻²⁷ × (3×10⁸)² = 1,5057×10⁻¹⁰ J<br><br>
+E₀ = 1,5057×10⁻¹⁰ / 1,602×10⁻¹³ ≈ 941 MeV<br><br>
+Đáp án đúng: C. 941 MeV`
+                },
+                {
+                    number: "Câu 21",
+                    question: "Hạt nhân X trong phản ứng: <span class='nucleus'>₅¹⁰B + ᴢᴀX → α + ₄⁸Be</span> là",
+                    options: [
+                        "A. <span class='nucleus'>₁¹p</span>",
+                        "B. <span class='nucleus'>₀¹n</span>",
+                        "C. <span class='nucleus'>₁²D</span>",
+                        "D. <span class='nucleus'>₁³T</span>"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Bảo toàn số nucleon và điện tích:<br><br>
+10 + A = 4 + 8 → A = 2<br>
+5 + Z = 2 + 4 → Z = 1<br><br>
+→ X = <span class='nucleus'>₁²D</span><br><br>
+Đáp án đúng: C. <span class='nucleus'>₁²D</span>`
+                },
+                {
+                    number: "Câu 22",
+                    question: "Cho khối lượng của <span class='nucleus'>₁³T</span>; proton; neutron lần lượt là 3,0161 u; 1,0073 u và 1,0087 u. Năng lượng liên kết riêng của <span class='nucleus'>₁³T</span> là",
+                    options: [
+                        "A. 6,71 eV/nucleon",
+                        "B. 2,24 MeV/nucleon",
+                        "C. 2,67 MeV/nucleon",
+                        "D. 8,01 eV/nucleon"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Δm = [1,0073 + 2×1,0087] - 3,0161 = [1,0073 + 2,0174] - 3,0161 = 3,0247 - 3,0161 = 0,0086 u<br><br>
+E = 0,0086 × 931,5 ≈ 8,01 MeV<br><br>
+E_riêng = 8,01 / 3 ≈ 2,67 MeV/nucleon<br><br>
+Đáp án đúng: C. 2,67 MeV/nucleon`
+                },
+                {
+                    number: "Câu 23",
+                    question: "Cho khối lượng <span class='nucleus'>₁₇³⁷Cl</span>, neutron, proton lần lượt là 36,9566 amu; 1,0087 amu; 1,0073 amu. Độ hụt khối của <span class='nucleus'>₁₇³⁷Cl</span> là bao nhiêu amu? (Làm tròn 2 chữ số thập phân)",
+                    options: [
+                        "A. 0.29 u",
+                        "B. 0.34 u",
+                        "C. 0.42 u",
+                        "D. 0.56 u"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+Δm = [17×1,0073 + 20×1,0087] - 36,9566 = [17,1241 + 20,174] - 36,9566 = 37,2981 - 36,9566 = 0,3415 ≈ 0,34 u<br><br>
+Đáp án: B. 0.34 u`
+                },
+                {
+                    number: "Câu 24",
+                    question: "Các hạt nhân <span class='nucleus'>₂⁴He</span>, <span class='nucleus'>₅₃¹³⁹I</span>, <span class='nucleus'>₉₂²³⁵U</span> có m lần lượt là 4,0015 u; 138,8970 u; 234,9933 u. Sắp xếp theo độ bền vững giảm dần là",
+                    options: [
+                        "A. <span class='nucleus'>₅₃¹³⁹I; ₉₂²³⁵U; ₂⁴He</span>",
+                        "B. <span class='nucleus'>₉₂²³⁵U; ₂⁴He; ₅₃¹³⁹I</span>",
+                        "C. <span class='nucleus'>₂⁴He; ₅₃¹³⁹I; ₉₂²³⁵U</span>",
+                        "D. <span class='nucleus'>₅₃¹³⁹I; ₂⁴He, ₉₂²³⁵U</span>"
+                    ],
+                    correct: 0,
+                    explanation: `Lời giải:<br>
+Tính năng lượng liên kết riêng:<br><br>
+1. <span class='nucleus'>₂⁴He</span>: Δm = 0,0305 u → E ≈ 28,41 MeV → E_riêng ≈ 7,1 MeV/nucleon<br>
+2. <span class='nucleus'>₅₃¹³⁹I</span>: Δm ≈ 1,23 u → E ≈ 1146 MeV → E_riêng ≈ 8,24 MeV/nucleon<br>
+3. <span class='nucleus'>₉₂²³⁵U</span>: Δm ≈ 1,917 u → E ≈ 1786 MeV → E_riêng ≈ 7,6 MeV/nucleon<br><br>
+Thứ tự: <span class='nucleus'>₅₃¹³⁹I > ₉₂²³⁵U > ₂⁴He</span><br><br>
+Đáp án đúng: A`
+                },
+                {
+                    number: "Câu 25",
+                    question: "Công suất Mặt Trời 3,83×10²⁶ W. Nếu duy trì từ khi hình thành (4,5 tỉ năm), tỉ lệ khối lượng Mặt Trời hiện nay (1,99×10³⁰ kg) so với ban đầu là bao nhiêu %? (Làm tròn 1 chữ số thập phân)",
+                    options: [
+                        "A. 98.5%",
+                        "B. 99.7%",
+                        "C. 99.9%",
+                        "D. 99.4%"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+E = P × t ≈ 3,83×10²⁶ × (4,5×10⁹ × 365 × 24 × 3600) ≈ 5,43×10⁴³ J<br>
+Δm = E/c² ≈ 6,03×10²⁶ kg<br><br>
+m_ban_đầu ≈ m_hiện_nay + Δm ≈ 1,99×10³⁰ + 6,03×10²⁶ ≈ 1,996×10³⁰ kg<br><br>
+% = m_hiện_nay / m_ban_đầu × 100 ≈ 99,7%<br><br>
+Đáp án: B. 99.7%`
+                },
+                {
+                    number: "Câu 26",
+                    question: "Photon có năng lượng tối thiểu bao nhiêu để phân tách <span class='nucleus'>₁²D</span> thành neutron và proton? Cho m_D=2,01355 amu, m_p=1,00728 amu, m_n=1,00867 amu.",
+                    options: [
+                        "A. 1.56 MeV",
+                        "B. 2.24 MeV",
+                        "C. 3.18 MeV",
+                        "D. 4.32 MeV"
+                    ],
+                    correct: 1,
+                    explanation: `Lời giải:<br>
+Δm = [1,00728 + 1,00867] - 2,01355 = 2,01595 - 2,01355 = 0,0024 u<br><br>
+E = 0,0024 × 931,5 ≈ 2,24 MeV<br><br>
+Đáp án: B. 2.24 MeV`
+                },
+                {
+                    number: "Câu 27",
+                    question: "Theo thuyết tương đối, hệ thức SAI về mối quan hệ giữa khối lượng m và năng lượng toàn phần E là",
+                    options: [
+                        "A. E = mc²",
+                        "B. m = E/c²",
+                        "C. E = mc",
+                        "D. c² = E/m"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Theo thuyết tương đối: E = mc².<br><br>
+- A: Đúng.<br>
+- B: Sai (đúng phải là m = E/c²).<br>
+- C: Sai (đơn vị không khớp).<br>
+- D: Đúng.<br><br>
+Đáp án đúng: C. E = mc`
+                },
+                {
+                    number: "Câu 28",
+                    question: "Cho m_α=4,0015 u; m_n=1,0087 u; m_p=1,0073 u; 1uc²=931,5 MeV; Nₐ=6,02×10²³ mol⁻¹. Năng lượng tỏa ra khi tạo thành 5 mol <span class='nucleus'>₂⁴He</span> từ các proton và neutron là bao nhiêu ×10²⁵ MeV? (Làm tròn 2 chữ số thập phân)",
+                    options: [
+                        "A. 6.78",
+                        "B. 7.15",
+                        "C. 8.52",
+                        "D. 9.24"
+                    ],
+                    correct: 2,
+                    explanation: `Lời giải:<br>
+Δm = [2×1,0073 + 2×1,0087] - 4,0015 = 0,0304 u<br><br>
+E = 0,0304 × 931,5 ≈ 28,32 MeV/hạt<br><br>
+N = 5 × 6,02×10²³ = 3,01×10²⁴ hạt<br><br>
+E_tổng = 3,01×10²⁴ × 28,32 = 8,52×10²⁵ MeV<br><br>
+Đáp án: C. 8.52`
+                },
+                {
+                    number: "Câu 29",
+                    question: "Cho khối lượng các nguyên tử <span class='nucleus'>₁¹H</span>, <span class='nucleus'>₂₅⁵⁵Mn</span>, <span class='nucleus'>₂₆⁵⁶Fe</span>, <span class='nucleus'>₂₇⁵⁹Co</span> và neutron lần lượt là: 1,00783 u; 54,93804 u; 55,93494 u; 58,93319 u; 1,00866 u. Phát biểu (Đúng/Sai):",
+                    extra: "<small>(Chọn tất cả các câu đúng)</small>",
+                    options: [
+                        "1. <span class='nucleus'>₂₅⁵⁵Mn</span> có E_liên_kết = 482,1 MeV.",
+                        "2. <span class='nucleus'>₂₆⁵⁶Fe</span> có E_liên_kết = 492,2 MeV.",
+                        "3. <span class='nucleus'>₂₇⁵⁹Co</span> có E_liên_kết = 517,3 MeV.",
+                        "4. Thứ tự độ bền tăng dần: <span class='nucleus'>Mn, Fe, Co</span>"
+                    ],
+                    correct: [0,1,2], // First three are correct
+                    explanation: `Lời giải:<br><br>
+1. Δm <span class='nucleus'>₂₅⁵⁵Mn</span> ≈ 0,518 u → E ≈ 482,1 MeV → <span class='success'>Đúng</span>.<br><br>
+2. Δm <span class='nucleus'>₂₆⁵⁶Fe</span> ≈ 0,528 u → E ≈ 492,2 MeV → <span class='success'>Đúng</span>.<br><br>
+3. Δm <span class='nucleus'>₂₇⁵⁹Co</span> ≈ 0,555 u → E ≈ 517,3 MeV → <span class='success'>Đúng</span>.<br><br>
+4. E_riêng: Mn ≈ 8,77 MeV/nucleon, Fe ≈ 8,79 MeV/nucleon, Co ≈ 8,77 MeV/nucleon.<br>
+→ Fe bền nhất, thứ tự đúng: Co, Mn, Fe → <span class='error'>Sai</span>.<br><br>
+Đáp án: 1. <span class='success'>Đúng</span>, 2. <span class='success'>Đúng</span>, 3. <span class='success'>Đúng</span>, 4. <span class='error'>Sai</span>`
+                },
+                {
+                    number: "Câu 30",
+                    question: "Hạt nhân <span class='nucleus'>₉₂²³⁵U</span> có năng lượng liên kết 1784 MeV. Năng lượng liên kết riêng của hạt nhân này là",
+                    options: [
+                        "A. 7,59 MeV/nucleon",
+                        "B. 19,39 MeV/nucleon",
+                        "C. 5,46 MeV/nucleon",
+                        "D. 12,48 MeV/nucleon"
+                    ],
+                    correct: 0,
+                    explanation: `Lời giải:<br>
+E_riêng = E/A = 1784/235 ≈ 7,59 MeV/nucleon<br><br>
+Đáp án đúng: A. 7,59 MeV/nucleon`
+                }
+            ];
+            
+            // Render each question
+            questions.forEach((q, index) => {
+                const questionEl = document.createElement('div');
+                questionEl.className = 'question';
+                
+                let questionHTML = `
+                    <div class="question-number">${q.number}</div>
+                    <div class="question-text">${q.question}</div>
+                `;
+                
+                if (q.extra) {
+                    questionHTML += `<div class="question-extra">${q.extra}</div>`;
+                }
+                
+                questionHTML += `
+                    <div class="options">
+                        ${q.options.map((opt, optIndex) => {
+                            // Handle multiple correct answers
+                            const isCorrect = Array.isArray(q.correct) 
+                                ? q.correct.includes(optIndex)
+                                : optIndex === q.correct;
+                            
+                            return `<div class="option" data-correct="${isCorrect}">${opt}</div>`;
+                        }).join('')}
+                    </div>
+                    <div class="explanation">
+                        <div class="explanation-title">
+                            <i class="material-icons">lightbulb</i>
+                            Giải thích
+                        </div>
+                        ${q.explanation}
+                    </div>
+                `;
+                
+                questionEl.innerHTML = questionHTML;
+                questionsContainer.appendChild(questionEl);
+            });
+            
+            // Add event listeners to options
+            document.querySelectorAll('.option').forEach(option => {
+                option.addEventListener('click', function() {
+                    // For single correct questions (non-array)
+                    if (!this.closest('.question').querySelector('.question-extra')) {
+                        const isCorrect = this.getAttribute('data-correct') === 'true';
+                        const question = this.closest('.question');
+                        
+                        // Remove selected class from all options in this question
+                        question.querySelectorAll('.option').forEach(opt => {
+                            opt.classList.remove('selected', 'correct', 'incorrect');
+                        });
+                        
+                        // Add appropriate classes
+                        this.classList.add('selected');
+                        this.classList.add(isCorrect ? 'correct' : 'incorrect');
+                        
+                        // Show other correct answer if this was incorrect
+                        if (!isCorrect) {
+                            const correctOption = question.querySelector(`.option[data-correct="true"]`);
+                            correctOption.classList.add('correct');
+                        }
+                        
+                        // Show explanation
+                        question.querySelector('.explanation').style.display = 'block';
+                    }
+                    // For multi-correct questions
+                    else {
+                        this.classList.toggle('selected');
+                        const isCorrect = this.getAttribute('data-correct') === 'true';
+                        
+                        if (this.classList.contains('selected')) {
+                            this.classList.add(isCorrect ? 'correct' : 'incorrect');
+                        } else {
+                            this.classList.remove('correct', 'incorrect');
+                        }
+                    }
+                });
+            });
+            
+            // Add logic for checking multi-correct answers
+            const checkAnswersBtn = document.createElement('button');
+            checkAnswersBtn.textContent = 'KIỂM TRA ĐÁP ÁN';
+            checkAnswersBtn.className = '';
+            checkAnswersBtn.addEventListener('click', function() {
+                // For questions with multiple correct answers
+                document.querySelectorAll('.question').forEach(question => {
+                    if (question.querySelector('.question-extra')) {
+                        question.querySelectorAll('.option').forEach(opt => {
+                            const isCorrect = opt.getAttribute('data-correct') === 'true';
+                            
+                            if (opt.classList.contains('selected')) {
+                                if (!isCorrect) {
+                                    opt.classList.add('incorrect');
+                                } else {
+                                    opt.classList.add('correct');
+                                }
+                            }
+                            
+                            if (isCorrect) {
+                                opt.classList.add('correct');
+                            }
+                        });
+                        
+                        question.querySelector('.explanation').style.display = 'block';
+                    }
+                });
+            });
+            
+            questionsContainer.appendChild(checkAnswersBtn);
+            
+            // Logout button functionality
+            document.getElementById('logout-btn').addEventListener('click', function() {
+                document.getElementById('login-container').style.display = 'block';
+                document.getElementById('content-container').style.display = 'none';
+                document.getElementById('password-input').value = '';
+                document.getElementById('error-message').textContent = '';
+            });
+        }
+        
+        // ====== INITIALIZATION ======
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create particles
+            createParticles();
+            
+            // Update countdown every second
+            setInterval(updateCountdown, 1000);
+            updateCountdown();
+            
+            // Password submission
+            document.getElementById('submit-btn').addEventListener('click', checkPassword);
+            document.getElementById('password-input').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') checkPassword();
+            });
+            
+            // Resize handler to recreate particles
+            window.addEventListener('resize', createParticles);
+        });
+    </script>
+</body>
+</html>
