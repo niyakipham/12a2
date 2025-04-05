@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Lực từ tác dụng lên đoạn dây dẫn mang dòng điện. Cảm ứng từ (CD) (tổng hợp)</title>
+    <style>
+        :root {
+            --primary: #00f7ff;
+            --secondary: #7b2dff;
+            --dark: #0a0a20;
+            --light: #e0e0ff;
+            --accent: #ff2d7b;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            font-family: 'Segoe UI', 'Source Sans Pro', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(123, 45, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 247, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(0, 247, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            animation: scanline 3s linear infinite;
+        }
+        
+        @keyframes scanline {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--primary);
+            text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            flex: 1;
+        }
+        
+        .auth-panel {
+            background: rgba(10, 10, 32, 0.8);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.1);
+            backdrop-filter: blur(5px);
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .auth-panel::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(transparent, rgba(0, 247, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 5s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        
+        h2 {
+            margin-top: 0;
+            color: var(--primary);
+            font-weight: 300;
+            text-align: center;
+        }
+        
+        .input-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--light);
+            font-size: 0.9rem;
+        }
+        
+        input[type="password"] {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            color: var(--light);
+            font-size: 1rem;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+        
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(255, 45, 123, 0.5);
+        }
+        
+        button {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--dark);
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 247, 255, 0.3);
+        }
+        
+        .payment-note {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: rgba(255, 45, 123, 0.1);
+            border-left: 3px solid var(--accent);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .question {
+            background: rgba(10, 10, 32, 0.8);
+            border: 1px solid rgba(0, 247, 255, 0.3);
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .question::before {
+            content: "Q";
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background: var(--dark);
+            color: var(--primary);
+            font-size: 0.8rem;
+            padding: 0 5px;
+        }
+        
+        .question-id {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .question-text {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .answer {
+            background: rgba(123, 45, 255, 0.1);
+            border-left: 3px solid var(--secondary);
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .answer-title {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.8rem;
+            color: rgba(224, 224, 255, 0.5);
+            border-top: 1px solid rgba(0, 247, 255, 0.1);
+        }
+        
+        .true-false {
+            margin: 1rem 0;
+        }
+        
+        .true-false-item {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .true-false-item::before {
+            content: "◈";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+        
+        .correct {
+            color: #4caf50;
+        }
+        
+        .incorrect {
+            color: #ff5252;
+        }
+        
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>2. Lực từ tác dụng lên đoạn dây...</h1>
+    </div>
+    
+    <div class="container">
+        <div class="auth-panel" id="authPanel">
+            <h2>ACCESS CODE REQUIRED</h2>
+            <div class="input-group">
+                <label for="password">ENCRYPTION KEY</label>
+                <input type="password" id="password" placeholder="Enter security clearance">
+            </div>
+            <button onclick="checkPassword()">ĐĂNG NHẬP</button>
+            
+            <div class="payment-note">
+                <strong>NHẮC NHỞ THÂN THIỆN:</strong> Hãy chuyển khoản 10k vào số điện thoại 0901574726 để được nhận mật khẩu truy cập.
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <p> CÂU 1 </p>
+            <div class="question">
+                <div class="question-id">#12993466 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một ống dây dài 50 cm gồm N vòng dây, dòng điện chạy trong mỗi vòng là 2 A. Cảm ứng từ bên trong ống dây có độ lớn 8π.10⁻⁴ T. Giá trị của N là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Áp dụng công thức tính cảm ứng từ bên trong ống dây:</p>
+                    <p>B = μ₀.n.I (vòng/m)</p>
+                    <p>Với n là số vòng dây trên 1 mét chiều dài, do đó số vòng quấn trên một ống dây là:</p>
+                    <p>N = n.L = (B/(μ₀.I)).L = (8π.10⁻⁴/(4π.10⁻⁷ × 2)) × 0.5 = 500 (vòng).</p>
+                </div>
+            </div>
+            
+            <p> CÂU 2 </p>
+            <div class="question">
+                <div class="question-id">#13086283 (Điểm số: 0,17 / 0,33)</div>
+                <div class="question-text">
+                    Trong mỗi ý ở câu dưới đây, hãy chọn đúng hoặc sai.
+                    <p>Một dây dẫn thẳng dài vô hạn mang dòng điện I₁ = 5 A đặt trong không khí. Điểm M cách dây dẫn 5 cm.</p>
+                </div>
+                
+                <div class="true-false">
+                    <div class="true-false-item">
+                        Cảm ứng từ tại điểm M là 2.10⁻⁵ T. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Điểm N cách dây dẫn 10 cm thì có độ lớn cảm ứng từ gấp đôi độ lớn cảm ứng từ tại M. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Nếu cường độ dòng điện trong dây dẫn tăng thêm 10 A thì cảm ứng từ tại M là 4.10⁻⁵ T. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Tại M đặt một dây dẫn thẳng dài vô hạn mang dòng điện I₂ = 10 A song song, cùng chiều với I₁ thì lực tương tác lên mỗi đơn vị chiều dài của mỗi dây dẫn là lực hút và có độ lớn bằng 2.10⁻⁴ N/m. <span class="correct">Đúng</span>
+                    </div>
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ "Cảm ứng từ tại điểm M là 2.10⁻⁵ T." đúng, vì cảm ứng từ tại M: B = (μ₀.I)/(2π.r) = (4π.10⁻⁷×5)/(2π×0.05) = 2×10⁻⁵ T</p>
+                    <p>+ "Điểm N cách dây dẫn 10 cm thì có độ lớn cảm ứng từ gấp đôi độ lớn cảm ứng từ tại M" sai, vì B tỉ lệ nghịch với r</p>
+                    <p>+ "Nếu cường độ dòng điện trong dây dẫn tăng thêm 10 A thì cảm ứng từ tại M là 4.10⁻⁵ T" sai, vì khi I = 15A thì B = 6×10⁻⁵ T</p>
+                    <p>+ "Tại M đặt một dây dẫn thẳng dài vô hạn mang dòng điện I₂ = 10 A song song, cùng chiều với I₁ thì lực tương tác lên mỗi đơn vị chiều dài của mỗi dây dẫn là lực hút và có độ lớn bằng 2×10⁻⁴ N/m" đúng, vì F/l = (μ₀.I₁.I₂)/(2π.d) = (4π.10⁻⁷×5×10)/(2π×0.05) = 2×10⁻⁴ N/m</p>
+                </div>
+            </div>
+            
+            <p> CÂU 3 </p>
+            <div class="question">
+                <div class="question-id">#13087290 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Trong mỗi ý ở câu dưới đây, hãy chọn đúng hoặc sai.
+                    <p>Hai dây dẫn thẳng song song dài vô hạn đặt cách nhau 10 cm trong không khí. Dòng điện chạy trong 2 dây dẫn ngược chiều nhau và có cường độ I₁ = 10 A; I₂ = 20 A.</p>
+                </div>
+                
+                <div class="true-false">
+                    <div class="true-false-item">
+                        Cảm ứng từ tại điểm A cách mỗi dây 5 cm là 4.10⁻⁵ T. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Điểm B cách dây 1 một đoạn 4 cm, cách dây 2 một đoạn 14 cm có cảm ứng từ bằng 1,5.10⁻⁵ T. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Cảm ứng từ tại điểm M cách mỗi dây 10 cm bằng 3,46.10⁻⁵ T. (Kết quả làm tròn đến chữ số thứ hai sau dấu phẩy thập phân). <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Cảm ứng từ tại điểm N cách dây 1 đoạn 8 cm và cách dây 2 đoạn 6 cm bằng 0,58.10⁻⁴ T. <span class="incorrect">Sai</span>
+                    </div>
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ "Cảm ứng từ tại điểm A cách mỗi dây 5 cm là 4.10⁻⁵ T." sai, vì:</p>
+                    <p>Điểm A cách mỗi dây 5 cm. Vì khoảng cách giữa hai dây là 10 cm nên điểm A chính là trung điểm của đoạn thẳng nối giữa hai sợi dây.</p>
+                    <p>Cảm ứng từ gây ra tổng hợp tại A: B = B₁ + B₂.</p>
+                    <p>Vì 2 dòng điện này ngược chiều nên B = |B₁ - B₂| = |(μ₀.I₁)/(2π.r) - (μ₀.I₂)/(2π.r)| = (μ₀/(2π.r))|I₁ - I₂| = (2×10⁻⁷/0.05)×10 = 4×10⁻⁵ T</p>
+                    
+                    <p>+ "Điểm B cách dây 1 một đoạn 4 cm, cách dây 2 một đoạn 14 cm có cảm ứng từ bằng 1,5.10⁻⁵ T" sai, vì:</p>
+                    <p>Điểm B cách dây 1 đoạn 4 cm, cách dây 2 đoạn 14 cm nên nằm ngoài đoạn nối 2 dây và gần dây 1 hơn.</p>
+                    <p>Cảm ứng từ tại B thỏa mãn B = B₁ - B₂ = (μ₀.I₁)/(2π.r₁) - (μ₀.I₂)/(2π.r₂) = 2×10⁻⁷×(10/0.04 - 20/0.14) ≈ 2×10⁻⁷×(250 - 142.86) ≈ 2.14×10⁻⁵ T</p>
+                    
+                    <p>+ "Cảm ứng từ tại điểm M cách mỗi dây 10 cm bằng 3,46.10⁻⁵ T." đúng, vì:</p>
+                    <p>Điểm M cách mỗi dây 10 cm. Gọi 2 đầu dây là A và B điểm M cách A và B 10 cm nên tam giác MAB là tam giác đều.</p>
+                    <p>Cảm ứng từ tại M thỏa mãn B = √(B₁² + B₂² + 2B₁B₂cosθ) với θ = 120°</p>
+                    <p>B₁ = (μ₀.I₁)/(2π.r) = 2×10⁻⁷×10/0.1 = 2×10⁻⁵ T</p>
+                    <p>B₂ = (μ₀.I₂)/(2π.r) = 2×10⁻⁷×20/0.1 = 4×10⁻⁵ T</p>
+                    <p>B = √(4×10⁻¹⁰ + 16×10⁻¹⁰ + 2×2×4×10⁻¹⁰×(-0.5)) = √(20×10⁻¹⁰ - 8×10⁻¹⁰) = √(12×10⁻¹⁰) ≈ 3.46×10⁻⁵ T</p>
+                    
+                    <p>+ "Cảm ứng từ tại điểm N cách dây 1 đoạn 8 cm và cách dây 2 đoạn 6 cm bằng 0,58.10⁻⁴ T" sai, vì:</p>
+                    <p>Điểm N cách dây 1 đoạn 8 cm và cách dây 2 đoạn 6 cm. Điểm N như vậy tạo với A, B thành một tam giác vuông NAB, vuông tại N.</p>
+                    <p>Cảm ứng từ tại N thỏa mãn B = √(B₁² + B₂²) và B₁⊥B₂</p>
+                    <p>B₁ = (μ₀.I₁)/(2π.r₁) = 2×10⁻⁷×10/0.08 = 2.5×10⁻⁵ T</p>
+                    <p>B₂ = (μ₀.I₂)/(2π.r₂) = 2×10⁻⁷×20/0.06 ≈ 6.67×10⁻⁵ T</p>
+                    <p>B = √(6.25×10⁻¹⁰ + 44.49×10⁻¹⁰) ≈ √(50.74×10⁻¹⁰) ≈ 7.12×10⁻⁵ T = 0.712×10⁻⁴ T</p>
+                </div>
+            </div>
+            
+            <p> CÂU 4 </p>
+            <div class="question">
+                <div class="question-id">#13086284 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Trong mỗi ý ở câu dưới đây, hãy chọn đúng hoặc sai.
+                    <p>Cho dòng điện có cường độ 10 A chạy qua một dây đồng có tiết diện 1,5 mm² được uốn thành một vòng tròn đặt trong không khí. Khi đó cảm ứng từ tại tâm vòng dây có độ lớn bằng 2,5.10⁻⁵ T. Cho biết dây đồng có điện trở suất 1,69.10⁻⁸ Ω.m.</p>
+                </div>
+                
+                <div class="true-false">
+                    <div class="true-false-item">
+                        Đường sức từ xung quanh vòng dây đều là đường thẳng. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Chiều của đường sức từ của vòng dây được xác định theo quy tắc nắm bàn tay phải. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Bán kính vòng dây là 8 cm. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Hiệu điện thế giữa hai đầu dây đồng là 0,42 V. <span class="incorrect">Sai</span>
+                    </div>
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ "Đường sức từ xung quanh vòng dây đều là đường thẳng." sai, vì chỉ có đường sức từ đi qua tâm O của vòng dây là đường thẳng, các đường khác đều là đường cong.</p>
+                    <p>+ "Chiều của đường sức từ của vòng dây được xác định theo quy tắc nắm bàn tay phải." đúng, vì chiều của đường sức từ của vòng dây được xác định theo quy tắc nắm bàn tay phải.</p>
+                    <p>+ "Bán kính vòng dây là 8 cm." đúng, vì:</p>
+                    <p>Cảm ứng từ tại tâm vòng dây: B = (μ₀.I)/(2R) ⇒ R = (μ₀.I)/(2B) = (4π×10⁻⁷×10)/(2×2.5×10⁻⁵) = 0.08 m = 8 cm</p>
+                    <p>+ "Hiệu điện thế giữa hai đầu dây đồng là 0,42 V" sai, vì:</p>
+                    <p>Chiều dài dây: L = 2πR = 2π×0.08 ≈ 0.5027 m</p>
+                    <p>Điện trở: R = ρ.L/S = 1.69×10⁻⁸×0.5027/(1.5×10⁻⁶) ≈ 0.00566 Ω</p>
+                    <p>Hiệu điện thế: U = I.R = 10×0.00566 ≈ 0.0566 V</p>
+                </div>
+            </div>
+            
+            <p> CÂU 5 </p>
+            <div class="question">
+                <div class="question-id">#12993597 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Dòng điện I = 0,5A chạy trong khung dây chữ nhật ABCD mặt phẳng khung dây đặt vuông góc trong từ trường đều có cảm ứng từ B = 0,02T. Biết AB = 10 cm, BC = 25 cm. Độ lớn lực từ tác dụng lên cạnh BC của khung dây bằng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Lực từ tác dụng lên cạnh BC có chiều dài L = BC = 25 cm = 0,25 m là:</p>
+                    <p>F = I.L.B.sinθ = 0.5 × 0.25 × 0.02 × sin90° = 2.5 × 10⁻³ N</p>
+                </div>
+            </div>
+            
+            <p> CÂU 6 </p>
+            <div class="question">
+                <div class="question-id">#12991456 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Chọn câu đúng. Khi electron bay vào vùng từ trường theo quỹ đạo song song với cảm ứng từ B, thì
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Khi electron bay vào vùng từ trường theo quỹ đạo song song với cảm ứng từ B, thì quỹ đạo của nó là đường thẳng. Do đó chuyển động của electron tiếp tục không bị thay đổi.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 7 </p>
+            <div class="question">
+                <div class="question-id">#13091131 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một khung dây hình vuông nằm trong mặt phẳng tờ giấy. Trong khung dây này có dòng điện với cường độ I chạy theo chiều kim đồng hồ. Nếu cảm ứng từ hướng từ trái sang phải và nếu mỗi cạnh của khung dây có chiều dài L thì tổng lực từ tác dụng lên vòng dây bằng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Vì khung dây nằm trong mặt phẳng tờ giấy và cảm ứng từ hướng sang phải nên song song với khung dây.</p>
+                    <p>Khi đó góc θ hợp bởi B và dòng điện bằng 0° nên lực từ F = I.L.B.sinθ = 0</p>
+                </div>
+            </div>
+            
+            <p> CÂU 8 </p>
+            <div class="question">
+                <div class="question-id">#12991637 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Khung dây dẫn nhỏ ABCD và dây dẫn có dòng điện I chạy qua (hình vẽ) luôn nằm trong một mặt phẳng. Chiều dòng điện cảm ứng xuất hiện trong khung ABCD theo chiều ABCD khi:
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ Áp dụng quy tắc nắm tay phải ta xác định được chiều của cảm ứng từ tác dụng lên khung dây là: có phương vuông góc với mặt phẳng khung dây và chiều đi từ ngoài vào trong.</p>
+                    <p>+ Khi biết chiều của dòng điện cảm ứng chạy trong khung dây là ABCD, áp dụng quy tắc bàn tay phải, ta xác định lực từ tác dụng lên các đoạn AB, BC, CD và DA là:</p>
+                    <p>- AB và CD không chịu tác dụng của lực từ.</p>
+                    <p>- AD bị đẩy ra xa, nhưng BC tiến lại gần.</p>
+                    <p>Nhưng lực từ F<sub>AD</sub> > F<sub>BC</sub>, nên khung dây chuyển động tịnh tiến ra xa dòng điện I.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 9 </p>
+            <div class="question">
+                <div class="question-id">#12993578 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Dùng loại dây đồng bán kính 0,5 mm, bên ngoài có phủ một lớp sơn cách điện mỏng quấn quanh một hình trụ tạo thành một ống dây, các vòng dây quấn sát nhau. Cho dòng điện 1,5 A chạy qua các vòng dây thì cảm ứng từ bên trong ống dây bằng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Do xếp sát nhau, bán kính mỗi ống dây là 0,5 mm, nên số vòng dây trên một mét dài là:</p>
+                    <p>n = 1/(2×0.5×10⁻³) = 1000 (vòng/m)</p>
+                    <p>Vậy cảm ứng từ bên trong ống dây:</p>
+                    <p>B = μ₀.n.I = 4π×10⁻⁷ × 1000 × 1.5 = 6π×10⁻⁴ T</p>
+                </div>
+            </div>
+            
+            <p> CÂU 10 </p>
+            <div class="question">
+                <div class="question-id">#13086285 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Trong mỗi ý ở câu dưới đây, hãy chọn đúng hoặc sai.
+                    <p>Một đoạn dây dẫn mang dòng điện 4 A đặt trong lòng của nam châm chữ U như hình vẽ thì chịu một lực từ 0,8 N.</p>
+                </div>
+                
+                <div class="true-false">
+                    <div class="true-false-item">
+                        Từ trường trong lòng nam châm chữ U là từ trường đều. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Lực từ có chiều hướng sang bên trái mặt phẳng hình vẽ. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Nếu dây dẫn dài 5 cm thì cảm ứng từ trong lòng nam châm có độ lớn là 4 T. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Nếu dòng điện qua dây dẫn là 1 A thì lực từ tác dụng lên dây dẫn bằng 0,2 N. <span class="correct">Đúng</span>
+                    </div>
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ "Từ trường trong lòng nam châm chữ U là từ trường đều." đúng, vì từ trường trong lòng nam châm chữ U là từ trường đều.</p>
+                    <p>+ "Lực từ có chiều hướng sang bên trái mặt phẳng hình vẽ." sai, vì áp dụng quy tắc bàn tay trái ta xác định được lực từ có chiều hướng sang bên phải mặt phẳng hình vẽ.</p>
+                    <p>+ "Nếu dây dẫn dài 5 cm thì cảm ứng từ trong lòng nam châm có độ lớn là 4 T." đúng, vì:</p>
+                    <p>Nếu dây dẫn dài 5 cm thì lực từ tác dụng lên dây: F = I.L.B ⇒ B = F/(I.L) = 0.8/(4×0.05) = 4 T</p>
+                    <p>+ "Nếu dòng điện qua dây dẫn là 1 A thì lực từ tác dụng lên dây dẫn bằng 0,2 N." đúng, vì:</p>
+                    <p>Lực từ tác dụng lên dây dẫn mang dòng điện đặt trong từ trường được xác định bằng biểu thức: F = I.L.B</p>
+                    <p>Lập tỉ số ta được: F₂/F₁ = I₂/I₁ ⇒ F₂ = (I₂/I₁).F₁ = (1/4)×0.8 = 0.2 N</p>
+                </div>
+            </div>
+            
+            <p> CÂU 11 </p>
+            <div class="question">
+                <div class="question-id">#13091128 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Lực tác dụng lên một dây dẫn mang dòng điện đặt trong từ trường có hướng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Lực tác dụng lên một dây dẫn mang dòng điện đặt trong từ trường có hướng, vuông góc với cả hướng cảm ứng từ và hướng dòng điện.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 12 </p>
+            <div class="question">
+                <div class="question-id">#12991146 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Hình vẽ dưới đây mô tả đoạn dây dẫn AB và lực từ tác dụng lên đoạn dây đó đều nằm trong mặt phẳng hình vẽ. Chiều của lực từ và chiều của dòng điện đã được chỉ rõ trong hình vẽ. Phát biểu nào sau đây là đúng?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Theo quy tắc bàn tay trái, cảm ứng từ vuông góc với mặt phẳng hình vẽ và có chiều từ trong ra ngoài.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 13 </p>
+            <div class="question">
+                <div class="question-id">#12993029 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một khung dây tròn A gồm 50 vòng dây có dòng điện chạy qua. Độ lớn cảm ứng từ ở tâm khung dây bằng 2.10⁻⁴ T. Khung dây B có cùng bán kính và cường độ dòng điện với khung dây A nhưng gồm 70 vòng dây thì độ lớn cảm ứng từ ở tâm khung là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Công thức tính cảm ứng từ tại tâm của dòng điện tròn mà khung dây gồm N vòng dây bán kính R:</p>
+                    <p>B = (μ₀.N.I)/(2R)</p>
+                    <p>Dễ dàng ta có: B₂/B₁ = N₂/N₁ ⇒ B₂ = (N₂/N₁).B₁ = (70/50)×2×10⁻⁴ = 2.8×10⁻⁴ T</p>
+                </div>
+            </div>
+            
+            <p> CÂU 14 </p>
+            <div class="question">
+                <div class="question-id">#12993522 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Độ lớn cảm ứng từ tại một điểm bên trong lòng ống dây có dòng điện đi qua sẽ tăng hay giảm bao nhiêu lần nếu số vòng dây và chiều dài ống dây đều tăng lên hai lần và cường độ dòng điện qua ống dây giảm bốn lần?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Áp dụng công thức tính cảm ứng từ bên trong ống dây:</p>
+                    <p>B = μ₀.n.I (vòng/m)</p>
+                    <p>Với n là số vòng dây trên 1 mét dài</p>
+                    <p>Với ống dây chiều dài l có N là số vòng dây thì: n = N/l</p>
+                    <p>Khi số vòng dây và chiều dài ống dây đều tăng lên hai lần và cường độ dòng điện qua ống dây giảm bốn lần thì cảm ứng từ có độ lớn bằng:</p>
+                    <p>B' = μ₀.(2N/2l).(I/4) = μ₀.(N/l).(I/4) = B/4</p>
+                    <p>Giảm 4 lần so với ban đầu.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 15 </p>
+            <div class="question">
+                <div class="question-id">#13086286 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một dòng điện có cường độ I chạy trong một dây dẫn thẳng dài. Cảm ứng từ do dòng điện này gây ra tại điểm M cách dây dẫn một khoảng 2 cm có độ lớn 4.10⁻⁵ T. Giá trị của I bằng bao nhiêu ampe?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Áp dụng công thức tính cảm ứng từ gây ra bởi dây dẫn thẳng dài:</p>
+                    <p>B = (μ₀.I)/(2π.r) ⇒ I = (2π.r.B)/μ₀ = (2π×0.02×4×10⁻⁵)/(4π×10⁻⁷) = 4 A</p>
+                    <p>Vậy cường độ dòng điện có giá trị là 4 A.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 16 </p>
+            <div class="question">
+                <div class="question-id">#12992770 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Cho hai vòng dây nằm trong cùng một mặt phẳng, và dòng điện chạy trong hai vòng cùng chiều. Bán kính một vòng là R₁ = 10 cm, vòng kia là R₂ = 20 cm, trong mỗi vòng dây đều có dòng điện cường độ I = 5 A chạy qua. Cảm ứng từ tại tâm của hai vòng tròn dây dẫn đồng tâm là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Áp dụng quy tắc nắm bàn tay phải ta có hướng các vecto cảm ứng từ như hình vẽ:</p>
+                    <p>Độ lớn cảm ứng từ tại tâm xác định bởi công thức:</p>
+                    <p>B₁ = (μ₀.I)/(2R₁) = (4π×10⁻⁷×5)/(2×0.1) = π×10⁻⁵ T</p>
+                    <p>B₂ = (μ₀.I)/(2R₂) = (4π×10⁻⁷×5)/(2×0.2) = 0.5π×10⁻⁵ T</p>
+                    <p>Vì hai vòng dây đồng phẳng và dòng điện cùng chiều nên:</p>
+                    <p>B = B₁ + B₂ = 1.5π×10⁻⁵ T</p>
+                </div>
+            </div>
+            
+            <p> CÂU 17 </p>
+            <div class="question">
+                <div class="question-id">#12993009 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một khung dây tròn gồm 50 vòng dây, mỗi vòng dây có dòng điện cường độ 1 A chạy qua. Theo tính toán thấy cảm ứng từ ở tâm khung bằng 2π.10⁻⁴ T. Nhưng khi đo thì thấy cảm ứng từ ở tâm bằng π.10⁻⁴ T, kiểm tra lại thấy có một số vòng dây bị quấn nhầm chiều ngược chiều với đa số các vòng trong khung. Số vòng dây bị quấn nhầm là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Công thức tính cảm ứng từ tại tâm của dòng điện tròn mà khung dây gồm N vòng dây bán kính R:</p>
+                    <p>B = (μ₀.N.I)/(2R)</p>
+                    <p>Suy ra: B đo được/B tính toán = (N đúng - N sai)/N = (π×10⁻⁴)/(2π×10⁻⁴) = 0.5</p>
+                    <p>Số vòng chênh nhau: 50 × 0.5 = 25 vòng.</p>
+                    <p>Số vòng quấn nhầm gây ra cảm ứng từ tại tâm và triệt tiêu cảm ứng từ của số vòng quấn đúng (do chúng ngược chiều dòng điện)</p>
+                    <p>Nên số vòng bị quấn nhầm: (50 - 25)/2 = 12.5 ≈ 13 vòng.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 18 </p>
+            <div class="question">
+                <div class="question-id">#13091133 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một dây dẫn thẳng có chiều dài 3,0 m mang dòng điện 6,0 A được đặt nằm ngang, hướng của dòng điện tạo với hướng Bắc một góc 50° lệch về phía Tây. Tại điểm này, cảm ứng từ của từ trường Trái Đất có độ lớn là 0,5×10⁻⁴ T và hướng Bắc. Lực tác dụng lên dây có độ lớn là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Góc hợp bởi hướng của cảm ứng từ (hướng Bắc) với hướng của dòng điện (tạo với hướng Bắc một góc 50° lệch về phía Tây) là θ = 50°</p>
+                    <p>Độ lớn lực từ tác dụng lên dây:</p>
+                    <p>F = I.L.B.sinθ = 6 × 3 × 0.5×10⁻⁴ × sin50° ≈ 6.89×10⁻⁴ N</p>
+                </div>
+            </div>
+            
+            <p> CÂU 19 </p>
+            <div class="question">
+                <div class="question-id">#13086291 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một đoạn dây đồng CD dài 20 cm, nặng 40 g được treo ở hai đầu bằng hai sợi dây mềm, rất nhẹ, cách điện sao cho đoạn dây CD nằm ngang. Đưa đoạn dây đồng vào trong từ trường đều có cảm ứng từ B = 0,5 T và các đường sức từ là những đường thẳng đứng hướng lên. Lấy g = 10 m/s². Cho dòng điện qua dây CD có cường độ I = 3 A thì lực căng mỗi sợi dây treo có độ lớn là bao nhiêu N?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ Giả sử dây đặt vuông góc với mặt phẳng hình vẽ và chiều dòng điện đi vào trong mặt phẳng, B hướng lên. Áp dụng quy tắc bàn tay trái ta xác định được chiều của lực từ là hướng sang phải và có độ lớn:</p>
+                    <p>F = I.L.B = 3 × 0.2 × 0.5 = 0.3 N</p>
+                    <p>+ Gọi lực căng mỗi sợi dây treo là T thì lực căng của hai dây tác dụng lên dây là 2T.</p>
+                    <p>+ Dây nằm cân bằng nên: √(F² + P²) = 2T</p>
+                    <p>+ Vì F nằm ngang còn P hướng xuống và vuông góc với F nên lực căng của mỗi dây có độ lớn:</p>
+                    <p>T = √(F² + P²)/2 = √(0.3² + (0.04×10)²)/2 = √(0.09 + 0.16)/2 = 0.5/2 = 0.25 N</p>
+                </div>
+            </div>
+            
+            <p> CÂU 20 </p>
+            <div class="question">
+                <div class="question-id">#12993651 (Điểm số: 0 / 0,33)</div>
+                <div class="question-text">
+                    Cho một khung dây hình chữ nhật ABCD có AB = 15 cm; BC = 25 cm, có dòng điện I = 5A chạy qua đặt trong một từ trường đều có các đường cảm ứng từ vuông góc với mặt phẳng chứa khung dây và hướng từ ngoài vào trong như hình vẽ. Biết B = 0,02T. Xác định độ lớn lực từ do từ trường đều tác dụng lên các cạnh của khung dây. Các lực này có tác dụng làm khung dây nén hay dãn?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Các lực từ tác dụng lên từng cạnh của khung dây có điểm đặt tại trung điểm của mỗi cạnh, có phương nằm trong mặt phẳng chứa khung dây và vuông góc với từng cạnh, có chiều như hình vẽ và có độ lớn:</p>
+                    <p>- AB và CD: F = I.AB.B = 5 × 0.15 × 0.02 = 0.015 N</p>
+                    <p>- BC và AD: F = I.BC.B = 5 × 0.25 × 0.02 = 0.025 N</p>
+                    <p>Các lực này cân bằng với nhau từng đôi một nhưng có tác dụng kéo dãn các cạnh của khung dây.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 21 </p>
+            <div class="question">
+                <div class="question-id">#12993326 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Cảm ứng từ bên trong ống hình trụ có dòng điện, có độ lớn tăng lên khi
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Công thức tính cảm ứng từ bên trong ống dây:</p>
+                    <p>B = μ₀.n.I</p>
+                    <p>Với n là số vòng dây cuốn trên một đơn vị độ dài, I là cường độ dòng điện chạy trong mạch.</p>
+                    <p>Từ công thức ta thấy B tỉ lệ thuận với cường độ dòng điện I và mật độ vòng dây.</p>
+                    <p>Vậy cảm ứng từ bên trong ống có độ lớn tăng lên khi:</p>
+                    <p>- Cường độ dòng điện tăng lên</p>
+                    <p>- Tăng số vòng dây N</p>
+                    <p>- Giảm chiều dài ống dây</p>
+                </div>
+            </div>
+            
+            <p> CÂU 22 </p>
+            <div class="question">
+                <div class="question-id">#13091132 (Điểm số: 0 / 0,33)</div>
+                <div class="question-text">
+                    Một dây dẫn được đặt nằm ngang theo hướng Nam Bắc trong một từ trường đều có cảm ứng từ nằm ngang hướng về phía Đông. Trong dây dẫn có dòng electron chuyển động theo chiều về phía nam. Phát biểu nào sau đây là đúng?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>- Dây dẫn được đặt nằm ngang theo hướng Nam Bắc có dòng electron chuyển động theo chiều về phía nam nên dòng điện ngược chiều chuyển động của electron nên có chiều hướng về phía Bắc.</p>
+                    <p>- Cảm ứng từ nằm ngang hướng về phía Đông.</p>
+                    <p>Áp dụng quy tắc bàn tay trái ta xác định được lực từ có chiều hướng xuống, tức là có hướng vuông góc và đi vào trang giấy.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 23 </p>
+            <div class="question">
+                <div class="question-id">#12993476 (Điểm số: 0 / 0,33)</div>
+                <div class="question-text">
+                    Đặt một khung dây dẫn hình chữ nhật có dòng điện chạy qua trong từ trường sao cho mặt phẳng khung dây vuông góc với các đường sức từ, chiều như hình vẽ thì lực từ có tác dụng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Sử dụng quy tắc bàn tay trái ta xác định được hướng của lực từ tác dụng lên dòng điện có chiều hướng ra ngoài như hình vẽ:</p>
+                    <p>Vậy lực từ có tác dụng làm dãn khung.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 24 </p>
+            <div class="question">
+                <div class="question-id">#13086288 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một đoạn dây thẳng dài L có dòng điện I được đặt trong một từ trường đều có cảm ứng từ B. Để lực từ tác dụng lên dây đạt giá trị cực đại thì góc θ giữa dây dẫn và B phải bằng bao nhiêu độ?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Lực từ F = I.L.B.sinθ</p>
+                    <p>Để lực từ F đạt cực đại thì sinθ = 1 ⇒ θ = 90°</p>
+                    <p>Vậy góc θ giữa dây dẫn và B phải bằng 90°</p>
+                </div>
+            </div>
+            
+            <p> CÂU 25 </p>
+            <div class="question">
+                <div class="question-id">#13091130 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một tesla bằng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Từ công thức tính lực từ F = I.L.B.sinθ suy ra cảm ứng từ: B = F/(I.L.sinθ)</p>
+                    <p>Vậy đơn vị của từ trường dựa vào thứ nguyên trong biểu thức tính cảm ứng từ là:</p>
+                    <p>1 T = 1 N/(A.m)</p>
+                </div>
+            </div>
+            
+            <p> CÂU 26 </p>
+            <div class="question">
+                <div class="question-id">#12991055 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Trong một từ trường đều B = 0,2 T, người ta đặt một dây dẫn dài 20 cm có mang dòng điện I. Biết rằng nếu đặt dây vuông góc với đường cảm ứng từ thì trọng lượng của dây P = 0,4 N sẽ cân bằng với lực từ tác dụng lên dây. Giá trị I bằng
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Trọng lượng của dây P = 0,4 N sẽ cân bằng với lực từ tác dụng lên dây nên lực từ tác dụng lên dây dẫn là F = 0,4 N.</p>
+                    <p>Cường độ dòng điện là:</p>
+                    <p>I = F/(L.B) = 0.4/(0.2 × 0.2) = 10 A</p>
+                </div>
+            </div>
+            
+            <p> CÂU 27 </p>
+            <div class="question">
+                <div class="question-id">#13088156 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Trong mỗi ý ở câu dưới đây, hãy chọn đúng hoặc sai.
+                </div>
+                
+                <div class="true-false">
+                    <div class="true-false-item">
+                        Nam châm tác dụng lên dòng điện thực chất là tương tác giữa từ trường của nam châm với các electron của dây điện. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Nam châm tác dụng lên dòng điện thực chất là tương tác giữa từ trường của nam châm với từ trường do các electron chuyển động gây ra. <span class="correct">Đúng</span>
+                    </div>
+                    <div class="true-false-item">
+                        Phương của lực từ trùng với phương của dòng điện. <span class="incorrect">Sai</span>
+                    </div>
+                    <div class="true-false-item">
+                        Lực từ tác dụng lên đoạn dòng điện có phương vuông góc với đoạn dây dẫn mang dòng điện và vuông góc với vectơ cảm ứng từ. <span class="correct">Đúng</span>
+                    </div>
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>+ "Nam châm tác dụng lên dòng điện thực chất là tương tác giữa từ trường của nam châm với các electron của dây điện." sai, vì tương tác giữa nam châm và dòng điện là tương tác giữa từ trường của nam châm và từ trường do dòng điện sinh ra, tức là từ trường được tạo ra bởi các electron đang chuyển động trong dây dẫn, chứ không phải tương tác trực tiếp với các electron.</p>
+                    <p>+ "Nam châm tác dụng lên dòng điện thực chất là tương tác giữa từ trường của nam châm với từ trường do các electron chuyển động gây ra." đúng, vì từ trường của nam châm tác động lên từ trường sinh ra bởi các electron chuyển động (dòng điện), gây ra lực từ lên đoạn dây dẫn.</p>
+                    <p>+ "Phương của lực từ trùng với phương của dòng điện." sai, vì lực từ tác dụng lên dòng điện luôn vuông góc với cả phương của dòng điện và vectơ cảm ứng từ, theo quy tắc bàn tay trái.</p>
+                    <p>+ "Lực từ tác dụng lên đoạn dòng điện có phương vuông góc với đoạn dây dẫn mang dòng điện và vuông góc với vectơ cảm ứng từ." đúng, vì theo quy tắc bàn tay trái, lực từ tác dụng lên một đoạn dây dẫn mang dòng điện sẽ có phương vuông góc với cả đoạn dây (phương dòng điện) và vectơ cảm ứng từ.</p>
+                </div>
+            </div>
+            
+            <p> CÂU 28 </p>
+            <div class="question">
+                <div class="question-id">#13087299 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Giữa hai cực của một nam châm hình móng ngựa có một từ trường đều B thẳng đứng, có độ lớn 0,2 T. Người ta treo một dây dẫn thẳng chiều dài 5 cm, khối lượng 5 g nằm ngang trong từ trường bằng hai dây dẫn mảnh nhẹ. Lấy g = 10 m/s². Góc lệch của dây treo so với phương thẳng đứng khi cho dòng điện I = 2√2 A chạy qua dây bằng bao nhiêu độ?
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Theo quy tắc bàn tay trái ta được F có hướng sang ngang và vuông góc với trọng lực P.</p>
+                    <p>F = I.L.B = 2√2 × 0.05 × 0.2 = 0.02√2 N</p>
+                    <p>P = m.g = 0.005 × 10 = 0.05 N</p>
+                    <p>Góc lệch của dây treo so với phương thẳng đứng là:</p>
+                    <p>tanα = F/P = (0.02√2)/0.05 = 0.4√2 ≈ 0.5657 ⇒ α ≈ 30°</p>
+                    <p>Vậy góc lệch của dây treo so với phương thẳng đứng là 30°</p>
+                </div>
+            </div>
+            
+            <p> CÂU 29 </p>
+            <div class="question">
+                <div class="question-id">#12993687 (Điểm số: 0 / 0,33)</div>
+                <div class="question-text">
+                    Cho một khung dây hình chữ nhật ABCD có AB = 10 cm; BC = 20 cm, có dòng điện I = 5 A chạy theo chiều ABCDA đặt trong một từ trường đều có các đường sức từ song song với mặt phẳng chứa khung dây và hợp với cạnh AD một góc α = 30° như hình vẽ. Biết B = 0,02 T. Xác định các véc tơ lực từ do từ trường đều tác dụng lên cạnh AB của khung dây.
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Các lực từ tác dụng lên từng cạnh của khung dây có điểm đặt tại trung điểm của mỗi cạnh, có phương vuông góc với mặt phẳng chứa khung dây và vuông góc với từng cạnh, lực tác dụng lên các cạnh AB và BC hướng từ trong ra và có độ lớn:</p>
+                    <p>- AB: F = I.AB.B.sin(90°-α) = 5 × 0.1 × 0.02 × cos30° ≈ 0.00866 N</p>
+                    <p>- BC: F = I.BC.B.sinα = 5 × 0.2 × 0.02 × 0.5 = 0.01 N</p>
+                </div>
+            </div>
+            
+            <p> CÂU 30 </p>
+            <div class="question">
+                <div class="question-id">#13091134 (Điểm số: 0,33 / 0,33)</div>
+                <div class="question-text">
+                    Một dây đồng dài 25 cm, có khối lượng là 10 g nằm trong từ trường 0,20 T. Lấy g = 10 m/s². Cường độ dòng điện nhỏ nhất chạy qua dây gây ra lực từ có độ lớn bằng trọng lượng của dây là
+                </div>
+                
+                <div class="answer">
+                    <div class="answer-title">❖ Giải đáp</div>
+                    <p>Trọng lượng của dây: P = m.g = 0.01 × 10 = 0.1 N</p>
+                    <p>Lực từ tác dụng lên dây có độ lớn: F = I.L.B.sinθ</p>
+                    <p>Vì lực từ có độ lớn bằng trọng lượng của dây nên I.L.B.sinθ = P</p>
+                    <p>Để cường độ dòng điện I nhỏ nhất thì sinθ = 1 ⇒ θ = 90°</p>
+                    <p>I = P/(L.B) = 0.1/(0.25 × 0.2) = 2 A</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>© Niyaki Phạm | ACCESS RESTRICTED</p>
+    </div>
+    
+    <script>
+        function checkPassword() {
+            const password = document.getElementById('password').value;
+            const authPanel = document.getElementById('authPanel');
+            const content = document.getElementById('content');
+            
+            if(password === '230612345') {
+                authPanel.style.display = 'none';
+                content.style.display = 'block';
+                
+                // Add cool animation effect
+                content.style.animation = 'fadeIn 1s';
+                setTimeout(() => {
+                    content.style.animation = '';
+                }, 1000);
+            } else {
+                alert('đôn nết đi có 10k thôi mà');
+                document.getElementById('password').value = '';
+                document.getElementById('password').focus();
+            }
+        }
+        
+        // Alternatively, make the Enter key trigger authentication
+        document.getElementById('password').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                checkPassword();
+            }
+        });
+    </script>
+</body>
+</html>
