@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Answer Portal</title>
+    <style>
+        :root {
+            --primary: #0af2ff;
+            --secondary: #0078ff;
+            --bg: #0a0a1a;
+            --text: #e0e0ff;
+            --error: #ff3078;
+        }
+        
+        body {
+            font-family: 'Courier New', monospace;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(10, 242, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 120, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 2rem;
+            background-color: rgba(10, 10, 30, 0.8);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(10, 242, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                linear-gradient(45deg, transparent 48%, var(--primary) 48%, var(--primary) 52%, transparent 52%),
+                linear-gradient(135deg, transparent 48%, var(--primary) 48%, var(--primary) 52%, transparent 52%);
+            background-size: 20px 20px;
+            opacity: 0.1;
+            transform: rotate(10deg);
+            z-index: -1;
+            animation: movePattern 30s linear infinite;
+        }
+        
+        @keyframes movePattern {
+            0% { transform: rotate(10deg) translate(0, 0); }
+            100% { transform: rotate(10deg) translate(20px, 20px); }
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .password-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .password-input {
+            padding: 0.8rem 1rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--secondary);
+            border-radius: 4px;
+            color: var(--text);
+            font-size: 1rem;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .password-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(10, 242, 255, 0.5);
+        }
+        
+        .password-btn {
+            padding: 0.8rem 2rem;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            border: none;
+            border-radius: 4px;
+            color: var(--bg);
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .password-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(10, 242, 255, 0.4);
+        }
+        
+        .error-message {
+            color: var(--error);
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .instructions {
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(224, 224, 255, 0.7);
+        }
+        
+        .content {
+            display: none;
+        }
+        
+        .question {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: rgba(0, 120, 255, 0.1);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .question h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        .options {
+            margin-left: 1rem;
+        }
+        
+        .explanation {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: rgba(10, 242, 255, 0.1);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        .explanation strong {
+            color: var(--primary);
+        }
+        
+        .next-btn {
+            margin-top: 1rem;
+            background-color: rgba(0, 120, 255, 0.3);
+            border: 1px solid var(--secondary);
+            color: var(--text);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .next-btn:hover {
+            background-color: rgba(0, 120, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>English Answer Portal</h1>
+        
+        <div class="password-section" id="password-section">
+            <input type="password" class="password-input" id="password-input" placeholder="Enter Password">
+            <button class="password-btn" id="password-btn">Access</button>
+            <div class="error-message" id="error-message"></div>
+            <div class="instructions">
+                Please transfer 10,000 VND to phone number 0901574726 to receive the password
+            </div>
+        </div>
+        
+        <div class="content" id="content">
+            <div class="question">
+                <h3>Question 1</h3>
+                <p>Environmentalists have made tireless ______ to save endangered animals.</p>
+                <div class="options">
+                    <p>a) efforts</p>
+                    <p>b) ignorance</p>
+                    <p>c) inventions</p>
+                    <p>d) connection</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> The word "tireless" (tireless) suggests a persistent and diligent action. In this context, "efforts" (efforts) are the most appropriate because environmentalists work tirelessly to save endangered animals. "Ignorance" (ignorance) has a negative connotation and is not reasonable. "Inventions" (inventions) may be related but not directly related to saving animals. "Connection" (link) is also not appropriate.
+                    <p><strong>Answer:</strong> a) efforts</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 2</h3>
+                <p>Efforts to preserve endangered species are crucial for maintaining biodiversity. (Find a word similar to "preserve")</p>
+                <div class="options">
+                    <p>a) destroy</p>
+                    <p>b) protect</p>
+                    <p>c) ignore</p>
+                    <p>d) endanger</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Preserve" means to preserve or protect, so the closest word is "protect" (protect). "Destroy" (destroy) and "endanger" (endanger) are antonyms, while "ignore" (ignore) is not related.
+                    <p><strong>Answer:</strong> b) protect</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 3</h3>
+                <p>Human activities can degrade natural habitats, putting wildlife at risk. (Find a word similar to "degrade")</p>
+                <div class="options">
+                    <p>a) destroy</p>
+                    <p>b) protect</p>
+                    <p>c) maintain</p>
+                    <p>d) develop</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Degrade" means to reduce quality or make worse. Among the options, "destroy" (destroy) is the closest, although "destroy" is a bit stronger (complete destruction), while "degrade" usually implies a gradual deterioration. "Protect" (protect) and "maintain" (maintain) have positive meanings, opposite to "degrade". "Develop" (develop) is not appropriate because in the environmental context, development is usually harmful but not synonymous with deterioration.
+                    <p><strong>Answer:</strong> a) destroy</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 4</h3>
+                <p>Wildlife conservationists work to ______ natural habitats from destruction.</p>
+                <div class="options">
+                    <p>a) harm</p>
+                    <p>b) protect</p>
+                    <p>c) destroy</p>
+                    <p>d) neglect</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> Wildlife conservationists work to "protect" natural habitats from destruction. "Harm" (harm), "destroy" (destroy), and "neglect" (neglect) all have negative meanings and are not in line with their goals.
+                    <p><strong>Answer:</strong> b) protect</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 5</h3>
+                <p>______ pollution poses a serious threat to aquatic wildlife such as dolphins and sea turtles.</p>
+                <div class="options">
+                    <p>a) Noise</p>
+                    <p>b) Air</p>
+                    <p>c) Light</p>
+                    <p>d) Plastic</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> Aquatic animals such as dolphins and sea turtles are threatened by plastic pollution (plastic pollution) from swallowing or getting stuck in plastic waste. "Noise" (noise) can have an effect, but not as serious as plastic. "Air" (air) and "Light" (light) are less directly related to the aquatic environment.
+                    <p><strong>Answer:</strong> d) Plastic</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 6</h3>
+                <p>It is important to minimize plastic waste to protect ______ creatures.</p>
+                <div class="options">
+                    <p>a) robotic</p>
+                    <p>b) marine</p>
+                    <p>c) virtual</p>
+                    <p>d) industrial</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> Plastic waste has a major impact on marine creatures (marine creatures), especially in the ocean. "Robotic" (robot), "virtual" (virtual), and "industrial" (industrial) are not living creatures affected by plastic.
+                    <p><strong>Answer:</strong> b) marine</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 7</h3>
+                <p>It is important to ______ the environment to ensure the well-being of all living organisms.</p>
+                <div class="options">
+                    <p>a) ignore</p>
+                    <p>b) damage</p>
+                    <p>c) protect</p>
+                    <p>d) forget</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> To ensure the health of living organisms, it is necessary to "protect" (protect) the environment. "Ignore" (ignore), "damage" (damage), and "forget" (forget) are not reasonable.
+                    <p><strong>Answer:</strong> c) protect</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 8</h3>
+                <p>Effective ______ are essential for the protection of endangered species.</p>
+                <div class="options">
+                    <p>a) conservation methods</p>
+                    <p>b) pollution controls</p>
+                    <p>c) climate policies</p>
+                    <p>d) urban developments</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Conservation methods" (conservation methods) are the most direct and necessary way to protect endangered species. Other options such as "pollution controls" (pollution controls) or "climate policies" (climate policies) may be indirectly helpful, but are not as specific. "Urban developments" (urban development) is usually more harmful.
+                    <p><strong>Answer:</strong> a) conservation methods</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 9</h3>
+                <p>Wildlife organizations combat illegal hunting to protect endangered species. (Find a word similar to "combat")</p>
+                <div class="options">
+                    <p>a) fight</p>
+                    <p>b) support</p>
+                    <p>c) ignore</p>
+                    <p>d) approve</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Combat" means to fight or fight, so "fight" (fight) is the closest word. "Support" (support), "ignore" (ignore), and "approve" (approve) are not appropriate.
+                    <p><strong>Answer:</strong> a) fight</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 10</h3>
+                <p>The threat to many animal species comes from habitat loss and pollution. (Find a word similar to "threat")</p>
+                <div class="options">
+                    <p>a) protection</p>
+                    <p>b) danger</p>
+                    <p>c) support</p>
+                    <p>d) opportunity</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Threat" means threat, synonymous with "danger" (danger). "Protection" (protection), "support" (support), and "opportunity" (opportunity) are not appropriate.
+                    <p><strong>Answer:</strong> b) danger</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 11</h3>
+                <p>Wildlife conservation groups aim to raise ______ about endangered species.</p>
+                <div class="options">
+                    <p>a) disinterest</p>
+                    <p>b) awareness</p>
+                    <p>c) spirit</p>
+                    <p>d) question</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> Conservation groups want to raise "awareness" (awareness) about endangered species. "Disinterest" (indifference), "spirit" (spirit), and "question" (question) are not in line with this goal.
+                    <p><strong>Answer:</strong> b) awareness</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 12</h3>
+                <p>Efforts to protect the environment have led to the reduction of pollution levels. (Find the opposite of "reduction")</p>
+                <div class="options">
+                    <p>a) escalation</p>
+                    <p>b) decrease</p>
+                    <p>c) downturn</p>
+                    <p>d) diminution</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Reduction" means to reduce, so the opposite is "escalation" (increase). "Decrease" (decrease), "downturn" (decrease), and "diminution" (shrinking) are all similar to "reduction".
+                    <p><strong>Answer:</strong> a) escalation</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 13</h3>
+                <p>Conservationists constantly monitor wildlife populations to ensure their survival. (Find the opposite of "monitor")</p>
+                <div class="options">
+                    <p>a) watch</p>
+                    <p>b) ignore</p>
+                    <p>c) protect</p>
+                    <p>d) observe</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Monitor" means to monitor or observe, so the opposite is "ignore" (ignore). "Watch" (watch) and "observe" (observe) are similar to "monitor", while "protect" (protect) is not directly related.
+                    <p><strong>Answer:</strong> b) ignore</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 14</h3>
+                <p>The extinction of these animals is a significant loss. (Find the opposite of "extinction")</p>
+                <div class="options">
+                    <p>a) survival</p>
+                    <p>b) status</p>
+                    <p>c) rarity</p>
+                    <p>d) decline</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Extinction" means extinction, so the opposite is "survival" (survival). "Status" (status), "rarity" (rarity), and "decline" (decline) are not appropriate.
+                    <p><strong>Answer:</strong> a) survival</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 15</h3>
+                <p>The habitat of many animals is being destroyed by deforestation. (Find a word similar to "habitat")</p>
+                <div class="options">
+                    <p>a) home</p>
+                    <p>b) predator</p>
+                    <p>c) offspring</p>
+                    <p>d) species</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Habitat" means living environment or natural habitat, so "home" (home) is the closest. "Predator" (predator), "offspring" (offspring), and "species" (species) are not synonymous.
+                    <p><strong>Answer:</strong> a) home</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 16</h3>
+                <p>The organization decided to house the rescued animals in a temporary shelter. (Find the opposite of "house")</p>
+                <div class="options">
+                    <p>a) shelter</p>
+                    <p>b) release</p>
+                    <p>c) harbor</p>
+                    <p>d) protect</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "House" means to provide shelter or to keep, so the opposite is "release" (release). "Shelter" (shelter) and "harbor" (harbor) are similar to "house", while "protect" (protect) is not directly related.
+                    <p><strong>Answer:</strong> b) release</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 17</h3>
+                <p>Many endangered species are at risk of ______ due to habitat loss and poaching.</p>
+                <div class="options">
+                    <p>a) discovery</p>
+                    <p>b) extinction</p>
+                    <p>c) migration</p>
+                    <p>d) reproduction</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> Endangered species are at risk of "extinction" (extinction) due to habitat loss and poaching. "Discovery" (discovery), "migration" (migration), and "reproduction" (reproduction) are not appropriate.
+                    <p><strong>Answer:</strong> b) extinction</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 18</h3>
+                <p>Some species are very threatened by human activities. (Find the opposite of "threatened")</p>
+                <div class="options">
+                    <p>a) protected</p>
+                    <p>b) endangered</p>
+                    <p>c) vulnerable</p>
+                    <p>d) abundant</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Threatened" means threatened, so the opposite is "abundant" (abundant), because abundant species are usually not threatened. "Protected" (protected) is an action, not a completely opposite state. "Endangered" (endangered) and "vulnerable" (vulnerable) are similar to "threatened".
+                    <p><strong>Answer:</strong> d) abundant</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 19</h3>
+                <p>Excessive ______ of natural resources leads to environmental degradation.</p>
+                <div class="options">
+                    <p>a) extraction</p>
+                    <p>b) reduction</p>
+                    <p>c) enhancement</p>
+                    <p>d) preservation</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> "Extraction" (extraction) of natural resources in excess leads to environmental degradation. "Reduction" (reduction), "enhancement" (enhancement), and "preservation" (preservation) are not appropriate in this harmful context.
+                    <p><strong>Answer:</strong> a) extraction</p>
+                </div>
+            </div>
+            
+            <div class="question" style="display: none;">
+                <h3>Question 20</h3>
+                <p>Conservation efforts aim to prevent species from becoming ______.</p>
+                <div class="options">
+                    <p>a) mature</p>
+                    <p>b) safe</p>
+                    <p>c) extinct</p>
+                    <p>d) adapted</p>
+                </div>
+                <div class="explanation">
+                    <strong>Explanation:</strong> The goal of conservation is to prevent species from becoming "extinct" (extinct). "Mature" (mature), "safe" (safe), and "adapted" (adapted) are not things to prevent.
+                    <p><strong>Answer:</strong> c) extinct</p>
+                </div>
+            </div>
+            
+            <button class="next-btn" id="next-btn">Next Question</button>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('password-input');
+            const passwordBtn = document.getElementById('password-btn');
+            const errorMessage = document.getElementById('error-message');
+            const passwordSection = document.getElementById('password-section');
+            const content = document.getElementById('content');
+            const nextBtn = document.getElementById('next-btn');
+            const questions = document.querySelectorAll('.question');
+            
+            let currentQuestion = 0;
+            
+            passwordBtn.addEventListener('click', function() {
+                if (passwordInput.value === '230612345') {
+                    passwordSection.style.display = 'none';
+                    content.style.display = 'block';
+                    questions[0].style.display = 'block';
+                } else {
+                    errorMessage.textContent = 'Incorrect password. Please try again.';
+                }
+            });
+            
+            nextBtn.addEventListener('click', function() {
+                questions[currentQuestion].style.display = 'none';
+                currentQuestion = (currentQuestion + 1) % questions.length;
+                questions[currentQuestion].style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
