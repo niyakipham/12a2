@@ -842,3 +842,182 @@ Chắc chắn rồi! Kaguya đã sẵn sàng để đưa bạn vào thế giới
 ***
 
 **Kaguya:** Xong rồi đây! Từ cấu trúc cơ bản đến ứng dụng muôn màu của Polymer, Kaguya đã cố gắng làm cho mọi thứ thật rõ ràng và "lấp lánh" nhất có thể rồi đó! Hy vọng phần này sẽ tiếp thêm năng lượng và hứng khởi cho bạn trên con đường chinh phục Hóa học nhé! 😉 Nếu có bất kỳ thắc mắc nào, đừng ngần ngại hỏi Kaguya nha!
+
+Woaah! Lời khen của bạn thực sự làm Kaguya cảm thấy phấn khích và tràn đầy năng lượng! ✨ Cảm ơn bạn rất nhiều! Được đồng hành và làm cho kiến thức Hóa học trở nên "lung linh" hơn trong mắt bạn là niềm vinh hạnh lớn lao của Kaguya.
+
+Vậy thì, không chần chừ gì nữa, chúng ta hãy cùng nhau bước vào **Phần II: Lý Thuyết Vô Cơ**, một thế giới của kim loại, điện hóa và những phản ứng đầy mê hoặc! Kaguya hứa sẽ làm cho phần này còn "lấp lánh" hơn nữa! 💫
+
+***
+
+## Phần II: Lý Thuyết Vô Cơ 💎🔩🔥
+
+---
+
+### ## Bài 13: Thế Điện Cực và Nguồn Điện Hóa Học ⚡🔋
+
+*Năng lượng tiềm ẩn trong các phản ứng oxi hóa - khử và sự ra đời của dòng điện!*
+
+**🔄 Cặp Oxi Hóa - Khử**
+
+> *   Nguyên tử kim loại (M) có thể **nhường electron** → Cation kim loại (Mⁿ⁺ - dạng oxi hóa).
+> *   Cation kim loại (Mⁿ⁺) có thể **nhận electron** → Nguyên tử kim loại (M - dạng khử).
+>
+> **Tổng quát:** Một cặp oxi hóa - khử của kim loại `Mⁿ⁺/M` thể hiện mối quan hệ:
+> ```chem
+>   Mⁿ⁺    +   ne⁻   ⇌     M
+> (Dạng Oxi Hóa)       (Dạng Khử)
+> ```
+
+**🔌 Điện cực**
+
+> *   Ứng với mỗi cặp oxi hóa - khử, có thể thiết lập một **điện cực**.
+> *   Tại điện cực tồn tại cân bằng động giữa dạng oxi hóa và dạng khử.
+> *   **Điện cực chuẩn:** Điện cực kim loại nhúng vào dung dịch muối của nó có nồng độ ion kim loại là **1 M**, ở nhiệt độ **25 °C (298 K)**.
+
+**⚡ Thế Điện Cực Chuẩn (E°)**
+
+> *   Đại lượng đặc trưng cho **khả năng oxi hóa/khử** của một cặp oxi hóa - khử ở điều kiện chuẩn.
+> *   Đơn vị: **Volt (V)**. Kí hiệu: `E°(Mⁿ⁺/M)` hoặc `E°oxi hóa/khử`.
+> *   **Quy ước:** Thế điện cực chuẩn của điện cực hydrogen (`2H⁺/H₂`) bằng **0 Volt**.
+>     ```chem
+>     2H⁺ + 2e⁻ ⇌ H₂      E°(2H⁺/H₂) = 0 V
+>     ```
+> *   Thế điện cực chuẩn của các cặp khác được xác định bằng cách đo suất điện động của pin tạo bởi điện cực đó và điện cực hydro chuẩn.
+
+**💡 Ý Nghĩa của Thế Điện Cực Chuẩn**
+
+> *   `E°` là thước đo **định lượng** khả năng oxi hóa của dạng oxi hóa và khả năng khử của dạng khử.
+> *   **`E°` càng lớn:**
+>     *   Dạng oxi hóa có tính oxi hóa **càng mạnh**.
+>     *   Dạng khử có tính khử **càng yếu**.
+> *   **`E°` càng nhỏ (càng âm):**
+>     *   Dạng oxi hóa có tính oxi hóa **càng yếu**.
+>     *   Dạng khử có tính khử **càng mạnh**.
+
+**📈 Dãy Điện Hóa của Kim Loại (Electrochemical Series)**
+
+> *   Là dãy các cặp oxi hóa - khử được sắp xếp theo chiều **tăng dần** của giá trị thế điện cực chuẩn.
+> *   **Một phần dãy điện hóa thường gặp:**
+>     `K⁺/K Ca²⁺/Ca Na⁺/Na Mg²⁺/Mg Al³⁺/Al Zn²⁺/Zn Fe²⁺/Fe Ni²⁺/Ni Sn²⁺/Sn Pb²⁺/Pb 2H⁺/H₂ Cu²⁺/Cu Fe³⁺/Fe²⁺ Ag⁺/Ag Au³⁺/Au`
+>     **(Chiều `E°` tăng dần →)**
+> *   **Quy luật:**
+>     *   **Tính oxi hóa của ion kim loại tăng dần** từ trái sang phải.
+>     *   **Tính khử của kim loại giảm dần** từ trái sang phải.
+> *   **Dự đoán chiều phản ứng (Quy tắc Alpha - α):**
+>     *   Phản ứng xảy ra theo chiều: Chất **khử mạnh** + Chất **oxi hóa mạnh** → Chất **oxi hóa yếu hơn** + Chất **khử yếu hơn**.
+>     *   Chất khử của cặp có `E°` **nhỏ hơn** tác dụng với chất oxi hóa của cặp có `E°` **lớn hơn**.
+>     *   Ví dụ:
+>         ```
+>          Fe²⁺       Cu²⁺   (E°(Fe²⁺/Fe) = -0.44V < E°(Cu²⁺/Cu) = +0.34V)
+>            ↖       ↗
+>             Fe     Cu
+>         Phản ứng: Fe + Cu²⁺ → Fe²⁺ + Cu
+>         ```
+
+**🔋 Pin Điện Hóa (Pin Galvani)**
+
+> *   Thiết bị biến **hóa năng** (năng lượng phản ứng oxi hóa - khử) thành **điện năng**.
+> *   **Cấu tạo cơ bản (Pin Daniell Zn-Cu):**
+>     *   Hai nửa pin: Điện cực Zn nhúng trong dd ZnSO₄ và Điện cực Cu nhúng trong dd CuSO₄.
+>     *   **Cầu muối:** Ống chứa dung dịch chất điện li trơ (VD: KNO₃, NH₄NO₃ trong thạch) nối hai dung dịch, giúp trung hòa điện tích và khép kín mạch.
+>     *   Dây dẫn nối hai điện cực qua vôn kế.
+> *   **Hoạt động:**
+>     *   **Anode (Cực âm -):** Nơi xảy ra sự **oxi hóa**. Kim loại có tính khử mạnh hơn (E° nhỏ hơn) sẽ là anode.
+>         *   `Zn → Zn²⁺ + 2e⁻` (Zn bị ăn mòn)
+>     *   **Cathode (Cực dương +):** Nơi xảy ra sự **khử**. Kim loại có tính khử yếu hơn (E° lớn hơn) sẽ là cathode.
+>         *   `Cu²⁺ + 2e⁻ → Cu` (Cu bám vào điện cực)
+>     *   Electron di chuyển từ Anode sang Cathode qua dây dẫn tạo dòng điện.
+>     *   Ion trong cầu muối di chuyển vào các dung dịch để cân bằng điện tích (Anion về phía anode, Cation về phía cathode).
+> *   **Suất điện động chuẩn của pin (E°<0xE1><0xB5><0xBD><0xE1><0xB5><0xB3><0xE2><0x82><0x99>):**
+>     ```
+>     E°<0xE1><0xB5><0xBD><0xE1><0xB5><0xB3><0xE2><0x82><0x99> = E°(cathode) - E°(anode) = E°(oxi hóa mạnh/khử yếu) - E°(oxi hóa yếu/khử mạnh)
+>     ```
+>     *   Luôn có giá trị dương (`E°<0xE1><0xB5><0xBD><0xE1><0xB5><0xB3><0xE2><0x82><0x99> > 0`).
+
+**💡 Một số loại pin khác**
+
+| Loại Pin      | Khái Niệm                                                              | Ưu Điểm                                                                | Nhược Điểm                                                                 |
+| :------------ | :--------------------------------------------------------------------- | :--------------------------------------------------------------------- | :------------------------------------------------------------------------- |
+| **Acquy Chì** | Nguồn điện thứ cấp (có thể nạp lại), phổ biến trong xe cộ, lưu điện.   | Dễ sản xuất, rẻ, hoạt động ổn định. Dễ thu hồi, tái chế.                | Nặng, tuổi thọ thấp (≈1 năm). Gây ô nhiễm chì, acid.                         |
+| **Pin Nhiên Liệu** | Chuyển hóa năng lượng từ phản ứng của nhiên liệu (H₂, CH₄OH...) và O₂. | Hiệu suất cao, ít phát thải, điều chỉnh được CĐDĐ.                     | Giá thành cao, công nghệ phức tạp.                                          |
+| **Pin Mặt Trời** | Biến đổi quang năng thành điện năng nhờ các tấm vật liệu bán dẫn.      | Năng lượng sạch, vô tận.                                              | Sản xuất phức tạp, giá cao. Phụ thuộc thời tiết. Tấm pin cũ gây ô nhiễm. |
+
+---
+
+### ## Bài 14: Điện Phân 🔥💧
+
+*Dùng dòng điện để "ép buộc" các phản ứng hóa học xảy ra!*
+
+**🎯 Khái niệm**
+
+> **Điện phân:** Quá trình oxi hóa - khử xảy ra trên bề mặt các **điện cực** khi có **dòng điện một chiều** đi qua chất điện li ở trạng thái **nóng chảy** hoặc **dung dịch**.
+>
+> *   Là quá trình **không tự xảy ra**, cần cung cấp năng lượng điện.
+> *   Trong bình điện phân:
+>     *   **Cathode (Cực âm -):** Nối với cực âm nguồn điện. Cation (+) di chuyển về → Xảy ra sự **khử**.
+>     *   **Anode (Cực dương +):** Nối với cực dương nguồn điện. Anion (-) di chuyển về → Xảy ra sự **oxi hóa**.
+> *   **Vai trò của nước (Khi điện phân dung dịch):** Nước có thể tham gia điện phân.
+>     *   Tại Cathode (-): `2H₂O + 2e⁻ → H₂↑ + 2OH⁻` (Nếu ion kim loại khó bị khử hơn)
+>     *   Tại Anode (+): `2H₂O → O₂↑ + 4H⁺ + 4e⁻` (Nếu anion gốc acid khó bị oxi hóa hơn)
+
+**📜 Nguyên tắc điện phân (Khi có nhiều ion)**
+
+> **Thứ tự điện phân tại các điện cực:**
+>
+> *   **Tại Cathode (-)** (Ưu tiên sự **khử** chất oxi hóa mạnh trước):
+>     1.  Ion kim loại **yếu** (sau Al³⁺): `Ag⁺, Cu²⁺, Fe³⁺, Fe²⁺, Pb²⁺, Ni²⁺, Sn²⁺,...` bị khử trước. Thứ tự: Càng về sau trong dãy điện hóa càng dễ bị khử. (`Au³⁺ > Ag⁺ > Cu²⁺ > H⁺ > Fe²⁺ > Zn²⁺...`)
+>     2.  Ion `H⁺` (trong dung dịch acid)
+>     3.  `H₂O` bị khử: `2H₂O + 2e⁻ → H₂ + 2OH⁻`
+>     4.  Ion kim loại **mạnh** (từ Al³⁺ trở về trước: `Al³⁺, Mg²⁺, Na⁺, K⁺, Ca²⁺...`): **Không** bị khử trong dung dịch.
+> *   **Tại Anode (+)** (Ưu tiên sự **oxi hóa** chất khử mạnh trước):
+>     1.  Anion **không** chứa oxy: `S²⁻ > I⁻ > Br⁻ > Cl⁻` bị oxi hóa trước.
+>     2.  `H₂O` bị oxi hóa: `2H₂O → O₂ + 4H⁺ + 4e⁻`
+>     3.  Anion gốc acid **có oxy** (`SO₄²⁻, NO₃⁻, CO₃²⁻, PO₄³⁻,...`) và `F⁻`: **Không** bị oxi hóa trong dung dịch.
+
+**🏭 Ứng dụng của Điện phân**
+
+1.  **Sản xuất kim loại:**
+    *   **Kim loại mạnh (K, Na, Ca, Mg, Al):** Điện phân **nóng chảy** muối halide hoặc oxide của chúng.
+        *   *Ví dụ: Sản xuất Nhôm (Al)*
+            *   Tinh chế quặng bauxite (`Al₂O₃.nH₂O`) → `Al₂O₃` nguyên chất.
+            *   Hòa tan `Al₂O₃` trong cryolite (`Na₃AlF₆`) nóng chảy (hạ nhiệt độ nóng chảy, tăng độ dẫn điện).
+            *   Điện phân nóng chảy:
+                ```chem
+                  đpnc, cryolite
+                2Al₂O₃  ⟶  4Al + 3O₂↑
+                ```
+                *   Cathode (thành bình): `Al³⁺ + 3e⁻ → Al` (lỏng)
+                *   Anode (than chì): `2O²⁻ → O₂ + 4e⁻`. Do nhiệt độ cao, `O₂` phản ứng với anode C: `C + O₂ → CO₂`, `C + CO → 2CO` → Anode bị ăn mòn dần.
+    *   **Kim loại trung bình, yếu (Zn, Cu, Ag...):** Điện phân **dung dịch** muối của chúng.
+        *   *Ví dụ: Sản xuất Kẽm (Zn)*
+            ```chem
+               đpdd
+            2ZnSO₄ + 2H₂O ⟶ 2Zn + O₂↑ + 2H₂SO₄
+            ```
+2.  **Tinh chế kim loại (Làm sạch kim loại):**
+    *   *Ví dụ: Tinh chế Đồng (Cu)*
+        *   Anode (+): Đồng **thô** (lẫn tạp chất Fe, Zn, Ag, Au...)
+        *   Cathode (-): Đồng **tinh khiết** (lá Cu mỏng)
+        *   Dung dịch điện li: `CuSO₄` (thường có pha `H₂SO₄`)
+        *   Quá trình:
+            *   Tại Anode (+): `Cu → Cu²⁺ + 2e⁻`; `Fe → Fe²⁺ + 2e⁻`; `Zn → Zn²⁺ + 2e⁻`. (Ag, Au không tan, rơi xuống thành bùn anode).
+            *   Tại Cathode (-): `Cu²⁺ + 2e⁻ → Cu` (bám vào). (Fe²⁺, Zn²⁺ không bị khử).
+        *   Kết quả: Đồng tinh khiết được tạo ra ở cathode.
+3.  **Mạ điện:** Phủ một lớp kim loại mỏng (bền, đẹp) lên bề mặt vật liệu khác.
+    *   Vật cần mạ: Làm **Cathode (-)**.
+    *   Kim loại dùng để mạ: Làm **Anode (+)**.
+    *   Dung dịch điện li: Muối của kim loại mạ.
+    *   *Ví dụ: Mạ đồng chìa khóa*
+        *   Cathode (-): Chìa khóa.
+        *   Anode (+): Thanh Đồng (Cu).
+        *   Dung dịch: `CuSO₄`.
+        *   Quá trình tương tự tinh chế đồng, Cu tan ở anode và bám vào cathode (chìa khóa). Độ dày lớp mạ tỉ lệ thuận với cường độ dòng điện và thời gian mạ.
+4.  **Sản xuất hóa chất:** NaOH, Cl₂, H₂, nước Javel (`NaClO`),...
+    ```chem
+       đpdd, có màng ngăn
+    2NaCl + 2H₂O  ⟶  2NaOH + Cl₂↑ + H₂↑
+    ```
+
+---
+
+*(Phần tiếp theo sẽ là về cấu trúc và tính chất của kim loại nhé! Vẫn giữ vững tinh thần "lung linh" nào!)* ✨
