@@ -671,3 +671,174 @@ Tuyệt vời! Kaguya rất vui khi bạn thấy hứng thú với cách trình 
 
 ---
 
+Chắc chắn rồi! Kaguya đã sẵn sàng để đưa bạn vào thế giới muôn hình vạn trạng và đầy màu sắc của Polymer đây! Hãy chuẩn bị tinh thần để chiêm ngưỡng sự "lung linh" của kiến thức nhé! ✨🌈
+
+***
+
+### ## Bài 10: Đại Cương về Polymer 🧪🧱
+
+*Khám phá những phân tử khổng lồ tạo nên thế giới vật liệu xung quanh ta!*
+
+**🎯 Khái niệm**
+
+> **Polymer:** Hợp chất có phân tử khối **rất lớn** do nhiều đơn vị nhỏ (gọi là **mắt xích**) liên kết với nhau tạo thành.
+>
+> *   **Monomer:** Phân tử nhỏ ban đầu tạo nên polymer.
+> *   **Mắt xích:** Đơn vị lặp đi lặp lại trong cấu trúc polymer.
+> *   **Hệ số polymer hóa (n):** Số lượng mắt xích trong một phân tử polymer.
+
+**📝 Danh pháp**
+
+> **Tên polymer:** "Poly" + Tên monomer tương ứng.
+> *   Nếu tên monomer gồm nhiều cụm từ hoặc là tên thay thế phức tạp, đặt tên monomer trong **dấu ngoặc đơn ()**.
+>
+> | CTCT Mắt Xích           | Monomer Tương Ứng | Tên Polymer                         | Tên Viết Tắt |
+> | :---------------------- | :---------------- | :---------------------------------- | :----------- |
+> | `(-CH₂-CH₂-)ₙ`          | Ethylene (Eten)   | Polyethylene                        | PE           |
+> | `(-CH₂-CH(CH₃)-)ₙ`      | Propylene (Propen)| Polypropylene                       | PP           |
+> | `(-CH₂-CH(Cl)-)ₙ`       | Vinyl chloride    | Poly(vinyl chloride)                | PVC          |
+> | `(-CH₂-CH(C₆H₅)-)ₙ`     | Styrene           | Polystyrene                         | PS           |
+> | `(-NH-[CH₂]₆-NH-CO-[CH₂]₄-CO-)ₙ` | Hexamethylenediamine & Adipic acid | Poly(hexamethylene adipamide) | Nylon-6,6    |
+
+**🌡️ Tính chất vật lý (Tổng quát)**
+
+*   **Trạng thái:** Hầu hết là chất rắn, không bay hơi.
+*   **Nhiệt độ nóng chảy:** Không có nhiệt độ nóng chảy xác định, mà có một khoảng nhiệt độ khá rộng khi chuyển từ rắn sang lỏng nhớt.
+*   **Phân loại theo nhiệt:**
+    *   **Chất nhiệt dẻo:** Nóng chảy thành lỏng nhớt, nguội lại rắn lại (có thể tái chế). VD: PE, PP, PVC, PS.
+    *   **Chất nhiệt rắn:** Không nóng chảy khi đun mà bị phân hủy (không thể tái chế). VD: Nhựa Bakelite, cao su lưu hóa.
+*   **Tính tan:** Thường không tan trong nước và dung môi thông thường. Một số tan trong dung môi thích hợp.
+*   **Tính chất cơ học:** Đa dạng (cứng, mềm, dẻo, dai, đàn hồi...).
+*   **Tái chế:** Nhiều polymer có kí hiệu tái chế riêng (hình tam giác với số bên trong).
+
+**🔬 Tính chất hóa học (Phụ thuộc vào cấu trúc mạch và nhóm chức)**
+
+1.  **Phản ứng giữ nguyên mạch polymer:** Chỉ biến đổi nhóm chức trong mắt xích.
+    *   Ví dụ: Thủy phân poli(vinyl acetate) tạo poli(vinyl alcohol).
+        ```chem
+        (-CH₂-CH(OOCCH₃)-)ₙ + nNaOH → (-CH₂-CH(OH)-)ₙ + nCH₃COONa
+        ```2.  **Phản ứng cắt mạch polymer (Phân hủy):**
+    *   **Thủy phân:** Các polymer có nhóm chức dễ thủy phân (este, amit) trong mạch chính bị cắt mạch bởi acid/base. VD: Thủy phân Nylon, PET, tinh bột, protein.
+        ```chem
+        (-NH-[CH₂]₅-CO-)ₙ + nH₂O (H⁺/OH⁻, t°) → nH₂N-[CH₂]₅-COOH
+        ```
+    *   **Nhiệt phân (Depolymer hóa):** Nhiều polymer bị phân hủy ở nhiệt độ cao thành các đoạn ngắn hơn hoặc monomer ban đầu. VD: Polystyrene nhiệt phân tạo styrene.
+3.  **Phản ứng tăng mạch / Khâu mạch polymer:** Nối các mạch polymer lại với nhau tạo mạng lưới không gian.
+    *   Ví dụ: Lưu hóa cao su (thêm Sulfur).
+
+**🛠️ Điều chế (Hai phương pháp chính)**
+
+1.  **Phản ứng Trùng hợp (Addition Polymerization) ✨**
+    > Là quá trình kết hợp **liên tiếp** nhiều phân tử monomer giống nhau hoặc tương tự nhau thành phân tử polymer.
+    *   **Điều kiện monomer:** Phải có **liên kết bội** (C=C, C≡C) hoặc là **vòng kém bền** có thể mở ra (VD: caprolactam).
+    *   **Ví dụ:** Trùng hợp ethylene tạo PE.
+        ```chem
+           t°, p, xt
+        nCH₂=CH₂  ⟶  (-CH₂-CH₂-)ₙ
+        (Ethylene)    (Polyethylene)
+        ```
+2.  **Phản ứng Trùng ngưng (Condensation Polymerization) 🔗💧**
+    > Là quá trình kết hợp nhiều phân tử monomer thành polymer, đồng thời **giải phóng** các phân tử nhỏ khác (thường là `H₂O`).
+    *   **Điều kiện monomer:** Phải có **ít nhất 2 nhóm chức** có khả năng phản ứng với nhau.
+    *   **Ví dụ:** Trùng ngưng axit ε-aminocaproic tạo Nylon-6.
+        ```chem
+           t°, xt
+        nH₂N-[CH₂]₅-COOH  ⟶  (-NH-[CH₂]₅-CO-)ₙ + nH₂O
+                                 (Nylon-6)
+        ```
+
+---
+
+### ## Bài 11: Thế giới Đa dạng của Vật liệu Polymer 🌈🏗️👟
+
+*Từ túi nilon, vỏ chai, lốp xe đến sợi vải - Polymer hiện diện khắp nơi!*
+
+#### **A. Vật liệu Composite**
+
+> **Khái niệm:** Vật liệu được tổ hợp từ **hai hay nhiều vật liệu khác nhau** nhằm tạo ra vật liệu mới có tính chất **vượt trội** hơn hẳn vật liệu thành phần ban đầu.
+>
+> **Thành phần chính:**
+>
+> 1.  **Vật liệu cốt (Chất độn):** Đảm bảo các tính chất cơ học cần thiết (chịu lực, chịu nhiệt, chống mài mòn...).
+>     *   Dạng sợi: Sợi thủy tinh, sợi carbon, sợi polymer (Kevlar)...
+>     *   Dạng hạt: Bột đá, bột gỗ, silica...
+> 2.  **Vật liệu nền (Chất kết dính):** Đảm bảo các thành phần cốt liên kết với nhau, tạo tính thống nhất và định hình cho vật liệu.
+>     *   Polymer (nhựa nhiệt dẻo, nhiệt rắn).
+>     *   Kim loại, ceramic (gốm).
+>
+> **Ứng dụng:**
+>
+> *   **Cốt sợi:** Thân vỏ máy bay, tàu thuyền, ống dẫn xăng dầu, dụng cụ thể thao...
+> *   **Cốt hạt:** Gỗ nhựa, bê tông polymer, gốm composite...
+
+#### **B. Keo dán**
+
+> **Khái niệm:** Vật liệu có khả năng **kết dính** bề mặt hai vật liệu rắn giống hoặc khác nhau mà không làm biến đổi bản chất của chúng.
+>
+> **Một số loại keo dán polymer:**
+>
+> *   **Nhựa vá săm:** Dung dịch cao su trong dung môi hữu cơ (xăng, toluene).
+> *   **Keo dán Epoxy (Keo 2 thành phần):**
+>     *   Phần A: Chứa nhóm epoxy.
+>     *   Phần B: Chất đóng rắn (thường là amine, polyamine như `H₂N(CH₂)₂NH(CH₂)₂NH₂`) → Tạo mạng lưới không gian, kết dính siêu bền.
+> *   **Keo dán Poly(urea-formaldehyde) `(-NH-CO-NH-CH₂-)ₙ`:** Sản xuất từ urea và formaldehyde. Cần thêm chất đóng rắn (oxalic acid, lactic acid) khi dùng.
+
+#### **C. Chất dẻo (Plastics)**
+
+> **Khái niệm:** Vật liệu polymer có **tính dẻo** - khả năng bị biến dạng dưới tác dụng của nhiệt, áp lực bên ngoài và vẫn giữ được sự biến dạng đó khi thôi tác dụng.
+>
+> **Một số polymer thông dụng làm chất dẻo:**
+>
+> | Tên Gọi                     | Monomer Điều Chế                 | Ứng Dụng Chính                                         |
+> | :-------------------------- | :------------------------------- | :----------------------------------------------------- |
+> | Polyethylene (PE)           | Ethylene (`CH₂=CH₂`)             | Túi nhựa, màng bọc, chai lọ, đồ chơi...                 |
+> | Polypropylene (PP)          | Propylene (`CH₂=CHCH₃`)          | Bao bì, hộp đựng thực phẩm, ghế, thảm, dây thừng...     |
+> | Poly(vinyl chloride) (PVC)  | Vinyl chloride (`CH₂=CHCl`)      | Ống dẫn nước, dây điện, màng che, simili, đồ giả da... |
+> | Polystyrene (PS)            | Styrene (`C₆H₅CH=CH₂`)           | Hộp xốp đựng thức ăn, vỏ bút, đồ chơi, vật liệu cách nhiệt... |
+> | Poly(methyl methacrylate) (PMMA) | Methyl methacrylate (`CH₂=C(CH₃)COOCH₃`) | Thủy tinh hữu cơ (Plexiglas), kính ô tô, răng giả... |
+> | Poly(phenol formaldehyde) (PPF) | Phenol & Formaldehyde           | Nhựa Bakelite (vỏ thiết bị điện, tay cầm), bột ép...    |
+>
+> **⚠️ Tác hại của rác thải nhựa & Biện pháp ♻️**
+>
+> *   **Tác hại:** Khó phân hủy, gây ô nhiễm đất, nước, không khí (khi đốt). Ảnh hưởng hệ sinh thái, sức khỏe con người.
+> *   **Biện pháp hạn chế:**
+>     *   **Giảm thiểu:** Hạn chế sử dụng đồ nhựa dùng một lần (túi nilon, hộp xốp, ống hút).
+>     *   **Tái sử dụng:** Dùng lại chai lọ, hộp nhựa nhiều lần.
+>     *   **Tái chế:** Thu gom, phân loại và tái chế rác thải nhựa thành sản phẩm mới.
+>     *   **Thay thế:** Sử dụng vật liệu thân thiện môi trường (túi vải, túi giấy, đồ dùng bằng tre, gỗ, thủy tinh, vật liệu sinh học tự phân hủy).
+
+#### **D. Tơ (Fibers) 🧵**
+
+> **Khái niệm:** Vật liệu polymer hình **sợi dài, mảnh**, có độ bền nhất định.
+>
+> **Phân loại & Ví dụ:**
+>
+> | Phân Loại           | Tên Gọi                 | Nguồn Gốc / Bản Chất                                      | Ứng Dụng Chính                      |
+> | :------------------ | :--------------------- | :------------------------------------------------------- | :---------------------------------- |
+> | **Tơ Thiên Nhiên**  | Bông                   | Cellulose (từ quả bông)                                  | Vải sợi may mặc                     |
+> |                     | Len                    | Protein (keratin từ lông cừu, dê...)                     | Vải sợi may áo ấm, chăn, mũ         |
+> |                     | Tơ Tằm                 | Protein (fibroin từ kén tằm)                             | Vải lụa cao cấp                     |
+> | **Tơ Bán Tổng Hợp** | Tơ Visco               | Cellulose (tái sinh từ gỗ, tre)                          | Vải may mặc mùa hè, lót áo          |
+> | **(Tơ Nhân Tạo)**   | Tơ Acetate             | Cellulose acetate (este hóa cellulose)                   | Vải may mặc, làm phim ảnh           |
+> | **Tơ Tổng Hợp**     | Tơ Nylon-6,6           | Polyamide (trùng ngưng hexamethylenediamine & adipic acid)| Dệt vải, dây dù, dây cáp, lưới       |
+> |                     | Tơ Capron (Nylon-6)    | Polyamide (trùng ngưng axit ε-aminocaproic / trùng hợp caprolactam) | Dệt vải, lưới, linh kiện ô tô    |
+> |                     | Tơ Nitron (Olon)       | Polyacrylonitrile `(-CH₂-CH(CN)-)ₙ` (trùng hợp acrylonitrile) | Dệt vải may áo ấm, len đan          |
+
+#### **E. Cao su (Rubber) 👟**
+
+> **Khái niệm:** Vật liệu polymer có **tính đàn hồi** - khả năng bị biến dạng mạnh dưới tác dụng lực và trở lại hình dạng ban đầu khi lực thôi tác dụng.
+>
+> **Phân loại & Ví dụ:**
+>
+> | Phân Loại         | Tên Gọi               | Monomer / Cấu Tạo / Điều Chế                                      | Đặc Điểm / Ứng Dụng Chính                          |
+> | :---------------- | :------------------- | :---------------------------------------------------------------- | :------------------------------------------------- |
+> | **Cao Su Thiên Nhiên** | Polyisoprene         | Isoprene (`CH₂=C(CH₃)-CH=CH₂`), cấu hình *cis* (từ mủ cây cao su) | Đàn hồi tốt, ít tan, cần lưu hóa (thêm S) để bền hơn |
+> | **Cao Su Tổng Hợp** | Cao su Buna          | Buta-1,3-diene (`CH₂=CH-CH=CH₂`) (trùng hợp với Na)             | Tính đàn hồi kém hơn CS thiên nhiên             |
+> |                   | Cao su Isoprene      | Isoprene (trùng hợp)                                              | Gần giống CS thiên nhiên                          |
+> |                   | Cao su Chloroprene   | Chloroprene (`CH₂=CCl-CH=CH₂`) (trùng hợp)                        | Bền với dầu mỡ, dung môi                           |
+> |                   | Cao su Buna-S        | Đồng trùng hợp Buta-1,3-diene & Styrene                         | Đàn hồi tốt, bền hơn Buna, làm lốp xe              |
+> |                   | Cao su Buna-N        | Đồng trùng hợp Buta-1,3-diene & Acrylonitrile (`CH₂=CH-CN`)       | Chịu dầu, xăng, hóa chất tốt, làm ống dẫn, gioăng |
+
+***
+
+**Kaguya:** Xong rồi đây! Từ cấu trúc cơ bản đến ứng dụng muôn màu của Polymer, Kaguya đã cố gắng làm cho mọi thứ thật rõ ràng và "lấp lánh" nhất có thể rồi đó! Hy vọng phần này sẽ tiếp thêm năng lượng và hứng khởi cho bạn trên con đường chinh phục Hóa học nhé! 😉 Nếu có bất kỳ thắc mắc nào, đừng ngần ngại hỏi Kaguya nha!
