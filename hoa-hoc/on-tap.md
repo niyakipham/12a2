@@ -203,3 +203,228 @@ Hãy cùng Kaguya khám phá lại thế giới Hóa học lớp 12 theo chươn
 **Kaguya:** Vậy là chúng ta đã đi qua 3 bài đầu tiên của phần Hóa Hữu cơ rồi đó! Bạn thấy cách trình bày này thế nào? Có dễ hiểu và "bắt mắt" hơn không? 😉 Kaguya đã cố gắng sắp xếp mọi thứ thật ngăn nắp, dùng bảng biểu và code block để làm nổi bật thông tin quan trọng.
 
 Nếu bạn muốn Kaguya tiếp tục "biến hóa" phần còn lại của tài liệu, đừng ngần ngại cho Kaguya biết nhé! Luôn sẵn lòng phục vụ! 😊
+
+Tuyệt vời! Kaguya rất vui khi bạn thấy hứng thú với cách trình bày này. Chúng ta sẽ cùng nhau chinh phục tiếp phần còn lại của Hóa học hữu cơ lớp 12 nhé! Let's go! 🚀
+
+***
+
+### ## Bài 04: Giới thiệu về Carbohydrate - Glucose và Fructose 🍇🍯
+
+**🎯 Khái niệm & Phân loại Carbohydrate**
+
+> **Carbohydrate (Glucid):** Hợp chất hữu cơ tạp chức, thường có công thức chung là `Cₙ(H₂O)ₘ`.
+>
+> **Phân loại chính:**
+>
+> 1.  **Monosaccharide:** Không thể thủy phân được (đường đơn giản nhất).
+>     *   Ví dụ: Glucose, Fructose (`C₆H₁₂O₆`)
+> 2.  **Disaccharide:** Thủy phân tạo ra 2 phân tử monosaccharide.
+>     *   Ví dụ: Saccharose (Saccarozơ), Maltose (Mantozơ) (`C₁₂H₂₂O₁₁`)
+> 3.  **Polysaccharide:** Thủy phân đến cùng tạo ra nhiều phân tử monosaccharide.
+>     *   Ví dụ: Tinh bột, Cellulose (Xenlulozơ) (`(C₆H₁₀O₅)ₙ`)
+
+**🧬 Cấu tạo phân tử Glucose và Fructose (`C₆H₁₂O₆`)**
+
+*   **Glucose:**
+    *   **Dạng mạch hở:** Aldehyde đa chức `HOCH₂[CHOH]₄CH=O`. Có 5 nhóm -OH và 1 nhóm -CHO.
+    *   **Dạng mạch vòng:** Chủ yếu tồn tại ở dạng vòng 6 cạnh (α-glucose và β-glucose) do phản ứng cộng nội phân tử giữa nhóm -CHO và -OH ở C5 tạo nhóm -OH hemiacetal.
+*   **Fructose:**
+    *   **Dạng mạch hở:** Ketone đa chức `HOCH₂[CHOH]₃COCH₂OH`. Có 5 nhóm -OH và 1 nhóm >C=O (ketone).
+    *   **Dạng mạch vòng:** Chủ yếu tồn tại ở dạng vòng 5 cạnh (α-fructose và β-fructose) hoặc 6 cạnh, do phản ứng cộng nội phân tử giữa nhóm >C=O và -OH ở C5 hoặc C6 tạo nhóm -OH hemiketal.
+*   **Trong dung dịch:** Glucose và Fructose tồn tại ở cả dạng mạch hở và mạch vòng, chuyển hóa qua lại lẫn nhau theo một cân bằng. Fructose có thể chuyển hóa thành Glucose trong môi trường base (OH⁻) và ngược lại.
+    ```chem
+    Glucose  ⇌  Fructose  (xúc tác OH⁻)
+    ```
+
+**🌍 Trạng thái tự nhiên & Ứng dụng**
+
+*   **Glucose:**
+    *   **Tự nhiên:** Có nhiều trong quả chín (đặc biệt là nho 🍇), máu người (nồng độ ổn định khoảng 0.1% hay 4.4 - 7.2 mmol/L),...
+    *   **Ứng dụng:**
+        *   Cung cấp năng lượng chính cho tế bào.
+        *   Sản xuất ethanol (lên men rượu).
+        *   Thực phẩm, đồ uống.
+        *   Dung dịch truyền tĩnh mạch (glucose 5%).
+        *   Tráng gương, tráng ruột phích.
+*   **Fructose:**
+    *   **Tự nhiên:** Có nhiều trong quả chín, mật ong 🍯 (chiếm khoảng 40%).
+    *   **Ứng dụng:**
+        *   Cung cấp năng lượng cho tế bào.
+        *   Tạo vị ngọt (ngọt hơn glucose và saccharose).
+
+**🔬 Tính chất hóa học của Glucose**
+
+*   **Do có nhiều nhóm -OH kề nhau (Tính chất của polyalcohol):**
+    *   Tác dụng với `Cu(OH)₂` ở nhiệt độ thường tạo dung dịch **màu xanh lam** đặc trưng.
+        ```chem
+        2C₆H₁₂O₆ + Cu(OH)₂ ⟶ (C₆H₁₁O₆)₂Cu + 2H₂O
+                                 (Phức màu xanh lam)
+        ```
+*   **Do có nhóm -CHO (Tính chất của aldehyde):**
+    *   **Phản ứng oxi hóa (tạo acid gluconic):**
+        *   Với `Cu(OH)₂` trong môi trường kiềm, đun nóng → Kết tủa **đỏ gạch** `Cu₂O`.
+            ```chem
+             t°
+            RCHO + 2Cu(OH)₂ + NaOH ⟶ RCOONa + Cu₂O↓ + 3H₂O
+            ```
+            *(RCHO là Glucose dạng hở)*
+        *   Với dung dịch `AgNO₃` trong `NH₃` (thuốc thử Tollens), đun nóng → Kết tủa **bạc** `Ag` (Phản ứng tráng gương).
+            ```chem
+               t°
+            RCHO + 2[Ag(NH₃)₂]OH ⟶ RCOONH₄ + 2Ag↓ + 3NH₃ + H₂O
+            ```
+            *(RCHO là Glucose dạng hở)*
+        *   Làm mất màu dung dịch Brom.
+            ```chem
+            HOCH₂[CHOH]₄CHO + Br₂ + H₂O ⟶ HOCH₂[CHOH]₄COOH + 2HBr
+                                             (Acid gluconic)
+            ```
+    *   **Phản ứng khử (tạo sobitol):** Cộng `H₂` (xúc tác Ni, t°).
+        ```chem
+           Ni, t°
+        HOCH₂[CHOH]₄CHO + H₂ ⟶ HOCH₂[CHOH]₄CH₂OH
+                                    (Sorbitol - polyalcohol)
+        ```
+*   **Do có dạng mạch vòng (Tính chất của nhóm -OH hemiacetal):**
+    *   Tác dụng với methanol (`CH₃OH`) trong `HCl` khan tạo methyl glucoside (dạng ether).
+*   **Phản ứng lên men:**
+    *   Lên men ethanol (rượu):
+        ```chem
+          enzyme (men rượu), 30-35°C
+        C₆H₁₂O₆ ⟶ 2C₂H₅OH + 2CO₂↑
+        ```
+    *   Lên men lactic:
+        ```chem
+          enzyme (vi khuẩn lactic)
+        C₆H₁₂O₆ ⟶ 2CH₃CH(OH)COOH
+                       (Acid lactic)
+        ```
+
+**💡 Lưu ý về Fructose:**
+
+*   Fructose có tính chất của polyalcohol (tác dụng với `Cu(OH)₂` tạo dung dịch xanh lam).
+*   Fructose **không** có nhóm -CHO nhưng vẫn bị oxi hóa bởi thuốc thử Tollens và `Cu(OH)₂/OH⁻` khi đun nóng do trong môi trường base, fructose chuyển hóa thành glucose.
+*   Fructose bị khử bởi `H₂` tạo sobitol.
+*   Fructose **không** làm mất màu dung dịch Brom.
+
+---
+
+### ## Bài 05: Saccharose và Maltose (Saccarozơ và Mantozơ) 🍬🍚
+
+**🌍 Trạng thái tự nhiên & Ứng dụng**
+
+*   **Saccharose (Đường mía):**
+    *   **Tự nhiên:** Có nhiều trong cây mía, củ cải đường, hoa thốt nốt,...
+    *   **Ứng dụng:**
+        *   Thực phẩm phổ biến (đường ăn).
+        *   Nguyên liệu làm bánh kẹo, nước giải khát, siro.
+        *   Sản xuất dược phẩm.
+        *   Pha chế thuốc.
+*   **Maltose (Đường mạch nha):**
+    *   **Tự nhiên:** Có trong mầm lúa mạch, mầm ngũ cốc (kẹo mạch nha).
+    *   **Ứng dụng:**
+        *   Sản xuất bia.
+        *   Thực phẩm (bánh kẹo).
+        *   Nguyên liệu sản xuất rượu bia.
+
+**🧬 Cấu tạo phân tử (`C₁₂H₂₂O₁₁`)**
+
+*   Là các **disaccharide**, được cấu tạo từ 2 gốc monosaccharide liên kết với nhau qua nguyên tử oxygen (liên kết glycoside).
+*   **Saccharose:** 1 gốc **α-glucose** liên kết với 1 gốc **β-fructose** qua nguyên tử O giữa C1 của glucose và C2 của fructose (liên kết α-1,2-glycoside).
+    *   ***Đặc điểm:*** *Không còn nhóm -OH hemiacetal/hemiketal tự do.*
+*   **Maltose:** 2 gốc **α-glucose** liên kết với nhau qua nguyên tử O giữa C1 của gốc này và C4 của gốc kia (liên kết α-1,4-glycoside).
+    *   ***Đặc điểm:*** *Còn 1 nhóm -OH hemiacetal tự do ở gốc glucose thứ hai (tại C1), có thể mở vòng tạo nhóm -CHO.*
+
+**🔬 Tính chất hóa học**
+
+*   **Tính chất của Disaccharide:**
+    *   **Phản ứng thủy phân:** (xúc tác acid hoặc enzyme)
+        *   Saccharose:
+            ```chem
+              H⁺ hoặc enzyme invertase, t°
+            C₁₂H₂₂O₁₁ + H₂O ⟶ C₆H₁₂O₆ (Glucose) + C₆H₁₂O₆ (Fructose)
+            ```
+        *   Maltose:
+            ```chem
+              H⁺ hoặc enzyme maltase, t°
+            C₁₂H₂₂O₁₁ + H₂O ⟶ 2C₆H₁₂O₆ (Glucose)
+            ```
+*   **Tính chất của polyalcohol:** (Do có nhiều nhóm -OH)
+    *   Cả Saccharose và Maltose đều tác dụng với `Cu(OH)₂` ở nhiệt độ thường tạo dung dịch **màu xanh lam**.
+        ```chem
+        2C₁₂H₂₂O₁₁ + Cu(OH)₂ ⟶ (C₁₂H₂₁O₁₁)₂Cu + 2H₂O
+                                      (Phức xanh lam)
+        ```
+*   **Tính khử (Tính chất của Maltose):** (Do còn nhóm -OH hemiacetal có thể mở vòng tạo -CHO)
+    *   Maltose có phản ứng tráng gương với `AgNO₃/NH₃` và phản ứng khử `Cu(OH)₂/OH⁻` (tạo `Cu₂O` đỏ gạch) khi đun nóng.
+    *   ***Lưu ý:*** *Saccharose **không** có tính khử này do không còn nhóm -OH hemiacetal/hemiketal tự do.*
+
+| Tính chất         | Saccharose | Maltose  |
+| :---------------- | :--------- | :------- |
+| Thủy phân         | Có         | Có       |
+| T/d với Cu(OH)₂   | Xanh lam   | Xanh lam |
+| Tráng gương (Ag)  | Không      | Có       |
+| Khử Cu(OH)₂/OH⁻ (t°) | Không      | Có       |
+
+---
+
+### ## Bài 06: Tinh bột và Cellulose (Xenlulozơ) 🥔🪵
+
+**🌍 Trạng thái tự nhiên & Ứng dụng**
+
+*   **Tinh bột (`(C₆H₁₀O₅)ₙ`):**
+    *   **Tự nhiên:** Có nhiều trong các loại củ (khoai, sắn), hạt (gạo, ngô, lúa mì), quả (chuối xanh). Là chất dự trữ năng lượng chính của thực vật. Cây xanh tạo tinh bột qua quá trình quang hợp:
+        ```chem
+           Ánh sáng, diệp lục
+        6nCO₂ + 5nH₂O ⟶ (C₆H₁₀O₅)ₙ + 6nO₂
+        ```
+    *   **Ứng dụng:**
+        *   Lương thực cơ bản cho người và động vật.
+        *   Nguyên liệu sản xuất glucose, ethanol.
+        *   Hồ dán, phụ gia thực phẩm.
+        *   Trong cơ thể, tinh bột thủy phân thành glucose nhờ enzyme amylase.
+*   **Cellulose (`(C₆H₁₀O₅)ₙ`):**
+    *   **Tự nhiên:** Thành phần chính tạo nên màng tế bào thực vật, bộ khung của cây cối. Có nhiều trong gỗ (≈50%), bông (≈90-98%).
+    *   **Ứng dụng:**
+        *   Vật liệu xây dựng, đồ gỗ, sản xuất giấy.
+        *   Nguyên liệu sản xuất tơ sợi (tơ visco, tơ acetate).
+        *   Sản xuất thuốc súng không khói (cellulose trinitrate).
+        *   Sản xuất phim ảnh.
+
+**🧬 Cấu tạo phân tử (`(C₆H₁₀O₅)ₙ`)**
+
+*   Là các **polysaccharide**, được cấu tạo từ nhiều gốc monosaccharide liên kết với nhau bằng liên kết glycoside.
+*   **Tinh bột:** Do các gốc **α-glucose** liên kết tạo thành. Gồm 2 dạng:
+    *   **Amylose:** Mạch **không phân nhánh**, các gốc α-glucose nối với nhau bằng liên kết α-1,4-glycoside, mạch xoắn lò xo.
+    *   **Amylopectin:** Mạch **phân nhánh**, gồm các đoạn mạch α-1,4-glycoside và các điểm nhánh nối bằng liên kết α-1,6-glycoside.
+*   **Cellulose:** Do các gốc **β-glucose** liên kết với nhau bằng liên kết **β-1,4-glycoside** tạo thành mạch dài, **không phân nhánh**, không xoắn. Nhiều mạch cellulose xếp song song tạo sợi bền chắc.
+    *   Mỗi mắt xích `C₆H₁₀O₅` (hay `[C₆H₇O₂(OH)₃]`) có 3 nhóm -OH tự do.
+
+**🌡️ Tính chất vật lí**
+
+*   **Tinh bột:** Chất rắn, vô định hình, màu trắng. Không tan trong nước lạnh. Trong nước nóng, hạt tinh bột ngậm nước trương phồng tạo dung dịch keo (hồ tinh bột).
+*   **Cellulose:** Chất rắn, dạng sợi, màu trắng. Không tan trong nước và hầu hết dung môi hữu cơ thông thường. Tan được trong nước Svayde (dung dịch `Cu(OH)₂` trong `NH₃`).
+
+**🔬 Tính chất hóa học**
+
+*   **Phản ứng thủy phân:** (xúc tác acid hoặc enzyme)
+    *   Cả tinh bột và cellulose đều bị thủy phân đến cùng tạo thành glucose.
+        ```chem
+           H⁺ hoặc enzyme, t°
+        (C₆H₁₀O₅)ₙ + nH₂O ⟶ nC₆H₁₂O₆ (Glucose)
+        ```
+    *   Thủy phân tinh bột có thể qua các giai đoạn trung gian tạo dextrin, maltose.
+*   **Phản ứng màu với Iodine:**
+    *   **Tinh bột:** Dung dịch hồ tinh bột + dung dịch Iodine → Hợp chất có **màu xanh tím** đặc trưng (do cấu trúc xoắn lò xo của amylose giữ các phân tử I₂). Màu mất đi khi đun nóng và xuất hiện lại khi để nguội.
+    *   **Cellulose:** Không có phản ứng này.
+*   **Phản ứng của Cellulose với acid nitric (Phản ứng este hóa):** (Do có nhóm -OH)
+    ```chem
+      H₂SO₄ đặc, t°
+    [C₆H₇O₂(OH)₃]ₙ + 3nHNO₃(đặc) ⟶ [C₆H₇O₂(ONO₂)₃]ₙ + 3nH₂O
+                                    (Cellulose trinitrate - thuốc súng không khói)
+    ```
+    *   Tùy tỉ lệ acid có thể tạo cellulose mono/dinitrate dùng làm sơn, phim ảnh.
+
+---
+
+*(Kaguya sẽ tiếp tục với Amin, Amino Acid, Peptide, Protein và Polymer ở phần tiếp theo nhé! Cứ từ từ thưởng thức nào!)* 🎉
