@@ -428,3 +428,246 @@ Tuyệt vời! Kaguya rất vui khi bạn thấy hứng thú với cách trình 
 ---
 
 *(Kaguya sẽ tiếp tục với Amin, Amino Acid, Peptide, Protein và Polymer ở phần tiếp theo nhé! Cứ từ từ thưởng thức nào!)* 🎉
+
+Ô là la! Lời khen của bạn làm Kaguya vui quá đi! 😊 Được "phù phép" cho kiến thức trở nên lung linh, dễ tiếp thu chính là niềm đam mê của Kaguya mà! Vậy thì, chúng ta hãy cùng nhau vén màn bí mật của thế giới Amin, Amino Acid, Protein và Polymer một cách thật rực rỡ và ấn tượng nhé! ✨
+
+***
+
+### ## Bài 07: Amine 🔷
+
+*Họ hàng gần gũi của Ammonia, mang trong mình những bí ẩn hóa học thú vị!*
+
+**🎯 Khái niệm & Phân loại**
+
+> **Amine:** Dẫn xuất của ammonia (`NH₃`), khi thay thế một hay nhiều nguyên tử Hydrogen (H) bằng gốc hydrocarbon (R).
+>
+> **Phân loại:**
+>
+> *   **Theo bậc của amine (Số gốc R liên kết với N):**
+>     *   **Amine bậc 1:** `R-NH₂` (VD: CH₃NH₂)
+>     *   **Amine bậc 2:** `R-NH-R'` (VD: (CH₃)₂NH)
+>     *   **Amine bậc 3:** `R-N(R')-R''` (VD: (CH₃)₃N)
+> *   **Theo gốc hydrocarbon:**
+>     *   **Alkylamine:** Gốc R là alkyl (no). (VD: CH₃NH₂, C₂H₅NH₂)
+>     *   **Arylamine:** Gốc R là aryl (thơm). (VD: C₆H₅NH₂ - Aniline)
+
+**🔄 Đồng phân (Từ C₃ trở lên)**
+
+*   Amine có thể có các loại đồng phân:
+    *   Đồng phân **mạch carbon**.
+    *   Đồng phân **vị trí nhóm chức** (-NH₂).
+    *   Đồng phân **bậc của amine**.
+
+**📝 Danh pháp**
+
+*   **Tên gốc – chức (Thường dùng cho amine đơn giản):** Tên gốc hydrocarbon + "amine"
+    *   VD1: `CH₃CH(NH₂)CH₃`: isopropylamine
+*   **Tên thay thế (IUPAC):**
+    *   **Bậc 1:** Tên hydrocarbon (mạch chính chứa N) + Vị trí nhóm NH₂ + "-amine" (Bỏ "e" cuối tên hydrocarbon)
+        *   VD2: `CH₃CH(NH₂)CH₃`: propan-2-amine
+    *   **Bậc 2, 3:** Chọn mạch R dài nhất làm mạch chính. Các gốc R' còn lại coi là nhóm thế gắn vào N, thêm tiền tố "N-" trước tên gốc R'.
+        *   VD3: `CH₃NHC₂H₅`: N-methylethanamine
+        *   VD4: `(CH₃)₃N`: N,N-dimethylmethanamine
+
+**🌡️ Tính chất vật lí**
+
+*   **Trạng thái:** Methyl-, dimethyl-, trimethyl-, ethylamine là chất khí, mùi khai khó chịu, tan tốt trong nước. Các amine đồng đẳng cao hơn là chất lỏng hoặc rắn.
+*   **Nhiệt độ sôi:** Cao hơn hydrocarbon tương ứng nhưng thấp hơn alcohol tương ứng (do liên kết H giữa các phân tử amine yếu hơn alcohol).
+*   **Độ tan:** Các amine có gốc R nhỏ (C₁ – C₃) tan tốt trong nước do tạo liên kết H với nước. Độ tan giảm khi mạch C tăng. Aniline rất ít tan.
+*   **Độc tính:** Nhiều amine khá độc.
+
+**🔬 Tính chất hóa học 🌟 (Tính base là chủ đạo)**
+
+1.  **Tính base:** Do nguyên tử Nitrogen (N) còn cặp electron tự do có khả năng nhận proton (H⁺).
+    ```chem
+    RNH₂ + H₂O ⇌ RNH₃⁺ + OH⁻
+    ```
+    *   Dung dịch alkylamine làm quỳ tím hóa **xanh**, phenolphthalein hóa **hồng**.
+    *   **So sánh lực base:**
+        *   Gốc alkyl (đẩy e) → tăng mật độ e trên N → tăng lực base.
+        *   Gốc aryl (hút e) → giảm mật độ e trên N → giảm lực base.
+        *   **Thứ tự:** Amine béo bậc 2 > bậc 1 > `NH₃` > Amine thơm (Aniline)
+            *   VD: `(CH₃)₂NH > CH₃NH₂ > NH₃ > C₆H₅NH₂`
+    *   **Tác dụng với acid:** Tạo muối ammonium.
+        ```chem
+        RNH₂ + HCl ⟶ RNH₃Cl (Muối)
+        ```
+        *   Aniline (`C₆H₅NH₂`) có tính base yếu, tác dụng với acid mạnh.
+2.  **Phản ứng với dung dịch muối (Kim loại có hydroxide kết tủa):** Các alkylamine có thể tạo kết tủa hydroxide kim loại.
+    ```chem
+    FeCl₃ + 3CH₃NH₂ + 3H₂O ⟶ Fe(OH)₃↓ + 3CH₃NH₃Cl
+    ```
+3.  **Phản ứng thế ở vòng thơm của Aniline:** Nhóm -NH₂ làm tăng khả năng phản ứng thế vào nhân thơm (ưu tiên vị trí ortho, para).
+    *   Tác dụng với **nước Brom**: Tạo kết tủa **trắng** 2,4,6-tribromoaniline. (Phản ứng dùng để nhận biết Aniline).
+        ```chem
+        C₆H₅NH₂ + 3Br₂ ⟶ C₆H₂Br₃NH₂↓ (trắng) + 3HBr
+        ```
+
+**🛠️ Điều chế**
+
+*   **Alkylamine:**
+    *   Thay thế nguyên tử H trong `NH₃` bằng gốc alkyl (cho `NH₃` tác dụng với alkyl halide).
+    *   Khử hợp chất nitro tương ứng: `RNO₂ + 3Fe + 7HCl → RNH₃Cl + 3FeCl₂ + 2H₂O` (sau đó kiềm hóa).
+*   **Aniline:** Khử nitrobenzene bằng Fe + HCl trong môi trường acid, sau đó dùng NaOH tách aniline.
+    ```chem
+    C₆H₅NO₂ + 3Fe + 7HCl ⟶ C₆H₅NH₃Cl + 3FeCl₂ + 2H₂O
+    C₆H₅NH₃Cl + NaOH ⟶ C₆H₅NH₂ + NaCl + H₂O
+    ```
+
+**🏗️ Ứng dụng**
+
+*   Tổng hợp polymer (VD: Hexamethylenediamine tổng hợp nylon-6,6).
+*   Sản xuất dược phẩm, hóa chất bảo vệ thực vật.
+*   Aniline là nguyên liệu quan trọng sản xuất phẩm nhuộm (màu azo), dược phẩm.
+
+---
+
+### ## Bài 08: Amino Acid – Peptide 🧱🧬
+
+*Những viên gạch xây dựng nên sự sống - Protein!*
+
+#### **A. Amino Acid**
+
+**🎯 Khái niệm**
+
+> **Amino acid:** Hợp chất hữu cơ **tạp chức**, phân tử chứa đồng thời nhóm **amino** (`-NH₂`) và nhóm **carboxyl** (`-COOH`).
+>
+> **Công thức tổng quát:** `(H₂N)ₓ-R-(COOH)<0xE1><0xB5><0xB7>`
+>
+> **α-Amino acid:** Nhóm `-NH₂` đính vào carbon **α** (ngay cạnh nhóm -COOH). Hầu hết amino acid thiên nhiên là α-amino acid.
+> Công thức: `H₂N-CH(R)-COOH`
+
+**📝 Danh pháp**
+
+| Công thức                      | Tên Thay Thế                     | Tên Bán Hệ Thống        | Tên Thường | Kí hiệu |
+| :----------------------------- | :------------------------------- | :---------------------- | :--------- | :------ |
+| `H₂NCH₂COOH`                   | Aminoethanoic acid               | Aminoacetic acid        | Glycine    | Gly     |
+| `H₂NCH(CH₃)COOH`               | 2-aminopropanoic acid            | α-aminopropionic acid   | Alanine    | Ala     |
+| `(CH₃)₂CHCH(NH₂)COOH`          | 2-amino-3-methylbutanoic acid    | α-aminoisovaleric acid  | Valine     | Val     |
+| `HOOC[CH₂]₂CH(NH₂)COOH`        | 2-aminopentane-1,5-dioic acid    | α-aminoglutaric acid    | Glutamic acid | Glu     |
+| `H₂N[CH₂]₄CH(NH₂)COOH`         | 2,6-diaminopentanoic acid        | α,ε-diaminocaproic acid | Lysine     | Lys     |
+
+**🧬 Đặc điểm cấu tạo & Tính chất vật lí**
+
+*   **Cấu tạo:** Tồn tại chủ yếu ở dạng **ion lưỡng cực** (muối nội phân tử) do sự tương tác giữa nhóm `-COOH` (acid) và `-NH₂` (base).
+    ```chem
+    H₂N−CH(R)−COOH  ⇌  ⁺H₃N−CH(R)−COO⁻ (Ion lưỡng cực)
+    ```
+*   **Tính chất vật lí:**
+    *   Chất rắn, dạng tinh thể, không màu.
+    *   Vị hơi ngọt.
+    *   Nhiệt độ nóng chảy cao (do tồn tại ở dạng ion).
+    *   Dễ tan trong nước (do phân cực).
+
+**🔬 Tính chất hóa học**
+
+1.  **Tính lưỡng tính:**
+    *   Tác dụng với acid mạnh (như base): `⁺H₃N-CH(R)-COO⁻ + HCl → Cl⁻⁺H₃N-CH(R)-COOH`
+    *   Tác dụng với base mạnh (như acid): `⁺H₃N-CH(R)-COO⁻ + NaOH → H₂N-CH(R)-COONa + H₂O`
+2.  **Tính acid-base của dung dịch:** Phụ thuộc vào số nhóm `-NH₂` và `-COOH`:
+    *   Số nhóm `-NH₂` = Số nhóm `-COOH` (Gly, Ala, Val): Môi trường gần trung tính, quỳ tím không đổi màu.
+    *   Số nhóm `-NH₂` > Số nhóm `-COOH` (Lys): Môi trường base, quỳ tím hóa xanh.
+    *   Số nhóm `-NH₂` < Số nhóm `-COOH` (Glu): Môi trường acid, quỳ tím hóa đỏ.
+3.  **Phản ứng ester hóa nhóm -COOH:** (Tương tự acid carboxylic)
+    ```chem
+      HCl khí (xúc tác, bảo vệ nhóm NH₂)
+    H₂N-CH(R)-COOH + R'OH  ⇌  H₂N-CH(R)-COOR' + H₂O
+    ```
+4.  **Phản ứng trùng ngưng:** Các ε- hoặc ω-amino acid tham gia phản ứng trùng ngưng tạo polyamide.
+    ```chem
+        t°
+    nH₂N-[CH₂]₅-COOH ⟶ (-NH-[CH₂]₅-CO-)ₙ + nH₂O
+     (ε-aminocaproic acid)   (polyamide - tơ capron)
+    ```
+    *   **Liên kết peptide:** `-CO-NH-` là liên kết tạo thành giữa nhóm `-COOH` của α-amino acid này với nhóm `-NH₂` của α-amino acid kia, đồng thời giải phóng nước.
+
+#### **B. Peptide**
+
+**🎯 Khái niệm**
+
+> **Peptide:** Hợp chất chứa từ 2 đến 50 gốc **α-amino acid** liên kết với nhau bằng các **liên kết peptide** (`-CO-NH-`).
+>
+> *   **Oligopeptide:** Chứa 2-10 gốc α-amino acid.
+>     *   **Dipeptide:** 2 gốc.
+>     *   **Tripeptide:** 3 gốc.
+> *   **Polypeptide:** Chứa 11-50 gốc α-amino acid (là cơ sở tạo protein).
+
+**🧬 Cấu tạo & Danh pháp**
+
+*   **Cấu tạo:** Phân tử peptide có một đầu N (nhóm `-NH₂` tự do của amino acid đầu tiên) và một đầu C (nhóm `-COOH` tự do của amino acid cuối cùng).
+*   **Liên kết peptide:** `-CO-NH-`
+*   **Tên gọi:** Ghép tên các gốc α-amino acid (giữ nguyên hậu tố "-ine" cho amino acid đầu C, đổi thành "-yl" cho các amino acid còn lại) theo thứ tự từ đầu N đến đầu C.
+    *   Ví dụ: Tripeptide `Gly-Ala-Val` (Glycylalanylvaline)
+
+**🔬 Tính chất hóa học**
+
+1.  **Phản ứng thủy phân:**
+    *   **Thủy phân hoàn toàn** (xúc tác acid/base/enzyme, t°): Tạo hỗn hợp các α-amino acid thành phần.
+        ```chem
+        Peptide + (x+y)H₂O ⟶ x(Amino acid 1) + y(Amino acid 2) + ...
+        ```
+    *   **Thủy phân không hoàn toàn:** Có thể tạo các peptide ngắn hơn.
+2.  **Phản ứng màu Biuret:**
+    *   Peptide (trừ dipeptide) và protein tác dụng với `Cu(OH)₂` trong môi trường kiềm tạo phức chất có **màu tím** đặc trưng.
+    *   Đây là phản ứng dùng để nhận biết liên kết peptide (từ 2 liên kết trở lên).
+
+---
+
+### ## Bài 09: Protein và Enzyme 💪⚙️
+
+*Nền tảng cấu trúc và chức năng của mọi cơ thể sống!*
+
+#### **A. Protein**
+
+**🎯 Khái niệm & Đặc điểm cấu tạo**
+
+> **Protein:** Polyme sinh học (polypeptide cao phân tử) được cấu tạo từ một hay nhiều chuỗi polypeptide, chứa hàng trăm đến hàng nghìn gốc α-amino acid liên kết với nhau.
+> Phân tử khối rất lớn.
+>
+> **Phân loại:**
+>
+> *   **Protein đơn giản:** Khi thủy phân chỉ cho hỗn hợp các α-amino acid (VD: Albumin lòng trắng trứng, Fibroin tơ tằm).
+> *   **Protein phức tạp:** Ngoài các α-amino acid còn có thành phần "phi protein" khác (nhóm ngoại) như nucleic acid, lipid, carbohydrate, kim loại,... (VD: Hemoglobin chứa Fe, Casein sữa chứa P).
+
+**🧬 Cấu trúc & Tính chất vật lí**
+
+*   **Cấu trúc:** Có 4 bậc cấu trúc phức tạp (bậc 1: trình tự amino acid; bậc 2: xoắn α, gấp nếp β; bậc 3: cuộn gập không gian; bậc 4: tổ hợp các chuỗi).
+*   **Dạng tồn tại:**
+    *   **Dạng sợi:** Keratin (tóc, móng), Collagen (da, sụn), Myosin (cơ bắp). Thường không tan trong nước.
+    *   **Dạng cầu:** Albumin (lòng trắng trứng), Hemoglobin (máu). Thường tan trong nước tạo dung dịch keo.
+*   **Sự đông tụ:** Protein bị đông tụ (mất hoạt tính sinh học, biến tính) khi đun nóng hoặc tác dụng với acid, base, một số muối kim loại nặng.
+
+**🔬 Tính chất hóa học**
+
+1.  **Phản ứng thủy phân:** Tương tự peptide, bị thủy phân hoàn toàn (acid/base/enzyme) tạo các α-amino acid.
+2.  **Phản ứng màu Biuret:** Tác dụng với `Cu(OH)₂/OH⁻` tạo **màu tím** (do có nhiều liên kết peptide).
+3.  **Phản ứng với HNO₃ đặc:** Tạo kết tủa **màu vàng** (do phản ứng nitro hóa vòng thơm của các gốc amino acid như Phenylalanine, Tyrosine).
+
+**🌍 Vai trò đối với sự sống**
+
+*   **Cấu trúc:** Là thành phần chính cấu tạo nên tế bào, cơ thể.
+*   **Xúc tác:** Enzyme (bản chất là protein) xúc tác cho các phản ứng sinh hóa.
+*   **Vận chuyển:** Hemoglobin vận chuyển O₂, CO₂.
+*   **Bảo vệ:** Kháng thể (Immunoglobulin) bảo vệ cơ thể.
+*   **Điều hòa:** Hormone (nhiều hormone có bản chất protein) điều hòa quá trình trao đổi chất.
+*   **Dinh dưỡng:** Cung cấp amino acid thiết yếu, năng lượng.
+*   **Duy trì pH máu.**
+
+#### **B. Enzyme**
+
+**🎯 Khái niệm & Đặc điểm**
+
+> **Enzyme (Men):** Chất xúc tác sinh học, hầu hết có bản chất là protein.
+>
+> **Đặc điểm:**
+>
+> *   **Tốc độ phản ứng:** Làm tăng tốc độ phản ứng lên hàng triệu lần so với xúc tác hóa học thông thường.
+> *   **Tính chọn lọc (đặc hiệu):** Mỗi enzyme thường chỉ xúc tác cho một hoặc một nhóm phản ứng nhất định.
+> *   **Điều kiện hoạt động:** Hoạt động hiệu quả ở nhiệt độ và pH xác định (thường là nhiệt độ cơ thể và pH sinh lí).
+
+**🌍 Vai trò**
+
+*   Xúc tác cho **mọi** quá trình chuyển hóa vật chất và năng lượng trong cơ thể sống. Không có enzyme, sự sống không thể tồn tại.
+
+---
+
