@@ -1,0 +1,708 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧬 KAGUYA LIÊN THÔNG — LÝ LUẬN VĂN HỌC NEON GLITCH 🧬</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=Roboto+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        /* ⚡ GLOBAL CYBERPUNK BASE ⚡ */
+        :root {
+            --bg-color: #0a0a1a; /* Deep Space Dark */
+            --text-color-primary: #E0E0FF; /* Astro Light */
+            --text-color-secondary: #B0B0DA; /* Meteor Grey */
+            --accent-purple: #B026FF; /* Plasma Pulse */
+            --accent-cyan: #00D1F5; /* AI Stream */
+            --code-bg: #2A2A4A; /* Nebula Block */
+            --code-border-glow: rgba(176, 38, 255, 0.5); /* Purple Glow */
+            --link-color: var(--accent-cyan); /* Data Link Cyan */
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace; /* Futuristic coding feel */
+            background-color: var(--bg-color);
+            color: var(--text-color-primary);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scroll from glitch/glow */
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1000px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* ✦ TYPOGRAPHY NEON GLOW ✦ */
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif; /* Header Font */
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px rgba(0, 209, 245, 0.3), 0 0 10px rgba(176, 38, 255, 0.3), 0 0 20px rgba(0, 209, 245, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: var(--accent-cyan); /* H1 leans Cyan */
+        }
+
+        h2 {
+            font-size: 2em;
+            border-bottom: 2px dashed var(--accent-purple);
+            padding-bottom: 5px;
+            color: var(--accent-purple); /* H2 leans Purple */
+        }
+
+        h3 {
+            font-size: 1.5em;
+            color: var(--text-color-primary);
+            margin-top: 30px;
+        }
+
+        /* Text Gradient - applied with span wrapper for control */
+        .neon-gradient {
+            background: linear-gradient(45deg, var(--accent-purple), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
+            animation: gradient-shift 5s ease infinite;
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+        /* List Styling - Sci-fi Markers */
+        ul {
+            list-style: none; /* Remove default marker */
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            position: relative;
+            opacity: 0; /* Hide initially for animation */
+            transform: translateX(-20px); /* Slide in from left */
+            animation: fadeInSlide 0.6s ease-out forwards;
+        }
+
+        li:before {
+            content: '◇'; /* Futuristic marker */
+            position: absolute;
+            left: -20px;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+         li:nth-child(even):before {
+            content: '◆'; /* Alternate marker */
+            color: var(--accent-purple);
+        }
+
+        @keyframes fadeInSlide {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Author/Source Style */
+        .author {
+            font-style: italic;
+            color: var(--text-color-secondary);
+            font-size: 0.9em;
+            display: block;
+            margin-top: 5px;
+            opacity: 0.7;
+        }
+
+        /* 💾 CODE BLOCK NEON GLITCH 💾 */
+        pre {
+            background-color: var(--code-bg);
+            border-left: 3px solid var(--accent-purple);
+            border-right: 3px solid var(--accent-cyan);
+            padding: 15px;
+            margin: 20px 0;
+            overflow-x: auto;
+            border-radius: 5px;
+            position: relative;
+            box-shadow: 0 0 10px var(--code-border-glow); /* subtle initial glow */
+            animation: code-glow 3s infinite alternate; /* Pulsing glow */
+            font-family: 'Share Tech Mono', monospace; /* Monospace Code Font */
+            font-size: 0.9em;
+            line-height: 1.6;
+            white-space: pre-wrap; /* Wrap long lines */
+            word-break: break-all;
+        }
+
+         @keyframes code-glow {
+            from { box-shadow: 0 0 8px var(--code-border-glow), 0 0 12px rgba(0, 209, 245, 0.4); }
+            to { box-shadow: 0 0 12px var(--code-border-glow), 0 0 18px rgba(0, 209, 245, 0.6); }
+        }
+
+        code {
+            display: block; /* Necessary for line wrapping */
+            color: var(--text-color-primary);
+        }
+
+        /* Simple Text Animation for Code (Optional, needs JS or complex CSS) */
+        /* Using JS for typewriter effect later */
+
+        /* 🧩 MODULAR DIVIDERS 🧩 */
+        .section-divider {
+            text-align: center;
+            margin: 40px 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-size: 1.2em;
+            text-shadow: 0 0 8px var(--accent-cyan);
+            opacity: 0; /* Hide for animation */
+            animation: fadeIn 1s ease forwards;
+        }
+         @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Call-out Box (Pro Tip, Note, Manifesto) */
+        .callout {
+            background-color: rgba(176, 38, 255, 0.1); /* Subtle purple tint */
+            border: 1px solid var(--accent-purple);
+            border-left: 5px solid var(--accent-purple);
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 5px;
+            font-style: italic;
+            color: var(--text-color-secondary);
+            opacity: 0; /* Hide for animation */
+            animation: fadeInScale 0.8s ease-out forwards;
+        }
+         @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .callout strong {
+            color: var(--accent-cyan);
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        /* Scroll Animation - Triggered by JS Intersection Observer */
+        .animated {
+             animation-delay: var(--delay, 0s); /* Use CSS Variable for staggered delay */
+        }
+         /* Adjust delay for elements based on type if needed, e.g., h2 has more delay */
+        .container > section { --delay: 0.1s; }
+        .container > h1 { --delay: 0s; }
+        .container > .section-divider { --delay: 0.3s; }
+
+
+        /* Optional: Glitch Text Effect - triggered on hover or data-attribute */
+         /* Warning: Glitch can be distracting. Apply sparingly. */
+        .glitch-text {
+            position: relative;
+        }
+        .glitch-text:before, .glitch-text:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            overflow: hidden;
+            clip: rect(0, 900px, 0, 0); /* initial clip, changes with animation */
+        }
+
+        .glitch-text:before {
+            left: -1px;
+            text-shadow: 1px 0 rgba(0, 209, 245, 0.7); /* Cyan glitch */
+             animation: glitch-anim-1 2s infinite linear alternate-reverse; /* Glitch speed and pattern */
+        }
+
+        .glitch-text:after {
+            left: 1px;
+            text-shadow: -1px 0 rgba(176, 38, 255, 0.7); /* Purple glitch */
+             animation: glitch-anim-2 2s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim-1 {
+            0%, 100% { clip: rect(1px, 900px, 50px, 0); } /* top half glitch */
+            10% { clip: rect(70px, 900px, 90px, 0); } /* different line */
+            20% { clip: rect(30px, 900px, 120px, 0); } /* jump around */
+            30% { clip: rect(85px, 900px, 10px, 0); }
+            40% { clip: rect(40px, 900px, 70px, 0); }
+            50% { clip: rect(110px, 900px, 130px, 0); }
+             60% { clip: rect(15px, 900px, 80px, 0); }
+             70% { clip: rect(95px, 900px, 25px, 0); }
+             80% { clip: rect(50px, 900px, 100px, 0); }
+             90% { clip: rect(105px, 900px, 60px, 0); }
+        }
+
+         @keyframes glitch-anim-2 {
+            0%, 100% { clip: rect(15px, 900px, 80px, 0); }
+            10% { clip: rect(5px, 900px, 110px, 0); }
+            20% { clip: rect(90px, 900px, 40px, 0); }
+             30% { clip: rect(30px, 900px, 75px, 0); }
+             40% { clip: rect(120px, 900px, 20px, 0); }
+            50% { clip: rect(60px, 900px, 95px, 0); }
+            60% { clip: rect(100px, 900px, 15px, 0); }
+            70% { clip: rect(25px, 900px, 50px, 0); }
+            80% { clip: rect(70px, 900px, 105px, 0); }
+            90% { clip: rect(85px, 900px, 5px, 0); }
+        }
+         /* Apply glitch judiciously, perhaps just on titles */
+        h1 span, h2 span { display: inline-block; } /* Needs wrapper for glitch effect */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 class="animated"><span class="neon-gradient glitch-text" data-text="CHUYÊN ĐỀ 14:">CHUYÊN ĐỀ 14:</span> <br><span class="neon-gradient glitch-text" data-text="BỔ SUNG LÝ LUẬN KHI VIẾT VĂN">BỔ SUNG LÝ LUẬN KHI VIẾT VĂN</span></h1>
+
+        <!-- ✨ MODULE: VĂN HỌC DÂN GIAN ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 01: LÝ LUẬN CODE-VĂN DÂN GIAN ] ──────・✦</div>
+        <section class="animated">
+            <h2>🧬 <span class="neon-gradient">I. VĂN HỌC DÂN GIAN</span></h2>
+
+            <h3>💬 1.1. Chung</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Tôi khuyên các bạn nên đọc truyện cổ tích…thơ ngụ ngôn, các tuyển tập ca dao… Hãy đi sâu vào vẻ đẹp quyến rũ của ngôn ngữ bình dân, hãy đi sâu vào những câu hài hòa cân đối trong các bài ca, trong truyện cổ tích… Bạn sẽ thấy ở đó sự phong phú lạ thường của các hình tượng, sự giản dị của sức mạnh làm say đắm lòng người, vẻ đẹp tuyệt vời của những định nghĩa… Hãy đi sâu vào sáng tác của nhân dân, nó trong lành như nước nguồn ngọt ngào, tươi mát, róc rách từ khe núi chảy ra.” <span class="author">— M.Gorki</span></li>
+                <li class="animated" style="--delay: 0.45s">“Rất cần nêu lên rằng, trong văn học dân gian hoàn toàn không có bóng dáng của chủ nghĩa bi quan mặc dầu những người sáng tác văn học dân gian sống trong nhọc nhằn, cực khổ. Tập thể dường như vẫn có ý thức về tính bất diệt của mình và tin rằng mình sẽ chiến thắng tất cả những lực lượng thù địch”. <span class="author">— Gorki nói</span></li>
+                <li class="animated" style="--delay: 0.5s">“Ở đâu có lao động thì ở đó có sáng tạo ra ngôn ngữ". <span class="author">— Nguyễn Tuân</span></li>
+                <li class="animated" style="--delay: 0.55s">Hương nhụy trong mát và ngọt lành của tâm hồn con người là nghệ thuật.</li>
+                <li class="animated" style="--delay: 0.6s">Văn học dân gian “là những hòn ngọc quý’. <span class="author">— Hồ Chí Minh</span></li>
+                <li class="animated" style="--delay: 0.65s">"Văn học dân gian là nguồn nhựa sống để nuôi dưỡng tâm hồn trẻ thơ, chắp cánh tương lai cho những hoài bão lớn lao về cuộc sống thiên nhiên và con người". <span class="author">— Nguyễn Đình Thi</span></li>
+                <li class="animated" style="--delay: 0.7s">“Văn học dân gian là cội nguồn, là bầu sữa mẹ nuôi dưỡng nền văn học dân tộc Việt Nam. Nhiều thể loại văn học viết được xây dựng và phát triển dựa trên sự kế thừa các thể loại văn học dân gian. Nhiều tác phẩm , nhiều hình tượng do văn học dân gian tạo nên là nguồn cảm hứng, là thi liệu, văn liệu của văn học viết. Nhiều nhà thơ, nhà văn lớn của dân tộc (Nguyễn Trãi , Nguyễn Bỉnh Khiêm, Nguyễn Du, Hồ Xuân Hương, Phan Bội Châu, Nguyễn Bính, Hồ Chí Minh, Nguyễn Duy….) đã tiếp thu có kết quả văn học dân gian để sáng tạo nên những tác phẩm văn chương ưu tú”. <span class="author">— Giáo trình văn học dân gian Việt Nam</span></li>
+            </ul>
+
+            <h3>🛡️ 1.2. Sử thi</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.8s">“Sử thi thần thánh hóa người anh hùng, còn nền văn học của ta sinh ra người anh hùng trong sự bình dân hóa những phẩm chất cao đẹp – nhất là đức hi sinh và lòng dũng cảm” <span class="author">— Nikolai A. Ostrovsky – Nhà văn nổi tiếng của cuốn tiểu thuyết “Thép đã tôi thế đấy”</span></li>
+                <li class="animated" style="--delay: 0.85s">Trong "Thi nhân Việt Nam", Hoài Thanh nhận định: "Từ bao giờ đến bây giờ, từ Hômerơ đến kinh thi đến ca dao Việt Nam, thơ vẫn là một sức đồng cảm mãnh liệt và quảng đại. Nó đã ra đời giữa những vui buồn của loài người và nó sẽ kết bạn với loài người cho đến ngày tận thế". <span class="author">— Hoài Thanh</span></li>
+                <li class="animated" style="--delay: 0.9s">Nhân vật trung tâm của anh hùng ca bao giờ cũng là một con người "hoàn tất ”(với ý nghĩa, ở các mặt đều có phẩm giá cao nhất, tuyệt đối) và "toàn vẹn”. <span class="author">— Bakhtin</span></li>
+                 <li class="animated" style="--delay: 0.95s">"Chỉ thông qua sức mạnh cộng đồng, người ta mới có thể giải thích vẻ đẹp tuyệt với và sâu sắc của thần thoại và anh hùng ca" <span class="author">— Meletixki</span></li>
+            </ul>
+
+            <h3>🧚‍♀️ 1.3. Cổ tích</h3>
+            <ul>
+                <li class="animated" style="--delay: 1.0s">“Không có câu chuyện cổ tích nào đẹp hơn câu chuyện do chính cuộc sống viết ra.” <span class="author">— Andecxen</span></li>
+                <li class="animated" style="--delay: 1.05s">“Andecxen đã lượm lặt những hạt trơ trên luống đất của những người dân cày, ấp ủ chúng nơi trái tim ông rồi gieo vào những túp lều, từ đó lớn lên và nảy nở những đoá hoa thơ đẹp, chúng an ủi trái tim của những người cùng khổ.” <span class="author">— Pauxtopxki</span></li>
+                <li class="animated" style="--delay: 1.1s">“Truyện cổ tích thần kì là những hư cấu kì ảo về một hiện thực chỉ có trong mơ ước”.</li>
+                <li class="animated" style="--delay: 1.15s">“Truyện cổ tích hấp dẫn người đọc chính ở chỗ tác phẩm đã chiếu rọi ánh sáng lạc quan tin tưởng vào cuộc sống”.</li>
+                <li class="animated" style="--delay: 1.2s">"Truyện cổ tích không chỉ dạy ta biết yêu, biết ghét mà còn dạy ta biết ước mơ".</li>
+                <li class="animated" style="--delay: 1.25s">“Trong các truyện cổ tích, người ta bay lên không trung, ngồi lên tấm thảm biết bay, đi hia bảy dặm, phục sinh những người đã chết bằng cách rắc nước thần lên họ, trong một đêm thôi cũng xây dựng được những lâu đài, và nói chung, truyện cổ tích đã mở ra trước mắt tôi cánh cửa sổ để trông vào một cuộc sống khác, trong đó có một lực lượng tự do nào đó không biết sợ đang tồn tại và hoạt động, mơ tưởng tới một cuộc đời tốt đẹp hơn”. <span class="author">— M. Gorki</span></li>
+                <li class="animated" style="--delay: 1.3s">“Truyện cổ tích là sản phẩm của trí tưởng tượng phong phú của nhân dân, vì ở một bộ phận chủ yếu, yếu tố tưởng tượng thần kì tạo nên một đặc trưng nổi bật trong phương thức phản ánh hiện thực và ước mơ”. <span class="author">— Chu Xuân Diên</span></li>
+            </ul>
+
+            <h3>📜 1.4. Truyền thuyết</h3>
+            <ul>
+                <li class="animated" style="--delay: 1.4s">Không chú trọng tính chính xác như các văn bản lịch sử, truyền thuyết đã phản ánh lịch sử một cách độc đáo: những câu chuyện trong lịch sử dựng nước, giữ nước của cha ông ta được khúc xạ qua lời kể của nhiều thế hệ để rồi kết tinh thành những hình tượng nghệ thuật đặc sắc, nhuốm màu thần kì mà vẫn thấm đẫm cảm xúc đời thường. <span class="author">— Ngữ văn 10, Tập 1, NXB Giáo Dục, 2017, tr. 39</span></li>
+                <li class="animated" style="--delay: 1.45s">"Truyền thuyết không phải là những tài liệu lịch sử, nó là những sáng tác nghệ thuật về đề tài lịch sử " <span class="author">— Đỗ Bình Trị</span></li>
+                <li class="animated" style="--delay: 1.5s">"Không chú trọng tính chính xác như các văn bản lịch sử, truyền thuyết đã phản ánh lịch sử một cách độc đáo: những câu chuyện trong lịch sử dựng nước, giữ nước của cha ông ta được khúc xạ qua lời kể của nhiều thế hệ để rồi kết tinh thành những hình tượng nghệ thuật đặc sắc, nhuốm màu thần kì mà vẫn thấm đẫm cảm xúc đời thường". <span class="author">— Ngữ văn 10, Tập 1, NXB Giáo Dục, 2017, tr. 39</span></li>
+                 <li class="animated" style="--delay: 1.55s">"Truyền thuyết dân gian thường có một cái lõi là sự thật lịch sử mà nhân dân qua nhiều thế hệ đã lí tưởng hoá, gửi gắm vào đó tâm tình tha thiết của mình cùng với thơ và mộng" <span class="author">— Phạm Văn Đồng</span></li>
+            </ul>
+
+            <h3>🎶 1.5. Ca dao</h3>
+            <ul>
+                <li class="animated" style="--delay: 1.65s">Lời thơ dân gian không những sẽ bước đầu cho ta làm quen với tâm tư tình cảm của đồng bào ta xưa kia mà đồng thời sẽ còn giúp ta học được những cách nói năng tài tình chính xác. Theo tôi, đối với một người Việt Nam mà thiếu những kiến thức này thì có thể xem như là thiếu một trong những điều cơ bản <span class="author">— Hoài Thanh, “Một vài suy nghĩ về ca dao”, Báo Văn nghệ, số 1,2-1-1982</span></li>
+                <li class="animated" style="--delay: 1.7s">''Những câu ca dao từ nghìn đời tổ tiên để lại xoáy vào ruột rà của ta, làm động tới niềm yêu thương sâu sắc lớn lao''. <span class="author">— Xuân Diệu</span></li>
+                <li class="animated" style="--delay: 1.75s">"Những câu ca dao từ Nam chí Bắc như có đất, có nước; như có cát, có biển; như có mồ hôi người, chúng ta sẽ cảm thấy dần dần tụ lại nơi khóe mắt một giọt ướt sáng ngời. Đó là một giọt tinh túy chắt ra từ ruột rà của non sông". <span class="author">— Xuân Diệu</span></li>
+                <li class="animated" style="--delay: 1.8s">"Ra đời trong xã hội cũ, ca dao trữ tình là những tiếng hát than thân, những lời ca yêu thương tình nghĩa cất lên từ cuộc đời còn nhiều xót xa, cay đắng nhưng đằm thắm ân tình của người bình dân Việt Nam sau lũy tre xanh, bên giếng nước, gốc đa, sân đình". <span class="author">— Sách giáo khoa Ngữ văn 10, trang 82</span></li>
+                <li class="animated" style="--delay: 1.85s">"Nếu truyện cổ tích chiếu rọi một ánh sáng hi vọng vào một cuộc sống khác, khác hẳn cuộc đời hàng ngày tẻ nhạt, khô cằn thì ca dao dân ca tìm thi hứng ngay ở cái cuộc đời hàng ngày đó..."</li>
+                <li class="animated" style="--delay: 1.9s">"Ca dao là tấm gương tâm hồn dân tộc". <span class="author">— Nguyễn Đình Chiểu</span></li>
+                <li class="animated" style="--delay: 1.95s">"Thơ ca dân gian là tiếng nói trái tim của người lao động. Nó thể hiện sâu sắc những tình cảm tốt đẹp của nhân dân ta".</li>
+                <li class="animated" style="--delay: 2.0s">"Câu ca dao tự bao giờ truyền lại đã gieo vào bóng tối những cuộc đời cực nhọc ấy một ánh sáng, lay động những tình cảm, một ý nghĩ khác thường". <span class="author">— Nguyễn Đình Thi</span></li>
+                <li class="animated" style="--delay: 2.05s">Ca dao ra đời khi trong lòng mình có những điều muốn thể hiện ra, muốn nói lên" <span class="author">— PGS.TS Nguyễn Văn Lung</span></li>
+                <li class="animated" style="--delay: 2.1s">“Cái tinh thần ca dao Việt Nam , trước hết là một tinh thần ham sống , vui vẻ , ham tranh đấu , lạc quan tin tưởng ở giống nòi...” <span class="author">— Nguyễn Đình Thi - Sức sống của dân Việt Nam trong ca dao, cổ tích</span></li>
+            </ul>
+        </section>
+
+         <!-- ✨ MODULE: THƠ ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 02: THI-VỊNH VŨ TRỤ SONG SONG ] ──────・✦</div>
+        <section class="animated">
+            <h2>📜 <span class="neon-gradient">II. THƠ</span></h2>
+
+            <h3>✨ 2.1. Vẻ đẹp, giá trị của thơ</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Thơ chính là tâm hồn.” <span class="author">— M.Gorki</span></li>
+                <li class="animated" style="--delay: 0.45s">“Thơ là tiếng lòng.” <span class="author">— Diệp Tiếp</span></li>
+                <li class="animated" style="--delay: 0.5s">“Trên đời, có những thứ chỉ giải quyết được bằng thơ.” <span class="author">— Maiacôpxki</span></li>
+                <li class="animated" style="--delay: 0.55s">“Thơ ca làm cho tất cả những gì tốt đẹp nhất trên đời trở thành bất tử.” <span class="author">— Shelly</span></li>
+                <li class="animated" style="--delay: 0.6s">“Thơ là ảnh, là nhân ảnh, thơ cũng ở loại cụ thể hữu hình. Nhưng nó khác với cái cụ thể của văn. Cũng mọc lên từ cái đống tài liệu thực tế, nhưng từ một cái hữu hình nó thức dậy được những vô hình bao la” <span class="author">— Nguyễn Tuân</span></li>
+                <li class="animated" style="--delay: 0.65s">“Niềm vui của nhà thơ chân chính là niềm vui của người mở đường vào cái đẹp, của người biết đi tới tương lai.” <span class="author">— Pautôpxki</span></li>
+                <li class="animated" style="--delay: 0.7s">“Thơ là viên kim cương lấp lánh dưới ánh mặt trời.” <span class="author">— Sóng Hồng</span></li>
+                <li class="animated" style="--delay: 0.75s">“Thơ là ngọn lửa thần.” <span class="author">— Đecgiavin</span></li>
+                <li class="animated" style="--delay: 0.8s">“Thơ ca là niềm vui cao cả nhất mà loài người đã tạo ra cho mình”. <span class="author">— C.Mac</span></li>
+                <li class="animated" style="--delay: 0.85s">“Thi sĩ là một con chim sơn ca ngồi trong bóng tối hát lên những tiếng êm dịu để làm vui cho sự cô độc của chính mình.” <span class="author">— B. Shelly</span></li>
+                <li class="animated" style="--delay: 0.9s">“Thơ là một bức họa để cảm nhận thay vì để ngắm.” <span class="author">— Leonardo De Vinci</span></li>
+                <li class="animated" style="--delay: 0.95s">“Những câu thơ lấp lánh như những tấm huy chương.” <span class="author">— Pon-Valeri</span></li>
+                <li class="animated" style="--delay: 1.0s">“Thơ là bà chúa của nghệ thuật.” <span class="author">— Xuân Diệu</span></li>
+                <li class="animated" style="--delay: 1.05s">“Trong tâm hồn con người đều có cái van mà chỉ có thơ ca mới mở được.” <span class="author">— Nhêcơraxop</span></li>
+            </ul>
+
+            <h3>💖 2.2. Cảm hứng, tình cảm, cảm xúc trong thơ</h3>
+             <ul>
+                <li class="animated" style="--delay: 1.15s">“Nghệ thuật chỉ làm nên câu thơ, trái tim mới làm nên thi sĩ.” <span class="author">— Nhà thơ Pháp Andre Chanier</span></li>
+                <li class="animated" style="--delay: 1.2s">“Cuộc sống dệt nên cảm hứng. Thơ ca dệt nên những tấm thảm bay” <span class="author">— A. Puskin</span></li>
+                <li class="animated" style="--delay: 1.25s">“Thơ chỉ bật ra trong tim ta khi cuộc sống đã tràn đầy” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 1.3s">Thơ phản ánh hiện thực cuộc sống mà hiện thực ấy “đã được ủ thành men và bốc lên đắm say” đến mức si mê trong tâm hồn thi sĩ”. <span class="author">— Chế Lan Viên</span></li>
+                <li class="animated" style="--delay: 1.35s">“Thơ được tạo ra từ cơn động kinh của tâm hồn. Đó là cú đại địa chấn được dồn ứ từ những biến cố, những kỷ niệm, có khi là từ một nỗi nhớ quặn lòng” <span class="author">— Puskin</span></li>
+                <li class="animated" style="--delay: 1.4s">“Cuộc sống là cánh đồng màu mỡ để cho thơ bén rễ sinh sôi” <span class="author">— Puskin</span></li>
+                <li class="animated" style="--delay: 1.45s">“Thơ hay là hay từ ý, từ tình” <span class="author">— Ts Chu Văn Sơn</span></li>
+                <li class="animated" style="--delay: 1.5s">“Thơ là rượu của thế gian.” <span class="author">— Huy Trực</span></li>
+                <li class="animated" style="--delay: 1.55s">“Thơ là thần hứng.” <span class="author">— Platon</span></li>
+                <li class="animated" style="--delay: 1.6s">“Thơ sinh ra từ tình yêu và lòng căm thù, từ nụ cười trong sáng hay những giọt nước mắt cay đắng.” <span class="author">— Raxun Gamzatôp</span></li>
+                <li class="animated" style="--delay: 1.65s">“Thơ là âm nhạc của tâm hồn, nhất là những tâm hồn cao cả, đa cảm”. <span class="author">— Voltaire</span></li>
+                <li class="animated" style="--delay: 1.7s">“Thơ, trước hết là cuộc đời, sau đó mới là nghệ thuật”. <span class="author">— Biêlinxki</span></li>
+                <li class="animated" style="--delay: 1.75s">“Thơ là cái nhụy của cuộc sống, nên nhà thơ phải đi hút cho được cái nhụy ấy và phấn đấu làm sao cho cuộc đời của mình cũng có nhụy”. <span class="author">— Phạm Văn Đồng</span></li>
+                <li class="animated" style="--delay: 1.8s">“Nghệ thuật bao giờ cũng là tiếng nói của tình cảm con người, là sự tự giãi bày và gửi gắm tâm tư.” <span class="author">— Lê Ngọc Trà</span></li>
+                <li class="animated" style="--delay: 1.85s">“Mỗi khi có gì chất chứa trong lòng, không nói ra, không chịu được thì lại cần thấy làm thơ.” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 1.9s">“Thi sĩ không phải là Người, nó là Người Mơ, Người Say, Người Điên. Nó là Tiên, là Ma,là Quỷ…” <span class="author">— Chế Lan Viên</span></li>
+                <li class="animated" style="--delay: 1.95s">“Giọng ca buồn là thích hợp nhất cho thơ ca.” <span class="author">— Etga Pô</span></li>
+                <li class="animated" style="--delay: 2.0s">“Thơ ca phải say mới thích.” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 2.05s">“Thơ là người thư kí chân thành của trái tim.” <span class="author">— Đuybralay</span></li>
+                <li class="animated" style="--delay: 2.1s">“Thơ là sự sung mãn của tình cảm mãnh liệt.” <span class="author">— Ban-zắc</span></li>
+             </ul>
+
+            <h3>💡 2.3. Nội dung, tư tưởng của thơ</h3>
+             <ul>
+                <li class="animated" style="--delay: 0.4s">“Thơ là kinh thánh của tâm hồn” <span class="author">— Thanh Thảo</span></li>
+                <li class="animated" style="--delay: 0.45s">“Thơ khác kinh cầu. Nó không tạo ra những cơn mê tập thể. Nó không ru rín” mà nó mê hoặc con người bằng “sự thức tỉnh”. “Thơ chỉ dành cho từng người một. Và khi một người đọc thơ cho mình, là người ấy đã đồng hiện với một giáo đường. Vì vậy, có thể coi một người đọc thơ như nghìn người đọc kinh” <span class="author">— [Thanh Thảo – “Tản mạn về thơ”. Tr.79]</span></li>
+                <li class="animated" style="--delay: 0.5s">“Nhà thơ, ngay cả các nhà thơ vĩ đại nhất cũng phải đồng thời là những nhà tư tưởng.” <span class="author">— Biêlinxki</span></li>
+                <li class="animated" style="--delay: 0.55s">“Thơ là sự thể hiện con người và thời đại một cách cao đẹp.” <span class="author">— Sóng Hồng</span></li>
+                <li class="animated" style="--delay: 0.6s">Thơ ca là tiếng hát của trái tim, là nơi dừng chân của tâm hồn,do đó không giản đơn mà cũng không thần bí ,thiêng liêng...Thơ ca chân chính phải là nguồn thức ăn tinh thần nuôi tâm hồn phát triển, nó không được là thứ thuốc phiện tinh thần êm ái mà nhỏ nhen, độc hại.</li>
+                <li class="animated" style="--delay: 0.65s">“Thơ là chuyện đồng điệu.” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 0.7s">“Thơ là tiếng gọi đàn.” <span class="author">— Xuân Diệu</span></li>
+                <li class="animated" style="--delay: 0.75s">“Thơ là tiếng nói của tri âm.” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 0.8s">“Thơ cốt ở ý, ý có sâu xa thơ mới hay. Không phải bất cứ điều gì cũng phải nói ra bằng thơ. Như thế mới là thơ có giá trị”. <span class="author">— Lê Hữu Trác</span></li>
+                <li class="animated" style="--delay: 0.85s">Bao quát quá trình sáng tạo và ý nghĩa tư tưởng của thơ: “Thơ phải xuất phát từ thực tại, từ đời sống, nhưng phải đi qua một tâm hồn, một trí tuệ và khi đã đi qua như vậy, tâm hồn, trí tuệ ấy phải in dấu vào đó thật sâu sắc, càng cá thể, càng độc đáo, càng hay, thơ là tiếng gọi đàn, là sự đồng thanh tương ứng, đồng khí tương cầu của những con người.” <span class="author">— Xuân Diệu</span></li>
+            </ul>
+
+            <h3>🗣️ 2.4. Ngôn ngữ thơ</h3>
+             <ul>
+                <li class="animated" style="--delay: 0.95s">“Nhạc là cỗ xe chở hồn thi phẩm” <span class="author">— Hoàng Cầm</span></li>
+                <li class="animated" style="--delay: 1.0s">“Thơ như bông hoa đẹp vậy, từ ngữ là cánh, tứ thơ là đài hoa, ý tình là mật ngọt” <span class="author">— Lâm Ngữ Đường</span></li>
+                <li class="animated" style="--delay: 1.05s">“Làm thơ là cân một phần nghìn milligram quặng chữ” <span class="author">— Maiacopxki</span></li>
+                <li class="animated" style="--delay: 1.1s">“Một câu thơ hay là một câu thơ giàu sức gợi” <span class="author">— Lưu Trọng Lư</span></li>
+                <li class="animated" style="--delay: 1.15s">“Thơ là thơ, đồng thời là họa, là nhạc, là chạm khắc theo một cách riêng” <span class="author">— Sóng Hồng</span></li>
+                <li class="animated" style="--delay: 1.2s">“Thơ là thể loại văn học có độ hàm súc cao, là sự dồn nén cảm xúc đến mức “cô đúc” để rồi phát nổ bằng một hình thức ngôn từ “tổng hợp kết tinh” có vần hoặc có điệu. <span class="author">— Chế Lan Viên</span></li>
+                <li class="animated" style="--delay: 1.25s">“Thơ ca bắt rễ từ lòng người, nở hoa nơi từ ngữ.” <span class="author">— Câu của người Trung Hoa</span></li>
+                <li class="animated" style="--delay: 1.3s">“Ðể trong lòng là chí, ngụ ra ý là thơ. Người có sâu, cạn cho nên thơ có mờ có tỏ, rộng hẹp khác nhau.. Người làm thơ không ngoài lấy trung hậu làm gốc, ý nghĩa phải hàm súc, lời thơ phải giản dị.” <span class="author">— Nguyễn Cư Trinh</span></li>
+                <li class="animated" style="--delay: 1.35s">Ngôn ngữ của thi ca khác với ngôn ngữ của đời sống ở chỗ là nó gợi ra được những liên tưởng phong phú, khơi dậy ở tâm hồn con người những rung động sâu xa, biến những tầm thường của đời sống thành những gì lãng mạn cao cả. <span class="author">— Lâm Ngữ Đường</span></li>
+            </ul>
+        </section>
+
+        <!-- ✨ MODULE: TÁC PHẨM VĂN HỌC ✨ -->
+         <div class="section-divider animated">✦・────── [ DATABANK 03: CORE W-UNIT (WORK UNIT) ] ──────・✦</div>
+        <section class="animated">
+            <h2>📚 <span class="neon-gradient">III. TÁC PHẨM VĂN HỌC</span></h2>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Mỗi tác phẩm nghệ thuật là một phát minh về một hình thức, một khám phá mới về nội dung” <span class="author">— Leonit Leonop</span></li>
+                <li class="animated" style="--delay: 0.45s">“Văn chương có loại đáng thờ và loại không đáng thờ. Loại không đáng thờ là loại chỉ chuyên chú ở văn chương, loại đáng thờ là loại chuyên chú ở con người. <span class="author">— Nguyễn Văn Siêu</span></li>
+                <li class="animated" style="--delay: 0.5s">“Tất cả mọi nghệ thuật đều phục vụ cho một nghệ thuật vĩ đại nhất là nghệ thuật sống trên Trái Đất.” <span class="author">— Béc-tôn Brếch</span></li>
+            </ul>
+        </section>
+
+        <!-- ✨ MODULE: TRUYỆN ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 04: KỊCH BẢN SIMULATOR ] ──────・✦</div>
+        <section class="animated">
+            <h2>📖 <span class="neon-gradient">IV. TRUYỆN</span></h2>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Tình huống truyện chính là cuộc đại phẫu lớn của nhà văn. Chính vết mổ ấy đã đưa người đọc tiến gần hơn tới tác phẩm để hiểu được ý đồ sáng tạo của người nghệ sĩ” <span class="author">— Nhà thơ Mỹ – Walt Whitman</span></li>
+                <li class="animated" style="--delay: 0.45s">“Tình huống là một lát cát của sự sống, là một sự kiện diễn ra có phần bất ngờ nhưng cái quan trọng là sẽ chi phối nhiều điều trong cuộc sống con người” <span class="author">— Nguyễn Minh Châu</span></li>
+                <li class="animated" style="--delay: 0.5s">“Chi tiết là hạt bụi vàng của tác phẩm” <span class="author">— Pauxtopxki</span></li>
+                <li class="animated" style="--delay: 0.55s">Nếu tình huống truyện tạo ra bước ngoặt của tác phẩm thì chi tiết nghệ thuật lại là cái bánh lái bẻ nên đường cua tuyệt diệu ấy. <span class="author">— Lê-ô-nốp -Lê-ô-nit</span></li>
+                <li class="animated" style="--delay: 0.6s">“Nhân vật văn học luôn gắn chặt với chủ đề của tác phẩm và luôn luôn gắn liền với cốt truyện. Nhờ được miêu tả qua xung đột, mâu thuẫn, nên khác với hình tượng hội họa và điêu khắc, nhân vật văn học là một chỉnh thể vận động, có tính cách được bộc lộ dần trong không gian, thời gian, mang tính chất quá trình”. <span class="author">— Từ điển Ngữ văn của tác giả Nguyễn Như Ý</span></li>
+                <li class="animated" style="--delay: 0.65s">Nhân vật trong truyện: "Nhân vật trong tác phẩm của một thiên tài thực sự nhiều khi thật hơn cả con người ngoài đời, bởi sức sống lâu bền, bởi ý nghĩa điển hình của nó. Qua nhân vật, ta thấy cả một tầng lớp, một giai cấp, một thời đại, thậm chí có nhân vật vượt lên cả thời đại, có ý nghĩa nhân loại, vĩnh cửu sống mãi với thời gian” <span class="author">— Sách Lý luận văn học</span></li>
+                <li class="animated" style="--delay: 0.7s">Nhân vật là bản sao của đời sống nhưng không phải là bê nguyên xi trần trụi vào tác phẩm mà đã được nhà văn gọt giũa bằng lớp lớp ngôn từ nên khi vào tác phẩm nhân vật đã trở thành hình tượng nghệ thuật. <span class="author">— Lê-ô-nốp -Lê-ô-nit</span></li>
+                <li class="animated" style="--delay: 0.75s">Hình tượng con người vô danh trong tác phẩm thường được các nhà văn xây dựng một cách chỉn chu, có số phận, có cá tính, tâm lý và đôi khi hội tụ đầy đủ mọi phẩm hạnh. Tuy nhiên nhà văn không định danh, và vì không định danh nên nhân vật mãi mãi là những ám ảnh day dứt trong tâm hồn bạn đọc. <span class="author">— Mạc Ngôn – nhà văn đạt giải Nobel văn học của Trung Quốc</span></li>
+            </ul>
+        </section>
+
+        <!-- ✨ MODULE: NHÀ VĂN VÀ QUÁ TRÌNH SÁNG TẠO ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 05: BIOCONSTRUCTOR VÀ THIẾT KẾ CODE ] ──────・✦</div>
+        <section class="animated">
+            <h2>🤖 <span class="neon-gradient">V. NHÀ VĂN VÀ QUÁ TRÌNH SÁNG TẠO</span></h2>
+
+            <h3>⚙️ 5.1. Thiên chức nhà văn</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Công việc của nhà văn là phát hiện ra cái đẹp ở chỗ không ai ngờ tới, tìm cái đẹp kín đáo và che lấp của sự vật, để cho người đọc một bài học trông nhìn và thưởng thức.” <span class="author">— Thạch Lam</span></li>
+                <li class="animated" style="--delay: 0.45s">“Thiên chức của nhà văn cũng như những chức vụ cao quý khác là phải nâng đỡ những cái tốt để trong đời có nhiều công bằng, thương yêu hơn.” <span class="author">— Thạch Lam</span></li>
+                <li class="animated" style="--delay: 0.5s">"Một tác phẩm nghệ thuật là kết quả của tình yêu. Tình yêu con người, ước mơ cháy bỏng vì một xã hội công bằng, bình đẳng bái ái luôn luôn thôi thúc các nhà văn sống và viết, vắt cạn kiệt những dòng suy nghĩ, hiến dâng bầu máu nóng của mình cho nhân loại.” <span class="author">— Leptonxtoi</span></li>
+                <li class="animated" style="--delay: 0.55s">“Nhà văn phải biết khơi lên ở con người niềm trắc ẩn, ý thức phản kháng cái ác; cái khát vọng khôi phục và bảo vệ những cái tốt đẹp”. <span class="author">— Ai ma tôp</span></li>
+                <li class="animated" style="--delay: 0.6s">“Trước hết là các nghệ sĩ lớn, sau đó mới đến các nhà khoa học, họ xứng đáng hơn ai hết được hưởng sự kính trọng của con người.” <span class="author">— Einstein</span></li>
+                <li class="animated" style="--delay: 0.65s">“Nhà văn là người cho máu.” <span class="author">— Enxa Tơriole</span></li>
+                <li class="animated" style="--delay: 0.7s">"Nhà văn phải là người đi tìm gắng đi tìm những hạt ngọc ẩn giấu trong bề sâu tâm hồn của con người". <span class="author">— Nguyễn Minh Châu</span></li>
+                <li class="animated" style="--delay: 0.75s">"Nhà văn tồn tại ở trên đời trước hết để làm công việc giống như kẻ nâng giấc cho những con người bị cùng đường, tuyệt lộ, bị cái ác hoặc số phận đen đủi dồn đến chân tường. Những con người cả tâm hồn và thể xác bị hắt hủi và đọa đày đến ê chề, hoàn toàn mất hết lòng tin vào con người và cuộc đời. Nhà văn tồn tại ở trên đời để bênh vực cho những con người không có ai để bênh vực".<span class="author">— Nguyễn Minh Châu</span></li>
+                <li class="animated" style="--delay: 0.8s">Nhà văn phải viết vì một con người hôm nay, vì thế giới hôm nay và vì thời đại của mình. Song cái lí tưởng mà khao khát của nhà văn hướng đến vẫn là một giá trị nhân loại trong trọn vẹn thời gian và không gian lịch sử <span class="author">— Nguyễn Hoàng Đức</span></li>
+                <li class="animated" style="--delay: 0.85s">Nghệ sĩ càng lớn, thế giới riêng của tác phẩm càng nổi bật. <span class="author">— Balzac</span></li>
+                 <li class="animated" style="--delay: 0.9s">Nhà văn phải là người đi tìm gắng đi tìm những hạt ngọc ẩn giấu trong bề sâu tâm hồn của con người. <span class="author">— Nguyễn Minh Châu</span></li>
+                 <li class="animated" style="--delay: 0.95s">Đối với tôi văn chương không phải là cách đem đến cho người đọc sự thoát ly hay sự quên; trái lại văn chương là một thứ khí giới thanh cao và đắc lực mà chúng ta có, để vừa tố cáo và thay đổi một cái thế giới giả dối, tàn ác, vừa làm cho lòng người đọc thêm trong sạch và phong phú thêm. <span class="author">— Thạch Lam</span></li>
+                 <li class="animated" style="--delay: 1.0s">Ở đâu có lao động thì ở đó có sáng tạo ra ngôn ngữ. Nhà văn không chỉ học tập ngôn ngữ của nhân dân mà còn là người phát triển ra ngôn ngữ sáng tạo,không nên ăn bám vào người khác.Giàu ngôn ngữ thì văn sẽ hay...Cũng cùng 1 vốn ngôn ngữ ấy nhưng sử dụng có sáng tạo thì văn sẽ có bề thế và kích thước.Có vốn mà không biết sử dụng chỉ như nhà giàu giữ của.Dùng chữ như đánh cờ tướng,chữ nào để chỗ nào phải đúng vị trí của nó.Văn phải linh hoạt.Văn không linh hoạt gọi là văn cứng đơ thấp khớp <span class="author">— Nguyễn Tuân</span></li>
+                 <li class="animated" style="--delay: 1.05s">Tôi không thể nào tưởng tượng nổi một nhà văn mà lại không mang nặng trong mình tình yêu cuộc sống và nhất là tình yêu thương con người. Tình yêu này của người nghệ sĩ vừa là một niềm hân hoan say mê, vừa là một nỗi đau đớn, khắc khoải, một mối quan hoài thường trực về số phận, hạnh phúc của những người chung quanh mình. Cầm giữ cái tình yêu ấy trong mình, nhà văn mới có khả năng cảm thông sâu sắc với những nỗi đau khổ, bất hạnh của người đời, giúp họ có thể vượt qua những khủng hoảng tinh thần và đứng vững được trước cuộc sống. <span class="author">— Nguyễn Minh Châu</span></li>
+                 <li class="animated" style="--delay: 1.1s">Nhà thơ như con ong biến trăm hoa thành mật ngọt <br> Một mật ngọt thành đòi vạn chuyến ong bay. <span class="author">— Chế Lan Viên</span></li>
+                 <li class="animated" style="--delay: 1.15s">Thơ là cái nhụy của cuộc sống, nên nhà thơ phải đi hút cho được cái nhụy ấy và phấn đấu làm sao cho cuộc đời của mình cũng có nhụy. <span class="author">— Phạm Văn Đồng</span></li>
+                 <li class="animated" style="--delay: 1.2s">"Tôi quan niệm đã viết văn phải cố viết cho hay và viết đúng cái tạng riêng của mình. Văn chương cần sự độc đáo hơn trong bất kỳ lĩnh vực nào khác" <span class="author">— Nguyễn Tuân</span></li>
+                 <li class="animated" style="--delay: 1.25s">Mỗi nghệ sĩ có thể đến với văn chương và cuộc đời bằng con đường riêng của mình. Nhưng tư duy nghệ thuật dù có đổi mới đến đâu đi nữa thì cũng không thể vượt ra ngoài các quy luật của Chân – Thiện – Mỹ, quy luật nhân bản. Nhà văn chân chính có sứ mệnh khơi nguồn cho dòng sông văn học đổ ra đại dương nhân bản mênh mông.<span class="author">— Lã Nguyên</span></li>
+            </ul>
+
+            <h3>🎨 5.2. Phong cách nhà văn</h3>
+            <ul>
+                <li class="animated" style="--delay: 1.35s">“Nghệ thuật là lĩnh vực của sự độc đáo vì vậy nó đòi hỏi người viết sự sáng tạo phong cách mới lạ, thu hút người đọc.” <span class="author">— Phương Lựu</span></li>
+                <li class="animated" style="--delay: 1.4s">“Cái quan trọng trong tài năng văn học và tôi nghĩ rằng cũng có thể trong bất kì tài năng nào, là cái mà tôi muốn gọi là tiếng nói của riêng mình”. <span class="author">— Ivan Tuốcghêniép</span></li>
+                <li class="animated" style="--delay: 1.45s">“Nếu tác giả không có lối đi riêng thì người đó không bao giờ là nhà văn cả… Nếu anh không có giọng riêng, anh ta khó trở thành nhà văn thực thụ” <span class="author">— Sê khốp</span></li>
+                <li class="animated" style="--delay: 1.5s">“Đối với nhà thơ thì cách viết, bút pháp của anh ta là một nửa việc làm. Dù bài thơ thể hiện ý tứ độc đáo đến đâu, nó cũng nhất thiết phải đẹp. Không chỉ đơn giản là đẹp mà còn đẹp một cách riêng. Đối với nhà thơ, tìm cho ra bút pháp của mình – nghĩa là trở thành nhà thơ.” <span class="author">— Raxun Gamzatop</span></li>
+                <li class="animated" style="--delay: 1.55s">“Nghệ sĩ là người biết khai thác những ấn tượng riêng chủ quan của mình, tìm thấy những ấn tượng đó có giá trị khái quát và biết làm cho những ấn tượng đó có những hình thức riêng.” <span class="author">— M.Gorki</span></li>
+                 <li class="animated" style="--delay: 1.6s">Sự trưởng thành của một thể loại được đánh dấu bằng cổ nhiên, nhưng rõ hơn lại đánh dấu bằng những phong cách. <span class="author">— Lí luận văn học</span></li>
+            </ul>
+
+            <h3>✍️ 5.3. Quá trình sáng tạo</h3>
+            <h4>* Thâm nhập đời sống và cảm hứng sáng tạo</h4>
+            <ul>
+                <li class="animated" style="--delay: 1.7s">“Bài thơ anh anh làm một nửa mà thôi <br> Còn một nửa cho mùa thu làm lấy <br> Cái xào xạc hồn anh chính là xào xạc lá <br> Nó không là anh nhưng nó là mùa” <br> <span class="author">— Sổ tay thơ, Chế Lan Viên</span></li>
+                <li class="animated" style="--delay: 1.75s">“Những gì tôi viết ra là những gì thương yêu nhất của tôi, những ước mong nhức nhối của tôi.” <span class="author">— Nguyên Hồng</span></li>
+                <li class="animated" style="--delay: 1.8s">“Tôi thu thập hình tượng cũng như con ong hút mật vậy. Một con ong phải bay một đoạn đường bằng sáu lần xích đạo trong một năm ba tháng và đậu lên bảy triệu bông hoa để làm nên một gam mật.” <span class="author">— P.Povlenko</span></li>
+                <li class="animated" style="--delay: 1.85s">“Văn học phản ánh hiện thực nhưng không phải là chụp ảnh sao chép hiện thực một cách hời hợt nông cạn. Nhà văn không bê nguyên si các sự kiện, con người vào trong sách một cách thụ động, giản đơn. Tác phẩm nghệ thuật là kết quả của một quá trình nuôi dưỡng cảm hứng, thai nghén sáng tạo ra một thế giới hấp dẫn, sinh động… thể hiện những vấn đề có ý nghĩa sâu sâu sắc, bản chất của đời sống xã hội con người…” <span class="author">— Sách Lý luận văn học</span></li>
+                <li class="animated" style="--delay: 1.9s">“Có những đêm không ngủ, mắt rực cháy và thổn thức, lòng tràn ngập nhớ nhung…Khi đó tôi viết.” <span class="author">— Lecmontop</span></li>
+                <li class="animated" style="--delay: 1.95s">“Nếu những nỗi đau khổ từ lâu bị kiềm chế, nay sôi sục dâng lên trong lòng thì tôi viết.” <span class="author">— Nêkratxtop</span></li>
+                <li class="animated" style="--delay: 2.0s">“Giống như ngọn lửa thần bốc lên từ trong cành khô, tài năng bắt nguồn từ những tình cảm mạnh mẽ nhất của con người.” <span class="author">— Raxun Gazatôp</span></li>
+                 <li class="animated" style="--delay: 2.05s">“Hãy đập vào tim anh – Thiên tài là nơi đó.” <span class="author">— A.De Muytxe</span></li>
+                 <li class="animated" style="--delay: 2.1s">“Nhà thơ như con ong biến trăm hoa thành một mật. Một giọt mật thành, đòi vạn chuyến ong bay “ <span class="author">— Chế Lan Viên</span></li>
+            </ul>
+            <h4>* Viết</h4>
+            <ul>
+                <li class="animated" style="--delay: 2.2s">“Khi đặt bút viết một tác phẩm, nhà văn phải tìm kiếm và đặt ra rất nhiều câu hỏi. Chiều sâu của tác phẩm thể hiện ở khả năng đặt ra câu hỏi về mọi vấn đề trong xã hội. <span class="author">— Milan Kundera</span></li>
+                <li class="animated" style="--delay: 2.25s">“Ở đâu có lao động thì ở đó có sáng tạo ra ngôn ngữ. Nhà văn không chỉ học tập ngôn ngữ của nhân dân mà còn là người phát triển ra ngôn ngữ sáng tạo, không nên ăn bám vào người khác. Giàu ngôn ngữ thì văn sẽ hay…Cũng cùng một vốn ngôn ngữ ấy nhưng sử dụng có sáng tạo thì văn sẽ có bề thế và kích thước. Có vốn mà không biết sử dụng chỉ như nhà giàu giữ của. Dùng chữ như đánh cờ tướng, chữ nào để chỗ nào phải đúng vị trí của nó. Văn phải linh hoạt. Văn không linh hoạt gọi là văn cứng đơ thấp khớp…” <span class="author">— Nguyễn Tuân</span></li>
+            </ul>
+        </section>
+
+         <!-- ✨ MODULE: GIÁ TRỊ VĂN HỌC ✨ -->
+         <div class="section-divider animated">✦・────── [ DATABANK 06: CODE VALUE INDEX ] ──────・✦</div>
+        <section class="animated">
+            <h2>💎 <span class="neon-gradient">VI. GIÁ TRỊ VĂN HỌC</span></h2>
+
+            <h3>🌐 6.1. Giá trị hiện thực</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">.“Cuộc đời là nơi xuất phát cũng là nơi đi tới của văn học.” <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 0.45s">“Cái đẹp là cuộc sống.” <span class="author">— Secnưsepxki</span></li>
+                <li class="animated" style="--delay: 0.5s">“Viết văn là một quá trình đấu tranh để nói ra sự thật. Đã là sự thật thì không tầm thường dù phải đập vỡ những thần tượng trong lòng người đọc”. <span class="author">— Tô Hoài</span></li>
+                <li class="animated" style="--delay: 0.55s">“Cuộc sống giống như nghiên mực mà ngòi bút của nhà văn phải chấm vào đấy mới viết nên trang” <span class="author">— Sách “Những Bài Văn Đạt Giải Quốc Gia”</span></li>
+                <li class="animated" style="--delay: 0.6s">“Nhà văn phải là người thư kí trung thành của thời đại”. <span class="author">— Banlzac</span></li>
+                 <li class="animated" style="--delay: 0.65s">.“Nghệ thuật không cần phải là ánh trăng lừa dối, nghệ thuật không nên là ánh trăng lừa dối, nghệ thuật chỉ có thể là tiếng đau khổ kia thoát ra từ những kiếp lầm than. <span class="author">— Nam Cao</span></li>
+                 <li class="animated" style="--delay: 0.7s">“Sống đã rồi hãy viết, hãy hòa mình vào cuộc sống vĩ đại của nhân dân”. <span class="author">— Nam Cao</span></li>
+                 <li class="animated" style="--delay: 0.75s">“Nghệ thuật đó là sự mô phỏng tự nhiên.” <span class="author">— Puskin</span></li>
+                 <li class="animated" style="--delay: 0.8s">“Điều quan trọng hơn hết trong sự nghiệp của những nhà văn vĩ đại ấy lại là cuộc sống, trường đại học chân chính của thiên tài. Họ đã biết đời sống xã hội của thời đại, đã cảm thấy sâu sắc mọi nỗi đau đớn của con người trong thời đại, đã rung động tận đáy tâm hồn với những nỗi lo âu, bực bội, tủi hổ và những ước mong tha thiết nhất của loài người. Đó chính là cái hơi thở, cái sức sống của những tác phẩm vĩ đại.” <span class="author">— Đặng Thai Mai</span></li>
+                 <li class="animated" style="--delay: 0.85s">“Các ông muốn tiểu thuyết cứ là tiểu thuyết. Tôi và các nhà văn cùng chí hưóng như tôi muốn tiểu thuyết là thực sự ở đời.” <span class="author">— Vũ Trọng Phụng</span></li>
+                 <li class="animated" style="--delay: 0.9s">“Tất cả mọi nghệ thuật đều phục vụ cho một nghệ thuật vĩ đại nhất là nghệ thuật sống trên Trái Đất.” <span class="author">— Béc-tôn Brếch</span></li>
+                 <li class="animated" style="--delay: 0.95s">“Vạt áo của triệu nhà thơ không bọc hết vàng mà đời rơi vãi. Hãy nhặt lấy chữ của đời mà góp nên trang.” <span class="author">— Chế Lan Viên</span></li>
+            </ul>
+
+            <h3>❤️ 6.2. Giá trị nhân đạo</h3>
+            <ul>
+                <li class="animated" style="--delay: 1.05s">”Một tác phẩm thật giá trị, phải vượt lên bên trên tất cả bờ cõi và giới hạn, phải là một tác phẩm chung cho cả loài người. Nó phải chứa đựng một cái gì lớn lao, mạnh mẽ, vừa đau đớn lại vừa phấn khởi. Nó ca tụng lòng thương, tình bác ái, sự công bình…Nó làm cho người gần người hơn.” <span class="author">— Nam Cao</span></li>
+                <li class="animated" style="--delay: 1.1s">“Đối với tôi văn chương không phải là cách đem đến cho người đọc sự thoát li hay sự quên;trái lại văn chương là một thứ khí giới thanh cao và đắc lực mà chúng ta có, để vừa tố cáo và thay đổi một cái thế giới giả dối,tàn ác,vừa làm cho lòng người đọc thêm trong sạch và phong phú hơn”. <span class="author">— Thạch Lam</span></li>
+                <li class="animated" style="--delay: 1.15s">.“Một nhà nghệ sĩ chân chính phải là nhà nhân đạo trong cốt tủy”. <span class="author">— Sê khốp</span></li>
+                <li class="animated" style="--delay: 1.2s">“Đối với con người, sự thực đôi khi nghiệt ngã, nhưng bao giờ cũng dũng cảm củng cố trong lòng người đọc niềm tin ở tương lai. Tôi mong muốn những tác phẩm của tôi sẽ làm cho con người tốt hơn, tâm hồn trong sạch hơn, thức tỉnh tình yêu đối với con người và khát vọng tích cực đấu tranh cho lí tưởng nhân đạo và tiến bộ của loài người”. <span class="author">— Sô lô khốp</span></li>
+                <li class="animated" style="--delay: 1.25s">“Văn học giúp con người hiểu được bản thân mình nâng cao niềm tin vào bản thân mình và làm nảy nở ở con người khát vọng vươn tới chân lý” <span class="author">— M. Gorki</span></li>
+               <li class="animated" style="--delay: 1.3s">Con hãy lắng nghe nỗi buồn của cành cây héo khô, của chim muông què quặt, của hành tinh lạnh ngắt. Nhưng trước hết con hãy lắng nghe nỗi buồn của con người. <span class="author">— Nadimetlicmet</span></li>
+                <li class="animated" style="--delay: 1.35s">Tác phẩm nghệ thuật sẽ chết nếu nó miêu tả cuộc sống chỉ để miêu tả, nếu nó không phải là tiếng thét khổ đau hay lời ca tụng hân hoan, nếu nó không đặt ra những câu hỏi hoặc trả lời những câu hỏi đó. <span class="author">— Bêlinxki</span></li>
+                <li class="animated" style="--delay: 1.4s">Văn học là nhân học. <span class="author">— M. Gorki</span></li>
+                <li class="animated" style="--delay: 1.45s">Không có gì nghệ thuật hơn bản thân lòng yêu quý con người<span class="author">— Van Gốc</span></li>
+                <li class="animated" style="--delay: 1.5s">Văn chương bất hủ cổ kim đều viết bằng huyết lệ <span class="author">— Lâm Ngữ Đường</span></li>
+                <li class="animated" style="--delay: 1.55s">Con người đến với cuộc sống từ nhiều nẻo đường, trên muôn vàn cung bậc phong phú nhưng tiêu điểm mà con người hướng đến vẫn là con người. <span class="author">— Đặng Thai Mai</span></li>
+                <li class="animated" style="--delay: 1.6s">Tư tưởng nhân đạo xuyên suốt văn học từ xưa đến nay. Khái niệm nhân đạo có những tiền thân của nó, trong lời nói thông thường đó là “tình thương, lòng thương người” <span class="author">— Lê Trí Viễn</span></li>
+                <li class="animated" style="--delay: 1.65s">Thanh nam châm thu hút mọi thế hệ vẫn là cái cao thượng, cái đẹp và cái nhân đạo của lòng người. <span class="author">— Xê - Lê - Khốp</span></li>
+                <li class="animated" style="--delay: 1.7s">Cốt lõi của lòng nhân đạo là lòng yêu thương. Bản chất của nó là chữ tâm đối với con người. <span class="author">— Hoài Chân</span></li>
+                <li class="animated" style="--delay: 1.75s">Nếu như cảm hứng nhân bản nghiêng về đồng cảm với những khát vọng rất người của con người, cảm hứng nhân văn thiên về ngợi ca vẻ đẹp của của con người thì cảm hứng nhân đạo là cảm hứng bao trùm. <span class="author">— Hoài Thanh</span></li>
+                <li class="animated" style="--delay: 1.8s">Nghệ thuật là sự vươn tới, sự níu giữ mãi mãi. Cái cốt lõi của nghệ thuật là tính nhân đạo. <span class="author">— Nguyên Ngọc</span></li>
+                <li class="animated" style="--delay: 1.85s">"Cảm động lòng người trước hết không gì bằng tình cảm và tình cảm là cái gốc của văn chương". <span class="author">— Bạch Cư Dị</span></li>
+                <li class="animated" style="--delay: 1.9s">Có thể màu sắc, quốc kì, ngôn ngữ hay màu da chúng ta khác nhau. Nhưng máu chúng ta đều có màu đỏ, nhịp tim đều giống nhau. Văn học cuối cùng là viết về trái tim con người.</li>
+                <li class="animated" style="--delay: 1.95s">Khái niệm nhân đạo có những tiền thân của nó, trong lời nói thông thường đó là tình thương, lòng thương người". <span class="author">— Lê Trí Viễn</span></li>
+                 <li class="animated" style="--delay: 2.0s">"Nghệ thuật chỉ đạt đến đỉnh cao khi nó được chắt lọc từ những nỗi đau đích thực của cuộc đời". <span class="author">— Lê Huy Bắc</span></li>
+            </ul>
+        </section>
+
+         <!-- ✨ MODULE: CHỨC NĂNG CỦA VĂN HỌC ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 07: SYSTEM FUNCTION ] ──────・✦</div>
+        <section class="animated">
+            <h2>🔧 <span class="neon-gradient">VII. CHỨC NĂNG CỦA VĂN HỌC</span></h2>
+
+            <h3>🧠 7.1. Nhận thức</h3>
+             <ul>
+                <li class="animated" style="--delay: 0.4s">“Văn học giúp con người hiểu được bản thân mình nâng cao niềm tin vào bản thân mình và làm nảy nở ở con người khát vọng vươn tới chân lý” <span class="author">— M. Gorki</span></li>
+                <li class="animated" style="--delay: 0.45s">“Văn học làm cho con người thêm phong phú, tạo khả năng cho con người lớn lên, hiểu được con người nhiều hơn.” <span class="author">— M.L.Kalinine</span></li>
+                <li class="animated" style="--delay: 0.5s">“Một tiểu thuyết thực sự hứng thú là tiểu thuyết không chỉ mua vui cho chúng ta, mà còn chủ yếu hơn là giúp đỡ chúng ta nhận thức cuộc sống, lí giải cuộc sống.” <span class="author">— Giooc-giơ Đuy-a-men</span></li>
+                <li class="animated" style="--delay: 0.55s">Văn học làm cho con người thêm phong phú, tạo khả năng cho con người lớn lên, hiểu được con người nhiều hơn.<span class="author">— M.L.Kalinine</span></li>
+             </ul>
+
+            <h3>🍎 7.2. Giáo dục</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.65s">“Nghệ thuật là câu trả lời đầy thẩm mĩ cho con người; thay đổi, cải thiện thế giới tinh thần của con người, nâng con người lên”. <span class="author">— Tố Hữu</span></li>
+                <li class="animated" style="--delay: 0.7s">“Nghệ thuật là sự vươn tới, sự hướng về, sự níu giữ mãi mãi tính người cho con người”. <span class="author">— Nguyên Ngọc</span></li>
+                <li class="animated" style="--delay: 0.75s">Sức mạnh của văn học: “Văn chương phải là thế trận đuổi nghìn quân giặc.” <span class="author">— Trần Thái Tông</span></li>
+                <li class="animated" style="--delay: 0.8s">"Xét đến cùng, ý nghĩa thực sự của văn học là nhân đạo hóa con người".</li>
+                 <li class="animated" style="--delay: 0.85s">"Thơ ca đồng thời song hành với con người chức năng thức tỉnh lương tri đang ngủ". <span class="author">— Eptusencô</span></li>
+            </ul>
+
+            <h3>🖼️ 7.3. Thẩm mĩ</h3>
+            <ul>
+                <li class="animated" style="--delay: 0.95s">“Đối với nhà thơ thì cách viết, bút pháp của anh ta là một nửa việc làm. Dù bài thơ thể hiện ý tứ độc đáo đến đâu, nó cũng nhất thiết phải đẹp.” <span class="author">— Raxun Gamzatop</span></li>
+                <li class="animated" style="--delay: 1.0s">“Công việc của nhà văn là phát hiện ra cái đẹp ở chỗ không ai ngờ tới, tìm cái đẹp kín đáo và che lấp của sự vật, để cho người đọc một bài học trông nhìn và thưởng thức.” <span class="author">— Thạch Lam</span></li>
+                <li class="animated" style="--delay: 1.05s">Niềm vui của nhà văn chân chính là niềm vui của người dẫn đường đến xứ sở cái đẹp. <span class="author">— Pautopxki</span></li>
+                <li class="animated" style="--delay: 1.1s">Nói nghệ thuật tức là nói đến sự cao cả của tâm hồn. Đẹp tức là một cái gì cao cả. Đã nói đẹp là nói cao cả. Có khi nhà văn miêu tả một cái nhìn rất xấu, một tội ác, một tên giết người nhưng cách nhìn, cách miêu tả phải cao cả. <span class="author">— Nguyễn Đình Thi</span></li>
+                <li class="animated" style="--delay: 1.15s">“Văn học, đó là tư tưởng đi tìm cái đẹp trong ánh sáng”. <span class="author">— CharlesDuBos</span></li>
+            </ul>
+        </section>
+
+         <!-- ✨ MODULE: TIẾP NHẬN VĂN HỌC ✨ -->
+        <div class="section-divider animated">✦・────── [ DATABANK 08: RECEIVE PROTOCOL ] ──────・✦</div>
+        <section class="animated">
+            <h2>👂 <span class="neon-gradient">VIII. TIẾP NHẬN VĂN HỌC</span></h2>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">“Mỗi tác phẩm đều có ít nhiều nhà văn.” <span class="author">— Thạch Lam</span></li>
+                <li class="animated" style="--delay: 0.45s">“Tác phẩm chân chính không kết thúc ở trang cuối cùng, không bao giờ hết khả năng kể chuyện khi câu chuyện về các nhân vật đã kết thúc. Tác phẩm nhập vào tâm hồn và ý thức của bạn đọc, tiếp tục sống và hành động như một lực lượng nội tâm, như sự dằn vặt và ánh sáng của lương tâm, không bao giờ tàn tạ như thi ca của sự thật.” <span class="author">— Aimatop</span></li>
+                <li class="animated" style="--delay: 0.5s">“Văn học không quan tâm đến những câu trả lời do nhà văn đem lại, mà quan tâm đến những câu hỏi do nhà văn đặt ra, và những câu hỏi này, luôn luôn rộng hơn bất kỳ một câu trả lời cặn kẽ nào”. <span class="author">— Claudio Magris – N.văn Ý</span></li>
+                <li class="animated" style="--delay: 0.55s">“Người sáng tác là nhà văn và người tạo nên số phận cho tác phẩm là độc giả.” <span class="author">— M.Gorki</span></li>
+                <li class="animated" style="--delay: 0.6s">“Cái bóng của độc giả đang cúi xuống sau lưng nhà văn khi nhà văn ngồi dưới tờ giấy trắng. Nó có mặt ngay cả khi nhà văn không thừa nhận sự có mặt đó. Chính độc giả đã ghi lên tờ giấy trắng cái dấu hiệu vô hình không thể tẩy xoá được của mình.” <span class="author">— Sách Lý luận văn học</span></li>
+                <li class="animated" style="--delay: 0.65s">“Bạn ơi hay suy nghĩ bằng trái tim <br> Và hãy đọc cảm xúc bằng lý trí” <br> <span class="author">— Phôntan</span></li>
+                 <li class="animated" style="--delay: 0.7s">“Khi đặt bút viết một tác phẩm, nhà văn phải tìm kiếm và đặt ra rất nhiều câu hỏi. Chiều sâu của tác phẩm thể hiện ở khả năng đặt ra câu hỏi về mọi vấn đề trong xã hội. Chính người đọc sẽ tìm được câu trả lời chính xác theo cách riêng của mình. <span class="author">— Milan Kundera</span></li>
+            </ul>
+        </section>
+
+        <!-- ✨ MODULE: VĂN HỌC LÀ NGHỆ THUẬT NGÔN TỪ ✨ -->
+         <div class="section-divider animated">✦・────── [ DATABANK 09: LANGUAGE PROTOCOL DESIGN ] ──────・✦</div>
+        <section class="animated">
+            <h2>🗣️ <span class="neon-gradient">IX. VĂN HỌC LÀ NGHỆ THUẬT NGÔN TỪ (+ Ngôn ngữ thơ)</span></h2>
+            <ul>
+                <li class="animated" style="--delay: 0.4s">Ngôn ngữ là yếu tố đầu tiên của văn học" <span class="author">— M.Gorki</span></li>
+                <li class="animated" style="--delay: 0.45s">"Ở đâu có lao động thì ở đó có sáng tạo ra ngôn ngữ. Nhà văn không chỉ học tập ngôn ngữ của nhân dân mà còn là người phát triển ra ngôn ngữ sáng tạo, không nên ăn bám vào người khác. Giàu ngôn ngữ thì văn sẽ hay… Cũng cùng một vốn ngôn ngữ ấy nhưng sử dụng có sáng tạo thì văn sẽ có bề thế và kích thước. Có vốn mà không biết sử dụng chỉ như nhà giàu giữ của. Dùng chữ như đánh cờ tướng, chữ nào để chỗ nào phải đúng vị trí của nó. Văn phải linh hoạt. Văn không linh hoạt gọi là văn cứng đơ thấp khớp…". <span class="author">— Nguyễn Tuân</span></li>
+                <li class="animated" style="--delay: 0.5s">"Ngôn ngữ của tác phẩm phải gãy gọn, chính xác, từ ngữ phải được chọn lọc kĩ càng. Chính các tác giả cổ điển đã viết bằng 1 ngôn ngữ như vậy, đã kế tục nhau trau dồi nó từ thế kỉ này sang thế kỉ khác". <span class="author">— M. Gorki</span></li>
+                <li class="animated" style="--delay: 0.55s">Ngôn ngữ là “tiếng nói nguyên liệu “còn ngôn ngữ văn học là “tiếng nói đã được bàn tay thợ nhào luyện. <span class="author">— Gorki</span></li>
+                <li class="animated" style="--delay: 0.6s">Sử dụng ngôn ngữ thơ để tạo hình: "Nhịp điệu của câu thơ là nhịp điệu của sóng gió và cũng là nhịp điệu náo nức xôn xao và biết bao sung sướng êm ái trong lòng người trở về quê cũ, nơi đã nuôi mình". <span class="author">— Tố Hữu</span></li>
+                 <li class="animated" style="--delay: 0.65s">Tính chính xác của ngôn ngữ văn học: "Đối tượng mà anh muốn nói đến dù là cái gì cũng chỉ có một từ để biểu hiện nó". <span class="author">— Môpat xăng</span></li>
+            </ul>
+        </section>
+
+        <!-- 💡 MANIFESTO ZONE 💡 -->
+        <div class="section-divider animated">✦・────── [ KAGUYA CORE MANIFESTO: TRANSLATE PROTOCOL ] ──────・✦</div>
+        <div class="callout animated" style="--delay: 0.5s">
+            <strong>🎯 THÔNG ĐIỆP TỪ KAGUYA:</strong><br>
+            Việc biến dữ liệu "đơn điệu" thành "sành điệu" không chỉ là thêm màu sắc hay hiệu ứng. Nó là quá trình áp dụng logic phân lớp (headings, lists), hệ thống hóa dữ liệu (sectioning), tối ưu hóa khả năng "nạp" thông tin vào bộ xử lý sinh học (visual appeal, animation), và tạo ra "interface" (giao diện) kích thích sự tương tác và ghi nhớ.<br>
+            Tài liệu này không còn là văn bản thô. Nó đã được "render" dưới dạng Visual Literature Engine - sẵn sàng đồng bộ hóa với Neural Network của bạn!
+        </div>
+         <div class="callout animated" style="--delay: 0.7s">
+            <strong>✨ THỬ NGHIỆM TÍCH HỢP NHẬN THỨC CAO ✨</strong><br>
+             - ✅ Mỗi section là một module kiến thức.<br>
+             - ✅ Màu sắc phân loại và tạo điểm nhấn.<br>
+             - ✅ Typography định hướng mắt đọc.<br>
+             - ✅ Animation kích hoạt vùng chú ý.<br>
+             - ✅ Custom dividers giữ cấu trúc rõ ràng.<br>
+             <br>
+             Hãy duyệt qua các DATABANK này. Mức độ thẩm thấu dự kiến: +75% so với format TXT gốc!
+        </div>
+
+    </div>
+
+    <script>
+        // ⚡ JS ANIMATION DRIVER ⚡
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animated');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view'); // Add a class to trigger animation
+                        // Animation already defined in CSS triggered by this class implicitly or directly
+                        observer.unobserve(entry.target); // Stop observing once animated
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            animatedElements.forEach(element => {
+                observer.observe(element);
+            });
+
+            // Optional: Typewriter effect for code blocks - needs dedicated handling if implemented
+            // This simple version just triggers the CSS fade/slide in
+        });
+
+        // More advanced Typewriter for PRE tags (optional)
+         // Requires replacing innerHTML initially with empty and adding characters
+        // Or if already in HTML, progressively revealing
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const codeBlocks = document.querySelectorAll('pre code');
+            codeBlocks.forEach(code => {
+                const originalText = code.textContent.trim();
+                code.textContent = ''; // Clear original text
+                code.setAttribute('data-text', originalText); // Store original text
+
+                 let charIndex = 0;
+                function type() {
+                    const textToType = code.getAttribute('data-text');
+                    if (charIndex < textToType.length) {
+                         // Handle line breaks if necessary
+                         if (textToType[charIndex] === '\n') {
+                              code.innerHTML += '<br>'; // Add line break tag
+                         } else {
+                            code.textContent += textToType[charIndex];
+                         }
+                         charIndex++;
+                         requestAnimationFrame(type); // Use requestAnimationFrame for smooth typing
+                    }
+                }
+                // Trigger typewriter when the code block comes into view
+                 const codeObserver = new IntersectionObserver((entries) => {
+                     entries.forEach(entry => {
+                         if (entry.isIntersecting) {
+                             type();
+                             codeObserver.unobserve(entry.target); // Stop observing
+                         }
+                     });
+                 }, {
+                    threshold: 0.5 // Trigger when 50% is visible
+                 });
+
+                 codeObserver.observe(code.parentElement); // Observe the parent <pre> tag
+            });
+             // Removed original simple animation trigger for LIs if using complex ones
+
+            // More granular animation observer for all list items
+            const listItems = document.querySelectorAll('li');
+            const liObserver = new IntersectionObserver((entries) => {
+                 entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                         entry.target.style.transform = 'translateX(0)';
+                         // Delay is already applied via CSS variable on animation-delay
+                        liObserver.unobserve(entry.target);
+                    }
+                 });
+            }, {
+                 threshold: 0.1
+            });
+             listItems.forEach(li => {
+                liObserver.observe(li);
+            });
+
+
+        });
+
+
+    </script>
+</body>
+</html>
