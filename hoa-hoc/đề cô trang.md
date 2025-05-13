@@ -368,3 +368,270 @@
 > > Vậy, E⁰pin (max) = E⁰(Ag⁺/Ag) - E⁰(Zn²⁺/Zn) = (+0,80V) - (-0,76V) = 0,80 + 0,76 = 1,56V.
 > >
 > > ➤ **Đáp án đúng là B.**
+
+---
+
+✨ **PHẦN II. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.** ✨
+
+---
+
+> **Câu 1. [ HÓA 12 CHƯƠNG 5]**
+> Một nhóm học sinh tìm hiểu quá trình thu hồi kim loại đồng (copper) bằng phương pháp điện phân (electrolysis) từ một đống xu làm bằng hợp kim Cu – Zn, chứa khoảng 95% đồng về khối lượng. Giả thuyết của nhóm học sinh là “khi điện phân, chỉ có tạp chất trong đồng xu tan hết vào trong dung dịch, còn lại sẽ là đồng tinh khiết”. Để kiểm tra giả thuyết này, nhóm học sinh đã thực hiện thí nghiệm như sau:
+> - Cân để xác định khối lượng ban đầu của đồng xu (2,25gam) và thanh đồng tinh khiết (2,55 gam).
+> - Nối đồng xu với một điện cực và thanh đồng tinh khiết với điện cực còn lại của nguồn điện một chiều, rồi nhúng vào bình điện phân chứa dung dịch copper(II) sulfate.
+> - Điện phân ở nhiệt điện thế phù hợp.
+> - Sau một thời gian điện phân, làm khô, rồi cân để xác định lại khối lượng của đồng xu và thanh đồng tinh khiết, thấy khối lượng đồng xu là 1,94 gam và khối lượng thanh đồng là m₁ gam.
+>
+> a) [ **HIỂU – ĐIỆN PHÂN**] Trong thí nghiệm trên, đồng xu được nối với cực dương (anode), thanh đồng tinh khiết được nối với cực âm (cathode) của nguồn điện.
+> b) [ **VẬN DỤNG – ĐIỆN PHÂN**] Giá trị của m₁ lớn hơn 2,55.
+> c) [ **BIẾT – ĐIỆN PHÂN**] Ở cực dương xảy ra quá trình khử (reduction).
+> d) [ **HIỂU – ĐIỆN PHÂN**] Do khối lượng của đồng xu giảm, nên giả thuyết ban đầu của nhóm học sinh là đúng.
+
+> 💡 **Phân tích & Giải thích từng ý:**
+>
+> **a) [ HIỂU – ĐIỆN PHÂN] Trong thí nghiệm trên, đồng xu được nối với cực dương, thanh đồng tinh khiết được nối với cực âm của nguồn điện.**
+> > > Đây là phương pháp tinh chế đồng (refining copper) bằng điện phân.
+> > > *   Cực dương (Anode): Là nơi xảy ra sự oxi hóa. Đồng không tinh khiết (đồng xu chứa Cu-Zn) được đặt ở cực dương. Tại đây, kim loại hoạt động hơn (Zn) và Cu sẽ bị oxi hóa (tan vào dung dịch).
+> > >     *   Zn → Zn²⁺ + 2e
+> > >     *   Cu → Cu²⁺ + 2e
+> > > *   Cực âm (Cathode): Là nơi xảy ra sự khử. Đồng tinh khiết (thanh đồng) được đặt ở cực âm. Tại đây, ion Cu²⁺ từ dung dịch sẽ bị khử và bám vào cực âm.
+> > >     *   Cu²⁺ + 2e → Cu
+> > > Mục đích là thu hồi đồng tinh khiết bám vào cathode.
+> >
+> > 🔬 **Vậy: Đồng xu (hợp kim) làm anode (cực dương), thanh đồng tinh khiết làm cathode (cực âm).**
+> >
+> > **➡️ a) ĐÚNG**
+>
+> ---
+>
+> **b) [ VẬN DỤNG – ĐIỆN PHÂN] Giá trị của m₁ lớn hơn 2,55.**
+> > > Tại cực âm (cathode - thanh đồng tinh khiết ban đầu có khối lượng 2,55g), ion Cu²⁺ từ dung dịch điện phân đến và bị khử thành Cu kim loại bám vào:
+> > > Cu²⁺ + 2e → Cu
+> > > Do đó, khối lượng của thanh đồng tinh khiết (cathode) sẽ tăng lên sau quá trình điện phân.
+> > > Vậy, m₁ (khối lượng thanh đồng sau điện phân) sẽ lớn hơn khối lượng ban đầu của nó (2,55 g).
+> >
+> > 🔬 **Khối lượng thanh đồng tinh khiết (cathode) tăng lên.**
+> >
+> > **➡️ b) ĐÚNG**
+>
+> ---
+>
+> **c) [ BIẾT – ĐIỆN PHÂN] Ở cực dương xảy ra quá trình khử.**
+> > > *   **Cực dương (Anode):** Là nơi các chất **nhường electron**, xảy ra **quá trình oxi hóa (oxidation)**. Trong trường hợp này, Zn và Cu ở đồng xu bị oxi hóa.
+> > > *   **Cực âm (Cathode):** Là nơi các chất **nhận electron**, xảy ra **quá trình khử (reduction)**. Ion Cu²⁺ bị khử.
+> >
+> > 🔬 **Ở cực dương (anode) luôn xảy ra quá trình oxi hóa.**
+> >
+> > **➡️ c) SAI**
+>
+> ---
+>
+> **d) [ HIỂU – ĐIỆN PHÂN] Do khối lượng của đồng xu giảm, nên giả thuyết ban đầu của nhóm học sinh là đúng.**
+> > > Giả thuyết: “khi điện phân, chỉ có tạp chất trong đồng xu tan hết vào trong dung dịch, còn lại sẽ là đồng tinh khiết”.
+> > >
+> > > Thực tế tại cực dương (đồng xu):
+> > > *   Zn (tạp chất) có tính khử mạnh hơn Cu nên sẽ tan ra trước (bị oxi hóa): Zn → Zn²⁺ + 2e.
+> > > *   Sau đó (hoặc đồng thời tùy điều kiện điện thế), Cu cũng bị oxi hóa và tan vào dung dịch: Cu → Cu²⁺ + 2e.
+> > > Khối lượng đồng xu giảm (từ 2,25g xuống 1,94g) là do cả Zn và một phần Cu từ đồng xu đã tan vào dung dịch.
+> > >
+> > > Giả thuyết nói rằng "chỉ có tạp chất...tan hết..., còn lại sẽ là đồng tinh khiết". Việc khối lượng đồng xu giảm không đủ để khẳng định đồng còn lại trên đồng xu là tinh khiết, vì Cu trong đồng xu cũng bị tan ra (bị oxi hóa) chứ không phải chỉ có tạp chất Zn tan. Phần còn lại của đồng xu nếu quá trình chưa hoàn tất vẫn là hợp kim Cu-Zn (nhưng hàm lượng Zn giảm), hoặc nếu toàn bộ Zn đã tan thì có thể là Cu không tinh khiết và vẫn tiếp tục tan.
+> > >
+> > > Thực tế là **cả Cu và Zn đều tan từ anode**. Mục tiêu là thu Cu tinh khiết ở **cathode**. Việc giảm khối lượng ở anode là điều hiển nhiên, nhưng nó không chứng minh cho giả thuyết là *chỉ* tạp chất tan.
+> >
+> > 🔬 **Khối lượng đồng xu giảm do cả Cu và Zn bị oxi hóa và tan vào dung dịch. Giả thuyết "chỉ có tạp chất tan" là không chính xác vì Cu trong đồng xu cũng tan (bị oxi hóa).**
+> >
+> > **➡️ d) SAI**
+
+---
+
+> **Câu 2. [ HÓA 12 CHƯƠNG 2]**
+> Enzyme amylase là một protein có khả năng xúc tác cho phản ứng thủy phân (hydrolysis) tinh bột (starch). Hoạt tính xúc tác (catalytic activity) của enzyme càng cao thì phản ứng thủy phân tinh bột diễn ra càng nhanh. Hoạt tính xúc tác của enzyme phụ thuộc vào các yếu tố như nhiệt độ (temperature), pH,… Một nhóm học sinh dự đoán “ pH càng tăng thì hoạt tính xúc tác của enzyme amylase càng cao”. Từ đó, học sinh tiến hành thí nghiệm ở nhiệt độ không đổi nhưng thay đổi pH của môi trường để kiểm tra dự đoán trên như sau:
+> Bước 1: Thêm 2,0 mL dung dịch một loại enzyme amylase vào một ống nghiệm chứa 5,0mL dung dịch có vai trò duy trì ổn định pH bằng 5.
+> Bước 2: Thêm tiếp 2,0 mL dung dịch tinh bột vào ống nghiệm trên, lắc đều.
+> Bước 3: Sau khoảng mỗi 10 giây, dùng ống hút lấy 1-2 giọt hỗn hợp phản ứng trong ống nghiệm và cho vào đĩa sứ chứa sẵn dung dịch iodine (iodine solution), quan sát để từ đó xác định thời gian tinh bột thủy phân hết.
+> Lặp lại thí nghiệm theo ba bước trên, chỉ thay đổi pH dung dịch trong Bước 1 lần lượt là 6 ; 7 ; 8 ; 9.
+> Nhóm học sinh ghi lại kết quả thời gian t (giây) mà tinh bột thủy phân hết trong môi trường pH = 5; 6; 7; 8; 9 và vẽ đồ thị như hình bên.
+> [Hình đồ thị: Trục hoành là pH (các điểm 5, 6, 7, 8, 9), trục tung là t (giây) (các điểm 20, 40, 60, 80, 100, ..., 200). Các điểm dữ liệu được nối: (pH5, t~140s), (pH6, t~80s), (pH7, t~40s), (pH8, t~60s), (pH9, t~200s).]
+>
+> a) [ **HIỂU – CARBOHYDRATE**] Ở Bước 3, nếu dung dịch iodine chuyển sang màu xanh tím nghĩa là tinh bột thủy phân hết.
+> b) [ **VẬN DỤNG – CARBOHYDRATE**] Theo số liệu thu được, phản ứng thủy phân tinh bột ở pH= 9 diễn ra nhanh hơn ở pH = 8.
+> c) [ **VẬN DỤNG – CARBOHYDRATE**] Ở các giá trị pH nghiên cứu, hoạt tính xúc tác của enzyme amylase cao nhất tại pH = 7.
+> d) [ **HIỂU – CARBOHYDRATE**] Từ kết quả thí nghiệm, kết luận được hoạt tính xúc tác của enzyme amylase tăng khi pH tăng.
+
+> 💡 **Phân tích & Giải thích từng ý:**
+>
+> **a) [ HIỂU – CARBOHYDRATE] Ở Bước 3, nếu dung dịch iodine chuyển sang màu xanh tím nghĩa là tinh bột thủy phân hết.**
+> > > Dung dịch Iodine được dùng để nhận biết tinh bột. Tinh bột tạo phức với iodine cho màu **xanh tím** đặc trưng.
+> > > Khi tinh bột bị thủy phân hết, sẽ không còn tinh bột trong hỗn hợp phản ứng. Khi đó, nếu nhỏ hỗn hợp phản ứng vào dung dịch iodine, sẽ **không** xuất hiện màu xanh tím nữa (dung dịch iodine vẫn giữ màu vàng nâu nhạt của nó, hoặc không màu tùy nồng độ).
+> > > Vậy, nếu dung dịch iodine chuyển sang màu xanh tím, nghĩa là **tinh bột vẫn còn**, chưa thủy phân hết.
+> >
+> > 🔬 **Màu xanh tím xuất hiện chứng tỏ còn tinh bột. Tinh bột thủy phân hết khi không còn hiện tượng đổi màu với iodine.**
+> >
+> > **➡️ a) SAI**
+>
+> ---
+>
+> **b) [ VẬN DỤNG – CARBOHYDRATE] Theo số liệu thu được, phản ứng thủy phân tinh bột ở pH= 9 diễn ra nhanh hơn ở pH = 8.**
+> > > Hoạt tính enzyme càng cao, phản ứng càng nhanh, thời gian (t) để tinh bột thủy phân hết càng ngắn.
+> > > Từ đồ thị:
+> > > *   Tại pH = 9, thời gian t ≈ 200 giây.
+> > > *   Tại pH = 8, thời gian t ≈ 60 giây.
+> > > Vì t(pH=9) > t(pH=8) (200s > 60s), nên phản ứng ở pH = 9 diễn ra **chậm hơn** ở pH = 8.
+> >
+> > 🔬 **Phản ứng nhanh hơn khi thời gian (t) ngắn hơn. Ở pH=9, t=200s; ở pH=8, t=60s. Vậy ở pH=9 chậm hơn.**
+> >
+> > **➡️ b) SAI**
+>
+> ---
+>
+> **c) [ VẬN DỤNG – CARBOHYDRATE] Ở các giá trị pH nghiên cứu, hoạt tính xúc tác của enzyme amylase cao nhất tại pH = 7.**
+> > > Hoạt tính enzyme cao nhất khi thời gian phản ứng (t) là ngắn nhất.
+> > > Quan sát đồ thị các giá trị thời gian t:
+> > > *   pH = 5, t ≈ 140s
+> > > *   pH = 6, t ≈ 80s
+> > > *   **pH = 7, t ≈ 40s (ngắn nhất)**
+> > > *   pH = 8, t ≈ 60s
+> > > *   pH = 9, t ≈ 200s
+> > > Thời gian t ngắn nhất là 40 giây tại pH = 7.
+> >
+> > 🔬 **Hoạt tính enzyme cao nhất khi thời gian phản ứng ngắn nhất. Thời gian ngắn nhất là 40s, tương ứng với pH=7.**
+> >
+> > **➡️ c) ĐÚNG**
+>
+> ---
+>
+> **d) [ HIỂU – CARBOHYDRATE] Từ kết quả thí nghiệm, kết luận được hoạt tính xúc tác của enzyme amylase tăng khi pH tăng.**
+> > > Dự đoán ban đầu của học sinh là “pH càng tăng thì hoạt tính xúc tác của enzyme amylase càng cao”.
+> > > Kết quả thí nghiệm cho thấy:
+> > > *   Từ pH 5 → 6 → 7: thời gian giảm dần (140s → 80s → 40s), nghĩa là hoạt tính enzyme **tăng**.
+> > > *   Từ pH 7 → 8 → 9: thời gian tăng dần (40s → 60s → 200s), nghĩa là hoạt tính enzyme **giảm**.
+> > > Như vậy, hoạt tính enzyme không phải luôn tăng khi pH tăng. Nó tăng đến một giá trị pH tối ưu (pH=7 trong thí nghiệm này) rồi sau đó lại giảm khi pH tiếp tục tăng.
+> >
+> > 🔬 **Hoạt tính enzyme tăng khi pH tăng từ 5 đến 7, sau đó giảm khi pH tăng từ 7 đến 9. Vậy kết luận này không đúng.**
+> >
+> > **➡️ d) SAI**
+
+---
+
+> **Câu 3. [ HÓA 12 CHƯƠNG 1]**
+> Một học sinh tiến hành tổng hợp isoamyl acetate (thành phần chính của dầu chuối) từ acetic acid và isoamyl alcohol theo phương trình hóa học sau:
+> [Sơ đồ phản ứng: H₃C-CO-OH (Acetic acid) + HO-CH₂-CH₂-CH(CH₃)₂ (Isoamyl alcohol) <=[H₂SO₄ đặc, t⁰]=> H₃C-CO-O-CH₂-CH₂-CH(CH₃)₂ (Isoamyl acetate) + H₂O]
+> Sau thí nghiệm, tiến hành phân tách sản phẩm. Ghi phổ hồng ngoại (Infrared Spectroscopy - IR) của acetic acid, isoamyl alcohol và isoamyl acetate. Cho biết số sóng hấp thụ đặc trưng (characteristic absorption wavenumber) của một số liên kết trên phổ hồng như sau:
+>
+> | Liên kết        | O-H (alcohol)  | O-H (carboxylic acid) | C=O (ester, carboxylic acid) |
+> |-----------------|----------------|-----------------------|-----------------------------|
+> | Số sóng (cm⁻¹)  | 3650-3200      | 3300-2500             | 1780-1650                   |
+>
+> a) [ **BIẾT – ESTER & LIPID**] Phổ hồng ngoại của hỗn hợp thu được vẫn còn phản ứng giữa acetic acid và isoamyl acetate. *(Trang nghĩ ý câu này là "Phổ hồng ngoại của hỗn hợp sản phẩm thu được sau phản ứng cho thấy acetic acid VÀ isoamyl ALCOHOL (chất phản ứng ban đầu) vẫn còn dư chứ không phải isoamyl acetate nha Hoàng)*. Nếu theo đúng nguyên văn: "phản ứng giữa acetic acid và isoamyl acetate" thì không có ý nghĩa lắm vì hai chất này không phản ứng với nhau trong điều kiện đó. Trang sẽ hiểu ý là "hỗn hợp thu được vẫn còn acetic acid và isoamyl alcohol (chất phản ứng dư) HOẶC phản ứng CHƯA hoàn toàn" (implied by "vẫn còn phản ứng", tức phản ứng vẫn tiếp diễn hoặc chưa hết).*
+> b) [ **HIỂU – ĐẠI CƯƠNG HÓA HỮU CƠ**] Phổ hồng ngoại có số sóng hấp thụ ở 3350cm⁻¹ là phổ của isoamyl alcohol.
+> c) [ **HIỂU – ĐẠI CƯƠNG HÓA HỮU CƠ**] Phổ hồng ngoại có số sóng hấp thụ ở 1750 cm⁻¹ mà không có số sóng hấp thụ đặc trưng của liên kết O–H là phổ của isoamyl acetate.
+> d) [ **VẬN DỤNG – ĐẠI CƯƠNG HÓA HỮU CƠ**] Dựa vào phổ hồng ngoại, phân biệt được acetic acid, isoamyl alcohol và isoamyl acetate.
+
+> 💡 **Phân tích & Giải thích từng ý:**
+> (Giả sử cho ý a theo hướng là "hỗn hợp còn acid và alcohol dư")
+>
+> **a) Phổ hồng ngoại của hỗn hợp thu được sau phản ứng cho thấy vẫn còn acetic acid và isoamyl alcohol (nghĩa là phản ứng không hoàn toàn, còn chất đầu).**
+> > > Phản ứng ester hóa là phản ứng thuận nghịch. Nếu không có các biện pháp chuyển dịch cân bằng (như lấy bớt sản phẩm hoặc thêm dư một trong hai chất đầu) thì thường phản ứng không đạt hiệu suất 100%.
+> > > Do đó, sau phản ứng, hỗn hợp sản phẩm có thể vẫn còn acetic acid (có peak O-H của acid ~3300-2500 cm⁻¹ và C=O acid ~1780-1650 cm⁻¹) và isoamyl alcohol (có peak O-H của alcohol ~3650-3200 cm⁻¹).
+> > > Việc "vẫn còn phản ứng" ngụ ý là chất đầu còn, có khả năng phản ứng tiếp (mặc dù khi đã dừng phản ứng và phân tách thì nó sẽ không phản ứng). Hoặc ý là sản phẩm còn lẫn chất đầu chưa phản ứng hết.
+> >
+> > 🔬 **Phản ứng este hóa là thuận nghịch, thường không hoàn toàn. Hỗn hợp sau phản ứng có thể còn acid và alcohol dư. Vì vậy, phổ IR của hỗn hợp sau phản ứng có thể sẽ thấy tín hiệu của nhóm O-H (từ cả acid và alcohol còn lại) và C=O (từ cả acid còn lại và ester sản phẩm).**
+> >
+> > **➡️ a) ĐÚNG** (Theo cách hiểu phổ biến của các thí nghiệm ester hóa không tối ưu hóa hiệu suất)
+>
+> ---
+>
+> **b) [ HIỂU – ĐẠI CƯƠNG HÓA HỮU CƠ**] Phổ hồng ngoại có số sóng hấp thụ ở 3350cm⁻¹ là phổ của isoamyl alcohol.
+> > > Theo bảng:
+> > > *   O-H (alcohol): 3650-3200 cm⁻¹
+> > > *   O-H (carboxylic acid): 3300-2500 cm⁻¹ (rộng và thường có dạng đặc trưng)
+> > > Số sóng 3350 cm⁻¹ nằm trong vùng hấp thụ của O-H alcohol (3650-3200 cm⁻¹) và cũng nằm chồng lấn một chút vào vùng O-H của carboxylic acid. Tuy nhiên, đặc điểm của peak O-H alcohol thường là một dải rộng nhưng ít "nhọn" hoặc không có "vai" rõ rệt như O-H của acid. Isoamyl alcohol chỉ có nhóm O-H của alcohol.
+> > > Một tín hiệu ở 3350 cm⁻¹ là phù hợp với nhóm O-H trong alcohol (do liên kết hydrogen).
+> >
+> > 🔬 **Peak ở 3350 cm⁻¹ nằm trong vùng của O-H (alcohol). Đây là tín hiệu đặc trưng của alcohol.**
+> >
+> > **➡️ b) ĐÚNG**
+>
+> ---
+>
+> **c) [ HIỂU – ĐẠI CƯƠNG HÓA HỮU CƠ**] Phổ hồng ngoại có số sóng hấp thụ ở 1750 cm⁻¹ mà không có số sóng hấp thụ đặc trưng của liên kết O–H là phổ của isoamyl acetate.
+> > > *   **Isoamyl acetate (este):** Có nhóm C=O (ester), theo bảng là 1780-1650 cm⁻¹. Số sóng 1750 cm⁻¹ nằm trong vùng này (C=O ester thường ~1735-1750 cm⁻¹, C=O acid thường ~1700-1725 cm⁻¹).
+> > > *   Este **không** có nhóm O-H (trừ khi tạp chức phức tạp, nhưng isoamyl acetate là este đơn giản). Vậy trên phổ IR của este tinh khiết sẽ không có peak rộng đặc trưng của O-H (alcohol hay acid) trong khoảng 3650-2500 cm⁻¹.
+> >
+> > 🔬 **Este (isoamyl acetate) có peak C=O (ví dụ, 1750 cm⁻¹) và không có peak O-H (alcohol/acid).**
+> >
+> > **➡️ c) ĐÚNG**
+>
+> ---
+>
+> **d) [ VẬN DỤNG – ĐẠI CƯƠNG HÓA HỮU CƠ**] Dựa vào phổ hồng ngoại, phân biệt được acetic acid, isoamyl alcohol và isoamyl acetate.
+> > > Chúng ta có thể phân biệt dựa trên các tín hiệu đặc trưng:
+> > > *   **Acetic acid:** Có peak O-H rất rộng của acid (3300-2500 cm⁻¹) VÀ peak C=O của acid (khoảng 1710-1725 cm⁻¹, thường dịch chuyển về số sóng thấp hơn so với C=O ester).
+> > > *   **Isoamyl alcohol:** Có peak O-H rộng của alcohol (3650-3200 cm⁻¹), KHÔNG có peak C=O.
+> > > *   **Isoamyl acetate (ester):** KHÔNG có peak O-H (alcohol/acid), có peak C=O của ester (khoảng 1735-1750 cm⁻¹).
+> > >
+> > > Các tín hiệu này đủ khác biệt để phân biệt ba chất.
+> >
+> > 🔬 **Ba chất có các nhóm chức khác nhau (hoặc vị trí peak khác nhau cho cùng nhóm chức C=O) và sự có/vắng mặt của peak O-H giúp phân biệt chúng bằng phổ IR.**
+> >
+> > **➡️ d) ĐÚNG**
+
+---
+
+> **Câu 4. [ HÓA 12 CHƯƠNG 8 ]**
+> Muối CoCl₂, khan (anhydrous) có màu xanh. Hòa tan một lượng muối này vào nước, thu được dung dịch màu hồng (có chứa phức chất X). Nhúng mảnh giấy lọc vào dung dịch này, sấy khô, thu được mảnh giấy có màu xanh (giấy Y). Giấy Y được sử dụng làm giấy chỉ thị để phát hiện nước.
+>
+> a) [ **BIẾT – KIM LOẠI CHUYỂN TIẾP**] CoCl₂ là hợp chất của kim loại chuyển tiếp (transition metal).
+> b) [ **HIỂU – KIM LOẠI CHUYỂN TIẾP**] Phức chất X không chứa phối tử aqua (ligand aqua - H₂O).
+> c) [ **HIỂU – KIM LOẠI CHUYỂN TIẾP**] Trong phức chất X, liên kết giữa nguyên tử trung tâm (central atom) và phối tử (ligand) là liên kết ion (ionic bond).
+> d) [ **VẬN DỤNG – KIM LOẠI CHUYỂN TIẾP**] Khi nhỏ giọt nước lên giấy Y, giấy Y chuyển màu.
+
+> 💡 **Phân tích & Giải thích từng ý:**
+>
+> **a) [ BIẾT – KIM LOẠI CHUYỂN TIẾP] CoCl₂ là hợp chất của kim loại chuyển tiếp.**
+> > > Cobalt (Co) có số hiệu nguyên tử Z=27. Cấu hình electron: [Ar]3d⁷4s².
+> > > Cobalt thuộc nhóm d, là một kim loại chuyển tiếp. Các hợp chất của nó, như CoCl₂, là hợp chất của kim loại chuyển tiếp.
+> >
+> > 🔬 **Cobalt (Co) là một kim loại chuyển tiếp.**
+> >
+> > **➡️ a) ĐÚNG**
+>
+> ---
+>
+> **b) [ HIỂU – KIM LOẠI CHUYỂN TIẾP] Phức chất X không chứa phối tử aqua (phối tử H₂O).**
+> > > CoCl₂ khan (màu xanh) hòa tan vào nước tạo dung dịch màu hồng. Sự thay đổi màu sắc này là do sự hình thành phức chất aqua của Co(II) với nước làm phối tử.
+> > > Phản ứng có thể là:
+> > > CoCl₂ (khan, xanh) + 6H₂O → [Co(H₂O)₆]²⁺ (hồng) + 2Cl⁻
+> > > Phức chất X chính là phức aqua, ví dụ như [Co(H₂O)₆]²⁺, có màu hồng.
+> >
+> > 🔬 **Phức chất X có màu hồng, được tạo thành khi CoCl₂ khan tan trong nước. Phức này là phức aqua, tức là có chứa phối tử H₂O.**
+> >
+> > **➡️ b) SAI**
+>
+> ---
+>
+> **c) [ HIỂU – KIM LOẠI CHUYỂN TIẾP] Trong phức chất X, liên kết giữa nguyên tử trung tâm và phối tử là liên kết ion.**
+> > > Trong phức chất (ví dụ [Co(H₂O)₆]²⁺), liên kết giữa ion trung tâm Co²⁺ và các phối tử (ví dụ H₂O) là **liên kết phối trí (coordinate covalent bond hay dative bond)**.
+> > > Trong liên kết phối trí, phối tử (donor) cung cấp cặp electron không chia sẻ cho ion trung tâm kim loại (acceptor) để tạo thành liên kết. Nó có bản chất là liên kết cộng hóa trị cho - nhận.
+> > > Liên kết ion thường hình thành giữa kim loại điển hình và phi kim mạnh hoặc giữa cation và anion.
+> >
+> > 🔬 **Liên kết giữa ion kim loại trung tâm và phối tử trong phức chất là liên kết phối trí (coordinate bond), không phải liên kết ion.**
+> >
+> > **➡️ c) SAI**
+>
+> ---
+>
+> **d) [ VẬN DỤNG – KIM LOẠI CHUYỂN TIẾP] Khi nhỏ giọt nước lên giấy Y, giấy Y chuyển màu.**
+> > > *   Muối CoCl₂ khan màu **xanh**.
+> > > *   Dung dịch muối này trong nước (chứa phức X: [Co(H₂O)₆]²⁺) màu **hồng**.
+> > > *   Giấy Y: mảnh giấy lọc nhúng dung dịch rồi sấy khô. Khi sấy khô, nước bay hơi, phức aqua [Co(H₂O)₆]Cl₂ (hồng) sẽ mất nước và chuyển về dạng CoCl₂ khan (hoặc ít nước hơn) có màu **xanh**.
+> > > *   "Giấy Y được sử dụng làm giấy chỉ thị để phát hiện nước": Điều này có nghĩa là khi giấy Y (màu xanh, dạng khan) tiếp xúc với nước (ví dụ: không khí ẩm, hoặc nhỏ giọt nước), nó sẽ hấp thụ nước và chuyển lại thành dạng ngậm nước có màu hồng.
+> > >     [CoCl₂(H₂O)₂(rắn, xanh)] + 4H₂O ⇌ [Co(H₂O)₆]²⁺(aq, hồng) + 2Cl⁻(aq) (ví dụ một dạng)
+> > >     Hoặc đơn giản là CoCl₂ (xanh) + nH₂O → CoCl₂.nH₂O (hồng)
+> >
+> > 🔬 **Giấy Y (màu xanh, CoCl₂ khan) khi tiếp xúc với nước sẽ chuyển thành màu hồng (dạng ngậm nước).**
+> >
+> > **➡️ d) ĐÚNG**
+
+---
+
