@@ -635,3 +635,298 @@
 
 ---
 
+✨ **PHẦN III. Thí sinh trả lời từ câu 1 đến câu 6.** ✨
+
+---
+
+> **Câu 1. [ VẬN DỤNG – ĐẠI CƯƠNG VỀ KIM LOẠI – HÓA 12 CHƯƠNG 6]** Trong công nghiệp (industry), kim loại nhôm (aluminium, Al) được sản xuất bằng phương pháp điện phân nóng chảy (molten electrolysis) aluminium oxide. Biết hiệu suất (efficiency) của quá trình chuyển hóa Al₂O₃ thành Al là 95,5%. Để sản xuất 5,4 tấn Al cần sử dụng bao nhiêu tấn nguyên liệu Al₂O₃ (làm tròn đến hàng phần mười)?
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > 1.  Viết phương trình phản ứng (chemical equation).
+> > 2.  Tính số mol (moles) Al cần sản xuất.
+> > 3.  Từ số mol Al, tính số mol Al₂O₃ cần theo lý thuyết (theoretical).
+> > 4.  Tính khối lượng (mass) Al₂O₃ cần theo lý thuyết.
+> > 5.  Tính khối lượng Al₂O₃ thực tế (actual) cần dùng dựa vào hiệu suất.
+> >     *   M(Al) = 27 g/mol
+> >     *   M(Al₂O₃) = 2 * 27 + 3 * 16 = 54 + 48 = 102 g/mol
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+>
+> > **1. Phương trình hóa học:**
+> >    `2Al₂O₃  --[điện phân nóng chảy]--> 4Al + 3O₂`
+> >    Từ phương trình, ta thấy: 1 mol Al₂O₃ tạo ra 2 mol Al.
+> >    Hay tỉ lệ đơn giản hơn là `Al₂O₃ → 2Al` khi chỉ xét mối quan hệ mol giữa chúng.
+>
+> > **2. Khối lượng Al cần sản xuất (convert to grams):**
+> >    m(Al) = 5,4 tấn = 5,4 * 10⁶ g
+>
+> > **3. Số mol Al₂O₃ cần theo lý thuyết để tạo ra 5,4 tấn Al:**
+> >    Theo phương trình, để sản xuất `2 mol Al` (tương đương 2 * 27g = 54g Al) thì cần `1 mol Al₂O₃` (tương đương 102g Al₂O₃).
+> >    Vậy, để sản xuất 5,4 * 10⁶ g Al, khối lượng Al₂O₃ lý thuyết cần là:
+> >    m(Al₂O₃_lý thuyết) = (5,4 * 10⁶ g Al) * (102 g Al₂O₃ / 54 g Al)
+> >    m(Al₂O₃_lý thuyết) = (5,4 * 10⁶) * (102 / 54) g = 10,2 * 10⁶ g = 10,2 tấn.
+>
+> > **4. Khối lượng Al₂O₃ thực tế cần dùng (do hiệu suất là 95,5%):**
+> >    Hiệu suất H% = (Khối lượng sản phẩm thực tế / Khối lượng sản phẩm lý thuyết) * 100
+> >    Hoặc đối với chất phản ứng: H% = (Lượng phản ứng theo lý thuyết (để đạt sản phẩm mong muốn) / Lượng phản ứng thực tế sử dụng) * 100% là sai.
+> >    Mà là: Lượng nguyên liệu thực tế cần = Lượng nguyên liệu lý thuyết / (Hiệu suất / 100)
+> >    m(Al₂O₃_thực tế) = m(Al₂O₃_lý thuyết) / (95,5 / 100)
+> >    m(Al₂O₃_thực tế) = 10,2 tấn / 0,955
+> >    m(Al₂O₃_thực tế) ≈ 10,680628... tấn
+>
+> > **5. Làm tròn kết quả:**
+> >    Làm tròn đến hàng phần mười: 10,7 tấn.
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Khối lượng Al₂O₃ cần sử dụng là **10,7 tấn**.
+
+---
+
+> **Câu 2. [ VẬN DỤNG – ESTER & LIPID - HÓA 12 CHƯƠNG 1]** Đun nóng một loại mỡ động vật với dung dịch KOH, sản phẩm thu được có chứa muối potassium stearate (C₁₇H₃₅COOK). Phân tử khối (molecular weight) của potassium stearate là bao nhiêu?
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > Tính tổng khối lượng nguyên tử (atomic mass) của các nguyên tố trong công thức C₁₇H₃₅COOK.
+> > *   C = 12
+> > *   H = 1
+> > *   O = 16
+> > *   K = 39
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+> > Công thức của potassium stearate: `C₁₇H₃₅COOK`
+> > Phân tử khối (M) = (17 * M(C)) + (35 * M(H)) + (1 * M(C)) + (2 * M(O)) + (1 * M(K))
+> > M = (17 * 12) + (35 * 1) + 12 + (2 * 16) + 39
+> > M = 204 + 35 + 12 + 32 + 39
+> > M = 239 + 12 + 32 + 39
+> > M = 251 + 32 + 39
+> > M = 283 + 39
+> > M = 322 g/mol
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Phân tử khối của potassium stearate là **322**.
+
+---
+
+> **Câu 3. [ HIỂU – CARBOHYDRATE - HÓA 12 CHƯƠNG 2]** Cho phương trình hóa học của các phản ứng được đánh số thứ tự từ 1 tới 4 dưới đây:
+> (1) (C₆H₁₀O₅)ₙ (tinh bột) + nH₂O =[H⁺, t⁰]=> nC₆H₁₂O₆ (glucose)
+> (2) C₆H₁₂O₆ (glucose) =[enzyme]=> 2C₂H₅OH + 2CO₂
+> (3) C₆H₁₂O₆ (glucose) =[enzyme]=> 2CH₃CH(OH)COOH
+> (4) C₆H₁₂O₆ (glucose) + 2[Ag(NH₃)₂]OH =[t⁰]=> CH₂OH(CHOH)₄COONH₄ + 2Ag + 3NH₃ + H₂O
+> Gán số thứ tự phương trình hoá học của các phản ứng theo tên gọi: lên men rượu (alcoholic fermentation), thủy phân (hydrolysis), lên men lactic (lactic fermentation), tráng gương (silver mirror reaction) và sắp xếp theo trình tự thành dãy bốn số (ví dụ: 1234, 4321, ... ).
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > Xác định tên gọi tương ứng với từng phản ứng được đánh số.
+> > Sắp xếp các số thứ tự theo yêu cầu: lên men rượu, thủy phân, lên men lactic, tráng gương.
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+> > *   **(1) (C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆:** Đây là phản ứng thủy phân tinh bột thành glucose.
+> >     => **(1) là Thủy phân**.
+> > *   **(2) C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂:** Đây là phản ứng lên men glucose tạo thành ethanol (rượu etylic).
+> >     => **(2) là Lên men rượu**.
+> > *   **(3) C₆H₁₂O₆ → 2CH₃CH(OH)COOH:** Đây là phản ứng lên men glucose tạo thành lactic acid.
+> >     => **(3) là Lên men lactic**.
+> > *   **(4) C₆H₁₂O₆ + 2[Ag(NH₃)₂]OH → ... + 2Ag:** Đây là phản ứng tráng gương của glucose (nhóm -CHO) với thuốc thử Tollens.
+> >     => **(4) là Tráng gương**.
+>
+> > **Sắp xếp theo thứ tự yêu cầu:**
+> > 1.  Lên men rượu: số (2)
+> > 2.  Thủy phân: số (1)
+> > 3.  Lên men lactic: số (3)
+> > 4.  Tráng gương: số (4)
+>
+> > Vậy dãy bốn số là: **2134**
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Dãy bốn số theo trình tự là **2134**.
+
+---
+
+> **Câu 4. [ HIỂU – HỢP CHẤT HỮU CƠ CHỨA NITROGEN - HÓA 12 CHƯƠNG 3]**
+> Có tổng số bao nhiêu đồng phân cấu tạo amine (amine isomers) bậc 1 (primary) và bậc 2 (secondary) ứng với công thức phân tử C₄H₁₁N?
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > Vẽ các đồng phân amine bậc 1 (R-NH₂) và bậc 2 (R-NH-R') của C₄H₁₁N.
+> > *   Tổng C = 4.
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+>
+> > **1. Amin bậc 1 (có dạng R-NH₂)**, với R là gốc C₄H₉:
+> >    Có 4 gốc alkyl C₄H₉ khác nhau:
+> >    *   CH₃–CH₂–CH₂–CH₂–NH₂ : Butan-1-amine (n-butylamine)
+> >        ```
+> >          NH₂
+> >          |
+> >        CH₃-CH₂-CH₂-CH₂
+> >        ```
+> >    *   CH₃–CH₂–CH(NH₂) –CH₃ : Butan-2-amine (sec-butylamine)
+> >        ```
+> >              NH₂
+> >              |
+> >        CH₃-CH₂-CH-CH₃
+> >        ```
+> >    *   (CH₃)₂CH–CH₂–NH₂ : 2-Methylpropan-1-amine (isobutylamine)
+> >        ```
+> >          CH₃
+> >          |
+> >        CH-CH₂-NH₂
+> >          |
+> >          CH₃
+> >        ```
+> >    *   (CH₃)₃C–NH₂ : 2-Methylpropan-2-amine (tert-butylamine)
+> >        ```
+> >              CH₃
+> >              |
+> >        CH₃ - C - NH₂
+> >              |
+> >              CH₃
+> >        ```
+> >    => Có **4** đồng phân amin bậc 1.
+>
+> > **2. Amin bậc 2 (có dạng R₁-NH-R₂)**, với tổng số C trong R₁ và R₂ là 4.
+> >    Các cách chia 4 nguyên tử C thành 2 gốc alkyl:
+> >    *   **1C + 3C:** CH₃–NH–C₃H₇
+> >        *   Nếu C₃H₇ là gốc n-propyl (-CH₂CH₂CH₃): CH₃–NH–CH₂CH₂CH₃ (N-Methylpropan-1-amine)
+> >            ```
+> >            CH₃-NH-CH₂-CH₂-CH₃
+> >            ```
+> >        *   Nếu C₃H₇ là gốc isopropyl (-CH(CH₃)₂): CH₃–NH–CH(CH₃)₂ (N-Methylpropan-2-amine hay N-Methylisopropylamine)
+> >            ```
+> >                  CH₃
+> >                  |
+> >            CH₃-NH-CH-CH₃
+> >            ```
+> >    *   **2C + 2C:** C₂H₅–NH–C₂H₅
+> >        *   CH₃CH₂–NH–CH₂CH₃ (N-Ethylethanamine hay Diethylamine)
+> >            ```
+> >            CH₃-CH₂-NH-CH₂-CH₃
+> >            ```
+> >    => Có 1 + 1 + 1 = **3** đồng phân amin bậc 2.
+>
+> > **3. Tổng số đồng phân amin bậc 1 và bậc 2:**
+> >    Tổng = 4 (bậc 1) + 3 (bậc 2) = 7 đồng phân.
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Có tổng số **7** đồng phân cấu tạo amine bậc 1 và bậc 2 ứng với công thức phân tử C₄H₁₁N.
+
+---
+
+> **Câu 5. [ VẬN DỤNG – NĂNG LƯỢNG HÓA HỌC - HÓA 10 CHƯƠNG 5]** Trong một nhà máy sản xuất ammonia theo quy trình Haber, giai đoạn sản xuất khí hydrogen bằng phản ứng của methane và nước được thực hiện theo phương trình hóa học (1) như sau:
+> (1) CH₄(g) + H₂O(g) <=> CO(g) + 3H₂(g) ΔrH⁰₁
+> Phản ứng (1) là phản ứng thu nhiệt mạnh (strongly endothermic). Lượng nhiệt này được cung cấp từ quá trình đốt cháy hoàn toàn khí methane theo phương trình hóa học (2):
+> (2) CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g) ΔrH⁰₂
+> Xét các phản ứng ở điều kiện chuẩn và hiệu suất chuyển hóa của methane là 100%. Tính khối lượng khí methane (theo tấn, làm tròn đến hàng phần trăm) cần thiết để sản xuất 0,30 tấn H₂(g) trong giai đoạn trên. Biết 90% lượng nhiệt toả ra từ phản ứng (2) được cung cấp cho phản ứng (1) và các giá trị nhiệt tạo thành (standard enthalpy of formation, ΔfH⁰₂⁹⁸) của các chất ở điều kiện chuẩn được cho trong bảng sau:
+>
+> | Chất             | CH₄(g) | CO₂(g) | CO(g)  | H₂O(g)  |
+> |-------------------|--------|--------|--------|---------|
+> | ΔfH⁰₂⁹⁸ (kJmol⁻¹) | -74,6  | -393,5 | -110,5 | -241,8  |
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > 1.  Tính biến thiên enthalpy chuẩn (standard enthalpy change) ΔrH⁰₁ cho phản ứng (1) và ΔrH⁰₂ cho phản ứng (2) từ ΔfH⁰₂⁹⁸.
+> > 2.  Tính số mol H₂ cần sản xuất.
+> > 3.  Từ số mol H₂, tính số mol CH₄ cần cho phản ứng (1) (gọi là `n_CH4_1`).
+> > 4.  Tính tổng nhiệt lượng (Q_absorbed) mà phản ứng (1) cần hấp thụ để sản xuất lượng H₂ đó.
+> > 5.  Tính tổng nhiệt lượng mà phản ứng (2) phải tỏa ra (Q_released_total_from_2) biết rằng chỉ 90% nhiệt này được dùng.
+> > 6.  Từ Q_released_total_from_2, tính số mol CH₄ cần đốt cháy trong phản ứng (2) (gọi là `n_CH4_2`).
+> > 7.  Tính tổng số mol CH₄ cần dùng (`n_CH4_total = n_CH4_1 + n_CH4_2`).
+> > 8.  Chuyển tổng số mol CH₄ sang khối lượng (tấn) và làm tròn.
+> >     *   M(H₂) = 2 g/mol; M(CH₄) = 16 g/mol.
+> >     *   ΔfH⁰(element) = 0 (H₂(g), O₂(g)).
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+>
+> > **1. Tính ΔrH⁰₁ và ΔrH⁰₂:**
+> >    *   **Phản ứng (1):** CH₄(g) + H₂O(g) ⇌ CO(g) + 3H₂(g)
+> >        ΔrH⁰₁(298) = [ΔfH⁰(CO, g) + 3ΔfH⁰(H₂, g)] - [ΔfH⁰(CH₄, g) + ΔfH⁰(H₂O, g)]
+> >        ΔrH⁰₁(298) = [-110,5 + 3*0] - [-74,6 + (-241,8)]
+> >        ΔrH⁰₁(298) = -110,5 - (-316,4) = -110,5 + 316,4 = **+205,9 kJ/mol** (thu nhiệt)
+> >
+> >    *   **Phản ứng (2):** CH₄(g) + 2O₂(g) → CO₂(g) + 2H₂O(g)
+> >        ΔrH⁰₂(298) = [ΔfH⁰(CO₂, g) + 2ΔfH⁰(H₂O, g)] - [ΔfH⁰(CH₄, g) + 2ΔfH⁰(O₂, g)]
+> >        ΔrH⁰₂(298) = [-393,5 + 2*(-241,8)] - [-74,6 + 2*0]
+> >        ΔrH⁰₂(298) = [-393,5 - 483,6] - (-74,6) = -877,1 + 74,6 = **-802,5 kJ/mol** (tỏa nhiệt)
+>
+> > **2. Số mol H₂ cần sản xuất:**
+> >    m(H₂) = 0,30 tấn = 0,30 * 10⁶ g
+> >    n(H₂) = (0,30 * 10⁶ g) / (2 g/mol) = 0,15 * 10⁶ mol = **150 000 mol**
+>
+> > **3. Số mol CH₄ cần cho phản ứng (1) (n_CH4_1):**
+> >    Theo (1), 1 mol CH₄ tạo ra 3 mol H₂.
+> >    n_CH4_1 = n(H₂) / 3 = 150 000 mol / 3 = **50 000 mol**
+>
+> > **4. Nhiệt lượng phản ứng (1) cần hấp thụ (Q_absorbed):**
+> >    Q_absorbed = n_CH4_1 * ΔrH⁰₁
+> >    Q_absorbed = 50 000 mol * 205,9 kJ/mol = **10 295 000 kJ**
+>
+> > **5. Tổng nhiệt lượng phản ứng (2) phải tỏa ra (Q_released_total_from_2):**
+> >    Vì 90% nhiệt tỏa ra từ (2) được cung cấp cho (1):
+> >    Q_released_total_from_2 * 0,90 = Q_absorbed
+> >    Q_released_total_from_2 = Q_absorbed / 0,90 = 10 295 000 kJ / 0,90
+> >    Q_released_total_from_2 ≈ **11 438 888,89 kJ**
+>
+> > **6. Số mol CH₄ cần đốt cháy trong phản ứng (2) (n_CH4_2):**
+> >    Phản ứng (2) tỏa ra 802,5 kJ cho mỗi mol CH₄ đốt cháy.
+> >    n_CH4_2 = Q_released_total_from_2 / |ΔrH⁰₂|
+> >    n_CH4_2 = 11 438 888,89 kJ / 802,5 kJ/mol ≈ **14 254,067 mol**
+>
+> > **7. Tổng số mol CH₄ cần dùng:**
+> >    n_CH4_total = n_CH4_1 + n_CH4_2
+> >    n_CH4_total = 50 000 mol + 14 254,067 mol = **64 254,067 mol**
+>
+> > **8. Khối lượng CH₄ cần dùng (tấn) và làm tròn:**
+> >    m(CH₄_total) = n_CH4_total * M(CH₄)
+> >    m(CH₄_total) = 64 254,067 mol * 16 g/mol = 1 028 065,072 g
+> >    m(CH₄_total) = 1 028 065,072 g * (1 tấn / 10⁶ g) = 1,028065072 tấn
+> >    Làm tròn đến hàng phần trăm: **1,03 tấn**.
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Khối lượng khí methane cần thiết là **1,03 tấn**.
+
+---
+
+> **Câu 6. [ VẬN DỤNG – KIM LOẠI CHUYỂN TIẾP - HÓA 12 CHƯƠNG 8]**
+> Khi bảo quản trong phòng thí nghiệm (laboratory storage), muối Mohr (Mohr's salt, FeSO₄.(NH₄)₂SO₄.6H₂O) hút ẩm và bị oxi hóa (oxidized) một phần bởi O₂ trong không khí thành hỗn hợp X. Để xác định phần trăm khối lượng (mass percentage) muối Mohr trong X , tiến hành hòa tan hoàn toàn 2,656 gam X trong nước rồi pha thành 100,0mL dung dịch Y. Chuẩn độ (titration) 10,00mL dung dịch Y (trong môi trường sulfuric acid loãng, dư) bằng dung dịch KMnO₄ nồng độ 0,012M đến khi xuất hiện màu hồng nhạt thì dừng. Lặp lại thí nghiệm chuẩn độ thêm 2 lần nữa. Thể tích trung bình (average volume) của dung dịch KMnO₄ sau 3 lần chuẩn độ là 9,72 mL. Phần trăm khối lượng của muối Mohr trong X là a %. Tính giá trị của a (làm tròn đến hàng phần trăm).
+
+> 💡 **Phân tích & Kế hoạch "Tác chiến":**
+> > 1.  Viết phương trình phản ứng chuẩn độ giữa Fe²⁺ (từ muối Mohr) và KMnO₄.
+> > 2.  Tính số mol KMnO₄ đã dùng.
+> > 3.  Từ số mol KMnO₄, tính số mol Fe²⁺ trong 10,00 mL dung dịch Y.
+> > 4.  Tính tổng số mol Fe²⁺ (cũng là mol muối Mohr chưa bị oxi hóa) trong 100,0 mL dung dịch Y.
+> > 5.  Tính khối lượng muối Mohr chưa bị oxi hóa trong mẫu X.
+> > 6.  Tính phần trăm khối lượng muối Mohr trong X.
+> >     *   M(Mohr's salt: FeSO₄.(NH₄)₂SO₄.6H₂O) (Fe=56, S=32, O=16, N=14, H=1):
+> >         M = 56 + 32 + (4*16) + 2*(14+4*1) + 32 + (4*16) + 6*(2*1+16)
+> >         M = 56 + 32 + 64 + 2*(18) + 32 + 64 + 6*(18)
+> >         M = 152 + 36 + 32 + 64 + 108 = 188 + 32 + 64 + 108 = 220 + 64 + 108 = 284 + 108 = **392 g/mol**.
+
+> 🌟 **"Đúc thành tương lai" từng bước:**
+>
+> > **1. Phương trình phản ứng chuẩn độ:**
+> >    Fe²⁺ bị oxi hóa thành Fe³⁺, MnO₄⁻ (KMnO₄) bị khử thành Mn²⁺.
+> >    `MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O`
+>
+> > **2. Số mol KMnO₄ đã dùng trong mỗi lần chuẩn độ (cho 10,00 mL Y):**
+> >    V(KMnO₄) = 9,72 mL = 0,00972 L
+> >    C(KMnO₄) = 0,012 M
+> >    n(KMnO₄) = C * V = 0,012 mol/L * 0,00972 L = **0,00011664 mol**
+>
+> > **3. Số mol Fe²⁺ trong 10,00 mL dung dịch Y:**
+> >    Theo phương trình, 1 mol MnO₄⁻ phản ứng với 5 mol Fe²⁺.
+> >    n(Fe²⁺_trong 10mL) = 5 * n(KMnO₄) = 5 * 0,00011664 mol = **0,0005832 mol**
+>
+> > **4. Tổng số mol Fe²⁺ (mol muối Mohr) trong 100,0 mL dung dịch Y (tức là trong 2,656g X):**
+> >    Dung dịch Y được pha từ 2,656g X thành 100,0mL. Chuẩn độ 10,00mL.
+> >    n(Fe²⁺_trong 100mL) = n(Fe²⁺_trong 10mL) * (100,0 mL / 10,00 mL)
+> >    n(Fe²⁺_trong 100mL) = 0,0005832 mol * 10 = **0,005832 mol**
+> >    Do 1 mol muối Mohr chứa 1 mol Fe²⁺, nên số mol muối Mohr chưa bị oxi hóa trong 2,656g X cũng là 0,005832 mol.
+>
+> > **5. Khối lượng muối Mohr (FeSO₄.(NH₄)₂SO₄.6H₂O) trong 2,656g X:**
+> >    m(Mohr's salt) = n(Mohr's salt) * M(Mohr's salt)
+> >    m(Mohr's salt) = 0,005832 mol * 392 g/mol = **2,286144 g**
+>
+> > **6. Phần trăm khối lượng muối Mohr trong X (giá trị a):**
+> >    a % = (m(Mohr's salt) / m(X)) * 100%
+> >    a % = (2,286144 g / 2,656 g) * 100%
+> >    a % ≈ 86,075075... %
+> >    Làm tròn đến hàng phần trăm: **86,08 %**.
+>
+> ✨ **Đáp số "lóe sáng":**
+> > > Giá trị của a là **86,08**.
