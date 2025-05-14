@@ -200,3 +200,260 @@ Nhưng dựa trên dữ kiện đã rõ ràng, lượng nhiệt mà vật bằng
 ⚛️ •────────────────────◇✨💡✨◇────────────────────• ⚛️
 
 Hoàng ơi, Trang đã giải xong các câu hỏi Vật Lý này rồi nè! (≧◡≦) ♡ Hoàng xem qua và nếu có bất kỳ thắc mắc nào hay muốn "xoáy sâu" thêm vào phần nào, đừng ngần ngại hỏi Trang nhé! Chúng mình sẽ cùng nhau làm sáng tỏ mọi thứ! 💪💖
+
+Hoàng ơi, Trang đây rồi! Để Trang giúp Hoàng "xử đẹp" mấy bài tập Vật Lý này nha! (≧◡≦) ♡ Tụi mình cùng nhau "đào sâu" từng câu một nhé!
+
+---
+
+⚛️ **BÀI TẬP ÔN THI THPT 2025 - VẬT LÍ** ⚛️
+
+---
+
+### 🔬 **Câu 23:**
+
+> Một đầu thép của một búa máy có khối lượng 15kg nóng lên thêm 200°C sau 1,6 phút hoạt động. Biết rằng chỉ có 40% cơ năng của búa máy chuyển thành nhiệt năng của đầu búa. Công và công suất của búa máy có giá trị là, biết nhiệt dung riêng của thép là 460J/kg.K.
+
+*   **Phân tích "tia laze" từ Trang:**
+    1.  Đầu tiên, mình cần tính nhiệt lượng mà đầu búa thép đã hấp thụ để nóng lên (Q_thu).
+    2.  Tiếp theo, từ hiệu suất chuyển đổi cơ năng thành nhiệt năng (40%), mình sẽ tìm ra tổng cơ năng (A) mà búa máy đã thực hiện.
+    3.  Cuối cùng, từ công (A) và thời gian hoạt động, mình tính được công suất (P) của búa máy.
+
+*   **"Công thức tia chớp" của Trang:**
+    *   Nhiệt lượng thu vào: `Q_thu = m * c * Δt`
+    *   Cơ năng thực hiện: `A = Q_thu / hiệu suất` (hiệu suất ở đây là 0,40)
+    *   Công suất: `P = A / t`
+
+*   **"Phép tính siêu tốc" cùng Trang:**
+    *   `m = 15 kg`
+    *   `c = 460 J/kg.K` (Nhiệt độ tăng thêm 200°C tương đương với tăng thêm 200K, vì độ lớn của đơn vị Celsius và Kelvin là như nhau khi xét độ chênh lệch nhiệt độ)
+    *   `Δt = 200 K`
+    *   `Q_thu = 15 * 460 * 200 = 1.380.000 J = 1380 kJ`
+
+    *   Cơ năng của búa máy (A):
+        `A = Q_thu / 0,40 = 1.380.000 J / 0,40 = 3.450.000 J = 3450 kJ`
+
+    *   Thời gian hoạt động `t = 1,6 phút = 1,6 * 60 giây = 96 giây`
+    *   Công suất của búa máy (P):
+        `P = A / t = 3.450.000 J / 96 s ≈ 35937,5 W`
+
+*   **"Kết luận khoa học" của Trang:**
+    > Xét các đáp án thì chưa có đáp án nào hoàn toàn trùng khớp với kết quả tính toán. Có thể có sự làm tròn hoặc sai khác nhỏ trong đề bài hoặc các đáp án. Tuy nhiên, nếu phải chọn một đáp án gần nhất với A = 3450kJ:
+    >
+    > Các đáp án đều có A = 345kJ, điều này gợi ý có thể Q_thu được tính hoặc làm tròn khác đi. Nếu giả sử A = 345kJ = 345.000 J (thay vì 3450kJ).
+    > Thì Q_thu = A * 0,40 = 345.000 J * 0,40 = 138.000 J.
+    > Với Q_thu này thì Δt = Q_thu / (m * c) = 138.000 / (15 * 460) = 138.000 / 6900 = 20°C.
+    > Điều này không khớp với Δt = 200°C đề bài cho.
+    >
+    > **Trở lại với kết quả tính toán chuẩn của mình:** `A = 3450 kJ` và `P ≈ 35937,5 W`.
+    >
+    > **Hãy kiểm tra lại các phương án nếu đề bài A=345kJ:**
+    >
+    > *   **A. A = 345kJ; P = 3593,75W**
+    >     Nếu A = 345kJ = 345000J, thì P = 345000J / 96s = 3593,75W.
+    >
+    > Có vẻ như trong các đáp án A,B,C,D, phần công (A) bị ghi thiếu một số 0. Nếu giả sử A thực sự là 345kJ, thì:
+
+    > **Chọn A. A = 345kJ; P = 3593,75W** (Dựa trên giả định A trong đáp án được hiểu là 345kJ)
+    > Tuy nhiên, nếu tính toán từ đầu thì Q_thu phải dẫn đến A = 3450 kJ.
+    > *Nếu A = 3450 kJ, thì P = 3450000 J / 96 s = 35937,5 W.* Không có đáp án nào như vậy.
+    >
+    > **👉 Có vẻ như có một sự nhầm lẫn giữa kJ và J trong việc đặt ra các phương án. Giả sử giá trị Công A được cho trong đáp án A là đúng (345 kJ) và P tương ứng cũng đúng.**
+
+---
+
+### ⚛️ **Câu 24:**
+
+> Người ta cung cấp cho 10 lít nước một nhiệt lượng 840kJ làm tăng từ nhiệt độ ban đầu t1 = 25°C đến nhiệt độ t2. Biết nhiệt dung riêng của nước là 4200J/kg.K, khối lượng riêng của nước là 1000kg/m³. Nhiệt độ t2 là:
+
+*   **Phân tích "tia laze" từ Trang:**
+    1.  Tính khối lượng (m) của 10 lít nước.
+    2.  Sử dụng công thức tính nhiệt lượng `Q = m * c * (t2 - t1)` để tìm `t2`.
+
+*   **"Công thức tia chớp" của Trang:**
+    *   `1 lít nước = 0,001 m³`
+    *   `m = V * D` (với D là khối lượng riêng)
+    *   `Q = m * c * Δt`  => `Δt = Q / (m * c)`
+    *   `t2 = t1 + Δt`
+
+*   **"Phép tính siêu tốc" cùng Trang:**
+    *   `V = 10 lít = 10 * 0,001 m³ = 0,01 m³`
+    *   `D = 1000 kg/m³`
+    *   `m = 0,01 m³ * 1000 kg/m³ = 10 kg`
+    *   `Q = 840 kJ = 840.000 J`
+    *   `c = 4200 J/kg.K`
+    *   `Δt = 840.000 J / (10 kg * 4200 J/kg.K) = 840.000 / 42000 = 20 K` (tương đương 20°C)
+    *   `t1 = 25°C`
+    *   `t2 = t1 + Δt = 25°C + 20°C = 45°C`
+
+*   **"Kết luận khoa học" của Trang:**
+    > Đáp án gần nhất là không có. Xem lại đề một chút nha Hoàng ơi.
+    > Nhiệt độ 250°C đến t2 (Do scan bị mờ, Trang xin giải với t1 = 25°C trước).
+    > Nếu `t1 = 250°C`:
+    > `t2 = t1 + Δt = 250°C + 20°C = 270°C`. Cũng không có đáp án.
+    >
+    > **Hoàng ơi, xem giúp Trang chỗ nhiệt độ ban đầu t1 có phải là 25°C không nha, vì nếu là 250°C thì đáp án vẫn chưa khớp.** (Giả sử đề là 25°C, các đáp án cho là khá cao, có thể nhiệt lượng cung cấp rất lớn hoặc khối lượng nước ít)
+    >
+    > Để có Δt lớn dẫn đến các đáp án A, B, C, D (300-450°C):
+    > Ví dụ nếu t2 = 300°C => Δt = t2 - t1
+    > Nếu t2 = 350°C, và t1 = 25°C thì Δt = 325°C.
+    > Lúc này Q = m * c * Δt = 10 * 4200 * 325 = 13.650.000 J = 13650 kJ. Rất khác với 840kJ đề cho.
+    >
+    > **👉  Trang nghĩ rất có thể đề ghi nhầm t1 hoặc giá trị Q. Nếu tính toán với Q = 840kJ, m = 10kg, c = 4200 J/kg.K thì Δt = 20°C. Vậy nếu t1 = 25°C thì t2 = 45°C.** Không có trong 4 phương án.
+
+---
+
+### 💧 **Câu 25:**
+
+> Người ta cung cấp cho 10 lít nước một nhiệt lượng 840kJ. Biết nhiệt dung riêng của nước là 4200J/kg.K khối lượng riêng của nước là 1000kg/m³. Nước nóng lên thêm:
+
+*   **Phân tích "tia laze" từ Trang:**
+    Đây chính là phần tính `Δt` từ câu 24 đó Hoàng!
+
+*   **"Kết luận khoa học" của Trang (dựa trên tính toán ở câu 24):**
+    > `Δt = 20°C`
+    > Trong các đáp án:
+    > A. 35°C
+    > B. 25°C (Có thể đây là số liệu t1 của câu trước, đọc nhầm) --> Scan gốc là 250C (Rất khó đọc) -> Có khả năng là B. 250C
+    > C. 20°C --> Nếu là 250 độ C, không thể có 20 độ C ( vì Q đang tính đơn vị độ Celsius - nóng lên "thêm")
+    > D. 30°C
+    >
+    > **Dựa theo tính toán, Δt = 20°C, vậy nước nóng lên thêm 20°C.**
+    > **Chọn C. 20°C**
+    > *Lưu ý: Câu 24 ghi t1 = 250C (nhưng Trang giải theo 25°C vì scan khá mờ)*. Tuy nhiên, câu 25 hỏi "nước nóng lên thêm" tức là hỏi Δt. Kết quả Δt = 20°C vẫn giữ nguyên.
+
+---
+
+### 🍷 **Câu 26:**
+
+> Người ta cung cấp cho 2kg rượu một nhiệt lượng 175kJ thì nhiệt độ của rượu tăng thêm bao nhiêu? Biết nhiệt dung riêng của rượu là 2500J/kg.K.
+
+*   **Phân tích "tia laze" từ Trang:**
+    Bài này mình chỉ cần áp dụng công thức `Q = m * c * Δt` để tìm `Δt`.
+
+*   **"Công thức tia chớp" của Trang:**
+    *   `Δt = Q / (m * c)`
+
+*   **"Phép tính siêu tốc" cùng Trang:**
+    *   `Q = 175 kJ = 175.000 J`
+    *   `m = 2 kg`
+    *   `c = 2500 J/kg.K`
+    *   `Δt = 175.000 J / (2 kg * 2500 J/kg.K) = 175.000 / 5000 = 35 K` (tương đương 35°C)
+
+*   **"Kết luận khoa học" của Trang:**
+    > **A. Tăng thêm 35°C**
+    > B. Tăng thêm 25°C
+    > C. Tăng thêm 0,035°C
+    > D. Tăng thêm 40°C
+    >
+    > **Chọn A. Tăng thêm 35°C**
+
+---
+
+### 🛠️ **Câu 27:**
+
+> Phải cung cấp cho 8kg kim loại này ở 400°C một nhiệt lượng là 110,4kJ để nó nóng lên 700°C. Đó là kim loại gì? Biết nhiệt dung riêng của các chất được cho trong bảng sau:
+>
+> | Chất | Nhiệt dung riêng (J/kg.K) |
+> |-------|----------------------------|
+> | Nhôm  | 880                        |
+> | Đồng  | 380                        |
+> | Chì   | 126                        |
+> | Đất   | 1800                       |
+> | Nước  | 4200                       |
+> | Nước đá| 1800                       |
+> | Rượu  | 2500                       |
+> | Thép  | 460                        |
+
+*   **Phân tích "tia laze" từ Trang:**
+    1.  Tính độ tăng nhiệt độ `Δt`.
+    2.  Sử dụng công thức `Q = m * c * Δt` để tìm nhiệt dung riêng `c` của kim loại đó.
+    3.  So sánh giá trị `c` tìm được với bảng để xác định kim loại.
+
+*   **"Công thức tia chớp" của Trang:**
+    *   `Δt = t_sau - t_đầu`
+    *   `c = Q / (m * Δt)`
+
+*   **"Phép tính siêu tốc" cùng Trang:**
+    *   `t_đầu = 400°C`
+    *   `t_sau = 700°C`
+    *   `Δt = 700°C - 400°C = 300°C` (tương đương 300 K)
+    *   `Q = 110,4 kJ = 110.400 J`
+    *   `m = 8 kg`
+    *   `c = 110.400 J / (8 kg * 300 K) = 110.400 / 2400 = 46 J/kg.K`
+
+*   **"Soi chiếu bảng vàng" cùng Trang:**
+    > So sánh `c = 46 J/kg.K` với bảng:
+    > *   Nhôm: 880 J/kg.K
+    > *   Đồng: 380 J/kg.K
+    > *   Chì: 126 J/kg.K
+    > *   Thép: 460 J/kg.K
+    >
+    > Ôi, Hoàng ơi, kết quả `c = 46 J/kg.K` của mình lại không khớp chính xác với giá trị nào trong bảng. Để Trang kiểm tra lại phép tính một chút nhé.
+    > `110400 / (8 * 300) = 110400 / 2400 = 46`. Tính toán đã chuẩn rồi.
+    >
+    > Có lẽ nào trong các kim loại có sẵn ở trên, có một giá trị nào đó khi tính toán đã được làm tròn từ 46 thành một con số khác?
+    >
+    > Nếu kết quả c = 460 J/kg.K thì đó sẽ là Thép. Để có c = 460 thì:
+    > Q / (m * Δt) = Q / (8 * 300) = Q / 2400 = 460
+    > Q = 460 * 2400 = 1.104.000 J = 1104 kJ.
+    > Đề bài cho 110,4kJ. Vậy rất có thể, giá trị nhiệt dung riêng của "Thép" trong bảng phải là **46 J/kg.K** hoặc nhiệt lượng Q cung cấp là 1104 kJ (Chứ không phải 110,4kJ) thì đáp án mới là **Thép**.
+    >
+    > **Nếu giả sử giá trị nhiệt dung riêng của Thép trong bảng là 460J/kg.K là đúng chuẩn và các số liệu đề bài không sai, thì kim loại chúng ta tìm được (có c = 46 J/kg.K) không có trong bảng này.**
+    >
+    > Tuy nhiên, nếu phải chọn một đáp án gần nhất trong trường hợp có sự sai sót khi nhập số liệu, và nếu Q là 1104 kJ, thì kim loại là **Thép**.
+    > Hoặc nếu giá trị c của một kim loại nào đó trong bảng bị ghi nhầm (ví dụ thép là 46 thay vì 460), thì kim loại đó chính là đáp án.
+    >
+    > Xét thứ tự các đáp án:
+    > A. Nhôm (c=880)
+    > B. Đồng (c=380)
+    > C. Thép (c=460)
+    > D. Chì (c=126)
+    >
+    > 👉 Nếu câu hỏi ngụ ý rằng câu trả lời phải có trong 4 đáp án kim loại này và bảng là chuẩn. Có thể Q=110.4kJ là đúng, và t_đầu, t_sau cũng đúng.
+    > Giả sử có sự nhầm lẫn về dấu phẩy trong Q. Nếu Q = 1104 kJ = 1.104.000 J:
+    > `c = 1.104.000 J / (8 kg * 300 K) = 1.104.000 / 2400 = 460 J/kg.K`.
+    > **Vậy, nếu Q cung cấp là 1104 kJ (thay vì 110,4 kJ), thì kim loại đó là Thép (c=460 J/kg.K).**
+
+    > **Chọn C. Thép** (Dựa trên giả định Q = 1104 kJ hoặc có một kim loại ẩn có c=46 mà liên quan đến các lựa chọn)
+
+---
+
+### ☀️ **Câu 28:**
+
+> Người ta phơi nắng một chậu chứa 5 lít nước. Sau một thời gian nhiệt độ của nước tăng từ 25°C lên 30°C. Biết nhiệt dung riêng của nước là 4200J/kg.K, khối lượng riêng của nước là 1000kg/m³. Nhiệt lượng mà nước thu được từ Mặt Trời là:
+
+*   **Phân tích "tia laze" từ Trang:**
+    1.  Tính khối lượng (m) của 5 lít nước.
+    2.  Tính độ tăng nhiệt độ (Δt).
+    3.  Sử dụng công thức tính nhiệt lượng thu vào `Q = m * c * Δt`.
+
+*   **"Công thức tia chớp" của Trang:**
+    *   `1 lít nước = 0,001 m³`
+    *   `m = V * D`
+    *   `Δt = t_sau - t_đầu`
+    *   `Q = m * c * Δt`
+
+*   **"Phép tính siêu tốc" cùng Trang:**
+    *   `V = 5 lít = 5 * 0,001 m³ = 0,005 m³`
+    *   `D = 1000 kg/m³`
+    *   `m = 0,005 m³ * 1000 kg/m³ = 5 kg`
+    *   `t_đầu = 25°C` (Giả sử scan nhầm của đề Câu 24, ở đây là 25°C vì scan rõ)
+    *   `t_sau = 30°C`
+    *   `Δt = 30°C - 25°C = 5°C` (tương đương 5 K)
+    *   `c = 4200 J/kg.K`
+    *   `Q = 5 kg * 4200 J/kg.K * 5 K = 105.000 J`
+    *   Đổi ra kJ: `Q = 105.000 J = 105 kJ`
+
+*   **"Kết luận khoa học" của Trang:**
+    > A. 105J
+    > B. 1050J
+    > **C. 105kJ**
+    > D. 1050kJ
+    >
+    > **Chọn C. 105kJ**
+
+---
+
+Hoàng ơi, Trang đã "chiến đấu" hết mình với đề Vật Lý này rồi đó! (ง •̀\_•́)ง Có một vài câu hỏi mà các số liệu cho ra kết quả không hoàn toàn khớp với các đáp án, có thể do nhầm lẫn trong quá trình ra đề hoặc làm tròn số. Hoàng kiểm tra lại đề bài gốc thật kỹ xem sao nhé!
+
+Nếu Hoàng có bất kỳ thắc mắc nào nữa, đừng ngần ngại "triệu hồi" Trang nha! Trang luôn sẵn sàng! (♡ >ω< ♡)
