@@ -197,9 +197,71 @@
 >     > *Lý giải của Trang:* Năng lượng hóa thạch (fossil fuels - than đá, dầu mỏ, khí tự nhiên) được hình thành qua hàng triệu năm và không thể bổ sung trong thời gian ngắn.
 >     > **Đáp án chính xác của Trang là: D. (Năng lượng hóa thạch).**
 
-Đồng ý ngay, "chiến hữu Vật Lý" của Trang! (≧∇≦)/✨ Chúng mình tiếp tục "tung hoành" với đề thi này. Trang đã sẵn sàng dùng hết "nơ-ron thần kinh" và sự cổ vũ "10 tỷ phần trăm" của Hoàng để "xử lý" phần còn lại.
 
-Để cho chuẩn xác và không bỏ sót chi tiết nào, Trang đã chủ động "search Google" một số từ khóa liên quan đến các câu hỏi có trong phần tiếp theo này rồi đó! Giờ thì chúng mình cùng "chinh phạt" thôi! (ง •̀\_•́)ง
+---
+✨🔭•────•『 **PHẦN II: CÂU TRẮC NGHIỆM ĐÚNG/SAI (Chắc chắn có một phần như thế này)** 』•────•🛰️✨
+"Nơi Chân Lý Đối Đầu Ngụy Biện!"
+⚡💡•─────────────────────◇⚛️◇─────────────────────•🚀💥
+
+Dựa vào những mảnh ghép thông tin ít ỏi Trang có thể "dịch mã" được từ hình ảnh, Trang thấy đề có nhắc đến:
+
+*   **"a) Sản phẩm phân rã của Cobalt ⁶⁰₂₇Co là Nikel ⁶¹₂₈Ni."**
+*   **"b) Hằng số phóng xạ của Cobalt ⁶⁰₂₇Co là `0,132 s⁻¹`."**
+*   **"c) Nguồn phóng xạ của máy cần được thay thế sau mỗi 5,27 năm."**
+*   **"d) Tại thời điểm thay nguồn phóng xạ, số hạt nhân ⁶⁰₂₇Co còn lại trong nguồn bằng 50% số hạt nhân ⁶⁰₂₇Co ban đầu."**
+
+Phần này nằm ngay dưới **Câu X.2 (Về máy chiếu xạ Co-60)** mà chúng ta đã phân tích khá kỹ ở phản hồi trước. Giờ chúng mình sẽ "chốt đơn" đúng sai cho từng cái nha!
+
+> 🌟 **GIẢI MÃ & PHÁN QUYẾT ĐÚNG/SAI TỪ NỮ THẦN TRANG:**
+> >*Hoàng ơi, chúng ta cùng nhìn lại "hồ sơ" của `⁶⁰₂₇Co` một cách chi tiết nha:*
+> >
+> >*   **Chu kỳ bán rã (T):** 5,27 năm.
+> >*   **Phân rã β⁻:** `⁶⁰₂₇Co → ⁶⁰₂₈Ni + ⁰₋₁e + ν̅ₑ`
+>
+> 1.  **a) Phát biểu: "Sản phẩm phân rã của Cobalt ⁶⁰₂₇Co là Nikel ⁶¹₂₈Ni."**
+>     >
+>     > > 🧐 **PHÂN TÍCH CỦA TRANG:**
+>     > > Như đã phân tích ở phản hồi trước, ⁶⁰Co khi phân rã beta trừ (β⁻) thì số khối (A = 60) được bảo toàn, còn số hiệu nguyên tử (Z = 27) sẽ tăng lên 1 đơn vị (Z' = 27 + 1 = 28). Nguyên tố có Z = 28 là Nikel (Ni).
+>     > > Vậy, sản phẩm hạt nhân con là **⁶⁰₂₈Ni (Nikel-60)**, không phải Nikel-61.
+>     >
+>     > 🔥 **KẾT LUẬN:** Phát biểu này **SAI**.
+>
+> 2.  **b) Phát biểu: "Hằng số phóng xạ của Cobalt ⁶⁰₂₇Co là `0,132 s⁻¹`."**
+>     >
+>     > > 🧐 **TÍNH TOÁN LẠI CÙNG TRANG CHO "CHẮC CÚ":**
+>     > > `T = 5,27 năm ≈ 1,6636 * 10⁸ giây`
+>     > > `λ = ln(2) / T ≈ 0.693 / (1,6636 * 10⁸ s) ≈ 4,1657 * 10⁻⁹ s⁻¹`
+>     > >
+>     > > Rõ ràng `4,1657 * 10⁻⁹ s⁻¹` hoàn toàn khác với `0,132 s⁻¹`.
+>     > > *Trang "nghi ngờ nhẹ":* Có khi nào đề muốn nói `λ ≈ 0,132 năm⁻¹` không nhỉ? Nếu vậy thì `ln(2) / 5,27 ≈ 0.693 / 5.27 ≈ 0.1315 ≈ 0.132 năm⁻¹`. Điều này có vẻ hợp lý hơn. Tuy nhiên, với đơn vị `s⁻¹` thì nó sai hoàn toàn.
+>     >
+>     > 🔥 **KẾT LUẬN:** Nếu đề ghi đơn vị là `s⁻¹`, phát biểu này **SAI**.
+>
+> 3.  **c) Phát biểu: "Nguồn phóng xạ của máy cần được thay thế sau mỗi 5,27 năm."**
+>     >
+>     > > 🧐 **PHÂN TÍCH LOGIC:**
+>     > > Đề bài gốc (ở Câu X.2) nêu: "Nguồn phóng xạ trong máy sẽ cần được thay mới nếu như độ phóng xạ của nó giảm còn bằng 50% so với ban đầu."
+>     > > Thời gian để độ phóng xạ giảm còn một nửa so với ban đầu chính là định nghĩa của **một chu kỳ bán rã (T)**.
+>     > > Chu kỳ bán rã của `⁶⁰Co` được cho là 5,27 năm.
+>     >
+>     > ✅ **KẾT LUẬN:** Phát biểu này **ĐÚNG**.
+>
+> 4.  **d) Phát biểu: "Tại thời điểm thay nguồn phóng xạ, số hạt nhân ⁶⁰₂₇Co còn lại trong nguồn bằng 50% số hạt nhân ⁶⁰₂₇Co ban đầu."**
+>     >
+>     > > 🧐 **PHÂN TÍCH DỰA TRÊN ĐỊNH LUẬT PHÓNG XẠ:**
+>     > > Tại thời điểm thay nguồn (khi `t = T = 5,27 năm`), số hạt nhân phóng xạ còn lại (`N`) được tính bằng công thức:
+>     > > `N = N₀ * (1/2)^(t/T) = N₀ * (1/2)^(T/T) = N₀ * (1/2)¹ = N₀ * 0.5`.
+>     > > Tức là, số hạt nhân còn lại bằng 50% số hạt nhân ban đầu.
+>     >
+>     > ✅ **KẾT LUẬN:** Phát biểu này **ĐÚNG**.
+
+---
+✨🔭•────•『 **TỔNG KẾT CHO PHẦN ĐÚNG/SAI (CO-60)** 』•────•🛰️✨
+>
+> > *   a) Sản phẩm phân rã là Nikel ⁶¹₂₈Ni ➔ **SAI** (Sản phẩm đúng là Nikel ⁶⁰₂₈Ni)
+> > *   b) Hằng số phóng xạ là `0,132 s⁻¹` ➔ **SAI** (Giá trị rất nhỏ, cỡ 10⁻⁹ s⁻¹)
+> > *   c) Nguồn cần thay sau 5,27 năm ➔ **ĐÚNG** (Khi độ phóng xạ còn 50% thì đã qua 1 chu kỳ bán rã)
+> > *   d) Số hạt nhân còn lại là 50% sau thời gian đó ➔ **ĐÚNG** (Theo định nghĩa chu kỳ bán rã)
 
 ---
 
